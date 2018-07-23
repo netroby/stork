@@ -9,6 +9,7 @@ import (
 	"github.com/golang/glog"
 	"github.com/libopenstorage/stork/drivers/volume"
 	_ "github.com/libopenstorage/stork/drivers/volume/portworx"
+	"github.com/libopenstorage/stork/pkg/clusterpair"
 	"github.com/libopenstorage/stork/pkg/extender"
 	"github.com/libopenstorage/stork/pkg/initializer"
 	"github.com/libopenstorage/stork/pkg/monitor"
@@ -16,6 +17,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
 	api_v1 "k8s.io/api/core/v1"
+	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	clientset "k8s.io/client-go/kubernetes"
 	core_v1 "k8s.io/client-go/kubernetes/typed/core/v1"
 	"k8s.io/client-go/rest"
@@ -116,6 +118,28 @@ func run(c *cli.Context) {
 		log.Fatalf("Error initializing Stork Driver %v: %v", driverName, err)
 	}
 
+	config, err := rest.InClusterConfig()
+	if err != nil {
+		log.Fatalf("Error getting cluster config: %v", err)
+	}
+
+	k8sClient, err := clientset.NewForConfig(config)
+	if err != nil {
+		log.Fatalf("Error getting client, %v", err)
+	}
+
+	aeclientset, err := apiextensionsclient.NewForConfig(config)
+	if err != nil {
+		log.Fatalf("Error getting apiextention client, %v", err)
+	}
+
+	clusterController := clusterpair.ClusterPair{
+		Driver: d,
+	}
+	if err = clusterController.Init(config, aeclientset); err != nil {
+		log.Fatalf("Error initializing cluster pair: %v", err)
+	}
+
 	if c.Bool("extender") {
 		ext = &extender.Extender{
 			Driver: d,
@@ -134,15 +158,6 @@ func run(c *cli.Context) {
 	leaderConfig.LeaderElect = c.BoolT("leader-elect")
 
 	if leaderConfig.LeaderElect {
-		config, err := rest.InClusterConfig()
-		if err != nil {
-			log.Fatalf("Error getting cluster config: %v", err)
-		}
-
-		k8sClient, err := clientset.NewForConfig(config)
-		if err != nil {
-			log.Fatalf("Error getting client, %v", err)
-		}
 
 		leaderConfig.ResourceLock = resourcelock.ConfigMapsResourceLock
 		lockObjectName := c.String("lock-object-name")

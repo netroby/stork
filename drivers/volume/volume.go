@@ -2,6 +2,7 @@ package volume
 
 import (
 	snapshotVolume "github.com/kubernetes-incubator/external-storage/snapshot/pkg/volume"
+	stork_crd "github.com/libopenstorage/stork/pkg/apis/stork/v1alpha1"
 	"github.com/libopenstorage/stork/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"k8s.io/api/core/v1"
@@ -35,6 +36,18 @@ type Driver interface {
 
 	// Stop the driver
 	Stop() error
+
+	// ClusterPairPluginInterface Interface to pair clusters
+	ClusterPairPluginInterface
+	//MigratePluginInterface
+}
+
+// ClusterPairPluginInterface Interface to pair clusters
+type ClusterPairPluginInterface interface {
+	// Create a pair with a remote cluster
+	CreatePair(*stork_crd.ClusterPair) (string, error)
+	// Deletes a paring with a remote cluster
+	DeletePair(*stork_crd.ClusterPair) error
 }
 
 // Info Information about a volume
@@ -108,4 +121,17 @@ func Get(name string) (Driver, error) {
 		ID:   name,
 		Type: "VolumeDriver",
 	}
+}
+
+// ClusterPairNotSupported to be used by drivers that don't support pairing
+type ClusterPairNotSupported struct{}
+
+// CreatePair Returns ErrNotSupported
+func (c *ClusterPairNotSupported) CreatePair(*stork_crd.ClusterPair) (string, error) {
+	return "", &errors.ErrNotSupported{}
+}
+
+// DeletePair Returns ErrNotSupported
+func (c *ClusterPairNotSupported) DeletePair(*stork_crd.ClusterPair) error {
+	return &errors.ErrNotSupported{}
 }

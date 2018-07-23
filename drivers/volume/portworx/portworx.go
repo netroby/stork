@@ -19,6 +19,7 @@ import (
 	"github.com/libopenstorage/openstorage/cluster"
 	"github.com/libopenstorage/openstorage/volume"
 	storkvolume "github.com/libopenstorage/stork/drivers/volume"
+	stork_crd "github.com/libopenstorage/stork/pkg/apis/stork/v1alpha1"
 	"github.com/libopenstorage/stork/pkg/errors"
 	"github.com/libopenstorage/stork/pkg/log"
 	"github.com/libopenstorage/stork/pkg/snapshot"
@@ -1425,6 +1426,29 @@ func getCloudSnapStatusString(status *api.CloudBackupStatus) string {
 		statusStr = fmt.Sprintf("%s Completion time: %v", statusStr, status.CompletedTime)
 	}
 	return statusStr
+}
+
+func (p *portworx) CreatePair(pair *stork_crd.ClusterPair) (string, error) {
+	port := uint64(9001)
+	var err error
+	if p, ok := pair.Options["port"]; ok {
+		port, err = strconv.ParseUint(p, 10, 64)
+		if err != nil {
+			return "", fmt.Errorf("invalid port specified for cluster pair: %v", err)
+		}
+	}
+	resp, err := p.clusterManager.CreatePair(&api.ClusterPairCreateRequest{
+		RemoteClusterIp:    pair.Options["ip"],
+		RemoteClusterToken: pair.Options["token"],
+		RemoteClusterPort:  uint32(port),
+	})
+	if err != nil {
+		return "", err
+	}
+	return resp.RemoteClusterId, nil
+}
+func (p *portworx) DeletePair(pair *stork_crd.ClusterPair) error {
+	return p.clusterManager.DeletePair(pair.RemoteStorageID)
 }
 
 func init() {

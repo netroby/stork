@@ -21,3 +21,11 @@ type ErrNotImplemented struct {
 func (e *ErrNotImplemented) Error() string {
 	return "Method not implemented"
 }
+
+// ErrNotSupported error type for methods not supported
+type ErrNotSupported struct {
+}
+
+func (e *ErrNotSupported) Error() string {
+	return "Method not supported"
+}

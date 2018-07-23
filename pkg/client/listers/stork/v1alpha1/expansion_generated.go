@@ -18,6 +18,14 @@ limitations under the License.
 
 package v1alpha1
 
+// ClusterPairListerExpansion allows custom methods to be added to
+// ClusterPairLister.
+type ClusterPairListerExpansion interface{}
+
+// ClusterPairNamespaceListerExpansion allows custom methods to be added to
+// ClusterPairNamespaceLister.
+type ClusterPairNamespaceListerExpansion interface{}
+
 // StorkRuleListerExpansion allows custom methods to be added to
 // StorkRuleLister.
 type StorkRuleListerExpansion interface{}

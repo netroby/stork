@@ -28,6 +28,10 @@ type FakeStorkV1alpha1 struct {
 	*testing.Fake
 }
 
+func (c *FakeStorkV1alpha1) ClusterPairs(namespace string) v1alpha1.ClusterPairInterface {
+	return &FakeClusterPairs{c, namespace}
+}
+
 func (c *FakeStorkV1alpha1) StorkRules(namespace string) v1alpha1.StorkRuleInterface {
 	return &FakeStorkRules{c, namespace}
 }
