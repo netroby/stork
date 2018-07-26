@@ -85,7 +85,11 @@ func (x Status) String() string {
 	return proto.EnumName(Status_name, int32(x))
 }
 func (Status) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{0}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{0}
+>>>>>>> Govendor update
 }
 
 type DriverType int32
@@ -120,7 +124,11 @@ func (x DriverType) String() string {
 	return proto.EnumName(DriverType_name, int32(x))
 }
 func (DriverType) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{1}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{1}
+>>>>>>> Govendor update
 }
 
 type FSType int32
@@ -161,7 +169,11 @@ func (x FSType) String() string {
 	return proto.EnumName(FSType_name, int32(x))
 }
 func (FSType) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{2}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{2}
+>>>>>>> Govendor update
 }
 
 type GraphDriverChangeType int32
@@ -190,7 +202,11 @@ func (x GraphDriverChangeType) String() string {
 	return proto.EnumName(GraphDriverChangeType_name, int32(x))
 }
 func (GraphDriverChangeType) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{3}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{3}
+>>>>>>> Govendor update
 }
 
 type SeverityType int32
@@ -219,7 +235,11 @@ func (x SeverityType) String() string {
 	return proto.EnumName(SeverityType_name, int32(x))
 }
 func (SeverityType) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{4}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{4}
+>>>>>>> Govendor update
 }
 
 type ResourceType int32
@@ -251,7 +271,11 @@ func (x ResourceType) String() string {
 	return proto.EnumName(ResourceType_name, int32(x))
 }
 func (ResourceType) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{5}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{5}
+>>>>>>> Govendor update
 }
 
 type AlertActionType int32
@@ -280,7 +304,11 @@ func (x AlertActionType) String() string {
 	return proto.EnumName(AlertActionType_name, int32(x))
 }
 func (AlertActionType) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{6}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{6}
+>>>>>>> Govendor update
 }
 
 type VolumeActionParam int32
@@ -308,7 +336,11 @@ func (x VolumeActionParam) String() string {
 	return proto.EnumName(VolumeActionParam_name, int32(x))
 }
 func (VolumeActionParam) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{7}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{7}
+>>>>>>> Govendor update
 }
 
 type CosType int32
@@ -337,7 +369,11 @@ func (x CosType) String() string {
 	return proto.EnumName(CosType_name, int32(x))
 }
 func (CosType) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{8}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{8}
+>>>>>>> Govendor update
 }
 
 type IoProfile int32
@@ -369,7 +405,11 @@ func (x IoProfile) String() string {
 	return proto.EnumName(IoProfile_name, int32(x))
 }
 func (IoProfile) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{9}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{9}
+>>>>>>> Govendor update
 }
 
 // VolumeState represents the state of a volume.
@@ -427,7 +467,11 @@ func (x VolumeState) String() string {
 	return proto.EnumName(VolumeState_name, int32(x))
 }
 func (VolumeState) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{10}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{10}
+>>>>>>> Govendor update
 }
 
 // VolumeStatus represents a health status for a volume.
@@ -465,7 +509,11 @@ func (x VolumeStatus) String() string {
 	return proto.EnumName(VolumeStatus_name, int32(x))
 }
 func (VolumeStatus) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{11}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{11}
+>>>>>>> Govendor update
 }
 
 type StorageMedium int32
@@ -494,7 +542,11 @@ func (x StorageMedium) String() string {
 	return proto.EnumName(StorageMedium_name, int32(x))
 }
 func (StorageMedium) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{12}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{12}
+>>>>>>> Govendor update
 }
 
 type ClusterNotify int32
@@ -515,7 +567,11 @@ func (x ClusterNotify) String() string {
 	return proto.EnumName(ClusterNotify_name, int32(x))
 }
 func (ClusterNotify) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{13}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{13}
+>>>>>>> Govendor update
 }
 
 type AttachState int32
@@ -544,7 +600,11 @@ func (x AttachState) String() string {
 	return proto.EnumName(AttachState_name, int32(x))
 }
 func (AttachState) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{14}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{14}
+>>>>>>> Govendor update
 }
 
 type OperationFlags int32
@@ -571,7 +631,11 @@ func (x OperationFlags) String() string {
 	return proto.EnumName(OperationFlags_name, int32(x))
 }
 func (OperationFlags) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{15}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{15}
+>>>>>>> Govendor update
 }
 
 // Defines times of day
@@ -617,7 +681,11 @@ func (x SdkTimeWeekday) String() string {
 	return proto.EnumName(SdkTimeWeekday_name, int32(x))
 }
 func (SdkTimeWeekday) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{16}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{16}
+>>>>>>> Govendor update
 }
 
 // CloudBackup operations types
@@ -647,7 +715,11 @@ func (x SdkCloudBackupOpType) String() string {
 	return proto.EnumName(SdkCloudBackupOpType_name, int32(x))
 }
 func (SdkCloudBackupOpType) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{17}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{17}
+>>>>>>> Govendor update
 }
 
 // CloudBackup status types
@@ -697,7 +769,11 @@ func (x SdkCloudBackupStatusType) String() string {
 	return proto.EnumName(SdkCloudBackupStatusType_name, int32(x))
 }
 func (SdkCloudBackupStatusType) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{18}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{18}
+>>>>>>> Govendor update
 }
 
 // SdkCloudBackupRequestedState defines states to set a specified backup or restore
@@ -732,6 +808,7 @@ func (x SdkCloudBackupRequestedState) String() string {
 	return proto.EnumName(SdkCloudBackupRequestedState_name, int32(x))
 }
 func (SdkCloudBackupRequestedState) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{19}
 }
 
@@ -817,6 +894,9 @@ func (x SdkVersion_Version) String() string {
 }
 func (SdkVersion_Version) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_api_0ad7204fc81c0401, []int{150, 0}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{19}
+>>>>>>> Govendor update
 }
 
 type CloudMigrate_OperationType int32
@@ -848,7 +928,11 @@ func (x CloudMigrate_OperationType) String() string {
 	return proto.EnumName(CloudMigrate_OperationType_name, int32(x))
 }
 func (CloudMigrate_OperationType) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{152, 0}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{145, 0}
+>>>>>>> Govendor update
 }
 
 type CloudMigrate_Stage int32
@@ -880,7 +964,11 @@ func (x CloudMigrate_Stage) String() string {
 	return proto.EnumName(CloudMigrate_Stage_name, int32(x))
 }
 func (CloudMigrate_Stage) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{152, 1}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{145, 1}
+>>>>>>> Govendor update
 }
 
 type CloudMigrate_Status int32
@@ -915,7 +1003,11 @@ func (x CloudMigrate_Status) String() string {
 	return proto.EnumName(CloudMigrate_Status_name, int32(x))
 }
 func (CloudMigrate_Status) EnumDescriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{152, 2}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{145, 2}
+>>>>>>> Govendor update
 }
 
 // StorageResource groups properties of a storage device.
@@ -950,6 +1042,7 @@ type StorageResource struct {
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 }
 
 func (m *StorageResource) Reset()         { *m = StorageResource{} }
@@ -974,6 +1067,32 @@ func (m *StorageResource) XXX_DiscardUnknown() {
 	xxx_messageInfo_StorageResource.DiscardUnknown(m)
 }
 
+=======
+}
+
+func (m *StorageResource) Reset()         { *m = StorageResource{} }
+func (m *StorageResource) String() string { return proto.CompactTextString(m) }
+func (*StorageResource) ProtoMessage()    {}
+func (*StorageResource) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{0}
+}
+func (m *StorageResource) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_StorageResource.Unmarshal(m, b)
+}
+func (m *StorageResource) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_StorageResource.Marshal(b, m, deterministic)
+}
+func (dst *StorageResource) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_StorageResource.Merge(dst, src)
+}
+func (m *StorageResource) XXX_Size() int {
+	return xxx_messageInfo_StorageResource.Size(m)
+}
+func (m *StorageResource) XXX_DiscardUnknown() {
+	xxx_messageInfo_StorageResource.DiscardUnknown(m)
+}
+
+>>>>>>> Govendor update
 var xxx_messageInfo_StorageResource proto.InternalMessageInfo
 
 func (m *StorageResource) GetId() string {
@@ -1092,7 +1211,11 @@ func (m *StoragePool) Reset()         { *m = StoragePool{} }
 func (m *StoragePool) String() string { return proto.CompactTextString(m) }
 func (*StoragePool) ProtoMessage()    {}
 func (*StoragePool) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{1}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{1}
+>>>>>>> Govendor update
 }
 func (m *StoragePool) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_StoragePool.Unmarshal(m, b)
@@ -1178,7 +1301,11 @@ func (m *VolumeLocator) Reset()         { *m = VolumeLocator{} }
 func (m *VolumeLocator) String() string { return proto.CompactTextString(m) }
 func (*VolumeLocator) ProtoMessage()    {}
 func (*VolumeLocator) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{2}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{2}
+>>>>>>> Govendor update
 }
 func (m *VolumeLocator) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_VolumeLocator.Unmarshal(m, b)
@@ -1230,7 +1357,11 @@ func (m *Source) Reset()         { *m = Source{} }
 func (m *Source) String() string { return proto.CompactTextString(m) }
 func (*Source) ProtoMessage()    {}
 func (*Source) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{3}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{3}
+>>>>>>> Govendor update
 }
 func (m *Source) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Source.Unmarshal(m, b)
@@ -1279,7 +1410,11 @@ func (m *Group) Reset()         { *m = Group{} }
 func (m *Group) String() string { return proto.CompactTextString(m) }
 func (*Group) ProtoMessage()    {}
 func (*Group) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{4}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{4}
+>>>>>>> Govendor update
 }
 func (m *Group) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Group.Unmarshal(m, b)
@@ -1360,6 +1495,7 @@ type VolumeSpec struct {
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 }
 
 func (m *VolumeSpec) Reset()         { *m = VolumeSpec{} }
@@ -1384,6 +1520,32 @@ func (m *VolumeSpec) XXX_DiscardUnknown() {
 	xxx_messageInfo_VolumeSpec.DiscardUnknown(m)
 }
 
+=======
+}
+
+func (m *VolumeSpec) Reset()         { *m = VolumeSpec{} }
+func (m *VolumeSpec) String() string { return proto.CompactTextString(m) }
+func (*VolumeSpec) ProtoMessage()    {}
+func (*VolumeSpec) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{5}
+}
+func (m *VolumeSpec) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_VolumeSpec.Unmarshal(m, b)
+}
+func (m *VolumeSpec) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_VolumeSpec.Marshal(b, m, deterministic)
+}
+func (dst *VolumeSpec) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_VolumeSpec.Merge(dst, src)
+}
+func (m *VolumeSpec) XXX_Size() int {
+	return xxx_messageInfo_VolumeSpec.Size(m)
+}
+func (m *VolumeSpec) XXX_DiscardUnknown() {
+	xxx_messageInfo_VolumeSpec.DiscardUnknown(m)
+}
+
+>>>>>>> Govendor update
 var xxx_messageInfo_VolumeSpec proto.InternalMessageInfo
 
 func (m *VolumeSpec) GetEphemeral() bool {
@@ -1679,7 +1841,185 @@ func (m *VolumeSpecUpdate) Reset()         { *m = VolumeSpecUpdate{} }
 func (m *VolumeSpecUpdate) String() string { return proto.CompactTextString(m) }
 func (*VolumeSpecUpdate) ProtoMessage()    {}
 func (*VolumeSpecUpdate) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{6}
+}
+func (m *VolumeSpecUpdate) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_VolumeSpecUpdate.Unmarshal(m, b)
+}
+func (m *VolumeSpecUpdate) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_VolumeSpecUpdate.Marshal(b, m, deterministic)
+}
+func (dst *VolumeSpecUpdate) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_VolumeSpecUpdate.Merge(dst, src)
+}
+func (m *VolumeSpecUpdate) XXX_Size() int {
+	return xxx_messageInfo_VolumeSpecUpdate.Size(m)
+}
+func (m *VolumeSpecUpdate) XXX_DiscardUnknown() {
+	xxx_messageInfo_VolumeSpecUpdate.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_VolumeSpecUpdate proto.InternalMessageInfo
+
+type isVolumeSpecUpdate_EphemeralOpt interface {
+	isVolumeSpecUpdate_EphemeralOpt()
+}
+type isVolumeSpecUpdate_SizeOpt interface {
+	isVolumeSpecUpdate_SizeOpt()
+}
+type isVolumeSpecUpdate_FormatOpt interface {
+	isVolumeSpecUpdate_FormatOpt()
+}
+type isVolumeSpecUpdate_BlockSizeOpt interface {
+	isVolumeSpecUpdate_BlockSizeOpt()
+}
+type isVolumeSpecUpdate_HaLevelOpt interface {
+	isVolumeSpecUpdate_HaLevelOpt()
+}
+type isVolumeSpecUpdate_CosOpt interface {
+	isVolumeSpecUpdate_CosOpt()
+}
+type isVolumeSpecUpdate_IoProfileOpt interface {
+	isVolumeSpecUpdate_IoProfileOpt()
+}
+type isVolumeSpecUpdate_DedupeOpt interface {
+	isVolumeSpecUpdate_DedupeOpt()
+}
+type isVolumeSpecUpdate_SnapshotIntervalOpt interface {
+	isVolumeSpecUpdate_SnapshotIntervalOpt()
+}
+type isVolumeSpecUpdate_SharedOpt interface {
+	isVolumeSpecUpdate_SharedOpt()
+}
+type isVolumeSpecUpdate_AggregationLevelOpt interface {
+	isVolumeSpecUpdate_AggregationLevelOpt()
+}
+type isVolumeSpecUpdate_EncryptedOpt interface {
+	isVolumeSpecUpdate_EncryptedOpt()
+}
+type isVolumeSpecUpdate_PassphraseOpt interface {
+	isVolumeSpecUpdate_PassphraseOpt()
+}
+type isVolumeSpecUpdate_SnapshotScheduleOpt interface {
+	isVolumeSpecUpdate_SnapshotScheduleOpt()
+}
+type isVolumeSpecUpdate_ScaleOpt interface {
+	isVolumeSpecUpdate_ScaleOpt()
+}
+type isVolumeSpecUpdate_StickyOpt interface {
+	isVolumeSpecUpdate_StickyOpt()
+}
+type isVolumeSpecUpdate_GroupOpt interface {
+	isVolumeSpecUpdate_GroupOpt()
+}
+type isVolumeSpecUpdate_GroupEnforcedOpt interface {
+	isVolumeSpecUpdate_GroupEnforcedOpt()
+}
+type isVolumeSpecUpdate_CompressedOpt interface {
+	isVolumeSpecUpdate_CompressedOpt()
+}
+type isVolumeSpecUpdate_CascadedOpt interface {
+	isVolumeSpecUpdate_CascadedOpt()
+}
+type isVolumeSpecUpdate_JournalOpt interface {
+	isVolumeSpecUpdate_JournalOpt()
+}
+type isVolumeSpecUpdate_Sharedv4Opt interface {
+	isVolumeSpecUpdate_Sharedv4Opt()
+}
+
+type VolumeSpecUpdate_Ephemeral struct {
+	Ephemeral bool `protobuf:"varint,1,opt,name=ephemeral,oneof"`
+}
+type VolumeSpecUpdate_Size struct {
+	Size uint64 `protobuf:"varint,2,opt,name=size,oneof"`
+}
+type VolumeSpecUpdate_Format struct {
+	Format FSType `protobuf:"varint,3,opt,name=format,enum=openstorage.api.FSType,oneof"`
+}
+type VolumeSpecUpdate_BlockSize struct {
+	BlockSize int64 `protobuf:"varint,4,opt,name=block_size,json=blockSize,oneof"`
+}
+type VolumeSpecUpdate_HaLevel struct {
+	HaLevel int64 `protobuf:"varint,5,opt,name=ha_level,json=haLevel,oneof"`
+}
+type VolumeSpecUpdate_Cos struct {
+	Cos CosType `protobuf:"varint,6,opt,name=cos,enum=openstorage.api.CosType,oneof"`
+}
+type VolumeSpecUpdate_IoProfile struct {
+	IoProfile IoProfile `protobuf:"varint,7,opt,name=io_profile,json=ioProfile,enum=openstorage.api.IoProfile,oneof"`
+}
+type VolumeSpecUpdate_Dedupe struct {
+	Dedupe bool `protobuf:"varint,8,opt,name=dedupe,oneof"`
+}
+type VolumeSpecUpdate_SnapshotInterval struct {
+	SnapshotInterval uint32 `protobuf:"varint,9,opt,name=snapshot_interval,json=snapshotInterval,oneof"`
+}
+type VolumeSpecUpdate_Shared struct {
+	Shared bool `protobuf:"varint,11,opt,name=shared,oneof"`
+}
+type VolumeSpecUpdate_AggregationLevel struct {
+	AggregationLevel uint32 `protobuf:"varint,13,opt,name=aggregation_level,json=aggregationLevel,oneof"`
+}
+type VolumeSpecUpdate_Encrypted struct {
+	Encrypted bool `protobuf:"varint,14,opt,name=encrypted,oneof"`
+}
+type VolumeSpecUpdate_Passphrase struct {
+	Passphrase string `protobuf:"bytes,15,opt,name=passphrase,oneof"`
+}
+type VolumeSpecUpdate_SnapshotSchedule struct {
+	SnapshotSchedule string `protobuf:"bytes,16,opt,name=snapshot_schedule,json=snapshotSchedule,oneof"`
+}
+type VolumeSpecUpdate_Scale struct {
+	Scale uint32 `protobuf:"varint,17,opt,name=scale,oneof"`
+}
+type VolumeSpecUpdate_Sticky struct {
+	Sticky bool `protobuf:"varint,18,opt,name=sticky,oneof"`
+}
+type VolumeSpecUpdate_Group struct {
+	Group *Group `protobuf:"bytes,19,opt,name=group,oneof"`
+}
+type VolumeSpecUpdate_GroupEnforced struct {
+	GroupEnforced bool `protobuf:"varint,20,opt,name=group_enforced,json=groupEnforced,oneof"`
+}
+type VolumeSpecUpdate_Compressed struct {
+	Compressed bool `protobuf:"varint,21,opt,name=compressed,oneof"`
+}
+type VolumeSpecUpdate_Cascaded struct {
+	Cascaded bool `protobuf:"varint,22,opt,name=cascaded,oneof"`
+}
+type VolumeSpecUpdate_Journal struct {
+	Journal bool `protobuf:"varint,23,opt,name=journal,oneof"`
+}
+type VolumeSpecUpdate_Sharedv4 struct {
+	Sharedv4 bool `protobuf:"varint,24,opt,name=sharedv4,oneof"`
+}
+
+func (*VolumeSpecUpdate_Ephemeral) isVolumeSpecUpdate_EphemeralOpt()               {}
+func (*VolumeSpecUpdate_Size) isVolumeSpecUpdate_SizeOpt()                         {}
+func (*VolumeSpecUpdate_Format) isVolumeSpecUpdate_FormatOpt()                     {}
+func (*VolumeSpecUpdate_BlockSize) isVolumeSpecUpdate_BlockSizeOpt()               {}
+func (*VolumeSpecUpdate_HaLevel) isVolumeSpecUpdate_HaLevelOpt()                   {}
+func (*VolumeSpecUpdate_Cos) isVolumeSpecUpdate_CosOpt()                           {}
+func (*VolumeSpecUpdate_IoProfile) isVolumeSpecUpdate_IoProfileOpt()               {}
+func (*VolumeSpecUpdate_Dedupe) isVolumeSpecUpdate_DedupeOpt()                     {}
+func (*VolumeSpecUpdate_SnapshotInterval) isVolumeSpecUpdate_SnapshotIntervalOpt() {}
+func (*VolumeSpecUpdate_Shared) isVolumeSpecUpdate_SharedOpt()                     {}
+func (*VolumeSpecUpdate_AggregationLevel) isVolumeSpecUpdate_AggregationLevelOpt() {}
+func (*VolumeSpecUpdate_Encrypted) isVolumeSpecUpdate_EncryptedOpt()               {}
+func (*VolumeSpecUpdate_Passphrase) isVolumeSpecUpdate_PassphraseOpt()             {}
+func (*VolumeSpecUpdate_SnapshotSchedule) isVolumeSpecUpdate_SnapshotScheduleOpt() {}
+func (*VolumeSpecUpdate_Scale) isVolumeSpecUpdate_ScaleOpt()                       {}
+func (*VolumeSpecUpdate_Sticky) isVolumeSpecUpdate_StickyOpt()                     {}
+func (*VolumeSpecUpdate_Group) isVolumeSpecUpdate_GroupOpt()                       {}
+func (*VolumeSpecUpdate_GroupEnforced) isVolumeSpecUpdate_GroupEnforcedOpt()       {}
+func (*VolumeSpecUpdate_Compressed) isVolumeSpecUpdate_CompressedOpt()             {}
+func (*VolumeSpecUpdate_Cascaded) isVolumeSpecUpdate_CascadedOpt()                 {}
+func (*VolumeSpecUpdate_Journal) isVolumeSpecUpdate_JournalOpt()                   {}
+func (*VolumeSpecUpdate_Sharedv4) isVolumeSpecUpdate_Sharedv4Opt()                 {}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{6}
 }
 func (m *VolumeSpecUpdate) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_VolumeSpecUpdate.Unmarshal(m, b)
@@ -2814,7 +3154,7 @@ func (m *ReplicaSet) Reset()         { *m = ReplicaSet{} }
 func (m *ReplicaSet) String() string { return proto.CompactTextString(m) }
 func (*ReplicaSet) ProtoMessage()    {}
 func (*ReplicaSet) Descriptor() ([]byte, []int) {
-	return fileDescriptor_api_0ad7204fc81c0401, []int{7}
+	return fileDescriptor_api_0cf30457993af864, []int{7}
 }
 func (m *ReplicaSet) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ReplicaSet.Unmarshal(m, b)
@@ -2855,7 +3195,7 @@ func (m *RuntimeStateMap) Reset()         { *m = RuntimeStateMap{} }
 func (m *RuntimeStateMap) String() string { return proto.CompactTextString(m) }
 func (*RuntimeStateMap) ProtoMessage()    {}
 func (*RuntimeStateMap) Descriptor() ([]byte, []int) {
-	return fileDescriptor_api_0ad7204fc81c0401, []int{8}
+	return fileDescriptor_api_0cf30457993af864, []int{8}
 }
 func (m *RuntimeStateMap) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RuntimeStateMap.Unmarshal(m, b)
@@ -2942,6 +3282,1440 @@ func (m *Volume) Reset()         { *m = Volume{} }
 func (m *Volume) String() string { return proto.CompactTextString(m) }
 func (*Volume) ProtoMessage()    {}
 func (*Volume) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{9}
+}
+func (m *Volume) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Volume.Unmarshal(m, b)
+}
+func (m *Volume) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Volume.Marshal(b, m, deterministic)
+}
+func (dst *Volume) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Volume.Merge(dst, src)
+}
+func (m *Volume) XXX_Size() int {
+	return xxx_messageInfo_Volume.Size(m)
+}
+func (m *Volume) XXX_DiscardUnknown() {
+	xxx_messageInfo_Volume.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Volume proto.InternalMessageInfo
+>>>>>>> Govendor update
+
+func (m *VolumeSpecUpdate) GetEphemeralOpt() isVolumeSpecUpdate_EphemeralOpt {
+	if m != nil {
+		return m.EphemeralOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetSizeOpt() isVolumeSpecUpdate_SizeOpt {
+	if m != nil {
+		return m.SizeOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetFormatOpt() isVolumeSpecUpdate_FormatOpt {
+	if m != nil {
+		return m.FormatOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetBlockSizeOpt() isVolumeSpecUpdate_BlockSizeOpt {
+	if m != nil {
+		return m.BlockSizeOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetHaLevelOpt() isVolumeSpecUpdate_HaLevelOpt {
+	if m != nil {
+		return m.HaLevelOpt
+	}
+	return nil
+}
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
+func (m *VolumeSpecUpdate) GetCosOpt() isVolumeSpecUpdate_CosOpt {
+=======
+
+func (m *Volume) GetCtime() *timestamp.Timestamp {
+>>>>>>> Govendor update
+	if m != nil {
+		return m.CosOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetIoProfileOpt() isVolumeSpecUpdate_IoProfileOpt {
+	if m != nil {
+		return m.IoProfileOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetDedupeOpt() isVolumeSpecUpdate_DedupeOpt {
+	if m != nil {
+		return m.DedupeOpt
+	}
+	return nil
+}
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
+func (m *VolumeSpecUpdate) GetSnapshotIntervalOpt() isVolumeSpecUpdate_SnapshotIntervalOpt {
+=======
+
+func (m *Volume) GetLastScan() *timestamp.Timestamp {
+>>>>>>> Govendor update
+	if m != nil {
+		return m.SnapshotIntervalOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetSharedOpt() isVolumeSpecUpdate_SharedOpt {
+	if m != nil {
+		return m.SharedOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetAggregationLevelOpt() isVolumeSpecUpdate_AggregationLevelOpt {
+	if m != nil {
+		return m.AggregationLevelOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetEncryptedOpt() isVolumeSpecUpdate_EncryptedOpt {
+	if m != nil {
+		return m.EncryptedOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetPassphraseOpt() isVolumeSpecUpdate_PassphraseOpt {
+	if m != nil {
+		return m.PassphraseOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetSnapshotScheduleOpt() isVolumeSpecUpdate_SnapshotScheduleOpt {
+	if m != nil {
+		return m.SnapshotScheduleOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetScaleOpt() isVolumeSpecUpdate_ScaleOpt {
+	if m != nil {
+		return m.ScaleOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetStickyOpt() isVolumeSpecUpdate_StickyOpt {
+	if m != nil {
+		return m.StickyOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetGroupOpt() isVolumeSpecUpdate_GroupOpt {
+	if m != nil {
+		return m.GroupOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetGroupEnforcedOpt() isVolumeSpecUpdate_GroupEnforcedOpt {
+	if m != nil {
+		return m.GroupEnforcedOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetCompressedOpt() isVolumeSpecUpdate_CompressedOpt {
+	if m != nil {
+		return m.CompressedOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetCascadedOpt() isVolumeSpecUpdate_CascadedOpt {
+	if m != nil {
+		return m.CascadedOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetJournalOpt() isVolumeSpecUpdate_JournalOpt {
+	if m != nil {
+		return m.JournalOpt
+	}
+	return nil
+}
+func (m *VolumeSpecUpdate) GetSharedv4Opt() isVolumeSpecUpdate_Sharedv4Opt {
+	if m != nil {
+		return m.Sharedv4Opt
+	}
+	return nil
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
+func (m *VolumeSpecUpdate) GetEphemeral() bool {
+	if x, ok := m.GetEphemeralOpt().(*VolumeSpecUpdate_Ephemeral); ok {
+		return x.Ephemeral
+	}
+	return false
+}
+
+func (m *VolumeSpecUpdate) GetSize() uint64 {
+	if x, ok := m.GetSizeOpt().(*VolumeSpecUpdate_Size); ok {
+		return x.Size
+=======
+func (m *Volume) GetFsResizeRequired() bool {
+	if m != nil {
+		return m.FsResizeRequired
+	}
+	return false
+}
+
+// Stats is a structure that represents last collected stats for a volume
+type Stats struct {
+	// Reads completed successfully
+	Reads uint64 `protobuf:"varint,1,opt,name=reads" json:"reads,omitempty"`
+	// Time spent in reads in ms
+	ReadMs uint64 `protobuf:"varint,2,opt,name=read_ms,json=readMs" json:"read_ms,omitempty"`
+	// Number of bytes read
+	ReadBytes uint64 `protobuf:"varint,3,opt,name=read_bytes,json=readBytes" json:"read_bytes,omitempty"`
+	// Writes completed successfully
+	Writes uint64 `protobuf:"varint,4,opt,name=writes" json:"writes,omitempty"`
+	// Time spent in writes in ms
+	WriteMs uint64 `protobuf:"varint,5,opt,name=write_ms,json=writeMs" json:"write_ms,omitempty"`
+	// Number of bytes written
+	WriteBytes uint64 `protobuf:"varint,6,opt,name=write_bytes,json=writeBytes" json:"write_bytes,omitempty"`
+	// IOs curently in progress
+	IoProgress uint64 `protobuf:"varint,7,opt,name=io_progress,json=ioProgress" json:"io_progress,omitempty"`
+	// Time spent doing IOs ms
+	IoMs uint64 `protobuf:"varint,8,opt,name=io_ms,json=ioMs" json:"io_ms,omitempty"`
+	// BytesUsed
+	BytesUsed uint64 `protobuf:"varint,9,opt,name=bytes_used,json=bytesUsed" json:"bytes_used,omitempty"`
+	// Interval in ms during which stats were collected
+	IntervalMs           uint64   `protobuf:"varint,10,opt,name=interval_ms,json=intervalMs" json:"interval_ms,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Stats) Reset()         { *m = Stats{} }
+func (m *Stats) String() string { return proto.CompactTextString(m) }
+func (*Stats) ProtoMessage()    {}
+func (*Stats) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{10}
+}
+func (m *Stats) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Stats.Unmarshal(m, b)
+}
+func (m *Stats) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Stats.Marshal(b, m, deterministic)
+}
+func (dst *Stats) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Stats.Merge(dst, src)
+}
+func (m *Stats) XXX_Size() int {
+	return xxx_messageInfo_Stats.Size(m)
+}
+func (m *Stats) XXX_DiscardUnknown() {
+	xxx_messageInfo_Stats.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Stats proto.InternalMessageInfo
+
+func (m *Stats) GetReads() uint64 {
+	if m != nil {
+		return m.Reads
+>>>>>>> Govendor update
+	}
+	return 0
+}
+
+func (m *VolumeSpecUpdate) GetFormat() FSType {
+	if x, ok := m.GetFormatOpt().(*VolumeSpecUpdate_Format); ok {
+		return x.Format
+	}
+	return FSType_FS_TYPE_NONE
+}
+
+func (m *VolumeSpecUpdate) GetBlockSize() int64 {
+	if x, ok := m.GetBlockSizeOpt().(*VolumeSpecUpdate_BlockSize); ok {
+		return x.BlockSize
+	}
+	return 0
+}
+
+func (m *VolumeSpecUpdate) GetHaLevel() int64 {
+	if x, ok := m.GetHaLevelOpt().(*VolumeSpecUpdate_HaLevel); ok {
+		return x.HaLevel
+	}
+	return 0
+}
+
+func (m *VolumeSpecUpdate) GetCos() CosType {
+	if x, ok := m.GetCosOpt().(*VolumeSpecUpdate_Cos); ok {
+		return x.Cos
+	}
+	return CosType_NONE
+}
+
+func (m *VolumeSpecUpdate) GetIoProfile() IoProfile {
+	if x, ok := m.GetIoProfileOpt().(*VolumeSpecUpdate_IoProfile); ok {
+		return x.IoProfile
+	}
+	return IoProfile_IO_PROFILE_SEQUENTIAL
+}
+
+func (m *VolumeSpecUpdate) GetDedupe() bool {
+	if x, ok := m.GetDedupeOpt().(*VolumeSpecUpdate_Dedupe); ok {
+		return x.Dedupe
+	}
+	return false
+}
+
+func (m *VolumeSpecUpdate) GetSnapshotInterval() uint32 {
+	if x, ok := m.GetSnapshotIntervalOpt().(*VolumeSpecUpdate_SnapshotInterval); ok {
+		return x.SnapshotInterval
+	}
+	return 0
+}
+
+func (m *VolumeSpecUpdate) GetVolumeLabels() map[string]string {
+	if m != nil {
+		return m.VolumeLabels
+	}
+	return nil
+}
+
+func (m *VolumeSpecUpdate) GetShared() bool {
+	if x, ok := m.GetSharedOpt().(*VolumeSpecUpdate_Shared); ok {
+		return x.Shared
+	}
+	return false
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
+func (m *VolumeSpecUpdate) GetReplicaSet() *ReplicaSet {
+	if m != nil {
+		return m.ReplicaSet
+	}
+	return nil
+}
+
+func (m *VolumeSpecUpdate) GetAggregationLevel() uint32 {
+	if x, ok := m.GetAggregationLevelOpt().(*VolumeSpecUpdate_AggregationLevel); ok {
+		return x.AggregationLevel
+=======
+// Alert is a structure that represents an alert object
+type Alert struct {
+	// Id for Alert
+	Id int64 `protobuf:"varint,1,opt,name=id" json:"id,omitempty"`
+	// Severity of the Alert
+	Severity SeverityType `protobuf:"varint,2,opt,name=severity,enum=openstorage.api.SeverityType" json:"severity,omitempty"`
+	// AlertType user defined alert type
+	AlertType int64 `protobuf:"varint,3,opt,name=alert_type,json=alertType" json:"alert_type,omitempty"`
+	// Message describing the Alert
+	Message string `protobuf:"bytes,4,opt,name=message" json:"message,omitempty"`
+	// Timestamp when Alert occured
+	Timestamp *timestamp.Timestamp `protobuf:"bytes,5,opt,name=timestamp" json:"timestamp,omitempty"`
+	// ResourceId where Alert occured
+	ResourceId string `protobuf:"bytes,6,opt,name=resource_id,json=resourceId" json:"resource_id,omitempty"`
+	// Resource where Alert occured
+	Resource ResourceType `protobuf:"varint,7,opt,name=resource,enum=openstorage.api.ResourceType" json:"resource,omitempty"`
+	// Cleared Flag
+	Cleared bool `protobuf:"varint,8,opt,name=cleared" json:"cleared,omitempty"`
+	// Time-to-live in seconds for this Alert
+	Ttl uint64 `protobuf:"varint,9,opt,name=ttl" json:"ttl,omitempty"`
+	// UniqueTag helps identify a unique alert for a given resouce
+	UniqueTag string `protobuf:"bytes,10,opt,name=unique_tag,json=uniqueTag" json:"unique_tag,omitempty"`
+	// Count of such alerts raised so far.
+	Count int64 `protobuf:"varint,11,opt,name=count" json:"count,omitempty"`
+	// Timestamp when such alert was raised the very first time.
+	FirstSeen            *timestamp.Timestamp `protobuf:"bytes,12,opt,name=first_seen,json=firstSeen" json:"first_seen,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
+	XXX_unrecognized     []byte               `json:"-"`
+	XXX_sizecache        int32                `json:"-"`
+}
+
+func (m *Alert) Reset()         { *m = Alert{} }
+func (m *Alert) String() string { return proto.CompactTextString(m) }
+func (*Alert) ProtoMessage()    {}
+func (*Alert) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{11}
+}
+func (m *Alert) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Alert.Unmarshal(m, b)
+}
+func (m *Alert) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Alert.Marshal(b, m, deterministic)
+}
+func (dst *Alert) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Alert.Merge(dst, src)
+}
+func (m *Alert) XXX_Size() int {
+	return xxx_messageInfo_Alert.Size(m)
+}
+func (m *Alert) XXX_DiscardUnknown() {
+	xxx_messageInfo_Alert.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Alert proto.InternalMessageInfo
+
+func (m *Alert) GetId() int64 {
+	if m != nil {
+		return m.Id
+>>>>>>> Govendor update
+	}
+	return 0
+}
+
+func (m *VolumeSpecUpdate) GetEncrypted() bool {
+	if x, ok := m.GetEncryptedOpt().(*VolumeSpecUpdate_Encrypted); ok {
+		return x.Encrypted
+	}
+	return false
+}
+
+func (m *VolumeSpecUpdate) GetPassphrase() string {
+	if x, ok := m.GetPassphraseOpt().(*VolumeSpecUpdate_Passphrase); ok {
+		return x.Passphrase
+	}
+	return ""
+}
+
+func (m *VolumeSpecUpdate) GetSnapshotSchedule() string {
+	if x, ok := m.GetSnapshotScheduleOpt().(*VolumeSpecUpdate_SnapshotSchedule); ok {
+		return x.SnapshotSchedule
+	}
+	return ""
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
+func (m *VolumeSpecUpdate) GetScale() uint32 {
+	if x, ok := m.GetScaleOpt().(*VolumeSpecUpdate_Scale); ok {
+		return x.Scale
+=======
+func (m *Alert) GetTimestamp() *timestamp.Timestamp {
+	if m != nil {
+		return m.Timestamp
+>>>>>>> Govendor update
+	}
+	return 0
+}
+
+func (m *VolumeSpecUpdate) GetSticky() bool {
+	if x, ok := m.GetStickyOpt().(*VolumeSpecUpdate_Sticky); ok {
+		return x.Sticky
+	}
+	return false
+}
+
+func (m *VolumeSpecUpdate) GetGroup() *Group {
+	if x, ok := m.GetGroupOpt().(*VolumeSpecUpdate_Group); ok {
+		return x.Group
+	}
+	return nil
+}
+
+func (m *VolumeSpecUpdate) GetGroupEnforced() bool {
+	if x, ok := m.GetGroupEnforcedOpt().(*VolumeSpecUpdate_GroupEnforced); ok {
+		return x.GroupEnforced
+	}
+	return false
+}
+
+func (m *VolumeSpecUpdate) GetCompressed() bool {
+	if x, ok := m.GetCompressedOpt().(*VolumeSpecUpdate_Compressed); ok {
+		return x.Compressed
+	}
+	return false
+}
+
+func (m *VolumeSpecUpdate) GetCascaded() bool {
+	if x, ok := m.GetCascadedOpt().(*VolumeSpecUpdate_Cascaded); ok {
+		return x.Cascaded
+	}
+	return false
+}
+
+func (m *VolumeSpecUpdate) GetJournal() bool {
+	if x, ok := m.GetJournalOpt().(*VolumeSpecUpdate_Journal); ok {
+		return x.Journal
+	}
+	return false
+}
+
+func (m *VolumeSpecUpdate) GetSharedv4() bool {
+	if x, ok := m.GetSharedv4Opt().(*VolumeSpecUpdate_Sharedv4); ok {
+		return x.Sharedv4
+	}
+	return false
+}
+
+// XXX_OneofFuncs is for the internal use of the proto package.
+func (*VolumeSpecUpdate) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _VolumeSpecUpdate_OneofMarshaler, _VolumeSpecUpdate_OneofUnmarshaler, _VolumeSpecUpdate_OneofSizer, []interface{}{
+		(*VolumeSpecUpdate_Ephemeral)(nil),
+		(*VolumeSpecUpdate_Size)(nil),
+		(*VolumeSpecUpdate_Format)(nil),
+		(*VolumeSpecUpdate_BlockSize)(nil),
+		(*VolumeSpecUpdate_HaLevel)(nil),
+		(*VolumeSpecUpdate_Cos)(nil),
+		(*VolumeSpecUpdate_IoProfile)(nil),
+		(*VolumeSpecUpdate_Dedupe)(nil),
+		(*VolumeSpecUpdate_SnapshotInterval)(nil),
+		(*VolumeSpecUpdate_Shared)(nil),
+		(*VolumeSpecUpdate_AggregationLevel)(nil),
+		(*VolumeSpecUpdate_Encrypted)(nil),
+		(*VolumeSpecUpdate_Passphrase)(nil),
+		(*VolumeSpecUpdate_SnapshotSchedule)(nil),
+		(*VolumeSpecUpdate_Scale)(nil),
+		(*VolumeSpecUpdate_Sticky)(nil),
+		(*VolumeSpecUpdate_Group)(nil),
+		(*VolumeSpecUpdate_GroupEnforced)(nil),
+		(*VolumeSpecUpdate_Compressed)(nil),
+		(*VolumeSpecUpdate_Cascaded)(nil),
+		(*VolumeSpecUpdate_Journal)(nil),
+		(*VolumeSpecUpdate_Sharedv4)(nil),
+	}
+}
+
+func _VolumeSpecUpdate_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*VolumeSpecUpdate)
+	// ephemeral_opt
+	switch x := m.EphemeralOpt.(type) {
+	case *VolumeSpecUpdate_Ephemeral:
+		t := uint64(0)
+		if x.Ephemeral {
+			t = 1
+		}
+		b.EncodeVarint(1<<3 | proto.WireVarint)
+		b.EncodeVarint(t)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.EphemeralOpt has unexpected type %T", x)
+	}
+	// size_opt
+	switch x := m.SizeOpt.(type) {
+	case *VolumeSpecUpdate_Size:
+		b.EncodeVarint(2<<3 | proto.WireVarint)
+		b.EncodeVarint(uint64(x.Size))
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.SizeOpt has unexpected type %T", x)
+	}
+	// format_opt
+	switch x := m.FormatOpt.(type) {
+	case *VolumeSpecUpdate_Format:
+		b.EncodeVarint(3<<3 | proto.WireVarint)
+		b.EncodeVarint(uint64(x.Format))
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.FormatOpt has unexpected type %T", x)
+	}
+	// block_size_opt
+	switch x := m.BlockSizeOpt.(type) {
+	case *VolumeSpecUpdate_BlockSize:
+		b.EncodeVarint(4<<3 | proto.WireVarint)
+		b.EncodeVarint(uint64(x.BlockSize))
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.BlockSizeOpt has unexpected type %T", x)
+	}
+	// ha_level_opt
+	switch x := m.HaLevelOpt.(type) {
+	case *VolumeSpecUpdate_HaLevel:
+		b.EncodeVarint(5<<3 | proto.WireVarint)
+		b.EncodeVarint(uint64(x.HaLevel))
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.HaLevelOpt has unexpected type %T", x)
+	}
+	// cos_opt
+	switch x := m.CosOpt.(type) {
+	case *VolumeSpecUpdate_Cos:
+		b.EncodeVarint(6<<3 | proto.WireVarint)
+		b.EncodeVarint(uint64(x.Cos))
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.CosOpt has unexpected type %T", x)
+	}
+	// io_profile_opt
+	switch x := m.IoProfileOpt.(type) {
+	case *VolumeSpecUpdate_IoProfile:
+		b.EncodeVarint(7<<3 | proto.WireVarint)
+		b.EncodeVarint(uint64(x.IoProfile))
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.IoProfileOpt has unexpected type %T", x)
+	}
+	// dedupe_opt
+	switch x := m.DedupeOpt.(type) {
+	case *VolumeSpecUpdate_Dedupe:
+		t := uint64(0)
+		if x.Dedupe {
+			t = 1
+		}
+		b.EncodeVarint(8<<3 | proto.WireVarint)
+		b.EncodeVarint(t)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.DedupeOpt has unexpected type %T", x)
+	}
+	// snapshot_interval_opt
+	switch x := m.SnapshotIntervalOpt.(type) {
+	case *VolumeSpecUpdate_SnapshotInterval:
+		b.EncodeVarint(9<<3 | proto.WireVarint)
+		b.EncodeVarint(uint64(x.SnapshotInterval))
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.SnapshotIntervalOpt has unexpected type %T", x)
+	}
+	// shared_opt
+	switch x := m.SharedOpt.(type) {
+	case *VolumeSpecUpdate_Shared:
+		t := uint64(0)
+		if x.Shared {
+			t = 1
+		}
+		b.EncodeVarint(11<<3 | proto.WireVarint)
+		b.EncodeVarint(t)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.SharedOpt has unexpected type %T", x)
+	}
+	// aggregation_level_opt
+	switch x := m.AggregationLevelOpt.(type) {
+	case *VolumeSpecUpdate_AggregationLevel:
+		b.EncodeVarint(13<<3 | proto.WireVarint)
+		b.EncodeVarint(uint64(x.AggregationLevel))
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.AggregationLevelOpt has unexpected type %T", x)
+	}
+	// encrypted_opt
+	switch x := m.EncryptedOpt.(type) {
+	case *VolumeSpecUpdate_Encrypted:
+		t := uint64(0)
+		if x.Encrypted {
+			t = 1
+		}
+		b.EncodeVarint(14<<3 | proto.WireVarint)
+		b.EncodeVarint(t)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.EncryptedOpt has unexpected type %T", x)
+	}
+	// passphrase_opt
+	switch x := m.PassphraseOpt.(type) {
+	case *VolumeSpecUpdate_Passphrase:
+		b.EncodeVarint(15<<3 | proto.WireBytes)
+		b.EncodeStringBytes(x.Passphrase)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.PassphraseOpt has unexpected type %T", x)
+	}
+	// snapshot_schedule_opt
+	switch x := m.SnapshotScheduleOpt.(type) {
+	case *VolumeSpecUpdate_SnapshotSchedule:
+		b.EncodeVarint(16<<3 | proto.WireBytes)
+		b.EncodeStringBytes(x.SnapshotSchedule)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.SnapshotScheduleOpt has unexpected type %T", x)
+	}
+	// scale_opt
+	switch x := m.ScaleOpt.(type) {
+	case *VolumeSpecUpdate_Scale:
+		b.EncodeVarint(17<<3 | proto.WireVarint)
+		b.EncodeVarint(uint64(x.Scale))
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.ScaleOpt has unexpected type %T", x)
+	}
+	// sticky_opt
+	switch x := m.StickyOpt.(type) {
+	case *VolumeSpecUpdate_Sticky:
+		t := uint64(0)
+		if x.Sticky {
+			t = 1
+		}
+		b.EncodeVarint(18<<3 | proto.WireVarint)
+		b.EncodeVarint(t)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.StickyOpt has unexpected type %T", x)
+	}
+	// group_opt
+	switch x := m.GroupOpt.(type) {
+	case *VolumeSpecUpdate_Group:
+		b.EncodeVarint(19<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.Group); err != nil {
+			return err
+		}
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.GroupOpt has unexpected type %T", x)
+	}
+	// group_enforced_opt
+	switch x := m.GroupEnforcedOpt.(type) {
+	case *VolumeSpecUpdate_GroupEnforced:
+		t := uint64(0)
+		if x.GroupEnforced {
+			t = 1
+		}
+		b.EncodeVarint(20<<3 | proto.WireVarint)
+		b.EncodeVarint(t)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.GroupEnforcedOpt has unexpected type %T", x)
+	}
+	// compressed_opt
+	switch x := m.CompressedOpt.(type) {
+	case *VolumeSpecUpdate_Compressed:
+		t := uint64(0)
+		if x.Compressed {
+			t = 1
+		}
+		b.EncodeVarint(21<<3 | proto.WireVarint)
+		b.EncodeVarint(t)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.CompressedOpt has unexpected type %T", x)
+	}
+	// cascaded_opt
+	switch x := m.CascadedOpt.(type) {
+	case *VolumeSpecUpdate_Cascaded:
+		t := uint64(0)
+		if x.Cascaded {
+			t = 1
+		}
+		b.EncodeVarint(22<<3 | proto.WireVarint)
+		b.EncodeVarint(t)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.CascadedOpt has unexpected type %T", x)
+	}
+	// journal_opt
+	switch x := m.JournalOpt.(type) {
+	case *VolumeSpecUpdate_Journal:
+		t := uint64(0)
+		if x.Journal {
+			t = 1
+		}
+		b.EncodeVarint(23<<3 | proto.WireVarint)
+		b.EncodeVarint(t)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.JournalOpt has unexpected type %T", x)
+	}
+	// sharedv4_opt
+	switch x := m.Sharedv4Opt.(type) {
+	case *VolumeSpecUpdate_Sharedv4:
+		t := uint64(0)
+		if x.Sharedv4 {
+			t = 1
+		}
+		b.EncodeVarint(24<<3 | proto.WireVarint)
+		b.EncodeVarint(t)
+	case nil:
+	default:
+		return fmt.Errorf("VolumeSpecUpdate.Sharedv4Opt has unexpected type %T", x)
+	}
+	return nil
+}
+
+func _VolumeSpecUpdate_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*VolumeSpecUpdate)
+	switch tag {
+	case 1: // ephemeral_opt.ephemeral
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.EphemeralOpt = &VolumeSpecUpdate_Ephemeral{x != 0}
+		return true, err
+	case 2: // size_opt.size
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.SizeOpt = &VolumeSpecUpdate_Size{x}
+		return true, err
+	case 3: // format_opt.format
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.FormatOpt = &VolumeSpecUpdate_Format{FSType(x)}
+		return true, err
+	case 4: // block_size_opt.block_size
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.BlockSizeOpt = &VolumeSpecUpdate_BlockSize{int64(x)}
+		return true, err
+	case 5: // ha_level_opt.ha_level
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.HaLevelOpt = &VolumeSpecUpdate_HaLevel{int64(x)}
+		return true, err
+	case 6: // cos_opt.cos
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.CosOpt = &VolumeSpecUpdate_Cos{CosType(x)}
+		return true, err
+	case 7: // io_profile_opt.io_profile
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.IoProfileOpt = &VolumeSpecUpdate_IoProfile{IoProfile(x)}
+		return true, err
+	case 8: // dedupe_opt.dedupe
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.DedupeOpt = &VolumeSpecUpdate_Dedupe{x != 0}
+		return true, err
+	case 9: // snapshot_interval_opt.snapshot_interval
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.SnapshotIntervalOpt = &VolumeSpecUpdate_SnapshotInterval{uint32(x)}
+		return true, err
+	case 11: // shared_opt.shared
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.SharedOpt = &VolumeSpecUpdate_Shared{x != 0}
+		return true, err
+	case 13: // aggregation_level_opt.aggregation_level
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.AggregationLevelOpt = &VolumeSpecUpdate_AggregationLevel{uint32(x)}
+		return true, err
+	case 14: // encrypted_opt.encrypted
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.EncryptedOpt = &VolumeSpecUpdate_Encrypted{x != 0}
+		return true, err
+	case 15: // passphrase_opt.passphrase
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeStringBytes()
+		m.PassphraseOpt = &VolumeSpecUpdate_Passphrase{x}
+		return true, err
+	case 16: // snapshot_schedule_opt.snapshot_schedule
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeStringBytes()
+		m.SnapshotScheduleOpt = &VolumeSpecUpdate_SnapshotSchedule{x}
+		return true, err
+	case 17: // scale_opt.scale
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.ScaleOpt = &VolumeSpecUpdate_Scale{uint32(x)}
+		return true, err
+	case 18: // sticky_opt.sticky
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.StickyOpt = &VolumeSpecUpdate_Sticky{x != 0}
+		return true, err
+	case 19: // group_opt.group
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(Group)
+		err := b.DecodeMessage(msg)
+		m.GroupOpt = &VolumeSpecUpdate_Group{msg}
+		return true, err
+	case 20: // group_enforced_opt.group_enforced
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.GroupEnforcedOpt = &VolumeSpecUpdate_GroupEnforced{x != 0}
+		return true, err
+	case 21: // compressed_opt.compressed
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.CompressedOpt = &VolumeSpecUpdate_Compressed{x != 0}
+		return true, err
+	case 22: // cascaded_opt.cascaded
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.CascadedOpt = &VolumeSpecUpdate_Cascaded{x != 0}
+		return true, err
+	case 23: // journal_opt.journal
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.JournalOpt = &VolumeSpecUpdate_Journal{x != 0}
+		return true, err
+	case 24: // sharedv4_opt.sharedv4
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.Sharedv4Opt = &VolumeSpecUpdate_Sharedv4{x != 0}
+		return true, err
+	default:
+		return false, nil
+	}
+}
+
+func _VolumeSpecUpdate_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*VolumeSpecUpdate)
+	// ephemeral_opt
+	switch x := m.EphemeralOpt.(type) {
+	case *VolumeSpecUpdate_Ephemeral:
+		n += 1 // tag and wire
+		n += 1
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// size_opt
+	switch x := m.SizeOpt.(type) {
+	case *VolumeSpecUpdate_Size:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(x.Size))
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// format_opt
+	switch x := m.FormatOpt.(type) {
+	case *VolumeSpecUpdate_Format:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(x.Format))
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// block_size_opt
+	switch x := m.BlockSizeOpt.(type) {
+	case *VolumeSpecUpdate_BlockSize:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(x.BlockSize))
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// ha_level_opt
+	switch x := m.HaLevelOpt.(type) {
+	case *VolumeSpecUpdate_HaLevel:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(x.HaLevel))
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// cos_opt
+	switch x := m.CosOpt.(type) {
+	case *VolumeSpecUpdate_Cos:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(x.Cos))
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// io_profile_opt
+	switch x := m.IoProfileOpt.(type) {
+	case *VolumeSpecUpdate_IoProfile:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(x.IoProfile))
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// dedupe_opt
+	switch x := m.DedupeOpt.(type) {
+	case *VolumeSpecUpdate_Dedupe:
+		n += 1 // tag and wire
+		n += 1
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// snapshot_interval_opt
+	switch x := m.SnapshotIntervalOpt.(type) {
+	case *VolumeSpecUpdate_SnapshotInterval:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(x.SnapshotInterval))
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// shared_opt
+	switch x := m.SharedOpt.(type) {
+	case *VolumeSpecUpdate_Shared:
+		n += 1 // tag and wire
+		n += 1
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// aggregation_level_opt
+	switch x := m.AggregationLevelOpt.(type) {
+	case *VolumeSpecUpdate_AggregationLevel:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(x.AggregationLevel))
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// encrypted_opt
+	switch x := m.EncryptedOpt.(type) {
+	case *VolumeSpecUpdate_Encrypted:
+		n += 1 // tag and wire
+		n += 1
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// passphrase_opt
+	switch x := m.PassphraseOpt.(type) {
+	case *VolumeSpecUpdate_Passphrase:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Passphrase)))
+		n += len(x.Passphrase)
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// snapshot_schedule_opt
+	switch x := m.SnapshotScheduleOpt.(type) {
+	case *VolumeSpecUpdate_SnapshotSchedule:
+		n += 2 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.SnapshotSchedule)))
+		n += len(x.SnapshotSchedule)
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// scale_opt
+	switch x := m.ScaleOpt.(type) {
+	case *VolumeSpecUpdate_Scale:
+		n += 2 // tag and wire
+		n += proto.SizeVarint(uint64(x.Scale))
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// sticky_opt
+	switch x := m.StickyOpt.(type) {
+	case *VolumeSpecUpdate_Sticky:
+		n += 2 // tag and wire
+		n += 1
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// group_opt
+	switch x := m.GroupOpt.(type) {
+	case *VolumeSpecUpdate_Group:
+		s := proto.Size(x.Group)
+		n += 2 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// group_enforced_opt
+	switch x := m.GroupEnforcedOpt.(type) {
+	case *VolumeSpecUpdate_GroupEnforced:
+		n += 2 // tag and wire
+		n += 1
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// compressed_opt
+	switch x := m.CompressedOpt.(type) {
+	case *VolumeSpecUpdate_Compressed:
+		n += 2 // tag and wire
+		n += 1
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// cascaded_opt
+	switch x := m.CascadedOpt.(type) {
+	case *VolumeSpecUpdate_Cascaded:
+		n += 2 // tag and wire
+		n += 1
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// journal_opt
+	switch x := m.JournalOpt.(type) {
+	case *VolumeSpecUpdate_Journal:
+		n += 2 // tag and wire
+		n += 1
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	// sharedv4_opt
+	switch x := m.Sharedv4Opt.(type) {
+	case *VolumeSpecUpdate_Sharedv4:
+		n += 2 // tag and wire
+		n += 1
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	return n
+}
+
+// ReplicaSet set of machine IDs (nodes) to which part of this volume is erasure
+// coded - for clustered storage arrays
+// swagger:model
+type ReplicaSet struct {
+	Nodes                []string `protobuf:"bytes,1,rep,name=nodes" json:"nodes,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ReplicaSet) Reset()         { *m = ReplicaSet{} }
+func (m *ReplicaSet) String() string { return proto.CompactTextString(m) }
+func (*ReplicaSet) ProtoMessage()    {}
+func (*ReplicaSet) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0ad7204fc81c0401, []int{7}
+}
+func (m *ReplicaSet) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ReplicaSet.Unmarshal(m, b)
+}
+func (m *ReplicaSet) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ReplicaSet.Marshal(b, m, deterministic)
+}
+func (dst *ReplicaSet) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ReplicaSet.Merge(dst, src)
+}
+func (m *ReplicaSet) XXX_Size() int {
+	return xxx_messageInfo_ReplicaSet.Size(m)
+}
+func (m *ReplicaSet) XXX_DiscardUnknown() {
+	xxx_messageInfo_ReplicaSet.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ReplicaSet proto.InternalMessageInfo
+
+func (m *ReplicaSet) GetNodes() []string {
+	if m != nil {
+		return m.Nodes
+	}
+	return nil
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
+// RuntimeStateMap is a list of name value mapping of driver specific runtime
+// information.
+// swagger:model
+type RuntimeStateMap struct {
+	RuntimeState         map[string]string `protobuf:"bytes,1,rep,name=runtime_state,json=runtimeState" json:"runtime_state,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *RuntimeStateMap) Reset()         { *m = RuntimeStateMap{} }
+func (m *RuntimeStateMap) String() string { return proto.CompactTextString(m) }
+func (*RuntimeStateMap) ProtoMessage()    {}
+func (*RuntimeStateMap) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0ad7204fc81c0401, []int{8}
+}
+func (m *RuntimeStateMap) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RuntimeStateMap.Unmarshal(m, b)
+}
+func (m *RuntimeStateMap) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RuntimeStateMap.Marshal(b, m, deterministic)
+}
+func (dst *RuntimeStateMap) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RuntimeStateMap.Merge(dst, src)
+}
+func (m *RuntimeStateMap) XXX_Size() int {
+	return xxx_messageInfo_RuntimeStateMap.Size(m)
+}
+func (m *RuntimeStateMap) XXX_DiscardUnknown() {
+	xxx_messageInfo_RuntimeStateMap.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_RuntimeStateMap proto.InternalMessageInfo
+=======
+func (m *Alert) GetCount() int64 {
+	if m != nil {
+		return m.Count
+	}
+	return 0
+}
+
+func (m *Alert) GetFirstSeen() *timestamp.Timestamp {
+	if m != nil {
+		return m.FirstSeen
+	}
+	return nil
+}
+
+// Alerts is an array of Alert objects
+// swagger:model
+type Alerts struct {
+	Alert                []*Alert `protobuf:"bytes,1,rep,name=alert" json:"alert,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Alerts) Reset()         { *m = Alerts{} }
+func (m *Alerts) String() string { return proto.CompactTextString(m) }
+func (*Alerts) ProtoMessage()    {}
+func (*Alerts) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{12}
+}
+func (m *Alerts) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Alerts.Unmarshal(m, b)
+}
+func (m *Alerts) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Alerts.Marshal(b, m, deterministic)
+}
+func (dst *Alerts) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Alerts.Merge(dst, src)
+}
+func (m *Alerts) XXX_Size() int {
+	return xxx_messageInfo_Alerts.Size(m)
+}
+func (m *Alerts) XXX_DiscardUnknown() {
+	xxx_messageInfo_Alerts.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Alerts proto.InternalMessageInfo
+>>>>>>> Govendor update
+
+func (m *RuntimeStateMap) GetRuntimeState() map[string]string {
+	if m != nil {
+		return m.RuntimeState
+	}
+	return nil
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
+// Volume represents an abstract storage volume.
+// Volume represents an abstract storage volume.
+=======
+// ObjectstoreInfo is a structure that has current objectstore info
+// swagger:model
+type ObjectstoreInfo struct {
+	// UUID of objectstore
+	Uuid string `protobuf:"bytes,1,opt,name=uuid" json:"uuid,omitempty"`
+	// VolumeID of volume used by object store
+	VolumeId string `protobuf:"bytes,2,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	// Enable/Disable created objectstore
+	Enabled bool `protobuf:"varint,3,opt,name=enabled" json:"enabled,omitempty"`
+	// Status of objectstore running/failed
+	Status string `protobuf:"bytes,4,opt,name=status" json:"status,omitempty"`
+	// Action being taken on this objectstore
+	Action int64 `protobuf:"varint,5,opt,name=action" json:"action,omitempty"`
+	// AccessKey for login into objectstore
+	AccessKey string `protobuf:"bytes,6,opt,name=access_key,json=accessKey" json:"access_key,omitempty"`
+	// SecretKey for login into objectstore
+	SecretKey string `protobuf:"bytes,7,opt,name=secret_key,json=secretKey" json:"secret_key,omitempty"`
+	// Endpoints for accessing objectstore
+	Endpoints []string `protobuf:"bytes,8,rep,name=endpoints" json:"endpoints,omitempty"`
+	// CurrentEndpoint on which objectstore server is accessible
+	CurrentEndpoint string `protobuf:"bytes,9,opt,name=current_endpoint,json=currentEndpoint" json:"current_endpoint,omitempty"`
+	// AccessPort is objectstore server port
+	AccessPort int64 `protobuf:"varint,10,opt,name=access_port,json=accessPort" json:"access_port,omitempty"`
+	// Region for this objectstore
+	Region               string   `protobuf:"bytes,11,opt,name=region" json:"region,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ObjectstoreInfo) Reset()         { *m = ObjectstoreInfo{} }
+func (m *ObjectstoreInfo) String() string { return proto.CompactTextString(m) }
+func (*ObjectstoreInfo) ProtoMessage()    {}
+func (*ObjectstoreInfo) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{13}
+}
+func (m *ObjectstoreInfo) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ObjectstoreInfo.Unmarshal(m, b)
+}
+func (m *ObjectstoreInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ObjectstoreInfo.Marshal(b, m, deterministic)
+}
+func (dst *ObjectstoreInfo) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ObjectstoreInfo.Merge(dst, src)
+}
+func (m *ObjectstoreInfo) XXX_Size() int {
+	return xxx_messageInfo_ObjectstoreInfo.Size(m)
+}
+func (m *ObjectstoreInfo) XXX_DiscardUnknown() {
+	xxx_messageInfo_ObjectstoreInfo.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ObjectstoreInfo proto.InternalMessageInfo
+
+func (m *ObjectstoreInfo) GetUuid() string {
+	if m != nil {
+		return m.Uuid
+	}
+	return ""
+}
+
+func (m *ObjectstoreInfo) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+	}
+	return ""
+}
+
+func (m *ObjectstoreInfo) GetEnabled() bool {
+	if m != nil {
+		return m.Enabled
+	}
+	return false
+}
+
+func (m *ObjectstoreInfo) GetStatus() string {
+	if m != nil {
+		return m.Status
+	}
+	return ""
+}
+
+func (m *ObjectstoreInfo) GetAction() int64 {
+	if m != nil {
+		return m.Action
+	}
+	return 0
+}
+
+func (m *ObjectstoreInfo) GetAccessKey() string {
+	if m != nil {
+		return m.AccessKey
+	}
+	return ""
+}
+
+func (m *ObjectstoreInfo) GetSecretKey() string {
+	if m != nil {
+		return m.SecretKey
+	}
+	return ""
+}
+
+func (m *ObjectstoreInfo) GetEndpoints() []string {
+	if m != nil {
+		return m.Endpoints
+	}
+	return nil
+}
+
+func (m *ObjectstoreInfo) GetCurrentEndpoint() string {
+	if m != nil {
+		return m.CurrentEndpoint
+	}
+	return ""
+}
+
+func (m *ObjectstoreInfo) GetAccessPort() int64 {
+	if m != nil {
+		return m.AccessPort
+	}
+	return 0
+}
+
+func (m *ObjectstoreInfo) GetRegion() string {
+	if m != nil {
+		return m.Region
+	}
+	return ""
+}
+
+// VolumeCreateRequest is a structure that has the locator, source and spec
+// to create a volume
+>>>>>>> Govendor update
+// swagger:model
+type Volume struct {
+	// Self referential volume ID.
+	Id string `protobuf:"bytes,1,opt,name=id" json:"id,omitempty"`
+	// Source specified seed data for the volume.
+	Source *Source `protobuf:"bytes,2,opt,name=source" json:"source,omitempty"`
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
+	// Group volumes in the same group have the same group id.
+	Group *Group `protobuf:"bytes,3,opt,name=group" json:"group,omitempty"`
+	// Readonly is true if this volume is to be mounted with readonly access.
+	Readonly bool `protobuf:"varint,4,opt,name=readonly" json:"readonly,omitempty"`
+	// User specified locator
+	Locator *VolumeLocator `protobuf:"bytes,5,opt,name=locator" json:"locator,omitempty"`
+	// Volume creation time
+	Ctime *timestamp.Timestamp `protobuf:"bytes,6,opt,name=ctime" json:"ctime,omitempty"`
+	// User specified VolumeSpec
+	Spec *VolumeSpec `protobuf:"bytes,7,opt,name=spec" json:"spec,omitempty"`
+	// Usage is bytes consumed by vtheis volume.
+	Usage uint64 `protobuf:"varint,8,opt,name=usage" json:"usage,omitempty"`
+	// LastScan is the time when an integrity check was run.
+	LastScan *timestamp.Timestamp `protobuf:"bytes,9,opt,name=last_scan,json=lastScan" json:"last_scan,omitempty"`
+	// Format specifies the filesytem for this volume.
+	Format FSType `protobuf:"varint,10,opt,name=format,enum=openstorage.api.FSType" json:"format,omitempty"`
+	// Status is the availability status of this volume.
+	Status VolumeStatus `protobuf:"varint,11,opt,name=status,enum=openstorage.api.VolumeStatus" json:"status,omitempty"`
+	// State is the current runtime state of this volume.
+	State VolumeState `protobuf:"varint,12,opt,name=state,enum=openstorage.api.VolumeState" json:"state,omitempty"`
+	// AttachedOn is the node instance identifier for clustered systems.
+	AttachedOn string `protobuf:"bytes,13,opt,name=attached_on,json=attachedOn" json:"attached_on,omitempty"`
+	// AttachedState shows whether the device is attached for internal or external use.
+	AttachedState AttachState `protobuf:"varint,14,opt,name=attached_state,json=attachedState,enum=openstorage.api.AttachState" json:"attached_state,omitempty"`
+	// DevicePath is the device exported by block device implementations.
+	DevicePath string `protobuf:"bytes,15,opt,name=device_path,json=devicePath" json:"device_path,omitempty"`
+	// SecureDevicePath is the device path for an encrypted volume.
+	SecureDevicePath string `protobuf:"bytes,16,opt,name=secure_device_path,json=secureDevicePath" json:"secure_device_path,omitempty"`
+	// AttachPath is the mounted path in the host namespace.
+	AttachPath []string `protobuf:"bytes,17,rep,name=attach_path,json=attachPath" json:"attach_path,omitempty"`
+	// AttachInfo is a list of name value mappings that provides attach information.
+	AttachInfo map[string]string `protobuf:"bytes,18,rep,name=attach_info,json=attachInfo" json:"attach_info,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	// ReplicatSets storage for this volumefor clustered storage arrays.
+	ReplicaSets []*ReplicaSet `protobuf:"bytes,19,rep,name=replica_sets,json=replicaSets" json:"replica_sets,omitempty"`
+	// RuntimeState is a lst of name value mapping of driver specific runtime
+	// information.
+	RuntimeState []*RuntimeStateMap `protobuf:"bytes,20,rep,name=runtime_state,json=runtimeState" json:"runtime_state,omitempty"`
+	// Error is the Last recorded error.
+	Error string `protobuf:"bytes,21,opt,name=error" json:"error,omitempty"`
+	// VolumeConsumers are entities that consume this volume
+	VolumeConsumers []*VolumeConsumer `protobuf:"bytes,22,rep,name=volume_consumers,json=volumeConsumers" json:"volume_consumers,omitempty"`
+	// FsResizeRequired if an FS resize is required on the volume.
+	FsResizeRequired     bool     `protobuf:"varint,23,opt,name=fs_resize_required,json=fsResizeRequired" json:"fs_resize_required,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Volume) Reset()         { *m = Volume{} }
+func (m *Volume) String() string { return proto.CompactTextString(m) }
+func (*Volume) ProtoMessage()    {}
+func (*Volume) Descriptor() ([]byte, []int) {
 	return fileDescriptor_api_0ad7204fc81c0401, []int{9}
 }
 func (m *Volume) XXX_Unmarshal(b []byte) error {
@@ -2961,6 +4735,38 @@ func (m *Volume) XXX_DiscardUnknown() {
 }
 
 var xxx_messageInfo_Volume proto.InternalMessageInfo
+=======
+	// The storage spec for the volume
+	Spec                 *VolumeSpec `protobuf:"bytes,3,opt,name=spec" json:"spec,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
+	XXX_unrecognized     []byte      `json:"-"`
+	XXX_sizecache        int32       `json:"-"`
+}
+
+func (m *VolumeCreateRequest) Reset()         { *m = VolumeCreateRequest{} }
+func (m *VolumeCreateRequest) String() string { return proto.CompactTextString(m) }
+func (*VolumeCreateRequest) ProtoMessage()    {}
+func (*VolumeCreateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{14}
+}
+func (m *VolumeCreateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_VolumeCreateRequest.Unmarshal(m, b)
+}
+func (m *VolumeCreateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_VolumeCreateRequest.Marshal(b, m, deterministic)
+}
+func (dst *VolumeCreateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_VolumeCreateRequest.Merge(dst, src)
+}
+func (m *VolumeCreateRequest) XXX_Size() int {
+	return xxx_messageInfo_VolumeCreateRequest.Size(m)
+}
+func (m *VolumeCreateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_VolumeCreateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_VolumeCreateRequest proto.InternalMessageInfo
+>>>>>>> Govendor update
 
 func (m *Volume) GetId() string {
 	if m != nil {
@@ -2983,6 +4789,7 @@ func (m *Volume) GetGroup() *Group {
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *Volume) GetReadonly() bool {
 	if m != nil {
 		return m.Readonly
@@ -2991,12 +4798,53 @@ func (m *Volume) GetReadonly() bool {
 }
 
 func (m *Volume) GetLocator() *VolumeLocator {
+=======
+// VolumeResponse is a structure that wraps an error.
+// swagger:response volumeResponse
+type VolumeResponse struct {
+	// Error message
+	//
+	// in: body
+	// Required: true
+	Error                string   `protobuf:"bytes,1,opt,name=error" json:"error,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *VolumeResponse) Reset()         { *m = VolumeResponse{} }
+func (m *VolumeResponse) String() string { return proto.CompactTextString(m) }
+func (*VolumeResponse) ProtoMessage()    {}
+func (*VolumeResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{15}
+}
+func (m *VolumeResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_VolumeResponse.Unmarshal(m, b)
+}
+func (m *VolumeResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_VolumeResponse.Marshal(b, m, deterministic)
+}
+func (dst *VolumeResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_VolumeResponse.Merge(dst, src)
+}
+func (m *VolumeResponse) XXX_Size() int {
+	return xxx_messageInfo_VolumeResponse.Size(m)
+}
+func (m *VolumeResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_VolumeResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_VolumeResponse proto.InternalMessageInfo
+
+func (m *VolumeResponse) GetError() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.Locator
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *Volume) GetCtime() *timestamp.Timestamp {
 	if m != nil {
 		return m.Ctime
@@ -3010,6 +4858,49 @@ func (m *Volume) GetSpec() *VolumeSpec {
 	}
 	return nil
 }
+=======
+// VolumeCreateResponse
+// swagger:response volumeCreateResponse
+type VolumeCreateResponse struct {
+	// ID of the newly created volume
+	//
+	// in: body
+	// Required: true
+	Id string `protobuf:"bytes,1,opt,name=id" json:"id,omitempty"`
+	// Volume Response
+	//
+	// in: body
+	// Required: true
+	VolumeResponse       *VolumeResponse `protobuf:"bytes,2,opt,name=volume_response,json=volumeResponse" json:"volume_response,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
+}
+
+func (m *VolumeCreateResponse) Reset()         { *m = VolumeCreateResponse{} }
+func (m *VolumeCreateResponse) String() string { return proto.CompactTextString(m) }
+func (*VolumeCreateResponse) ProtoMessage()    {}
+func (*VolumeCreateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{16}
+}
+func (m *VolumeCreateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_VolumeCreateResponse.Unmarshal(m, b)
+}
+func (m *VolumeCreateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_VolumeCreateResponse.Marshal(b, m, deterministic)
+}
+func (dst *VolumeCreateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_VolumeCreateResponse.Merge(dst, src)
+}
+func (m *VolumeCreateResponse) XXX_Size() int {
+	return xxx_messageInfo_VolumeCreateResponse.Size(m)
+}
+func (m *VolumeCreateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_VolumeCreateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_VolumeCreateResponse proto.InternalMessageInfo
+>>>>>>> Govendor update
 
 func (m *Volume) GetUsage() uint64 {
 	if m != nil {
@@ -3025,6 +4916,7 @@ func (m *Volume) GetLastScan() *timestamp.Timestamp {
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *Volume) GetFormat() FSType {
 	if m != nil {
 		return m.Format
@@ -3033,6 +4925,49 @@ func (m *Volume) GetFormat() FSType {
 }
 
 func (m *Volume) GetStatus() VolumeStatus {
+=======
+// VolumeStateAction specifies desired actions.
+// swagger:model
+type VolumeStateAction struct {
+	// Attach or Detach volume
+	Attach VolumeActionParam `protobuf:"varint,1,opt,name=attach,enum=openstorage.api.VolumeActionParam" json:"attach,omitempty"`
+	// Mount or unmount volume
+	Mount VolumeActionParam `protobuf:"varint,2,opt,name=mount,enum=openstorage.api.VolumeActionParam" json:"mount,omitempty"`
+	// MountPath Path where the device is mounted
+	MountPath string `protobuf:"bytes,3,opt,name=mount_path,json=mountPath" json:"mount_path,omitempty"`
+	// DevicePath Path returned in attach
+	DevicePath           string   `protobuf:"bytes,4,opt,name=device_path,json=devicePath" json:"device_path,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *VolumeStateAction) Reset()         { *m = VolumeStateAction{} }
+func (m *VolumeStateAction) String() string { return proto.CompactTextString(m) }
+func (*VolumeStateAction) ProtoMessage()    {}
+func (*VolumeStateAction) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{17}
+}
+func (m *VolumeStateAction) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_VolumeStateAction.Unmarshal(m, b)
+}
+func (m *VolumeStateAction) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_VolumeStateAction.Marshal(b, m, deterministic)
+}
+func (dst *VolumeStateAction) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_VolumeStateAction.Merge(dst, src)
+}
+func (m *VolumeStateAction) XXX_Size() int {
+	return xxx_messageInfo_VolumeStateAction.Size(m)
+}
+func (m *VolumeStateAction) XXX_DiscardUnknown() {
+	xxx_messageInfo_VolumeStateAction.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_VolumeStateAction proto.InternalMessageInfo
+
+func (m *VolumeStateAction) GetAttach() VolumeActionParam {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.Status
 	}
@@ -3067,6 +5002,7 @@ func (m *Volume) GetDevicePath() string {
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *Volume) GetSecureDevicePath() string {
 	if m != nil {
 		return m.SecureDevicePath
@@ -3075,6 +5011,50 @@ func (m *Volume) GetSecureDevicePath() string {
 }
 
 func (m *Volume) GetAttachPath() []string {
+=======
+// VolumeSet specifies a request to update a volume.
+// swagger:model
+type VolumeSetRequest struct {
+	// User specified volume name and labels
+	Locator *VolumeLocator `protobuf:"bytes,1,opt,name=locator" json:"locator,omitempty"`
+	// The storage spec for the volume
+	Spec *VolumeSpec `protobuf:"bytes,2,opt,name=spec" json:"spec,omitempty"`
+	// State modification on this volume.
+	Action *VolumeStateAction `protobuf:"bytes,3,opt,name=action" json:"action,omitempty"`
+	// additional options
+	// required for the Set operation.
+	Options              map[string]string `protobuf:"bytes,4,rep,name=options" json:"options,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *VolumeSetRequest) Reset()         { *m = VolumeSetRequest{} }
+func (m *VolumeSetRequest) String() string { return proto.CompactTextString(m) }
+func (*VolumeSetRequest) ProtoMessage()    {}
+func (*VolumeSetRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{18}
+}
+func (m *VolumeSetRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_VolumeSetRequest.Unmarshal(m, b)
+}
+func (m *VolumeSetRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_VolumeSetRequest.Marshal(b, m, deterministic)
+}
+func (dst *VolumeSetRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_VolumeSetRequest.Merge(dst, src)
+}
+func (m *VolumeSetRequest) XXX_Size() int {
+	return xxx_messageInfo_VolumeSetRequest.Size(m)
+}
+func (m *VolumeSetRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_VolumeSetRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_VolumeSetRequest proto.InternalMessageInfo
+
+func (m *VolumeSetRequest) GetLocator() *VolumeLocator {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.AttachPath
 	}
@@ -3102,6 +5082,7 @@ func (m *Volume) GetRuntimeState() []*RuntimeStateMap {
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *Volume) GetError() string {
 	if m != nil {
 		return m.Error
@@ -3110,6 +5091,51 @@ func (m *Volume) GetError() string {
 }
 
 func (m *Volume) GetVolumeConsumers() []*VolumeConsumer {
+=======
+// VolumeSetResponse
+// swagger:response volumeSetResponse
+type VolumeSetResponse struct {
+	// Volume
+	//
+	// in: body
+	// Required: true
+	Volume *Volume `protobuf:"bytes,1,opt,name=volume" json:"volume,omitempty"`
+	// VolumeResponse
+	//
+	// in: body
+	// Required: true
+	VolumeResponse       *VolumeResponse `protobuf:"bytes,2,opt,name=volume_response,json=volumeResponse" json:"volume_response,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
+}
+
+func (m *VolumeSetResponse) Reset()         { *m = VolumeSetResponse{} }
+func (m *VolumeSetResponse) String() string { return proto.CompactTextString(m) }
+func (*VolumeSetResponse) ProtoMessage()    {}
+func (*VolumeSetResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{19}
+}
+func (m *VolumeSetResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_VolumeSetResponse.Unmarshal(m, b)
+}
+func (m *VolumeSetResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_VolumeSetResponse.Marshal(b, m, deterministic)
+}
+func (dst *VolumeSetResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_VolumeSetResponse.Merge(dst, src)
+}
+func (m *VolumeSetResponse) XXX_Size() int {
+	return xxx_messageInfo_VolumeSetResponse.Size(m)
+}
+func (m *VolumeSetResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_VolumeSetResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_VolumeSetResponse proto.InternalMessageInfo
+
+func (m *VolumeSetResponse) GetVolume() *Volume {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.VolumeConsumers
 	}
@@ -3123,6 +5149,7 @@ func (m *Volume) GetFsResizeRequired() bool {
 	return false
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Stats is a structure that represents last collected stats for a volume
 type Stats struct {
 	// Reads completed successfully
@@ -3173,6 +5200,43 @@ func (m *Stats) XXX_DiscardUnknown() {
 }
 
 var xxx_messageInfo_Stats proto.InternalMessageInfo
+=======
+// SnapCreateRequest specifies a request to create a snapshot of given volume.
+// swagger:parameters snapVolume
+type SnapCreateRequest struct {
+	// volume id
+	Id                   string         `protobuf:"bytes,1,opt,name=id" json:"id,omitempty"`
+	Locator              *VolumeLocator `protobuf:"bytes,2,opt,name=locator" json:"locator,omitempty"`
+	Readonly             bool           `protobuf:"varint,3,opt,name=readonly" json:"readonly,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
+	XXX_unrecognized     []byte         `json:"-"`
+	XXX_sizecache        int32          `json:"-"`
+}
+
+func (m *SnapCreateRequest) Reset()         { *m = SnapCreateRequest{} }
+func (m *SnapCreateRequest) String() string { return proto.CompactTextString(m) }
+func (*SnapCreateRequest) ProtoMessage()    {}
+func (*SnapCreateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{20}
+}
+func (m *SnapCreateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SnapCreateRequest.Unmarshal(m, b)
+}
+func (m *SnapCreateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SnapCreateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SnapCreateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SnapCreateRequest.Merge(dst, src)
+}
+func (m *SnapCreateRequest) XXX_Size() int {
+	return xxx_messageInfo_SnapCreateRequest.Size(m)
+}
+func (m *SnapCreateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SnapCreateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SnapCreateRequest proto.InternalMessageInfo
+>>>>>>> Govendor update
 
 func (m *Stats) GetReads() uint64 {
 	if m != nil {
@@ -3195,6 +5259,7 @@ func (m *Stats) GetReadBytes() uint64 {
 	return 0
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *Stats) GetWrites() uint64 {
 	if m != nil {
 		return m.Writes
@@ -3203,12 +5268,53 @@ func (m *Stats) GetWrites() uint64 {
 }
 
 func (m *Stats) GetWriteMs() uint64 {
+=======
+// SnapCreateRequest specifies a response that get's returned when creating a snapshot.
+// swagger:response snapCreateResponse
+type SnapCreateResponse struct {
+	// VolumeCreateResponse
+	//
+	// in: body
+	// Required: true
+	VolumeCreateResponse *VolumeCreateResponse `protobuf:"bytes,1,opt,name=volume_create_response,json=volumeCreateResponse" json:"volume_create_response,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
+	XXX_unrecognized     []byte                `json:"-"`
+	XXX_sizecache        int32                 `json:"-"`
+}
+
+func (m *SnapCreateResponse) Reset()         { *m = SnapCreateResponse{} }
+func (m *SnapCreateResponse) String() string { return proto.CompactTextString(m) }
+func (*SnapCreateResponse) ProtoMessage()    {}
+func (*SnapCreateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{21}
+}
+func (m *SnapCreateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SnapCreateResponse.Unmarshal(m, b)
+}
+func (m *SnapCreateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SnapCreateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SnapCreateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SnapCreateResponse.Merge(dst, src)
+}
+func (m *SnapCreateResponse) XXX_Size() int {
+	return xxx_messageInfo_SnapCreateResponse.Size(m)
+}
+func (m *SnapCreateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SnapCreateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SnapCreateResponse proto.InternalMessageInfo
+
+func (m *SnapCreateResponse) GetVolumeCreateResponse() *VolumeCreateResponse {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.WriteMs
 	}
 	return 0
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *Stats) GetWriteBytes() uint64 {
 	if m != nil {
 		return m.WriteBytes
@@ -3222,6 +5328,42 @@ func (m *Stats) GetIoProgress() uint64 {
 	}
 	return 0
 }
+=======
+// VolumeInfo
+// swagger:model
+type VolumeInfo struct {
+	VolumeId             string      `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	Path                 string      `protobuf:"bytes,2,opt,name=path" json:"path,omitempty"`
+	Storage              *VolumeSpec `protobuf:"bytes,3,opt,name=storage" json:"storage,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
+	XXX_unrecognized     []byte      `json:"-"`
+	XXX_sizecache        int32       `json:"-"`
+}
+
+func (m *VolumeInfo) Reset()         { *m = VolumeInfo{} }
+func (m *VolumeInfo) String() string { return proto.CompactTextString(m) }
+func (*VolumeInfo) ProtoMessage()    {}
+func (*VolumeInfo) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{22}
+}
+func (m *VolumeInfo) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_VolumeInfo.Unmarshal(m, b)
+}
+func (m *VolumeInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_VolumeInfo.Marshal(b, m, deterministic)
+}
+func (dst *VolumeInfo) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_VolumeInfo.Merge(dst, src)
+}
+func (m *VolumeInfo) XXX_Size() int {
+	return xxx_messageInfo_VolumeInfo.Size(m)
+}
+func (m *VolumeInfo) XXX_DiscardUnknown() {
+	xxx_messageInfo_VolumeInfo.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_VolumeInfo proto.InternalMessageInfo
+>>>>>>> Govendor update
 
 func (m *Stats) GetIoMs() uint64 {
 	if m != nil {
@@ -3244,6 +5386,7 @@ func (m *Stats) GetIntervalMs() uint64 {
 	return 0
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Alert is a structure that represents an alert object
 type Alert struct {
 	// Id for Alert
@@ -3298,6 +5441,58 @@ func (m *Alert) XXX_DiscardUnknown() {
 }
 
 var xxx_messageInfo_Alert proto.InternalMessageInfo
+=======
+// VolumeConsumer identifies a consumer for a Volume. An example of a VolumeConsumer
+// would be a Pod in Kubernetes who has mounted the PersistentVolumeClaim for the
+// Volume
+// swagger: model
+type VolumeConsumer struct {
+	// Name is the name of the volume consumer
+	Name string `protobuf:"bytes,1,opt,name=name" json:"name,omitempty"`
+	// Namespace is the namespace of the volume consumer
+	Namespace string `protobuf:"bytes,2,opt,name=namespace" json:"namespace,omitempty"`
+	// Type is the type of the consumer. E.g a Kubernetes pod
+	Type string `protobuf:"bytes,3,opt,name=type" json:"type,omitempty"`
+	// NodeID is the identifier of the node on which the consumer is running. This
+	// identifier would be from the perspective of the container runtime or
+	// orchestrator under which the volume consumer resides. For example, NodeID
+	//  can be name of a minion in Kubernetes.
+	NodeId string `protobuf:"bytes,4,opt,name=node_id,json=nodeId" json:"node_id,omitempty"`
+	// OwnerName is the name of the entity who owns this volume consumer
+	OwnerName string `protobuf:"bytes,5,opt,name=owner_name,json=ownerName" json:"owner_name,omitempty"`
+	// OwnerType is the type of the entity who owns this volume consumer. The type would
+	// be from the perspective of the container runtime or the orchestrator under which
+	// the volume consumer resides. For e.g OwnerType can be a Deployment in Kubernetes.
+	OwnerType            string   `protobuf:"bytes,6,opt,name=owner_type,json=ownerType" json:"owner_type,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *VolumeConsumer) Reset()         { *m = VolumeConsumer{} }
+func (m *VolumeConsumer) String() string { return proto.CompactTextString(m) }
+func (*VolumeConsumer) ProtoMessage()    {}
+func (*VolumeConsumer) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{23}
+}
+func (m *VolumeConsumer) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_VolumeConsumer.Unmarshal(m, b)
+}
+func (m *VolumeConsumer) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_VolumeConsumer.Marshal(b, m, deterministic)
+}
+func (dst *VolumeConsumer) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_VolumeConsumer.Merge(dst, src)
+}
+func (m *VolumeConsumer) XXX_Size() int {
+	return xxx_messageInfo_VolumeConsumer.Size(m)
+}
+func (m *VolumeConsumer) XXX_DiscardUnknown() {
+	xxx_messageInfo_VolumeConsumer.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_VolumeConsumer proto.InternalMessageInfo
+>>>>>>> Govendor update
 
 func (m *Alert) GetId() int64 {
 	if m != nil {
@@ -3341,7 +5536,48 @@ func (m *Alert) GetResourceId() string {
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *Alert) GetResource() ResourceType {
+=======
+// GraphDriverChanges represent a list of changes between the filesystem layers
+// specified by the ID and Parent.  // Parent may be an empty string, in which
+// case there is no parent.
+// Where the Path is the filesystem path within the layered filesystem
+// swagger:model
+type GraphDriverChanges struct {
+	Path                 string                `protobuf:"bytes,1,opt,name=path" json:"path,omitempty"`
+	Kind                 GraphDriverChangeType `protobuf:"varint,2,opt,name=kind,enum=openstorage.api.GraphDriverChangeType" json:"kind,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
+	XXX_unrecognized     []byte                `json:"-"`
+	XXX_sizecache        int32                 `json:"-"`
+}
+
+func (m *GraphDriverChanges) Reset()         { *m = GraphDriverChanges{} }
+func (m *GraphDriverChanges) String() string { return proto.CompactTextString(m) }
+func (*GraphDriverChanges) ProtoMessage()    {}
+func (*GraphDriverChanges) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{24}
+}
+func (m *GraphDriverChanges) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GraphDriverChanges.Unmarshal(m, b)
+}
+func (m *GraphDriverChanges) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GraphDriverChanges.Marshal(b, m, deterministic)
+}
+func (dst *GraphDriverChanges) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GraphDriverChanges.Merge(dst, src)
+}
+func (m *GraphDriverChanges) XXX_Size() int {
+	return xxx_messageInfo_GraphDriverChanges.Size(m)
+}
+func (m *GraphDriverChanges) XXX_DiscardUnknown() {
+	xxx_messageInfo_GraphDriverChanges.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GraphDriverChanges proto.InternalMessageInfo
+
+func (m *GraphDriverChanges) GetPath() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.Resource
 	}
@@ -3355,6 +5591,7 @@ func (m *Alert) GetCleared() bool {
 	return false
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *Alert) GetTtl() uint64 {
 	if m != nil {
 		return m.Ttl
@@ -3363,12 +5600,52 @@ func (m *Alert) GetTtl() uint64 {
 }
 
 func (m *Alert) GetUniqueTag() string {
+=======
+// ClusterResponse specifies a response that gets returned when requesting the cluster
+// swagger:response clusterResponse
+type ClusterResponse struct {
+	// Error code
+	//
+	// in: body
+	Error                string   `protobuf:"bytes,1,opt,name=error" json:"error,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ClusterResponse) Reset()         { *m = ClusterResponse{} }
+func (m *ClusterResponse) String() string { return proto.CompactTextString(m) }
+func (*ClusterResponse) ProtoMessage()    {}
+func (*ClusterResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{25}
+}
+func (m *ClusterResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ClusterResponse.Unmarshal(m, b)
+}
+func (m *ClusterResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ClusterResponse.Marshal(b, m, deterministic)
+}
+func (dst *ClusterResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ClusterResponse.Merge(dst, src)
+}
+func (m *ClusterResponse) XXX_Size() int {
+	return xxx_messageInfo_ClusterResponse.Size(m)
+}
+func (m *ClusterResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_ClusterResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ClusterResponse proto.InternalMessageInfo
+
+func (m *ClusterResponse) GetError() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.UniqueTag
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *Alert) GetCount() int64 {
 	if m != nil {
 		return m.Count
@@ -3377,6 +5654,42 @@ func (m *Alert) GetCount() int64 {
 }
 
 func (m *Alert) GetFirstSeen() *timestamp.Timestamp {
+=======
+// Active Request
+// swagger:model
+type ActiveRequest struct {
+	ReqestKV             map[int64]string `protobuf:"bytes,1,rep,name=ReqestKV" json:"ReqestKV,omitempty" protobuf_key:"varint,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
+	XXX_unrecognized     []byte           `json:"-"`
+	XXX_sizecache        int32            `json:"-"`
+}
+
+func (m *ActiveRequest) Reset()         { *m = ActiveRequest{} }
+func (m *ActiveRequest) String() string { return proto.CompactTextString(m) }
+func (*ActiveRequest) ProtoMessage()    {}
+func (*ActiveRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{26}
+}
+func (m *ActiveRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ActiveRequest.Unmarshal(m, b)
+}
+func (m *ActiveRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ActiveRequest.Marshal(b, m, deterministic)
+}
+func (dst *ActiveRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ActiveRequest.Merge(dst, src)
+}
+func (m *ActiveRequest) XXX_Size() int {
+	return xxx_messageInfo_ActiveRequest.Size(m)
+}
+func (m *ActiveRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_ActiveRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ActiveRequest proto.InternalMessageInfo
+
+func (m *ActiveRequest) GetReqestKV() map[int64]string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.FirstSeen
 	}
@@ -3385,6 +5698,7 @@ func (m *Alert) GetFirstSeen() *timestamp.Timestamp {
 
 // Alerts is an array of Alert objects
 // swagger:model
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 type Alerts struct {
 	Alert                []*Alert `protobuf:"bytes,1,rep,name=alert" json:"alert,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -3415,6 +5729,39 @@ func (m *Alerts) XXX_DiscardUnknown() {
 }
 
 var xxx_messageInfo_Alerts proto.InternalMessageInfo
+=======
+type ActiveRequests struct {
+	RequestCount         int64            `protobuf:"varint,1,opt,name=RequestCount" json:"RequestCount,omitempty"`
+	ActiveRequest        []*ActiveRequest `protobuf:"bytes,2,rep,name=ActiveRequest" json:"ActiveRequest,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
+	XXX_unrecognized     []byte           `json:"-"`
+	XXX_sizecache        int32            `json:"-"`
+}
+
+func (m *ActiveRequests) Reset()         { *m = ActiveRequests{} }
+func (m *ActiveRequests) String() string { return proto.CompactTextString(m) }
+func (*ActiveRequests) ProtoMessage()    {}
+func (*ActiveRequests) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{27}
+}
+func (m *ActiveRequests) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ActiveRequests.Unmarshal(m, b)
+}
+func (m *ActiveRequests) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ActiveRequests.Marshal(b, m, deterministic)
+}
+func (dst *ActiveRequests) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ActiveRequests.Merge(dst, src)
+}
+func (m *ActiveRequests) XXX_Size() int {
+	return xxx_messageInfo_ActiveRequests.Size(m)
+}
+func (m *ActiveRequests) XXX_DiscardUnknown() {
+	xxx_messageInfo_ActiveRequests.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ActiveRequests proto.InternalMessageInfo
+>>>>>>> Govendor update
 
 func (m *Alerts) GetAlert() []*Alert {
 	if m != nil {
@@ -3533,6 +5880,7 @@ func (m *ObjectstoreInfo) GetEndpoints() []string {
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *ObjectstoreInfo) GetCurrentEndpoint() string {
 	if m != nil {
 		return m.CurrentEndpoint
@@ -3546,6 +5894,41 @@ func (m *ObjectstoreInfo) GetAccessPort() int64 {
 	}
 	return 0
 }
+=======
+// GroupSnapCreateRequest specifies a request to create a snapshot of given group.
+// swagger:model
+type GroupSnapCreateRequest struct {
+	Id                   string            `protobuf:"bytes,1,opt,name=id" json:"id,omitempty"`
+	Labels               map[string]string `protobuf:"bytes,2,rep,name=Labels" json:"Labels,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *GroupSnapCreateRequest) Reset()         { *m = GroupSnapCreateRequest{} }
+func (m *GroupSnapCreateRequest) String() string { return proto.CompactTextString(m) }
+func (*GroupSnapCreateRequest) ProtoMessage()    {}
+func (*GroupSnapCreateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{28}
+}
+func (m *GroupSnapCreateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GroupSnapCreateRequest.Unmarshal(m, b)
+}
+func (m *GroupSnapCreateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GroupSnapCreateRequest.Marshal(b, m, deterministic)
+}
+func (dst *GroupSnapCreateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GroupSnapCreateRequest.Merge(dst, src)
+}
+func (m *GroupSnapCreateRequest) XXX_Size() int {
+	return xxx_messageInfo_GroupSnapCreateRequest.Size(m)
+}
+func (m *GroupSnapCreateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GroupSnapCreateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GroupSnapCreateRequest proto.InternalMessageInfo
+>>>>>>> Govendor update
 
 func (m *ObjectstoreInfo) GetRegion() string {
 	if m != nil {
@@ -3621,6 +6004,7 @@ type VolumeResponse struct {
 	//
 	// in: body
 	// Required: true
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	Error                string   `protobuf:"bytes,1,opt,name=error" json:"error,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
@@ -3648,6 +6032,42 @@ func (m *VolumeResponse) XXX_Size() int {
 func (m *VolumeResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_VolumeResponse.DiscardUnknown(m)
 }
+=======
+	Snapshots map[string]*SnapCreateResponse `protobuf:"bytes,1,rep,name=snapshots" json:"snapshots,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	// Error message
+	//
+	// in: body
+	// Required: true
+	Error                string   `protobuf:"bytes,2,opt,name=error" json:"error,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GroupSnapCreateResponse) Reset()         { *m = GroupSnapCreateResponse{} }
+func (m *GroupSnapCreateResponse) String() string { return proto.CompactTextString(m) }
+func (*GroupSnapCreateResponse) ProtoMessage()    {}
+func (*GroupSnapCreateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{29}
+}
+func (m *GroupSnapCreateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GroupSnapCreateResponse.Unmarshal(m, b)
+}
+func (m *GroupSnapCreateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GroupSnapCreateResponse.Marshal(b, m, deterministic)
+}
+func (dst *GroupSnapCreateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GroupSnapCreateResponse.Merge(dst, src)
+}
+func (m *GroupSnapCreateResponse) XXX_Size() int {
+	return xxx_messageInfo_GroupSnapCreateResponse.Size(m)
+}
+func (m *GroupSnapCreateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_GroupSnapCreateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GroupSnapCreateResponse proto.InternalMessageInfo
+>>>>>>> Govendor update
 
 var xxx_messageInfo_VolumeResponse proto.InternalMessageInfo
 
@@ -3714,6 +6134,7 @@ func (m *VolumeCreateResponse) GetVolumeResponse() *VolumeResponse {
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // VolumeStateAction specifies desired actions.
 // swagger:model
 type VolumeStateAction struct {
@@ -3778,10 +6199,16 @@ func (m *VolumeStateAction) GetMountPath() string {
 func (m *VolumeStateAction) GetDevicePath() string {
 	if m != nil {
 		return m.DevicePath
+=======
+func (m *GroupSnapCreateResponse) GetError() string {
+	if m != nil {
+		return m.Error
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // VolumeSet specifies a request to update a volume.
 // swagger:model
 type VolumeSetRequest struct {
@@ -3794,11 +6221,42 @@ type VolumeSetRequest struct {
 	// additional options
 	// required for the Set operation.
 	Options              map[string]string `protobuf:"bytes,4,rep,name=options" json:"options,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+=======
+// StorageNode describes the state of the node
+type StorageNode struct {
+	// Id of the node
+	Id string `protobuf:"bytes,1,opt,name=id" json:"id,omitempty"`
+	// Cpu usage of the node
+	Cpu float64 `protobuf:"fixed64,2,opt,name=cpu" json:"cpu,omitempty"`
+	// Total memory of the node
+	MemTotal uint64 `protobuf:"varint,3,opt,name=mem_total,json=memTotal" json:"mem_total,omitempty"`
+	// Used memory of the node
+	MemUsed uint64 `protobuf:"varint,4,opt,name=mem_used,json=memUsed" json:"mem_used,omitempty"`
+	// Free memory of the node
+	MemFree uint64 `protobuf:"varint,5,opt,name=mem_free,json=memFree" json:"mem_free,omitempty"`
+	// Average load (percentage)
+	AvgLoad int64 `protobuf:"varint,6,opt,name=avg_load,json=avgLoad" json:"avg_load,omitempty"`
+	// Node status
+	Status Status `protobuf:"varint,7,opt,name=status,enum=openstorage.api.Status" json:"status,omitempty"`
+	// List of disks on the node
+	Disks map[string]*StorageResource `protobuf:"bytes,9,rep,name=disks" json:"disks,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	// List of storage pools this node supports
+	Pools []*StoragePool `protobuf:"bytes,10,rep,name=pools" json:"pools,omitempty"`
+	// Management IP
+	MgmtIp string `protobuf:"bytes,11,opt,name=mgmt_ip,json=mgmtIp" json:"mgmt_ip,omitempty"`
+	// Data IP
+	DataIp string `protobuf:"bytes,12,opt,name=data_ip,json=dataIp" json:"data_ip,omitempty"`
+	// Hostname of the node
+	Hostname string `protobuf:"bytes,15,opt,name=hostname" json:"hostname,omitempty"`
+	// User defined labels for the node
+	NodeLabels           map[string]string `protobuf:"bytes,16,rep,name=node_labels,json=nodeLabels" json:"node_labels,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
 	XXX_unrecognized     []byte            `json:"-"`
 	XXX_sizecache        int32             `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *VolumeSetRequest) Reset()         { *m = VolumeSetRequest{} }
 func (m *VolumeSetRequest) String() string { return proto.CompactTextString(m) }
 func (*VolumeSetRequest) ProtoMessage()    {}
@@ -3903,10 +6361,89 @@ func (m *VolumeSetResponse) GetVolume() *Volume {
 func (m *VolumeSetResponse) GetVolumeResponse() *VolumeResponse {
 	if m != nil {
 		return m.VolumeResponse
+=======
+func (m *StorageNode) Reset()         { *m = StorageNode{} }
+func (m *StorageNode) String() string { return proto.CompactTextString(m) }
+func (*StorageNode) ProtoMessage()    {}
+func (*StorageNode) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{30}
+}
+func (m *StorageNode) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_StorageNode.Unmarshal(m, b)
+}
+func (m *StorageNode) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_StorageNode.Marshal(b, m, deterministic)
+}
+func (dst *StorageNode) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_StorageNode.Merge(dst, src)
+}
+func (m *StorageNode) XXX_Size() int {
+	return xxx_messageInfo_StorageNode.Size(m)
+}
+func (m *StorageNode) XXX_DiscardUnknown() {
+	xxx_messageInfo_StorageNode.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_StorageNode proto.InternalMessageInfo
+
+func (m *StorageNode) GetId() string {
+	if m != nil {
+		return m.Id
+	}
+	return ""
+}
+
+func (m *StorageNode) GetCpu() float64 {
+	if m != nil {
+		return m.Cpu
+	}
+	return 0
+}
+
+func (m *StorageNode) GetMemTotal() uint64 {
+	if m != nil {
+		return m.MemTotal
+	}
+	return 0
+}
+
+func (m *StorageNode) GetMemUsed() uint64 {
+	if m != nil {
+		return m.MemUsed
+	}
+	return 0
+}
+
+func (m *StorageNode) GetMemFree() uint64 {
+	if m != nil {
+		return m.MemFree
+	}
+	return 0
+}
+
+func (m *StorageNode) GetAvgLoad() int64 {
+	if m != nil {
+		return m.AvgLoad
+	}
+	return 0
+}
+
+func (m *StorageNode) GetStatus() Status {
+	if m != nil {
+		return m.Status
+	}
+	return Status_STATUS_NONE
+}
+
+func (m *StorageNode) GetDisks() map[string]*StorageResource {
+	if m != nil {
+		return m.Disks
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // SnapCreateRequest specifies a request to create a snapshot of given volume.
 // swagger:parameters snapVolume
 type SnapCreateRequest struct {
@@ -3948,10 +6485,23 @@ var xxx_messageInfo_SnapCreateRequest proto.InternalMessageInfo
 func (m *SnapCreateRequest) GetId() string {
 	if m != nil {
 		return m.Id
+=======
+func (m *StorageNode) GetPools() []*StoragePool {
+	if m != nil {
+		return m.Pools
+	}
+	return nil
+}
+
+func (m *StorageNode) GetMgmtIp() string {
+	if m != nil {
+		return m.MgmtIp
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SnapCreateRequest) GetLocator() *VolumeLocator {
 	if m != nil {
 		return m.Locator
@@ -4069,10 +6619,119 @@ func (m *VolumeInfo) GetPath() string {
 func (m *VolumeInfo) GetStorage() *VolumeSpec {
 	if m != nil {
 		return m.Storage
+=======
+func (m *StorageNode) GetDataIp() string {
+	if m != nil {
+		return m.DataIp
+	}
+	return ""
+}
+
+func (m *StorageNode) GetHostname() string {
+	if m != nil {
+		return m.Hostname
+	}
+	return ""
+}
+
+func (m *StorageNode) GetNodeLabels() map[string]string {
+	if m != nil {
+		return m.NodeLabels
 	}
 	return nil
 }
 
+// StorageCluster represents the state and information about the cluster
+type StorageCluster struct {
+	// Status of the cluster
+	Status Status `protobuf:"varint,1,opt,name=status,enum=openstorage.api.Status" json:"status,omitempty"`
+	// Id of the cluster
+	Id                   string   `protobuf:"bytes,2,opt,name=id" json:"id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *StorageCluster) Reset()         { *m = StorageCluster{} }
+func (m *StorageCluster) String() string { return proto.CompactTextString(m) }
+func (*StorageCluster) ProtoMessage()    {}
+func (*StorageCluster) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{31}
+}
+func (m *StorageCluster) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_StorageCluster.Unmarshal(m, b)
+}
+func (m *StorageCluster) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_StorageCluster.Marshal(b, m, deterministic)
+}
+func (dst *StorageCluster) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_StorageCluster.Merge(dst, src)
+}
+func (m *StorageCluster) XXX_Size() int {
+	return xxx_messageInfo_StorageCluster.Size(m)
+}
+func (m *StorageCluster) XXX_DiscardUnknown() {
+	xxx_messageInfo_StorageCluster.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_StorageCluster proto.InternalMessageInfo
+
+func (m *StorageCluster) GetStatus() Status {
+	if m != nil {
+		return m.Status
+	}
+	return Status_STATUS_NONE
+}
+
+func (m *StorageCluster) GetId() string {
+	if m != nil {
+		return m.Id
+	}
+	return ""
+}
+
+// Define a schedule policy request
+type SdkSchedulePolicyCreateRequest struct {
+	// Schedule Policy
+	SchedulePolicy       *SdkSchedulePolicy `protobuf:"bytes,1,opt,name=SchedulePolicy" json:"SchedulePolicy,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
+	XXX_unrecognized     []byte             `json:"-"`
+	XXX_sizecache        int32              `json:"-"`
+}
+
+func (m *SdkSchedulePolicyCreateRequest) Reset()         { *m = SdkSchedulePolicyCreateRequest{} }
+func (m *SdkSchedulePolicyCreateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyCreateRequest) ProtoMessage()    {}
+func (*SdkSchedulePolicyCreateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{32}
+}
+func (m *SdkSchedulePolicyCreateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyCreateRequest.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyCreateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyCreateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyCreateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyCreateRequest.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyCreateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyCreateRequest.Size(m)
+}
+func (m *SdkSchedulePolicyCreateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyCreateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyCreateRequest proto.InternalMessageInfo
+
+func (m *SdkSchedulePolicyCreateRequest) GetSchedulePolicy() *SdkSchedulePolicy {
+	if m != nil {
+		return m.SchedulePolicy
+>>>>>>> Govendor update
+	}
+	return nil
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // VolumeConsumer identifies a consumer for a Volume. An example of a VolumeConsumer
 // would be a Pod in Kubernetes who has mounted the PersistentVolumeClaim for the
 // Volume
@@ -4095,11 +6754,16 @@ type VolumeConsumer struct {
 	// be from the perspective of the container runtime or the orchestrator under which
 	// the volume consumer resides. For e.g OwnerType can be a Deployment in Kubernetes.
 	OwnerType            string   `protobuf:"bytes,6,opt,name=owner_type,json=ownerType" json:"owner_type,omitempty"`
+=======
+// Empty response
+type SdkSchedulePolicyCreateResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *VolumeConsumer) Reset()         { *m = VolumeConsumer{} }
 func (m *VolumeConsumer) String() string { return proto.CompactTextString(m) }
 func (*VolumeConsumer) ProtoMessage()    {}
@@ -4224,11 +6888,111 @@ type ClusterResponse struct {
 	//
 	// in: body
 	Error                string   `protobuf:"bytes,1,opt,name=error" json:"error,omitempty"`
+=======
+func (m *SdkSchedulePolicyCreateResponse) Reset()         { *m = SdkSchedulePolicyCreateResponse{} }
+func (m *SdkSchedulePolicyCreateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyCreateResponse) ProtoMessage()    {}
+func (*SdkSchedulePolicyCreateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{33}
+}
+func (m *SdkSchedulePolicyCreateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyCreateResponse.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyCreateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyCreateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyCreateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyCreateResponse.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyCreateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyCreateResponse.Size(m)
+}
+func (m *SdkSchedulePolicyCreateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyCreateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyCreateResponse proto.InternalMessageInfo
+
+// Define a request to update a schedule policy
+type SdkSchedulePolicyUpdateRequest struct {
+	// Schedule Policy
+	SchedulePolicy       *SdkSchedulePolicy `protobuf:"bytes,1,opt,name=SchedulePolicy" json:"SchedulePolicy,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
+	XXX_unrecognized     []byte             `json:"-"`
+	XXX_sizecache        int32              `json:"-"`
+}
+
+func (m *SdkSchedulePolicyUpdateRequest) Reset()         { *m = SdkSchedulePolicyUpdateRequest{} }
+func (m *SdkSchedulePolicyUpdateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyUpdateRequest) ProtoMessage()    {}
+func (*SdkSchedulePolicyUpdateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{34}
+}
+func (m *SdkSchedulePolicyUpdateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyUpdateRequest.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyUpdateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyUpdateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyUpdateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyUpdateRequest.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyUpdateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyUpdateRequest.Size(m)
+}
+func (m *SdkSchedulePolicyUpdateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyUpdateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyUpdateRequest proto.InternalMessageInfo
+
+func (m *SdkSchedulePolicyUpdateRequest) GetSchedulePolicy() *SdkSchedulePolicy {
+	if m != nil {
+		return m.SchedulePolicy
+	}
+	return nil
+}
+
+// Empty response
+type SdkSchedulePolicyUpdateResponse struct {
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+func (m *SdkSchedulePolicyUpdateResponse) Reset()         { *m = SdkSchedulePolicyUpdateResponse{} }
+func (m *SdkSchedulePolicyUpdateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyUpdateResponse) ProtoMessage()    {}
+func (*SdkSchedulePolicyUpdateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{35}
+}
+func (m *SdkSchedulePolicyUpdateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyUpdateResponse.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyUpdateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyUpdateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyUpdateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyUpdateResponse.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyUpdateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyUpdateResponse.Size(m)
+}
+func (m *SdkSchedulePolicyUpdateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyUpdateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyUpdateResponse proto.InternalMessageInfo
+
+// Empty request
+type SdkSchedulePolicyEnumerateRequest struct {
+>>>>>>> Govendor update
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *ClusterResponse) Reset()         { *m = ClusterResponse{} }
 func (m *ClusterResponse) String() string { return proto.CompactTextString(m) }
 func (*ClusterResponse) ProtoMessage()    {}
@@ -4296,10 +7060,73 @@ var xxx_messageInfo_ActiveRequest proto.InternalMessageInfo
 func (m *ActiveRequest) GetReqestKV() map[int64]string {
 	if m != nil {
 		return m.ReqestKV
+=======
+func (m *SdkSchedulePolicyEnumerateRequest) Reset()         { *m = SdkSchedulePolicyEnumerateRequest{} }
+func (m *SdkSchedulePolicyEnumerateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyEnumerateRequest) ProtoMessage()    {}
+func (*SdkSchedulePolicyEnumerateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{36}
+}
+func (m *SdkSchedulePolicyEnumerateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyEnumerateRequest.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyEnumerateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyEnumerateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyEnumerateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyEnumerateRequest.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyEnumerateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyEnumerateRequest.Size(m)
+}
+func (m *SdkSchedulePolicyEnumerateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyEnumerateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyEnumerateRequest proto.InternalMessageInfo
+
+// Defines a schedule policy enumerate response
+type SdkSchedulePolicyEnumerateResponse struct {
+	// List of Schedule Policy
+	Policies             []*SdkSchedulePolicy `protobuf:"bytes,1,rep,name=policies" json:"policies,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
+	XXX_unrecognized     []byte               `json:"-"`
+	XXX_sizecache        int32                `json:"-"`
+}
+
+func (m *SdkSchedulePolicyEnumerateResponse) Reset()         { *m = SdkSchedulePolicyEnumerateResponse{} }
+func (m *SdkSchedulePolicyEnumerateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyEnumerateResponse) ProtoMessage()    {}
+func (*SdkSchedulePolicyEnumerateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{37}
+}
+func (m *SdkSchedulePolicyEnumerateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyEnumerateResponse.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyEnumerateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyEnumerateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyEnumerateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyEnumerateResponse.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyEnumerateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyEnumerateResponse.Size(m)
+}
+func (m *SdkSchedulePolicyEnumerateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyEnumerateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyEnumerateResponse proto.InternalMessageInfo
+
+func (m *SdkSchedulePolicyEnumerateResponse) GetPolicies() []*SdkSchedulePolicy {
+	if m != nil {
+		return m.Policies
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Active Requests
 // swagger:model
 type ActiveRequests struct {
@@ -4392,10 +7219,89 @@ func (m *GroupSnapCreateRequest) GetId() string {
 func (m *GroupSnapCreateRequest) GetLabels() map[string]string {
 	if m != nil {
 		return m.Labels
+=======
+// Define a schedule policy inspection request
+type SdkSchedulePolicyInspectRequest struct {
+	// Name of the schedule Policy
+	Name                 string   `protobuf:"bytes,1,opt,name=name" json:"name,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkSchedulePolicyInspectRequest) Reset()         { *m = SdkSchedulePolicyInspectRequest{} }
+func (m *SdkSchedulePolicyInspectRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyInspectRequest) ProtoMessage()    {}
+func (*SdkSchedulePolicyInspectRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{38}
+}
+func (m *SdkSchedulePolicyInspectRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyInspectRequest.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyInspectRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyInspectRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyInspectRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyInspectRequest.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyInspectRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyInspectRequest.Size(m)
+}
+func (m *SdkSchedulePolicyInspectRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyInspectRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyInspectRequest proto.InternalMessageInfo
+
+func (m *SdkSchedulePolicyInspectRequest) GetName() string {
+	if m != nil {
+		return m.Name
+	}
+	return ""
+}
+
+// Defines a schedule policy inspection response
+type SdkSchedulePolicyInspectResponse struct {
+	// List of Schedule Policy
+	Policy               *SdkSchedulePolicy `protobuf:"bytes,1,opt,name=policy" json:"policy,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
+	XXX_unrecognized     []byte             `json:"-"`
+	XXX_sizecache        int32              `json:"-"`
+}
+
+func (m *SdkSchedulePolicyInspectResponse) Reset()         { *m = SdkSchedulePolicyInspectResponse{} }
+func (m *SdkSchedulePolicyInspectResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyInspectResponse) ProtoMessage()    {}
+func (*SdkSchedulePolicyInspectResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{39}
+}
+func (m *SdkSchedulePolicyInspectResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyInspectResponse.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyInspectResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyInspectResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyInspectResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyInspectResponse.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyInspectResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyInspectResponse.Size(m)
+}
+func (m *SdkSchedulePolicyInspectResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyInspectResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyInspectResponse proto.InternalMessageInfo
+
+func (m *SdkSchedulePolicyInspectResponse) GetPolicy() *SdkSchedulePolicy {
+	if m != nil {
+		return m.Policy
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // GroupSnapCreateRequest specifies a response that get's returned when creating a group snapshot.
 // swagger:response groupSnapCreateResponse
 type GroupSnapCreateResponse struct {
@@ -4409,11 +7315,18 @@ type GroupSnapCreateResponse struct {
 	// in: body
 	// Required: true
 	Error                string   `protobuf:"bytes,2,opt,name=error" json:"error,omitempty"`
+=======
+// Define schedule policy deletion request
+type SdkSchedulePolicyDeleteRequest struct {
+	// Name of the schedule policy
+	Name                 string   `protobuf:"bytes,1,opt,name=name" json:"name,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *GroupSnapCreateResponse) Reset()         { *m = GroupSnapCreateResponse{} }
 func (m *GroupSnapCreateResponse) String() string { return proto.CompactTextString(m) }
 func (*GroupSnapCreateResponse) ProtoMessage()    {}
@@ -4540,17 +7453,126 @@ func (m *StorageNode) GetMemUsed() uint64 {
 func (m *StorageNode) GetMemFree() uint64 {
 	if m != nil {
 		return m.MemFree
+=======
+func (m *SdkSchedulePolicyDeleteRequest) Reset()         { *m = SdkSchedulePolicyDeleteRequest{} }
+func (m *SdkSchedulePolicyDeleteRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyDeleteRequest) ProtoMessage()    {}
+func (*SdkSchedulePolicyDeleteRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{40}
+}
+func (m *SdkSchedulePolicyDeleteRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyDeleteRequest.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyDeleteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyDeleteRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyDeleteRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyDeleteRequest.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyDeleteRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyDeleteRequest.Size(m)
+}
+func (m *SdkSchedulePolicyDeleteRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyDeleteRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyDeleteRequest proto.InternalMessageInfo
+
+func (m *SdkSchedulePolicyDeleteRequest) GetName() string {
+	if m != nil {
+		return m.Name
+	}
+	return ""
+}
+
+// Empty response
+type SdkSchedulePolicyDeleteResponse struct {
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkSchedulePolicyDeleteResponse) Reset()         { *m = SdkSchedulePolicyDeleteResponse{} }
+func (m *SdkSchedulePolicyDeleteResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyDeleteResponse) ProtoMessage()    {}
+func (*SdkSchedulePolicyDeleteResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{41}
+}
+func (m *SdkSchedulePolicyDeleteResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyDeleteResponse.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyDeleteResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyDeleteResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyDeleteResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyDeleteResponse.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyDeleteResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyDeleteResponse.Size(m)
+}
+func (m *SdkSchedulePolicyDeleteResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyDeleteResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyDeleteResponse proto.InternalMessageInfo
+
+// Defines a daily schedule
+type SdkSchedulePolicyIntervalDaily struct {
+	// Range: 0-23
+	Hour int32 `protobuf:"varint,1,opt,name=hour" json:"hour,omitempty"`
+	// Range: 0-59
+	Minute               int32    `protobuf:"varint,2,opt,name=minute" json:"minute,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkSchedulePolicyIntervalDaily) Reset()         { *m = SdkSchedulePolicyIntervalDaily{} }
+func (m *SdkSchedulePolicyIntervalDaily) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyIntervalDaily) ProtoMessage()    {}
+func (*SdkSchedulePolicyIntervalDaily) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{42}
+}
+func (m *SdkSchedulePolicyIntervalDaily) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyIntervalDaily.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyIntervalDaily) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyIntervalDaily.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyIntervalDaily) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyIntervalDaily.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyIntervalDaily) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyIntervalDaily.Size(m)
+}
+func (m *SdkSchedulePolicyIntervalDaily) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyIntervalDaily.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyIntervalDaily proto.InternalMessageInfo
+
+func (m *SdkSchedulePolicyIntervalDaily) GetHour() int32 {
+	if m != nil {
+		return m.Hour
+>>>>>>> Govendor update
 	}
 	return 0
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *StorageNode) GetAvgLoad() int64 {
 	if m != nil {
 		return m.AvgLoad
+=======
+func (m *SdkSchedulePolicyIntervalDaily) GetMinute() int32 {
+	if m != nil {
+		return m.Minute
+>>>>>>> Govendor update
 	}
 	return 0
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *StorageNode) GetStatus() Status {
 	if m != nil {
 		return m.Status
@@ -4606,11 +7628,79 @@ type StorageCluster struct {
 	Status Status `protobuf:"varint,1,opt,name=status,enum=openstorage.api.Status" json:"status,omitempty"`
 	// Id of the cluster
 	Id                   string   `protobuf:"bytes,2,opt,name=id" json:"id,omitempty"`
+=======
+// Defines a weekly schedule
+type SdkSchedulePolicyIntervalWeekly struct {
+	Day SdkTimeWeekday `protobuf:"varint,1,opt,name=day,enum=openstorage.api.SdkTimeWeekday" json:"day,omitempty"`
+	// Range: 0-23
+	Hour int32 `protobuf:"varint,2,opt,name=hour" json:"hour,omitempty"`
+	// Range: 0-59
+	Minute               int32    `protobuf:"varint,3,opt,name=minute" json:"minute,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+func (m *SdkSchedulePolicyIntervalWeekly) Reset()         { *m = SdkSchedulePolicyIntervalWeekly{} }
+func (m *SdkSchedulePolicyIntervalWeekly) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyIntervalWeekly) ProtoMessage()    {}
+func (*SdkSchedulePolicyIntervalWeekly) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{43}
+}
+func (m *SdkSchedulePolicyIntervalWeekly) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyIntervalWeekly.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyIntervalWeekly) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyIntervalWeekly.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyIntervalWeekly) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyIntervalWeekly.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyIntervalWeekly) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyIntervalWeekly.Size(m)
+}
+func (m *SdkSchedulePolicyIntervalWeekly) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyIntervalWeekly.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyIntervalWeekly proto.InternalMessageInfo
+
+func (m *SdkSchedulePolicyIntervalWeekly) GetDay() SdkTimeWeekday {
+	if m != nil {
+		return m.Day
+	}
+	return SdkTimeWeekday_SdkTimeWeekdaySunday
+}
+
+func (m *SdkSchedulePolicyIntervalWeekly) GetHour() int32 {
+	if m != nil {
+		return m.Hour
+	}
+	return 0
+}
+
+func (m *SdkSchedulePolicyIntervalWeekly) GetMinute() int32 {
+	if m != nil {
+		return m.Minute
+	}
+	return 0
+}
+
+// Defines a monthly schedule
+type SdkSchedulePolicyIntervalMonthly struct {
+	// Range: 1-28
+	Day int32 `protobuf:"varint,1,opt,name=day" json:"day,omitempty"`
+	// Range: 0-59
+	Hour int32 `protobuf:"varint,2,opt,name=hour" json:"hour,omitempty"`
+	// Range: 0-59
+	Minute               int32    `protobuf:"varint,3,opt,name=minute" json:"minute,omitempty"`
+>>>>>>> Govendor update
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *StorageCluster) Reset()         { *m = StorageCluster{} }
 func (m *StorageCluster) String() string { return proto.CompactTextString(m) }
 func (*StorageCluster) ProtoMessage()    {}
@@ -5175,6 +8265,51 @@ func (m *SdkSchedulePolicyIntervalMonthly) GetMinute() int32 {
 		return m.Minute
 	}
 	return 0
+=======
+func (m *SdkSchedulePolicyIntervalMonthly) Reset()         { *m = SdkSchedulePolicyIntervalMonthly{} }
+func (m *SdkSchedulePolicyIntervalMonthly) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicyIntervalMonthly) ProtoMessage()    {}
+func (*SdkSchedulePolicyIntervalMonthly) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{44}
+}
+func (m *SdkSchedulePolicyIntervalMonthly) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicyIntervalMonthly.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicyIntervalMonthly) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicyIntervalMonthly.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicyIntervalMonthly) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicyIntervalMonthly.Merge(dst, src)
+}
+func (m *SdkSchedulePolicyIntervalMonthly) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicyIntervalMonthly.Size(m)
+}
+func (m *SdkSchedulePolicyIntervalMonthly) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicyIntervalMonthly.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicyIntervalMonthly proto.InternalMessageInfo
+
+func (m *SdkSchedulePolicyIntervalMonthly) GetDay() int32 {
+	if m != nil {
+		return m.Day
+	}
+	return 0
+}
+
+func (m *SdkSchedulePolicyIntervalMonthly) GetHour() int32 {
+	if m != nil {
+		return m.Hour
+	}
+	return 0
+}
+
+func (m *SdkSchedulePolicyIntervalMonthly) GetMinute() int32 {
+	if m != nil {
+		return m.Minute
+	}
+	return 0
+>>>>>>> Govendor update
 }
 
 // Defines a schedule policy interval
@@ -5195,7 +8330,11 @@ func (m *SdkSchedulePolicyInterval) Reset()         { *m = SdkSchedulePolicyInte
 func (m *SdkSchedulePolicyInterval) String() string { return proto.CompactTextString(m) }
 func (*SdkSchedulePolicyInterval) ProtoMessage()    {}
 func (*SdkSchedulePolicyInterval) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{45}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{45}
+>>>>>>> Govendor update
 }
 func (m *SdkSchedulePolicyInterval) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SdkSchedulePolicyInterval.Unmarshal(m, b)
@@ -5271,6 +8410,7 @@ func (m *SdkSchedulePolicyInterval) GetMonthly() *SdkSchedulePolicyIntervalMonth
 // XXX_OneofFuncs is for the internal use of the proto package.
 func (*SdkSchedulePolicyInterval) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
 	return _SdkSchedulePolicyInterval_OneofMarshaler, _SdkSchedulePolicyInterval_OneofUnmarshaler, _SdkSchedulePolicyInterval_OneofSizer, []interface{}{
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 		(*SdkSchedulePolicyInterval_Daily)(nil),
 		(*SdkSchedulePolicyInterval_Weekly)(nil),
 		(*SdkSchedulePolicyInterval_Monthly)(nil),
@@ -5518,15 +8658,45 @@ func _SdkCredentialCreateRequest_OneofMarshaler(msg proto.Message, b *proto.Buff
 	case *SdkCredentialCreateRequest_GoogleCredential:
 		b.EncodeVarint(3<<3 | proto.WireBytes)
 		if err := b.EncodeMessage(x.GoogleCredential); err != nil {
+=======
+		(*SdkSchedulePolicyInterval_Daily)(nil),
+		(*SdkSchedulePolicyInterval_Weekly)(nil),
+		(*SdkSchedulePolicyInterval_Monthly)(nil),
+	}
+}
+
+func _SdkSchedulePolicyInterval_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*SdkSchedulePolicyInterval)
+	// period_type
+	switch x := m.PeriodType.(type) {
+	case *SdkSchedulePolicyInterval_Daily:
+		b.EncodeVarint(2<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.Daily); err != nil {
+			return err
+		}
+	case *SdkSchedulePolicyInterval_Weekly:
+		b.EncodeVarint(3<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.Weekly); err != nil {
+			return err
+		}
+	case *SdkSchedulePolicyInterval_Monthly:
+		b.EncodeVarint(4<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.Monthly); err != nil {
+>>>>>>> Govendor update
 			return err
 		}
 	case nil:
 	default:
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 		return fmt.Errorf("SdkCredentialCreateRequest.CredentialType has unexpected type %T", x)
+=======
+		return fmt.Errorf("SdkSchedulePolicyInterval.PeriodType has unexpected type %T", x)
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func _SdkCredentialCreateRequest_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
 	m := msg.(*SdkCredentialCreateRequest)
 	switch tag {
@@ -5553,12 +8723,41 @@ func _SdkCredentialCreateRequest_OneofUnmarshaler(msg proto.Message, tag, wire i
 		msg := new(SdkGoogleCredentialRequest)
 		err := b.DecodeMessage(msg)
 		m.CredentialType = &SdkCredentialCreateRequest_GoogleCredential{msg}
+=======
+func _SdkSchedulePolicyInterval_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*SdkSchedulePolicyInterval)
+	switch tag {
+	case 2: // period_type.daily
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(SdkSchedulePolicyIntervalDaily)
+		err := b.DecodeMessage(msg)
+		m.PeriodType = &SdkSchedulePolicyInterval_Daily{msg}
+		return true, err
+	case 3: // period_type.weekly
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(SdkSchedulePolicyIntervalWeekly)
+		err := b.DecodeMessage(msg)
+		m.PeriodType = &SdkSchedulePolicyInterval_Weekly{msg}
+		return true, err
+	case 4: // period_type.monthly
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(SdkSchedulePolicyIntervalMonthly)
+		err := b.DecodeMessage(msg)
+		m.PeriodType = &SdkSchedulePolicyInterval_Monthly{msg}
+>>>>>>> Govendor update
 		return true, err
 	default:
 		return false, nil
 	}
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func _SdkCredentialCreateRequest_OneofSizer(msg proto.Message) (n int) {
 	m := msg.(*SdkCredentialCreateRequest)
 	// credential_type
@@ -5575,6 +8774,24 @@ func _SdkCredentialCreateRequest_OneofSizer(msg proto.Message) (n int) {
 		n += s
 	case *SdkCredentialCreateRequest_GoogleCredential:
 		s := proto.Size(x.GoogleCredential)
+=======
+func _SdkSchedulePolicyInterval_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*SdkSchedulePolicyInterval)
+	// period_type
+	switch x := m.PeriodType.(type) {
+	case *SdkSchedulePolicyInterval_Daily:
+		s := proto.Size(x.Daily)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *SdkSchedulePolicyInterval_Weekly:
+		s := proto.Size(x.Weekly)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *SdkSchedulePolicyInterval_Monthly:
+		s := proto.Size(x.Monthly)
+>>>>>>> Govendor update
 		n += 1 // tag and wire
 		n += proto.SizeVarint(uint64(s))
 		n += s
@@ -5585,6 +8802,7 @@ func _SdkCredentialCreateRequest_OneofSizer(msg proto.Message) (n int) {
 	return n
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a response from creating a credential
 type SdkCredentialCreateResponse struct {
 	// Id of the credentials
@@ -5681,10 +8899,51 @@ func (m *SdkAwsCredentialRequest) GetSecretKey() string {
 func (m *SdkAwsCredentialRequest) GetEndpoint() string {
 	if m != nil {
 		return m.Endpoint
+=======
+// Defines a schedule policy
+type SdkSchedulePolicy struct {
+	// Name of the schedule policy
+	Name string `protobuf:"bytes,1,opt,name=name" json:"name,omitempty"`
+	// Schedule policies
+	Schedules            []*SdkSchedulePolicyInterval `protobuf:"bytes,2,rep,name=schedules" json:"schedules,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}                     `json:"-"`
+	XXX_unrecognized     []byte                       `json:"-"`
+	XXX_sizecache        int32                        `json:"-"`
+}
+
+func (m *SdkSchedulePolicy) Reset()         { *m = SdkSchedulePolicy{} }
+func (m *SdkSchedulePolicy) String() string { return proto.CompactTextString(m) }
+func (*SdkSchedulePolicy) ProtoMessage()    {}
+func (*SdkSchedulePolicy) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{46}
+}
+func (m *SdkSchedulePolicy) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkSchedulePolicy.Unmarshal(m, b)
+}
+func (m *SdkSchedulePolicy) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkSchedulePolicy.Marshal(b, m, deterministic)
+}
+func (dst *SdkSchedulePolicy) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkSchedulePolicy.Merge(dst, src)
+}
+func (m *SdkSchedulePolicy) XXX_Size() int {
+	return xxx_messageInfo_SdkSchedulePolicy.Size(m)
+}
+func (m *SdkSchedulePolicy) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkSchedulePolicy.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkSchedulePolicy proto.InternalMessageInfo
+
+func (m *SdkSchedulePolicy) GetName() string {
+	if m != nil {
+		return m.Name
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkAwsCredentialRequest) GetRegion() string {
 	if m != nil {
 		return m.Region
@@ -5863,11 +9122,200 @@ type SdkAzureCredentialResponse struct {
 	CredentialId string `protobuf:"bytes,1,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
 	// Account name
 	AccountName          string   `protobuf:"bytes,2,opt,name=account_name,json=accountName" json:"account_name,omitempty"`
+=======
+func (m *SdkSchedulePolicy) GetSchedules() []*SdkSchedulePolicyInterval {
+	if m != nil {
+		return m.Schedules
+	}
+	return nil
+}
+
+// Defines a request to create credentials
+type SdkCredentialCreateRequest struct {
+	// Types that are valid to be assigned to CredentialType:
+	//	*SdkCredentialCreateRequest_AwsCredential
+	//	*SdkCredentialCreateRequest_AzureCredential
+	//	*SdkCredentialCreateRequest_GoogleCredential
+	CredentialType       isSdkCredentialCreateRequest_CredentialType `protobuf_oneof:"credential_type"`
+	XXX_NoUnkeyedLiteral struct{}                                    `json:"-"`
+	XXX_unrecognized     []byte                                      `json:"-"`
+	XXX_sizecache        int32                                       `json:"-"`
+}
+
+func (m *SdkCredentialCreateRequest) Reset()         { *m = SdkCredentialCreateRequest{} }
+func (m *SdkCredentialCreateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCredentialCreateRequest) ProtoMessage()    {}
+func (*SdkCredentialCreateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{47}
+}
+func (m *SdkCredentialCreateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCredentialCreateRequest.Unmarshal(m, b)
+}
+func (m *SdkCredentialCreateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCredentialCreateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCredentialCreateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCredentialCreateRequest.Merge(dst, src)
+}
+func (m *SdkCredentialCreateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCredentialCreateRequest.Size(m)
+}
+func (m *SdkCredentialCreateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCredentialCreateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCredentialCreateRequest proto.InternalMessageInfo
+
+type isSdkCredentialCreateRequest_CredentialType interface {
+	isSdkCredentialCreateRequest_CredentialType()
+}
+
+type SdkCredentialCreateRequest_AwsCredential struct {
+	AwsCredential *SdkAwsCredentialRequest `protobuf:"bytes,1,opt,name=aws_credential,json=awsCredential,oneof"`
+}
+type SdkCredentialCreateRequest_AzureCredential struct {
+	AzureCredential *SdkAzureCredentialRequest `protobuf:"bytes,2,opt,name=azure_credential,json=azureCredential,oneof"`
+}
+type SdkCredentialCreateRequest_GoogleCredential struct {
+	GoogleCredential *SdkGoogleCredentialRequest `protobuf:"bytes,3,opt,name=google_credential,json=googleCredential,oneof"`
+}
+
+func (*SdkCredentialCreateRequest_AwsCredential) isSdkCredentialCreateRequest_CredentialType()    {}
+func (*SdkCredentialCreateRequest_AzureCredential) isSdkCredentialCreateRequest_CredentialType()  {}
+func (*SdkCredentialCreateRequest_GoogleCredential) isSdkCredentialCreateRequest_CredentialType() {}
+
+func (m *SdkCredentialCreateRequest) GetCredentialType() isSdkCredentialCreateRequest_CredentialType {
+	if m != nil {
+		return m.CredentialType
+	}
+	return nil
+}
+
+func (m *SdkCredentialCreateRequest) GetAwsCredential() *SdkAwsCredentialRequest {
+	if x, ok := m.GetCredentialType().(*SdkCredentialCreateRequest_AwsCredential); ok {
+		return x.AwsCredential
+	}
+	return nil
+}
+
+func (m *SdkCredentialCreateRequest) GetAzureCredential() *SdkAzureCredentialRequest {
+	if x, ok := m.GetCredentialType().(*SdkCredentialCreateRequest_AzureCredential); ok {
+		return x.AzureCredential
+	}
+	return nil
+}
+
+func (m *SdkCredentialCreateRequest) GetGoogleCredential() *SdkGoogleCredentialRequest {
+	if x, ok := m.GetCredentialType().(*SdkCredentialCreateRequest_GoogleCredential); ok {
+		return x.GoogleCredential
+	}
+	return nil
+}
+
+// XXX_OneofFuncs is for the internal use of the proto package.
+func (*SdkCredentialCreateRequest) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _SdkCredentialCreateRequest_OneofMarshaler, _SdkCredentialCreateRequest_OneofUnmarshaler, _SdkCredentialCreateRequest_OneofSizer, []interface{}{
+		(*SdkCredentialCreateRequest_AwsCredential)(nil),
+		(*SdkCredentialCreateRequest_AzureCredential)(nil),
+		(*SdkCredentialCreateRequest_GoogleCredential)(nil),
+	}
+}
+
+func _SdkCredentialCreateRequest_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*SdkCredentialCreateRequest)
+	// credential_type
+	switch x := m.CredentialType.(type) {
+	case *SdkCredentialCreateRequest_AwsCredential:
+		b.EncodeVarint(1<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.AwsCredential); err != nil {
+			return err
+		}
+	case *SdkCredentialCreateRequest_AzureCredential:
+		b.EncodeVarint(2<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.AzureCredential); err != nil {
+			return err
+		}
+	case *SdkCredentialCreateRequest_GoogleCredential:
+		b.EncodeVarint(3<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.GoogleCredential); err != nil {
+			return err
+		}
+	case nil:
+	default:
+		return fmt.Errorf("SdkCredentialCreateRequest.CredentialType has unexpected type %T", x)
+	}
+	return nil
+}
+
+func _SdkCredentialCreateRequest_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*SdkCredentialCreateRequest)
+	switch tag {
+	case 1: // credential_type.aws_credential
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(SdkAwsCredentialRequest)
+		err := b.DecodeMessage(msg)
+		m.CredentialType = &SdkCredentialCreateRequest_AwsCredential{msg}
+		return true, err
+	case 2: // credential_type.azure_credential
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(SdkAzureCredentialRequest)
+		err := b.DecodeMessage(msg)
+		m.CredentialType = &SdkCredentialCreateRequest_AzureCredential{msg}
+		return true, err
+	case 3: // credential_type.google_credential
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(SdkGoogleCredentialRequest)
+		err := b.DecodeMessage(msg)
+		m.CredentialType = &SdkCredentialCreateRequest_GoogleCredential{msg}
+		return true, err
+	default:
+		return false, nil
+	}
+}
+
+func _SdkCredentialCreateRequest_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*SdkCredentialCreateRequest)
+	// credential_type
+	switch x := m.CredentialType.(type) {
+	case *SdkCredentialCreateRequest_AwsCredential:
+		s := proto.Size(x.AwsCredential)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *SdkCredentialCreateRequest_AzureCredential:
+		s := proto.Size(x.AzureCredential)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *SdkCredentialCreateRequest_GoogleCredential:
+		s := proto.Size(x.GoogleCredential)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	return n
+}
+
+// Defines a response from creating a credential
+type SdkCredentialCreateResponse struct {
+	// Id of the credentials
+	CredentialId         string   `protobuf:"bytes,1,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkAzureCredentialResponse) Reset()         { *m = SdkAzureCredentialResponse{} }
 func (m *SdkAzureCredentialResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkAzureCredentialResponse) ProtoMessage()    {}
@@ -5893,12 +9341,40 @@ func (m *SdkAzureCredentialResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_SdkAzureCredentialResponse proto.InternalMessageInfo
 
 func (m *SdkAzureCredentialResponse) GetCredentialId() string {
+=======
+func (m *SdkCredentialCreateResponse) Reset()         { *m = SdkCredentialCreateResponse{} }
+func (m *SdkCredentialCreateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCredentialCreateResponse) ProtoMessage()    {}
+func (*SdkCredentialCreateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{48}
+}
+func (m *SdkCredentialCreateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCredentialCreateResponse.Unmarshal(m, b)
+}
+func (m *SdkCredentialCreateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCredentialCreateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCredentialCreateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCredentialCreateResponse.Merge(dst, src)
+}
+func (m *SdkCredentialCreateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCredentialCreateResponse.Size(m)
+}
+func (m *SdkCredentialCreateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCredentialCreateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCredentialCreateResponse proto.InternalMessageInfo
+
+func (m *SdkCredentialCreateResponse) GetCredentialId() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.CredentialId
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkAzureCredentialResponse) GetAccountName() string {
 	if m != nil {
 		return m.AccountName
@@ -5912,11 +9388,24 @@ type SdkGoogleCredentialResponse struct {
 	CredentialId string `protobuf:"bytes,1,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
 	// Project ID
 	ProjectId            string   `protobuf:"bytes,2,opt,name=project_id,json=projectId" json:"project_id,omitempty"`
+=======
+// Defines credentials for Aws/S3 endpoints
+type SdkAwsCredentialRequest struct {
+	// Access key
+	AccessKey string `protobuf:"bytes,1,opt,name=access_key,json=accessKey" json:"access_key,omitempty"`
+	// Secret key
+	SecretKey string `protobuf:"bytes,2,opt,name=secret_key,json=secretKey" json:"secret_key,omitempty"`
+	// Endpoint
+	Endpoint string `protobuf:"bytes,3,opt,name=endpoint" json:"endpoint,omitempty"`
+	// Region
+	Region               string   `protobuf:"bytes,4,opt,name=region" json:"region,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkGoogleCredentialResponse) Reset()         { *m = SdkGoogleCredentialResponse{} }
 func (m *SdkGoogleCredentialResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkGoogleCredentialResponse) ProtoMessage()    {}
@@ -5944,17 +9433,53 @@ var xxx_messageInfo_SdkGoogleCredentialResponse proto.InternalMessageInfo
 func (m *SdkGoogleCredentialResponse) GetCredentialId() string {
 	if m != nil {
 		return m.CredentialId
+=======
+func (m *SdkAwsCredentialRequest) Reset()         { *m = SdkAwsCredentialRequest{} }
+func (m *SdkAwsCredentialRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkAwsCredentialRequest) ProtoMessage()    {}
+func (*SdkAwsCredentialRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{49}
+}
+func (m *SdkAwsCredentialRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkAwsCredentialRequest.Unmarshal(m, b)
+}
+func (m *SdkAwsCredentialRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkAwsCredentialRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkAwsCredentialRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkAwsCredentialRequest.Merge(dst, src)
+}
+func (m *SdkAwsCredentialRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkAwsCredentialRequest.Size(m)
+}
+func (m *SdkAwsCredentialRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkAwsCredentialRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkAwsCredentialRequest proto.InternalMessageInfo
+
+func (m *SdkAwsCredentialRequest) GetAccessKey() string {
+	if m != nil {
+		return m.AccessKey
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkGoogleCredentialResponse) GetProjectId() string {
 	if m != nil {
 		return m.ProjectId
+=======
+func (m *SdkAwsCredentialRequest) GetSecretKey() string {
+	if m != nil {
+		return m.SecretKey
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Empty request
 type SdkCredentialEnumerateRequest struct {
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -5990,11 +9515,34 @@ var xxx_messageInfo_SdkCredentialEnumerateRequest proto.InternalMessageInfo
 type SdkCredentialEnumerateResponse struct {
 	// List of credentials
 	CredentialIds        []string `protobuf:"bytes,1,rep,name=credential_ids,json=credentialIds" json:"credential_ids,omitempty"`
+=======
+func (m *SdkAwsCredentialRequest) GetEndpoint() string {
+	if m != nil {
+		return m.Endpoint
+	}
+	return ""
+}
+
+func (m *SdkAwsCredentialRequest) GetRegion() string {
+	if m != nil {
+		return m.Region
+	}
+	return ""
+}
+
+// Defines credentials for Azure
+type SdkAzureCredentialRequest struct {
+	// Account name
+	AccountName string `protobuf:"bytes,1,opt,name=account_name,json=accountName" json:"account_name,omitempty"`
+	// Account key
+	AccountKey           string   `protobuf:"bytes,2,opt,name=account_key,json=accountKey" json:"account_key,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCredentialEnumerateResponse) Reset()         { *m = SdkCredentialEnumerateResponse{} }
 func (m *SdkCredentialEnumerateResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkCredentialEnumerateResponse) ProtoMessage()    {}
@@ -6030,11 +9578,58 @@ func (m *SdkCredentialEnumerateResponse) GetCredentialIds() []string {
 type SdkCredentialInspectRequest struct {
 	// Id of the credential
 	CredentialId         string   `protobuf:"bytes,1,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+=======
+func (m *SdkAzureCredentialRequest) Reset()         { *m = SdkAzureCredentialRequest{} }
+func (m *SdkAzureCredentialRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkAzureCredentialRequest) ProtoMessage()    {}
+func (*SdkAzureCredentialRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{50}
+}
+func (m *SdkAzureCredentialRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkAzureCredentialRequest.Unmarshal(m, b)
+}
+func (m *SdkAzureCredentialRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkAzureCredentialRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkAzureCredentialRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkAzureCredentialRequest.Merge(dst, src)
+}
+func (m *SdkAzureCredentialRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkAzureCredentialRequest.Size(m)
+}
+func (m *SdkAzureCredentialRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkAzureCredentialRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkAzureCredentialRequest proto.InternalMessageInfo
+
+func (m *SdkAzureCredentialRequest) GetAccountName() string {
+	if m != nil {
+		return m.AccountName
+	}
+	return ""
+}
+
+func (m *SdkAzureCredentialRequest) GetAccountKey() string {
+	if m != nil {
+		return m.AccountKey
+	}
+	return ""
+}
+
+// Defines credentials for Google
+type SdkGoogleCredentialRequest struct {
+	// Project ID
+	ProjectId string `protobuf:"bytes,1,opt,name=project_id,json=projectId" json:"project_id,omitempty"`
+	// JSON Key
+	JsonKey              string   `protobuf:"bytes,2,opt,name=json_key,json=jsonKey" json:"json_key,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCredentialInspectRequest) Reset()         { *m = SdkCredentialInspectRequest{} }
 func (m *SdkCredentialInspectRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCredentialInspectRequest) ProtoMessage()    {}
@@ -6062,10 +9657,40 @@ var xxx_messageInfo_SdkCredentialInspectRequest proto.InternalMessageInfo
 func (m *SdkCredentialInspectRequest) GetCredentialId() string {
 	if m != nil {
 		return m.CredentialId
+=======
+func (m *SdkGoogleCredentialRequest) Reset()         { *m = SdkGoogleCredentialRequest{} }
+func (m *SdkGoogleCredentialRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkGoogleCredentialRequest) ProtoMessage()    {}
+func (*SdkGoogleCredentialRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{51}
+}
+func (m *SdkGoogleCredentialRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkGoogleCredentialRequest.Unmarshal(m, b)
+}
+func (m *SdkGoogleCredentialRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkGoogleCredentialRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkGoogleCredentialRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkGoogleCredentialRequest.Merge(dst, src)
+}
+func (m *SdkGoogleCredentialRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkGoogleCredentialRequest.Size(m)
+}
+func (m *SdkGoogleCredentialRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkGoogleCredentialRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkGoogleCredentialRequest proto.InternalMessageInfo
+
+func (m *SdkGoogleCredentialRequest) GetProjectId() string {
+	if m != nil {
+		return m.ProjectId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines the response to an inspection of a credential.
 // This response uses OneOf proto style. Depending on your programming language
 // you will need to check if the value of credential_type is one of the ones below.
@@ -6248,11 +9873,143 @@ func _SdkCredentialInspectResponse_OneofSizer(msg proto.Message) (n int) {
 type SdkCredentialDeleteRequest struct {
 	// Id for credentials
 	CredentialId         string   `protobuf:"bytes,1,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+=======
+func (m *SdkGoogleCredentialRequest) GetJsonKey() string {
+	if m != nil {
+		return m.JsonKey
+	}
+	return ""
+}
+
+// Defines the response for AWS/S3 credentials
+type SdkAwsCredentialResponse struct {
+	// Credential Id
+	CredentialId string `protobuf:"bytes,1,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+	// Access key
+	AccessKey string `protobuf:"bytes,2,opt,name=access_key,json=accessKey" json:"access_key,omitempty"`
+	// Endpoint
+	Endpoint string `protobuf:"bytes,3,opt,name=endpoint" json:"endpoint,omitempty"`
+	// Region
+	Region               string   `protobuf:"bytes,4,opt,name=region" json:"region,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+func (m *SdkAwsCredentialResponse) Reset()         { *m = SdkAwsCredentialResponse{} }
+func (m *SdkAwsCredentialResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkAwsCredentialResponse) ProtoMessage()    {}
+func (*SdkAwsCredentialResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{52}
+}
+func (m *SdkAwsCredentialResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkAwsCredentialResponse.Unmarshal(m, b)
+}
+func (m *SdkAwsCredentialResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkAwsCredentialResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkAwsCredentialResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkAwsCredentialResponse.Merge(dst, src)
+}
+func (m *SdkAwsCredentialResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkAwsCredentialResponse.Size(m)
+}
+func (m *SdkAwsCredentialResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkAwsCredentialResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkAwsCredentialResponse proto.InternalMessageInfo
+
+func (m *SdkAwsCredentialResponse) GetCredentialId() string {
+	if m != nil {
+		return m.CredentialId
+	}
+	return ""
+}
+
+func (m *SdkAwsCredentialResponse) GetAccessKey() string {
+	if m != nil {
+		return m.AccessKey
+	}
+	return ""
+}
+
+func (m *SdkAwsCredentialResponse) GetEndpoint() string {
+	if m != nil {
+		return m.Endpoint
+	}
+	return ""
+}
+
+func (m *SdkAwsCredentialResponse) GetRegion() string {
+	if m != nil {
+		return m.Region
+	}
+	return ""
+}
+
+// Defines the response for Azure credentials
+type SdkAzureCredentialResponse struct {
+	// Credential Id
+	CredentialId string `protobuf:"bytes,1,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+	// Account name
+	AccountName          string   `protobuf:"bytes,2,opt,name=account_name,json=accountName" json:"account_name,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkAzureCredentialResponse) Reset()         { *m = SdkAzureCredentialResponse{} }
+func (m *SdkAzureCredentialResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkAzureCredentialResponse) ProtoMessage()    {}
+func (*SdkAzureCredentialResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{53}
+}
+func (m *SdkAzureCredentialResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkAzureCredentialResponse.Unmarshal(m, b)
+}
+func (m *SdkAzureCredentialResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkAzureCredentialResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkAzureCredentialResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkAzureCredentialResponse.Merge(dst, src)
+}
+func (m *SdkAzureCredentialResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkAzureCredentialResponse.Size(m)
+}
+func (m *SdkAzureCredentialResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkAzureCredentialResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkAzureCredentialResponse proto.InternalMessageInfo
+
+func (m *SdkAzureCredentialResponse) GetCredentialId() string {
+	if m != nil {
+		return m.CredentialId
+	}
+	return ""
+}
+
+func (m *SdkAzureCredentialResponse) GetAccountName() string {
+	if m != nil {
+		return m.AccountName
+	}
+	return ""
+}
+
+// Defines the response for Google credentials
+type SdkGoogleCredentialResponse struct {
+	// Credential Id
+	CredentialId string `protobuf:"bytes,1,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+	// Project ID
+	ProjectId            string   `protobuf:"bytes,2,opt,name=project_id,json=projectId" json:"project_id,omitempty"`
+>>>>>>> Govendor update
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCredentialDeleteRequest) Reset()         { *m = SdkCredentialDeleteRequest{} }
 func (m *SdkCredentialDeleteRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCredentialDeleteRequest) ProtoMessage()    {}
@@ -6278,19 +10035,59 @@ func (m *SdkCredentialDeleteRequest) XXX_DiscardUnknown() {
 var xxx_messageInfo_SdkCredentialDeleteRequest proto.InternalMessageInfo
 
 func (m *SdkCredentialDeleteRequest) GetCredentialId() string {
+=======
+func (m *SdkGoogleCredentialResponse) Reset()         { *m = SdkGoogleCredentialResponse{} }
+func (m *SdkGoogleCredentialResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkGoogleCredentialResponse) ProtoMessage()    {}
+func (*SdkGoogleCredentialResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{54}
+}
+func (m *SdkGoogleCredentialResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkGoogleCredentialResponse.Unmarshal(m, b)
+}
+func (m *SdkGoogleCredentialResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkGoogleCredentialResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkGoogleCredentialResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkGoogleCredentialResponse.Merge(dst, src)
+}
+func (m *SdkGoogleCredentialResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkGoogleCredentialResponse.Size(m)
+}
+func (m *SdkGoogleCredentialResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkGoogleCredentialResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkGoogleCredentialResponse proto.InternalMessageInfo
+
+func (m *SdkGoogleCredentialResponse) GetCredentialId() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.CredentialId
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Empty response
 type SdkCredentialDeleteResponse struct {
+=======
+func (m *SdkGoogleCredentialResponse) GetProjectId() string {
+	if m != nil {
+		return m.ProjectId
+	}
+	return ""
+}
+
+// Empty request
+type SdkCredentialEnumerateRequest struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCredentialDeleteResponse) Reset()         { *m = SdkCredentialDeleteResponse{} }
 func (m *SdkCredentialDeleteResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkCredentialDeleteResponse) ProtoMessage()    {}
@@ -6318,12 +10115,82 @@ var xxx_messageInfo_SdkCredentialDeleteResponse proto.InternalMessageInfo
 // Defines a request to validate credentials
 type SdkCredentialValidateRequest struct {
 	// Id of the credentials
+=======
+func (m *SdkCredentialEnumerateRequest) Reset()         { *m = SdkCredentialEnumerateRequest{} }
+func (m *SdkCredentialEnumerateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCredentialEnumerateRequest) ProtoMessage()    {}
+func (*SdkCredentialEnumerateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{55}
+}
+func (m *SdkCredentialEnumerateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCredentialEnumerateRequest.Unmarshal(m, b)
+}
+func (m *SdkCredentialEnumerateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCredentialEnumerateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCredentialEnumerateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCredentialEnumerateRequest.Merge(dst, src)
+}
+func (m *SdkCredentialEnumerateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCredentialEnumerateRequest.Size(m)
+}
+func (m *SdkCredentialEnumerateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCredentialEnumerateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCredentialEnumerateRequest proto.InternalMessageInfo
+
+// Defines response for a enumeration of credentials
+type SdkCredentialEnumerateResponse struct {
+	// List of credentials
+	CredentialIds        []string `protobuf:"bytes,1,rep,name=credential_ids,json=credentialIds" json:"credential_ids,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkCredentialEnumerateResponse) Reset()         { *m = SdkCredentialEnumerateResponse{} }
+func (m *SdkCredentialEnumerateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCredentialEnumerateResponse) ProtoMessage()    {}
+func (*SdkCredentialEnumerateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{56}
+}
+func (m *SdkCredentialEnumerateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCredentialEnumerateResponse.Unmarshal(m, b)
+}
+func (m *SdkCredentialEnumerateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCredentialEnumerateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCredentialEnumerateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCredentialEnumerateResponse.Merge(dst, src)
+}
+func (m *SdkCredentialEnumerateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCredentialEnumerateResponse.Size(m)
+}
+func (m *SdkCredentialEnumerateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCredentialEnumerateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCredentialEnumerateResponse proto.InternalMessageInfo
+
+func (m *SdkCredentialEnumerateResponse) GetCredentialIds() []string {
+	if m != nil {
+		return m.CredentialIds
+	}
+	return nil
+}
+
+// Defines the request to inspection for credentials
+type SdkCredentialInspectRequest struct {
+	// Id of the credential
+>>>>>>> Govendor update
 	CredentialId         string   `protobuf:"bytes,1,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCredentialValidateRequest) Reset()         { *m = SdkCredentialValidateRequest{} }
 func (m *SdkCredentialValidateRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCredentialValidateRequest) ProtoMessage()    {}
@@ -6349,12 +10216,40 @@ func (m *SdkCredentialValidateRequest) XXX_DiscardUnknown() {
 var xxx_messageInfo_SdkCredentialValidateRequest proto.InternalMessageInfo
 
 func (m *SdkCredentialValidateRequest) GetCredentialId() string {
+=======
+func (m *SdkCredentialInspectRequest) Reset()         { *m = SdkCredentialInspectRequest{} }
+func (m *SdkCredentialInspectRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCredentialInspectRequest) ProtoMessage()    {}
+func (*SdkCredentialInspectRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{57}
+}
+func (m *SdkCredentialInspectRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCredentialInspectRequest.Unmarshal(m, b)
+}
+func (m *SdkCredentialInspectRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCredentialInspectRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCredentialInspectRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCredentialInspectRequest.Merge(dst, src)
+}
+func (m *SdkCredentialInspectRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCredentialInspectRequest.Size(m)
+}
+func (m *SdkCredentialInspectRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCredentialInspectRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCredentialInspectRequest proto.InternalMessageInfo
+
+func (m *SdkCredentialInspectRequest) GetCredentialId() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.CredentialId
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Empty response
 type SdkCredentialValidateResponse struct {
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -6440,10 +10335,80 @@ func (m *SdkVolumeMountRequest) GetMountPath() string {
 func (m *SdkVolumeMountRequest) GetOptions() map[string]string {
 	if m != nil {
 		return m.Options
+=======
+// Defines the response to an inspection of a credential.
+// This response uses OneOf proto style. Depending on your programming language
+// you will need to check if the value of credential_type is one of the ones below.
+type SdkCredentialInspectResponse struct {
+	// Types that are valid to be assigned to CredentialType:
+	//	*SdkCredentialInspectResponse_AwsCredential
+	//	*SdkCredentialInspectResponse_AzureCredential
+	//	*SdkCredentialInspectResponse_GoogleCredential
+	CredentialType       isSdkCredentialInspectResponse_CredentialType `protobuf_oneof:"credential_type"`
+	XXX_NoUnkeyedLiteral struct{}                                      `json:"-"`
+	XXX_unrecognized     []byte                                        `json:"-"`
+	XXX_sizecache        int32                                         `json:"-"`
+}
+
+func (m *SdkCredentialInspectResponse) Reset()         { *m = SdkCredentialInspectResponse{} }
+func (m *SdkCredentialInspectResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCredentialInspectResponse) ProtoMessage()    {}
+func (*SdkCredentialInspectResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{58}
+}
+func (m *SdkCredentialInspectResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCredentialInspectResponse.Unmarshal(m, b)
+}
+func (m *SdkCredentialInspectResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCredentialInspectResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCredentialInspectResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCredentialInspectResponse.Merge(dst, src)
+}
+func (m *SdkCredentialInspectResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCredentialInspectResponse.Size(m)
+}
+func (m *SdkCredentialInspectResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCredentialInspectResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCredentialInspectResponse proto.InternalMessageInfo
+
+type isSdkCredentialInspectResponse_CredentialType interface {
+	isSdkCredentialInspectResponse_CredentialType()
+}
+
+type SdkCredentialInspectResponse_AwsCredential struct {
+	AwsCredential *SdkAwsCredentialResponse `protobuf:"bytes,1,opt,name=aws_credential,json=awsCredential,oneof"`
+}
+type SdkCredentialInspectResponse_AzureCredential struct {
+	AzureCredential *SdkAzureCredentialResponse `protobuf:"bytes,2,opt,name=azure_credential,json=azureCredential,oneof"`
+}
+type SdkCredentialInspectResponse_GoogleCredential struct {
+	GoogleCredential *SdkGoogleCredentialResponse `protobuf:"bytes,3,opt,name=google_credential,json=googleCredential,oneof"`
+}
+
+func (*SdkCredentialInspectResponse_AwsCredential) isSdkCredentialInspectResponse_CredentialType()   {}
+func (*SdkCredentialInspectResponse_AzureCredential) isSdkCredentialInspectResponse_CredentialType() {}
+func (*SdkCredentialInspectResponse_GoogleCredential) isSdkCredentialInspectResponse_CredentialType() {
+}
+
+func (m *SdkCredentialInspectResponse) GetCredentialType() isSdkCredentialInspectResponse_CredentialType {
+	if m != nil {
+		return m.CredentialType
 	}
 	return nil
 }
 
+func (m *SdkCredentialInspectResponse) GetAwsCredential() *SdkAwsCredentialResponse {
+	if x, ok := m.GetCredentialType().(*SdkCredentialInspectResponse_AwsCredential); ok {
+		return x.AwsCredential
+>>>>>>> Govendor update
+	}
+	return nil
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Empty response
 type SdkVolumeMountResponse struct {
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -6535,11 +10500,125 @@ func (m *SdkVolumeUnmountRequest) GetOptions() map[string]string {
 
 // Empty response
 type SdkVolumeUnmountResponse struct {
+=======
+func (m *SdkCredentialInspectResponse) GetAzureCredential() *SdkAzureCredentialResponse {
+	if x, ok := m.GetCredentialType().(*SdkCredentialInspectResponse_AzureCredential); ok {
+		return x.AzureCredential
+	}
+	return nil
+}
+
+func (m *SdkCredentialInspectResponse) GetGoogleCredential() *SdkGoogleCredentialResponse {
+	if x, ok := m.GetCredentialType().(*SdkCredentialInspectResponse_GoogleCredential); ok {
+		return x.GoogleCredential
+	}
+	return nil
+}
+
+// XXX_OneofFuncs is for the internal use of the proto package.
+func (*SdkCredentialInspectResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _SdkCredentialInspectResponse_OneofMarshaler, _SdkCredentialInspectResponse_OneofUnmarshaler, _SdkCredentialInspectResponse_OneofSizer, []interface{}{
+		(*SdkCredentialInspectResponse_AwsCredential)(nil),
+		(*SdkCredentialInspectResponse_AzureCredential)(nil),
+		(*SdkCredentialInspectResponse_GoogleCredential)(nil),
+	}
+}
+
+func _SdkCredentialInspectResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*SdkCredentialInspectResponse)
+	// credential_type
+	switch x := m.CredentialType.(type) {
+	case *SdkCredentialInspectResponse_AwsCredential:
+		b.EncodeVarint(1<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.AwsCredential); err != nil {
+			return err
+		}
+	case *SdkCredentialInspectResponse_AzureCredential:
+		b.EncodeVarint(2<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.AzureCredential); err != nil {
+			return err
+		}
+	case *SdkCredentialInspectResponse_GoogleCredential:
+		b.EncodeVarint(3<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.GoogleCredential); err != nil {
+			return err
+		}
+	case nil:
+	default:
+		return fmt.Errorf("SdkCredentialInspectResponse.CredentialType has unexpected type %T", x)
+	}
+	return nil
+}
+
+func _SdkCredentialInspectResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*SdkCredentialInspectResponse)
+	switch tag {
+	case 1: // credential_type.aws_credential
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(SdkAwsCredentialResponse)
+		err := b.DecodeMessage(msg)
+		m.CredentialType = &SdkCredentialInspectResponse_AwsCredential{msg}
+		return true, err
+	case 2: // credential_type.azure_credential
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(SdkAzureCredentialResponse)
+		err := b.DecodeMessage(msg)
+		m.CredentialType = &SdkCredentialInspectResponse_AzureCredential{msg}
+		return true, err
+	case 3: // credential_type.google_credential
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(SdkGoogleCredentialResponse)
+		err := b.DecodeMessage(msg)
+		m.CredentialType = &SdkCredentialInspectResponse_GoogleCredential{msg}
+		return true, err
+	default:
+		return false, nil
+	}
+}
+
+func _SdkCredentialInspectResponse_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*SdkCredentialInspectResponse)
+	// credential_type
+	switch x := m.CredentialType.(type) {
+	case *SdkCredentialInspectResponse_AwsCredential:
+		s := proto.Size(x.AwsCredential)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *SdkCredentialInspectResponse_AzureCredential:
+		s := proto.Size(x.AzureCredential)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *SdkCredentialInspectResponse_GoogleCredential:
+		s := proto.Size(x.GoogleCredential)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	return n
+}
+
+// Defines the request to delete credentials
+type SdkCredentialDeleteRequest struct {
+	// Id for credentials
+	CredentialId         string   `protobuf:"bytes,1,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeUnmountResponse) Reset()         { *m = SdkVolumeUnmountResponse{} }
 func (m *SdkVolumeUnmountResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeUnmountResponse) ProtoMessage()    {}
@@ -6602,10 +10681,40 @@ var xxx_messageInfo_SdkVolumeAttachRequest proto.InternalMessageInfo
 func (m *SdkVolumeAttachRequest) GetVolumeId() string {
 	if m != nil {
 		return m.VolumeId
+=======
+func (m *SdkCredentialDeleteRequest) Reset()         { *m = SdkCredentialDeleteRequest{} }
+func (m *SdkCredentialDeleteRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCredentialDeleteRequest) ProtoMessage()    {}
+func (*SdkCredentialDeleteRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{59}
+}
+func (m *SdkCredentialDeleteRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCredentialDeleteRequest.Unmarshal(m, b)
+}
+func (m *SdkCredentialDeleteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCredentialDeleteRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCredentialDeleteRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCredentialDeleteRequest.Merge(dst, src)
+}
+func (m *SdkCredentialDeleteRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCredentialDeleteRequest.Size(m)
+}
+func (m *SdkCredentialDeleteRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCredentialDeleteRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCredentialDeleteRequest proto.InternalMessageInfo
+
+func (m *SdkCredentialDeleteRequest) GetCredentialId() string {
+	if m != nil {
+		return m.CredentialId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeAttachRequest) GetOptions() map[string]string {
 	if m != nil {
 		return m.Options
@@ -6617,11 +10726,16 @@ func (m *SdkVolumeAttachRequest) GetOptions() map[string]string {
 type SdkVolumeAttachResponse struct {
 	// Device path where device is exported
 	DevicePath           string   `protobuf:"bytes,1,opt,name=device_path,json=devicePath" json:"device_path,omitempty"`
+=======
+// Empty response
+type SdkCredentialDeleteResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeAttachResponse) Reset()         { *m = SdkVolumeAttachResponse{} }
 func (m *SdkVolumeAttachResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeAttachResponse) ProtoMessage()    {}
@@ -6657,11 +10771,42 @@ func (m *SdkVolumeAttachResponse) GetDevicePath() string {
 type SdkVolumeDetachRequest struct {
 	// Id of the volume
 	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+=======
+func (m *SdkCredentialDeleteResponse) Reset()         { *m = SdkCredentialDeleteResponse{} }
+func (m *SdkCredentialDeleteResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCredentialDeleteResponse) ProtoMessage()    {}
+func (*SdkCredentialDeleteResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{60}
+}
+func (m *SdkCredentialDeleteResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCredentialDeleteResponse.Unmarshal(m, b)
+}
+func (m *SdkCredentialDeleteResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCredentialDeleteResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCredentialDeleteResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCredentialDeleteResponse.Merge(dst, src)
+}
+func (m *SdkCredentialDeleteResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCredentialDeleteResponse.Size(m)
+}
+func (m *SdkCredentialDeleteResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCredentialDeleteResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCredentialDeleteResponse proto.InternalMessageInfo
+
+// Defines a request to validate credentials
+type SdkCredentialValidateRequest struct {
+	// Id of the credentials
+	CredentialId         string   `protobuf:"bytes,1,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeDetachRequest) Reset()         { *m = SdkVolumeDetachRequest{} }
 func (m *SdkVolumeDetachRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeDetachRequest) ProtoMessage()    {}
@@ -6689,17 +10834,51 @@ var xxx_messageInfo_SdkVolumeDetachRequest proto.InternalMessageInfo
 func (m *SdkVolumeDetachRequest) GetVolumeId() string {
 	if m != nil {
 		return m.VolumeId
+=======
+func (m *SdkCredentialValidateRequest) Reset()         { *m = SdkCredentialValidateRequest{} }
+func (m *SdkCredentialValidateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCredentialValidateRequest) ProtoMessage()    {}
+func (*SdkCredentialValidateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{61}
+}
+func (m *SdkCredentialValidateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCredentialValidateRequest.Unmarshal(m, b)
+}
+func (m *SdkCredentialValidateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCredentialValidateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCredentialValidateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCredentialValidateRequest.Merge(dst, src)
+}
+func (m *SdkCredentialValidateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCredentialValidateRequest.Size(m)
+}
+func (m *SdkCredentialValidateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCredentialValidateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCredentialValidateRequest proto.InternalMessageInfo
+
+func (m *SdkCredentialValidateRequest) GetCredentialId() string {
+	if m != nil {
+		return m.CredentialId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
 // Empty response
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 type SdkVolumeDetachResponse struct {
+=======
+type SdkCredentialValidateResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeDetachResponse) Reset()         { *m = SdkVolumeDetachResponse{} }
 func (m *SdkVolumeDetachResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeDetachResponse) ProtoMessage()    {}
@@ -6763,26 +10942,111 @@ var xxx_messageInfo_SdkVolumeCreateRequest proto.InternalMessageInfo
 func (m *SdkVolumeCreateRequest) GetName() string {
 	if m != nil {
 		return m.Name
+=======
+func (m *SdkCredentialValidateResponse) Reset()         { *m = SdkCredentialValidateResponse{} }
+func (m *SdkCredentialValidateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCredentialValidateResponse) ProtoMessage()    {}
+func (*SdkCredentialValidateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{62}
+}
+func (m *SdkCredentialValidateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCredentialValidateResponse.Unmarshal(m, b)
+}
+func (m *SdkCredentialValidateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCredentialValidateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCredentialValidateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCredentialValidateResponse.Merge(dst, src)
+}
+func (m *SdkCredentialValidateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCredentialValidateResponse.Size(m)
+}
+func (m *SdkCredentialValidateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCredentialValidateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCredentialValidateResponse proto.InternalMessageInfo
+
+// Defines a request to mount a volume to the node receiving this request
+type SdkVolumeMountRequest struct {
+	// Id of the volume
+	VolumeId string `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	// Mount path for mounting the volume.
+	MountPath string `protobuf:"bytes,2,opt,name=mount_path,json=mountPath" json:"mount_path,omitempty"`
+	// Additional options
+	Options              map[string]string `protobuf:"bytes,3,rep,name=options" json:"options,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *SdkVolumeMountRequest) Reset()         { *m = SdkVolumeMountRequest{} }
+func (m *SdkVolumeMountRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeMountRequest) ProtoMessage()    {}
+func (*SdkVolumeMountRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{63}
+}
+func (m *SdkVolumeMountRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeMountRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeMountRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeMountRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeMountRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeMountRequest.Merge(dst, src)
+}
+func (m *SdkVolumeMountRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeMountRequest.Size(m)
+}
+func (m *SdkVolumeMountRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeMountRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeMountRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeMountRequest) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeCreateRequest) GetSpec() *VolumeSpec {
 	if m != nil {
 		return m.Spec
+=======
+func (m *SdkVolumeMountRequest) GetMountPath() string {
+	if m != nil {
+		return m.MountPath
+	}
+	return ""
+}
+
+func (m *SdkVolumeMountRequest) GetOptions() map[string]string {
+	if m != nil {
+		return m.Options
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a response to the creation of a volume
 type SdkVolumeCreateResponse struct {
 	// Id of new volume
 	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+=======
+// Empty response
+type SdkVolumeMountResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeCreateResponse) Reset()         { *m = SdkVolumeCreateResponse{} }
 func (m *SdkVolumeCreateResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeCreateResponse) ProtoMessage()    {}
@@ -6852,26 +11116,111 @@ var xxx_messageInfo_SdkVolumeCloneRequest proto.InternalMessageInfo
 func (m *SdkVolumeCloneRequest) GetName() string {
 	if m != nil {
 		return m.Name
+=======
+func (m *SdkVolumeMountResponse) Reset()         { *m = SdkVolumeMountResponse{} }
+func (m *SdkVolumeMountResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeMountResponse) ProtoMessage()    {}
+func (*SdkVolumeMountResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{64}
+}
+func (m *SdkVolumeMountResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeMountResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeMountResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeMountResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeMountResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeMountResponse.Merge(dst, src)
+}
+func (m *SdkVolumeMountResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeMountResponse.Size(m)
+}
+func (m *SdkVolumeMountResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeMountResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeMountResponse proto.InternalMessageInfo
+
+// Defines a request to unmount a volume on the node receiving this request
+type SdkVolumeUnmountRequest struct {
+	// Id of volume
+	VolumeId string `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	// MountPath for device
+	MountPath string `protobuf:"bytes,2,opt,name=mount_path,json=mountPath" json:"mount_path,omitempty"`
+	// Options to unmount device
+	Options              map[string]string `protobuf:"bytes,3,rep,name=options" json:"options,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *SdkVolumeUnmountRequest) Reset()         { *m = SdkVolumeUnmountRequest{} }
+func (m *SdkVolumeUnmountRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeUnmountRequest) ProtoMessage()    {}
+func (*SdkVolumeUnmountRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{65}
+}
+func (m *SdkVolumeUnmountRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeUnmountRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeUnmountRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeUnmountRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeUnmountRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeUnmountRequest.Merge(dst, src)
+}
+func (m *SdkVolumeUnmountRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeUnmountRequest.Size(m)
+}
+func (m *SdkVolumeUnmountRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeUnmountRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeUnmountRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeUnmountRequest) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeCloneRequest) GetParentId() string {
 	if m != nil {
 		return m.ParentId
+=======
+func (m *SdkVolumeUnmountRequest) GetMountPath() string {
+	if m != nil {
+		return m.MountPath
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines the response when creating a clone from a volume or a snapshot
 type SdkVolumeCloneResponse struct {
 	// Id of new volume
 	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+=======
+func (m *SdkVolumeUnmountRequest) GetOptions() map[string]string {
+	if m != nil {
+		return m.Options
+	}
+	return nil
+}
+
+// Empty response
+type SdkVolumeUnmountResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeCloneResponse) Reset()         { *m = SdkVolumeCloneResponse{} }
 func (m *SdkVolumeCloneResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeCloneResponse) ProtoMessage()    {}
@@ -6937,19 +11286,96 @@ func (m *SdkVolumeDeleteRequest) XXX_DiscardUnknown() {
 var xxx_messageInfo_SdkVolumeDeleteRequest proto.InternalMessageInfo
 
 func (m *SdkVolumeDeleteRequest) GetVolumeId() string {
+=======
+func (m *SdkVolumeUnmountResponse) Reset()         { *m = SdkVolumeUnmountResponse{} }
+func (m *SdkVolumeUnmountResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeUnmountResponse) ProtoMessage()    {}
+func (*SdkVolumeUnmountResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{66}
+}
+func (m *SdkVolumeUnmountResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeUnmountResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeUnmountResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeUnmountResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeUnmountResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeUnmountResponse.Merge(dst, src)
+}
+func (m *SdkVolumeUnmountResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeUnmountResponse.Size(m)
+}
+func (m *SdkVolumeUnmountResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeUnmountResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeUnmountResponse proto.InternalMessageInfo
+
+// Defines a request to attach a volume to the node receiving this request
+type SdkVolumeAttachRequest struct {
+	// Id of volume
+	VolumeId string `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	// Options for attaching volume, right now only passphrase options is supported
+	Options              map[string]string `protobuf:"bytes,2,rep,name=options" json:"options,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *SdkVolumeAttachRequest) Reset()         { *m = SdkVolumeAttachRequest{} }
+func (m *SdkVolumeAttachRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeAttachRequest) ProtoMessage()    {}
+func (*SdkVolumeAttachRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{67}
+}
+func (m *SdkVolumeAttachRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeAttachRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeAttachRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeAttachRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeAttachRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeAttachRequest.Merge(dst, src)
+}
+func (m *SdkVolumeAttachRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeAttachRequest.Size(m)
+}
+func (m *SdkVolumeAttachRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeAttachRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeAttachRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeAttachRequest) GetVolumeId() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.VolumeId
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Empty response
 type SdkVolumeDeleteResponse struct {
+=======
+func (m *SdkVolumeAttachRequest) GetOptions() map[string]string {
+	if m != nil {
+		return m.Options
+	}
+	return nil
+}
+
+// Defines a response from the node which received the request to attach
+type SdkVolumeAttachResponse struct {
+	// Device path where device is exported
+	DevicePath           string   `protobuf:"bytes,1,opt,name=device_path,json=devicePath" json:"device_path,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeDeleteResponse) Reset()         { *m = SdkVolumeDeleteResponse{} }
 func (m *SdkVolumeDeleteResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeDeleteResponse) ProtoMessage()    {}
@@ -6977,12 +11403,49 @@ var xxx_messageInfo_SdkVolumeDeleteResponse proto.InternalMessageInfo
 // Defines the request to inspect a volume
 type SdkVolumeInspectRequest struct {
 	// Id of volume to inspect
+=======
+func (m *SdkVolumeAttachResponse) Reset()         { *m = SdkVolumeAttachResponse{} }
+func (m *SdkVolumeAttachResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeAttachResponse) ProtoMessage()    {}
+func (*SdkVolumeAttachResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{68}
+}
+func (m *SdkVolumeAttachResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeAttachResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeAttachResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeAttachResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeAttachResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeAttachResponse.Merge(dst, src)
+}
+func (m *SdkVolumeAttachResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeAttachResponse.Size(m)
+}
+func (m *SdkVolumeAttachResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeAttachResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeAttachResponse proto.InternalMessageInfo
+
+func (m *SdkVolumeAttachResponse) GetDevicePath() string {
+	if m != nil {
+		return m.DevicePath
+	}
+	return ""
+}
+
+// Defines a request to detach a volume
+type SdkVolumeDetachRequest struct {
+	// Id of the volume
+>>>>>>> Govendor update
 	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeInspectRequest) Reset()         { *m = SdkVolumeInspectRequest{} }
 func (m *SdkVolumeInspectRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeInspectRequest) ProtoMessage()    {}
@@ -7008,21 +11471,54 @@ func (m *SdkVolumeInspectRequest) XXX_DiscardUnknown() {
 var xxx_messageInfo_SdkVolumeInspectRequest proto.InternalMessageInfo
 
 func (m *SdkVolumeInspectRequest) GetVolumeId() string {
+=======
+func (m *SdkVolumeDetachRequest) Reset()         { *m = SdkVolumeDetachRequest{} }
+func (m *SdkVolumeDetachRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeDetachRequest) ProtoMessage()    {}
+func (*SdkVolumeDetachRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{69}
+}
+func (m *SdkVolumeDetachRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeDetachRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeDetachRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeDetachRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeDetachRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeDetachRequest.Merge(dst, src)
+}
+func (m *SdkVolumeDetachRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeDetachRequest.Size(m)
+}
+func (m *SdkVolumeDetachRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeDetachRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeDetachRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeDetachRequest) GetVolumeId() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.VolumeId
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines the response when inspecting a volume
 type SdkVolumeInspectResponse struct {
 	// Information about the volume
 	Volume               *Volume  `protobuf:"bytes,1,opt,name=volume" json:"volume,omitempty"`
+=======
+// Empty response
+type SdkVolumeDetachResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeInspectResponse) Reset()         { *m = SdkVolumeInspectResponse{} }
 func (m *SdkVolumeInspectResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeInspectResponse) ProtoMessage()    {}
@@ -7104,10 +11600,76 @@ var xxx_messageInfo_SdkVolumeUpdateRequest proto.InternalMessageInfo
 func (m *SdkVolumeUpdateRequest) GetVolumeId() string {
 	if m != nil {
 		return m.VolumeId
+=======
+func (m *SdkVolumeDetachResponse) Reset()         { *m = SdkVolumeDetachResponse{} }
+func (m *SdkVolumeDetachResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeDetachResponse) ProtoMessage()    {}
+func (*SdkVolumeDetachResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{70}
+}
+func (m *SdkVolumeDetachResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeDetachResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeDetachResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeDetachResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeDetachResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeDetachResponse.Merge(dst, src)
+}
+func (m *SdkVolumeDetachResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeDetachResponse.Size(m)
+}
+func (m *SdkVolumeDetachResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeDetachResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeDetachResponse proto.InternalMessageInfo
+
+// Defines a request to create a volume. Use OpenStorageVolume.Update()
+// to update any labels on the volume.
+type SdkVolumeCreateRequest struct {
+	// Unique name of the volume. This will be used for idempotency.
+	Name string `protobuf:"bytes,1,opt,name=name" json:"name,omitempty"`
+	// Volume specification
+	Spec                 *VolumeSpec `protobuf:"bytes,2,opt,name=spec" json:"spec,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
+	XXX_unrecognized     []byte      `json:"-"`
+	XXX_sizecache        int32       `json:"-"`
+}
+
+func (m *SdkVolumeCreateRequest) Reset()         { *m = SdkVolumeCreateRequest{} }
+func (m *SdkVolumeCreateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeCreateRequest) ProtoMessage()    {}
+func (*SdkVolumeCreateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{71}
+}
+func (m *SdkVolumeCreateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeCreateRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeCreateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeCreateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeCreateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeCreateRequest.Merge(dst, src)
+}
+func (m *SdkVolumeCreateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeCreateRequest.Size(m)
+}
+func (m *SdkVolumeCreateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeCreateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeCreateRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeCreateRequest) GetName() string {
+	if m != nil {
+		return m.Name
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeUpdateRequest) GetLocator() *VolumeLocator {
 	if m != nil {
 		return m.Locator
@@ -7116,19 +11678,30 @@ func (m *SdkVolumeUpdateRequest) GetLocator() *VolumeLocator {
 }
 
 func (m *SdkVolumeUpdateRequest) GetSpec() *VolumeSpecUpdate {
+=======
+func (m *SdkVolumeCreateRequest) GetSpec() *VolumeSpec {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.Spec
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Empty response
 type SdkVolumeUpdateResponse struct {
+=======
+// Defines a response to the creation of a volume
+type SdkVolumeCreateResponse struct {
+	// Id of new volume
+	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeUpdateResponse) Reset()         { *m = SdkVolumeUpdateResponse{} }
 func (m *SdkVolumeUpdateResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeUpdateResponse) ProtoMessage()    {}
@@ -7160,11 +11733,51 @@ type SdkVolumeStatsRequest struct {
 	// When set to false the stats are in /proc/diskstats style stats.
 	// When set to true the stats are stats for a specific duration.
 	NotCumulative        bool     `protobuf:"varint,2,opt,name=not_cumulative,json=notCumulative" json:"not_cumulative,omitempty"`
+=======
+func (m *SdkVolumeCreateResponse) Reset()         { *m = SdkVolumeCreateResponse{} }
+func (m *SdkVolumeCreateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeCreateResponse) ProtoMessage()    {}
+func (*SdkVolumeCreateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{72}
+}
+func (m *SdkVolumeCreateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeCreateResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeCreateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeCreateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeCreateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeCreateResponse.Merge(dst, src)
+}
+func (m *SdkVolumeCreateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeCreateResponse.Size(m)
+}
+func (m *SdkVolumeCreateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeCreateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeCreateResponse proto.InternalMessageInfo
+
+func (m *SdkVolumeCreateResponse) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+	}
+	return ""
+}
+
+// Defines a request to clone a volume or create a volume from a snapshot
+type SdkVolumeCloneRequest struct {
+	// Unique name of the volume. This will be used for idempotency.
+	Name string `protobuf:"bytes,1,opt,name=name" json:"name,omitempty"`
+	// Parent volume id or snapshot id will create a new volume as a clone of the parent.
+	ParentId             string   `protobuf:"bytes,2,opt,name=parent_id,json=parentId" json:"parent_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeStatsRequest) Reset()         { *m = SdkVolumeStatsRequest{} }
 func (m *SdkVolumeStatsRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeStatsRequest) ProtoMessage()    {}
@@ -7192,10 +11805,40 @@ var xxx_messageInfo_SdkVolumeStatsRequest proto.InternalMessageInfo
 func (m *SdkVolumeStatsRequest) GetVolumeId() string {
 	if m != nil {
 		return m.VolumeId
+=======
+func (m *SdkVolumeCloneRequest) Reset()         { *m = SdkVolumeCloneRequest{} }
+func (m *SdkVolumeCloneRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeCloneRequest) ProtoMessage()    {}
+func (*SdkVolumeCloneRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{73}
+}
+func (m *SdkVolumeCloneRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeCloneRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeCloneRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeCloneRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeCloneRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeCloneRequest.Merge(dst, src)
+}
+func (m *SdkVolumeCloneRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeCloneRequest.Size(m)
+}
+func (m *SdkVolumeCloneRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeCloneRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeCloneRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeCloneRequest) GetName() string {
+	if m != nil {
+		return m.Name
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeStatsRequest) GetNotCumulative() bool {
 	if m != nil {
 		return m.NotCumulative
@@ -7207,11 +11850,25 @@ func (m *SdkVolumeStatsRequest) GetNotCumulative() bool {
 type SdkVolumeStatsResponse struct {
 	// Statistics for a single volume
 	Stats                *Stats   `protobuf:"bytes,1,opt,name=stats" json:"stats,omitempty"`
+=======
+func (m *SdkVolumeCloneRequest) GetParentId() string {
+	if m != nil {
+		return m.ParentId
+	}
+	return ""
+}
+
+// Defines the response when creating a clone from a volume or a snapshot
+type SdkVolumeCloneResponse struct {
+	// Id of new volume
+	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeStatsResponse) Reset()         { *m = SdkVolumeStatsResponse{} }
 func (m *SdkVolumeStatsResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeStatsResponse) ProtoMessage()    {}
@@ -7245,11 +11902,49 @@ func (m *SdkVolumeStatsResponse) GetStats() *Stats {
 
 // Defines a request to list volumes
 type SdkVolumeEnumerateRequest struct {
+=======
+func (m *SdkVolumeCloneResponse) Reset()         { *m = SdkVolumeCloneResponse{} }
+func (m *SdkVolumeCloneResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeCloneResponse) ProtoMessage()    {}
+func (*SdkVolumeCloneResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{74}
+}
+func (m *SdkVolumeCloneResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeCloneResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeCloneResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeCloneResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeCloneResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeCloneResponse.Merge(dst, src)
+}
+func (m *SdkVolumeCloneResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeCloneResponse.Size(m)
+}
+func (m *SdkVolumeCloneResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeCloneResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeCloneResponse proto.InternalMessageInfo
+
+func (m *SdkVolumeCloneResponse) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+	}
+	return ""
+}
+
+// Defines the request to delete a volume
+type SdkVolumeDeleteRequest struct {
+	// Id of volume to delete
+	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeEnumerateRequest) Reset()         { *m = SdkVolumeEnumerateRequest{} }
 func (m *SdkVolumeEnumerateRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeEnumerateRequest) ProtoMessage()    {}
@@ -7278,11 +11973,47 @@ var xxx_messageInfo_SdkVolumeEnumerateRequest proto.InternalMessageInfo
 type SdkVolumeEnumerateResponse struct {
 	// List of volumes matching label
 	VolumeIds            []string `protobuf:"bytes,1,rep,name=volume_ids,json=volumeIds" json:"volume_ids,omitempty"`
+=======
+func (m *SdkVolumeDeleteRequest) Reset()         { *m = SdkVolumeDeleteRequest{} }
+func (m *SdkVolumeDeleteRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeDeleteRequest) ProtoMessage()    {}
+func (*SdkVolumeDeleteRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{75}
+}
+func (m *SdkVolumeDeleteRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeDeleteRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeDeleteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeDeleteRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeDeleteRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeDeleteRequest.Merge(dst, src)
+}
+func (m *SdkVolumeDeleteRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeDeleteRequest.Size(m)
+}
+func (m *SdkVolumeDeleteRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeDeleteRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeDeleteRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeDeleteRequest) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+	}
+	return ""
+}
+
+// Empty response
+type SdkVolumeDeleteResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeEnumerateResponse) Reset()         { *m = SdkVolumeEnumerateResponse{} }
 func (m *SdkVolumeEnumerateResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeEnumerateResponse) ProtoMessage()    {}
@@ -7359,11 +12090,82 @@ func (m *SdkVolumeEnumerateWithFiltersRequest) GetLocator() *VolumeLocator {
 type SdkVolumeEnumerateWithFiltersResponse struct {
 	// List of volumes matching label
 	VolumeIds            []string `protobuf:"bytes,1,rep,name=volume_ids,json=volumeIds" json:"volume_ids,omitempty"`
+=======
+func (m *SdkVolumeDeleteResponse) Reset()         { *m = SdkVolumeDeleteResponse{} }
+func (m *SdkVolumeDeleteResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeDeleteResponse) ProtoMessage()    {}
+func (*SdkVolumeDeleteResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{76}
+}
+func (m *SdkVolumeDeleteResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeDeleteResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeDeleteResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeDeleteResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeDeleteResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeDeleteResponse.Merge(dst, src)
+}
+func (m *SdkVolumeDeleteResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeDeleteResponse.Size(m)
+}
+func (m *SdkVolumeDeleteResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeDeleteResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeDeleteResponse proto.InternalMessageInfo
+
+// Defines the request to inspect a volume
+type SdkVolumeInspectRequest struct {
+	// Id of volume to inspect
+	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+func (m *SdkVolumeInspectRequest) Reset()         { *m = SdkVolumeInspectRequest{} }
+func (m *SdkVolumeInspectRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeInspectRequest) ProtoMessage()    {}
+func (*SdkVolumeInspectRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{77}
+}
+func (m *SdkVolumeInspectRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeInspectRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeInspectRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeInspectRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeInspectRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeInspectRequest.Merge(dst, src)
+}
+func (m *SdkVolumeInspectRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeInspectRequest.Size(m)
+}
+func (m *SdkVolumeInspectRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeInspectRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeInspectRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeInspectRequest) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+	}
+	return ""
+}
+
+// Defines the response when inspecting a volume
+type SdkVolumeInspectResponse struct {
+	// Information about the volume
+	Volume               *Volume  `protobuf:"bytes,1,opt,name=volume" json:"volume,omitempty"`
+>>>>>>> Govendor update
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeEnumerateWithFiltersResponse) Reset()         { *m = SdkVolumeEnumerateWithFiltersResponse{} }
 func (m *SdkVolumeEnumerateWithFiltersResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeEnumerateWithFiltersResponse) ProtoMessage()    {}
@@ -7391,10 +12193,40 @@ var xxx_messageInfo_SdkVolumeEnumerateWithFiltersResponse proto.InternalMessageI
 func (m *SdkVolumeEnumerateWithFiltersResponse) GetVolumeIds() []string {
 	if m != nil {
 		return m.VolumeIds
+=======
+func (m *SdkVolumeInspectResponse) Reset()         { *m = SdkVolumeInspectResponse{} }
+func (m *SdkVolumeInspectResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeInspectResponse) ProtoMessage()    {}
+func (*SdkVolumeInspectResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{78}
+}
+func (m *SdkVolumeInspectResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeInspectResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeInspectResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeInspectResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeInspectResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeInspectResponse.Merge(dst, src)
+}
+func (m *SdkVolumeInspectResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeInspectResponse.Size(m)
+}
+func (m *SdkVolumeInspectResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeInspectResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeInspectResponse proto.InternalMessageInfo
+
+func (m *SdkVolumeInspectResponse) GetVolume() *Volume {
+	if m != nil {
+		return m.Volume
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines the request when creating a snapshot from a volume.
 type SdkVolumeSnapshotCreateRequest struct {
 	// Id of volume to take the snapshot from
@@ -7403,11 +12235,32 @@ type SdkVolumeSnapshotCreateRequest struct {
 	Name string `protobuf:"bytes,2,opt,name=name" json:"name,omitempty"`
 	// Labels to apply to snapshot
 	Labels               map[string]string `protobuf:"bytes,3,rep,name=labels" json:"labels,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+=======
+// This request is used to adjust or set new values in the volume
+type SdkVolumeUpdateRequest struct {
+	// Id of the volume to update
+	VolumeId string `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	// Change locator values. Some of these values may not be able to be changed.
+	// New labels will be added to the current volume labels. To delete a label, set the
+	// value of the label to an empty string.
+	Locator *VolumeLocator `protobuf:"bytes,2,opt,name=locator" json:"locator,omitempty"`
+	// VolumeSpecUpdate provides a method to request that certain values
+	// in the VolumeSpec are changed. This is necessary as a separate variable
+	// because values like int and bool in the VolumeSpec cannot be determined
+	// if they are being requested to change in gRPC proto3. Some of these
+	// values may not be able to be changed.
+	// Here are a few examples of actions that can be accomplished using the VolumeSpec.
+	// To resize the volume: Set a new value in spec.size.
+	// To change number of replicas: Adjust spec.ha_level.
+	// To change the I/O Profile: Adjust spec.io_profile.
+	Spec                 *VolumeSpecUpdate `protobuf:"bytes,4,opt,name=spec" json:"spec,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
 	XXX_unrecognized     []byte            `json:"-"`
 	XXX_sizecache        int32             `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeSnapshotCreateRequest) Reset()         { *m = SdkVolumeSnapshotCreateRequest{} }
 func (m *SdkVolumeSnapshotCreateRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeSnapshotCreateRequest) ProtoMessage()    {}
@@ -7433,12 +12286,40 @@ func (m *SdkVolumeSnapshotCreateRequest) XXX_DiscardUnknown() {
 var xxx_messageInfo_SdkVolumeSnapshotCreateRequest proto.InternalMessageInfo
 
 func (m *SdkVolumeSnapshotCreateRequest) GetVolumeId() string {
+=======
+func (m *SdkVolumeUpdateRequest) Reset()         { *m = SdkVolumeUpdateRequest{} }
+func (m *SdkVolumeUpdateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeUpdateRequest) ProtoMessage()    {}
+func (*SdkVolumeUpdateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{79}
+}
+func (m *SdkVolumeUpdateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeUpdateRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeUpdateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeUpdateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeUpdateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeUpdateRequest.Merge(dst, src)
+}
+func (m *SdkVolumeUpdateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeUpdateRequest.Size(m)
+}
+func (m *SdkVolumeUpdateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeUpdateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeUpdateRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeUpdateRequest) GetVolumeId() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.VolumeId
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeSnapshotCreateRequest) GetName() string {
 	if m != nil {
 		return m.Name
@@ -7449,19 +12330,37 @@ func (m *SdkVolumeSnapshotCreateRequest) GetName() string {
 func (m *SdkVolumeSnapshotCreateRequest) GetLabels() map[string]string {
 	if m != nil {
 		return m.Labels
+=======
+func (m *SdkVolumeUpdateRequest) GetLocator() *VolumeLocator {
+	if m != nil {
+		return m.Locator
 	}
 	return nil
 }
 
+func (m *SdkVolumeUpdateRequest) GetSpec() *VolumeSpecUpdate {
+	if m != nil {
+		return m.Spec
+>>>>>>> Govendor update
+	}
+	return nil
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a response after creating a snapshot of a volume
 type SdkVolumeSnapshotCreateResponse struct {
 	// Id of immutable snapshot
 	SnapshotId           string   `protobuf:"bytes,1,opt,name=snapshot_id,json=snapshotId" json:"snapshot_id,omitempty"`
+=======
+// Empty response
+type SdkVolumeUpdateResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeSnapshotCreateResponse) Reset()         { *m = SdkVolumeSnapshotCreateResponse{} }
 func (m *SdkVolumeSnapshotCreateResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeSnapshotCreateResponse) ProtoMessage()    {}
@@ -7499,11 +12398,45 @@ type SdkVolumeSnapshotRestoreRequest struct {
 	VolumeId string `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
 	// Snapshot id to apply to `volume_id`
 	SnapshotId           string   `protobuf:"bytes,2,opt,name=snapshot_id,json=snapshotId" json:"snapshot_id,omitempty"`
+=======
+func (m *SdkVolumeUpdateResponse) Reset()         { *m = SdkVolumeUpdateResponse{} }
+func (m *SdkVolumeUpdateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeUpdateResponse) ProtoMessage()    {}
+func (*SdkVolumeUpdateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{80}
+}
+func (m *SdkVolumeUpdateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeUpdateResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeUpdateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeUpdateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeUpdateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeUpdateResponse.Merge(dst, src)
+}
+func (m *SdkVolumeUpdateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeUpdateResponse.Size(m)
+}
+func (m *SdkVolumeUpdateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeUpdateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeUpdateResponse proto.InternalMessageInfo
+
+// Defines a request to retreive volume statistics
+type SdkVolumeStatsRequest struct {
+	// Id of the volume to get statistics
+	VolumeId string `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	// When set to false the stats are in /proc/diskstats style stats.
+	// When set to true the stats are stats for a specific duration.
+	NotCumulative        bool     `protobuf:"varint,2,opt,name=not_cumulative,json=notCumulative" json:"not_cumulative,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeSnapshotRestoreRequest) Reset()         { *m = SdkVolumeSnapshotRestoreRequest{} }
 func (m *SdkVolumeSnapshotRestoreRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeSnapshotRestoreRequest) ProtoMessage()    {}
@@ -7529,12 +12462,40 @@ func (m *SdkVolumeSnapshotRestoreRequest) XXX_DiscardUnknown() {
 var xxx_messageInfo_SdkVolumeSnapshotRestoreRequest proto.InternalMessageInfo
 
 func (m *SdkVolumeSnapshotRestoreRequest) GetVolumeId() string {
+=======
+func (m *SdkVolumeStatsRequest) Reset()         { *m = SdkVolumeStatsRequest{} }
+func (m *SdkVolumeStatsRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeStatsRequest) ProtoMessage()    {}
+func (*SdkVolumeStatsRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{81}
+}
+func (m *SdkVolumeStatsRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeStatsRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeStatsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeStatsRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeStatsRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeStatsRequest.Merge(dst, src)
+}
+func (m *SdkVolumeStatsRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeStatsRequest.Size(m)
+}
+func (m *SdkVolumeStatsRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeStatsRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeStatsRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeStatsRequest) GetVolumeId() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.VolumeId
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeSnapshotRestoreRequest) GetSnapshotId() string {
 	if m != nil {
 		return m.SnapshotId
@@ -7577,11 +12538,25 @@ var xxx_messageInfo_SdkVolumeSnapshotRestoreResponse proto.InternalMessageInfo
 type SdkVolumeSnapshotEnumerateRequest struct {
 	// Get the snapshots for this volume id
 	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+=======
+func (m *SdkVolumeStatsRequest) GetNotCumulative() bool {
+	if m != nil {
+		return m.NotCumulative
+	}
+	return false
+}
+
+// Defines a response containing drive statistics
+type SdkVolumeStatsResponse struct {
+	// Statistics for a single volume
+	Stats                *Stats   `protobuf:"bytes,1,opt,name=stats" json:"stats,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeSnapshotEnumerateRequest) Reset()         { *m = SdkVolumeSnapshotEnumerateRequest{} }
 func (m *SdkVolumeSnapshotEnumerateRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeSnapshotEnumerateRequest) ProtoMessage()    {}
@@ -7617,11 +12592,47 @@ func (m *SdkVolumeSnapshotEnumerateRequest) GetVolumeId() string {
 type SdkVolumeSnapshotEnumerateResponse struct {
 	// List of immutable snapshots
 	VolumeSnapshotIds    []string `protobuf:"bytes,1,rep,name=volume_snapshot_ids,json=volumeSnapshotIds" json:"volume_snapshot_ids,omitempty"`
+=======
+func (m *SdkVolumeStatsResponse) Reset()         { *m = SdkVolumeStatsResponse{} }
+func (m *SdkVolumeStatsResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeStatsResponse) ProtoMessage()    {}
+func (*SdkVolumeStatsResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{82}
+}
+func (m *SdkVolumeStatsResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeStatsResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeStatsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeStatsResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeStatsResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeStatsResponse.Merge(dst, src)
+}
+func (m *SdkVolumeStatsResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeStatsResponse.Size(m)
+}
+func (m *SdkVolumeStatsResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeStatsResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeStatsResponse proto.InternalMessageInfo
+
+func (m *SdkVolumeStatsResponse) GetStats() *Stats {
+	if m != nil {
+		return m.Stats
+	}
+	return nil
+}
+
+// Defines a request to list volumes
+type SdkVolumeEnumerateRequest struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVolumeSnapshotEnumerateResponse) Reset()         { *m = SdkVolumeSnapshotEnumerateResponse{} }
 func (m *SdkVolumeSnapshotEnumerateResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkVolumeSnapshotEnumerateResponse) ProtoMessage()    {}
@@ -7702,10 +12713,73 @@ func (m *SdkVolumeSnapshotEnumerateWithFiltersRequest) GetVolumeId() string {
 func (m *SdkVolumeSnapshotEnumerateWithFiltersRequest) GetLabels() map[string]string {
 	if m != nil {
 		return m.Labels
+=======
+func (m *SdkVolumeEnumerateRequest) Reset()         { *m = SdkVolumeEnumerateRequest{} }
+func (m *SdkVolumeEnumerateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeEnumerateRequest) ProtoMessage()    {}
+func (*SdkVolumeEnumerateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{83}
+}
+func (m *SdkVolumeEnumerateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeEnumerateRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeEnumerateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeEnumerateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeEnumerateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeEnumerateRequest.Merge(dst, src)
+}
+func (m *SdkVolumeEnumerateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeEnumerateRequest.Size(m)
+}
+func (m *SdkVolumeEnumerateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeEnumerateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeEnumerateRequest proto.InternalMessageInfo
+
+// Defines the response when listing volumes
+type SdkVolumeEnumerateResponse struct {
+	// List of volumes matching label
+	VolumeIds            []string `protobuf:"bytes,1,rep,name=volume_ids,json=volumeIds" json:"volume_ids,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkVolumeEnumerateResponse) Reset()         { *m = SdkVolumeEnumerateResponse{} }
+func (m *SdkVolumeEnumerateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeEnumerateResponse) ProtoMessage()    {}
+func (*SdkVolumeEnumerateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{84}
+}
+func (m *SdkVolumeEnumerateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeEnumerateResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeEnumerateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeEnumerateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeEnumerateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeEnumerateResponse.Merge(dst, src)
+}
+func (m *SdkVolumeEnumerateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeEnumerateResponse.Size(m)
+}
+func (m *SdkVolumeEnumerateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeEnumerateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeEnumerateResponse proto.InternalMessageInfo
+
+func (m *SdkVolumeEnumerateResponse) GetVolumeIds() []string {
+	if m != nil {
+		return m.VolumeIds
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a response when listing snapshots
 type SdkVolumeSnapshotEnumerateWithFiltersResponse struct {
 	// List of immutable snapshots
@@ -7746,17 +12820,64 @@ var xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersResponse proto.Internal
 func (m *SdkVolumeSnapshotEnumerateWithFiltersResponse) GetVolumeSnapshotIds() []string {
 	if m != nil {
 		return m.VolumeSnapshotIds
+=======
+// Defines a request to list volumes
+type SdkVolumeEnumerateWithFiltersRequest struct {
+	// Volumes to match to this locator.
+	// If not provided, all volumes will be returned.
+	Locator              *VolumeLocator `protobuf:"bytes,1,opt,name=locator" json:"locator,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
+	XXX_unrecognized     []byte         `json:"-"`
+	XXX_sizecache        int32          `json:"-"`
+}
+
+func (m *SdkVolumeEnumerateWithFiltersRequest) Reset()         { *m = SdkVolumeEnumerateWithFiltersRequest{} }
+func (m *SdkVolumeEnumerateWithFiltersRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeEnumerateWithFiltersRequest) ProtoMessage()    {}
+func (*SdkVolumeEnumerateWithFiltersRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{85}
+}
+func (m *SdkVolumeEnumerateWithFiltersRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeEnumerateWithFiltersRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeEnumerateWithFiltersRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeEnumerateWithFiltersRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeEnumerateWithFiltersRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeEnumerateWithFiltersRequest.Merge(dst, src)
+}
+func (m *SdkVolumeEnumerateWithFiltersRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeEnumerateWithFiltersRequest.Size(m)
+}
+func (m *SdkVolumeEnumerateWithFiltersRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeEnumerateWithFiltersRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeEnumerateWithFiltersRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeEnumerateWithFiltersRequest) GetLocator() *VolumeLocator {
+	if m != nil {
+		return m.Locator
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Empty request
 type SdkClusterInspectCurrentRequest struct {
+=======
+// Defines the response when listing volumes
+type SdkVolumeEnumerateWithFiltersResponse struct {
+	// List of volumes matching label
+	VolumeIds            []string `protobuf:"bytes,1,rep,name=volume_ids,json=volumeIds" json:"volume_ids,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkClusterInspectCurrentRequest) Reset()         { *m = SdkClusterInspectCurrentRequest{} }
 func (m *SdkClusterInspectCurrentRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkClusterInspectCurrentRequest) ProtoMessage()    {}
@@ -7817,19 +12938,105 @@ var xxx_messageInfo_SdkClusterInspectCurrentResponse proto.InternalMessageInfo
 func (m *SdkClusterInspectCurrentResponse) GetCluster() *StorageCluster {
 	if m != nil {
 		return m.Cluster
+=======
+func (m *SdkVolumeEnumerateWithFiltersResponse) Reset()         { *m = SdkVolumeEnumerateWithFiltersResponse{} }
+func (m *SdkVolumeEnumerateWithFiltersResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeEnumerateWithFiltersResponse) ProtoMessage()    {}
+func (*SdkVolumeEnumerateWithFiltersResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{86}
+}
+func (m *SdkVolumeEnumerateWithFiltersResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeEnumerateWithFiltersResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeEnumerateWithFiltersResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeEnumerateWithFiltersResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeEnumerateWithFiltersResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeEnumerateWithFiltersResponse.Merge(dst, src)
+}
+func (m *SdkVolumeEnumerateWithFiltersResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeEnumerateWithFiltersResponse.Size(m)
+}
+func (m *SdkVolumeEnumerateWithFiltersResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeEnumerateWithFiltersResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeEnumerateWithFiltersResponse proto.InternalMessageInfo
+
+func (m *SdkVolumeEnumerateWithFiltersResponse) GetVolumeIds() []string {
+	if m != nil {
+		return m.VolumeIds
 	}
 	return nil
 }
 
+// Defines the request when creating a snapshot from a volume.
+type SdkVolumeSnapshotCreateRequest struct {
+	// Id of volume to take the snapshot from
+	VolumeId string `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	// Labels to apply to snapshot
+	Labels               map[string]string `protobuf:"bytes,2,rep,name=labels" json:"labels,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *SdkVolumeSnapshotCreateRequest) Reset()         { *m = SdkVolumeSnapshotCreateRequest{} }
+func (m *SdkVolumeSnapshotCreateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeSnapshotCreateRequest) ProtoMessage()    {}
+func (*SdkVolumeSnapshotCreateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{87}
+}
+func (m *SdkVolumeSnapshotCreateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeSnapshotCreateRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeSnapshotCreateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeSnapshotCreateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeSnapshotCreateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeSnapshotCreateRequest.Merge(dst, src)
+}
+func (m *SdkVolumeSnapshotCreateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeSnapshotCreateRequest.Size(m)
+}
+func (m *SdkVolumeSnapshotCreateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeSnapshotCreateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeSnapshotCreateRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeSnapshotCreateRequest) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+	}
+	return ""
+}
+
+func (m *SdkVolumeSnapshotCreateRequest) GetLabels() map[string]string {
+	if m != nil {
+		return m.Labels
+>>>>>>> Govendor update
+	}
+	return nil
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a request when inspecting a node
 type SdkNodeInspectRequest struct {
 	// Id of node to inspect
 	NodeId               string   `protobuf:"bytes,1,opt,name=node_id,json=nodeId" json:"node_id,omitempty"`
+=======
+// Defines a response after creating a snapshot of a volume
+type SdkVolumeSnapshotCreateResponse struct {
+	// Id of immutable snapshot
+	SnapshotId           string   `protobuf:"bytes,1,opt,name=snapshot_id,json=snapshotId" json:"snapshot_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkNodeInspectRequest) Reset()         { *m = SdkNodeInspectRequest{} }
 func (m *SdkNodeInspectRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkNodeInspectRequest) ProtoMessage()    {}
@@ -7857,10 +13064,40 @@ var xxx_messageInfo_SdkNodeInspectRequest proto.InternalMessageInfo
 func (m *SdkNodeInspectRequest) GetNodeId() string {
 	if m != nil {
 		return m.NodeId
+=======
+func (m *SdkVolumeSnapshotCreateResponse) Reset()         { *m = SdkVolumeSnapshotCreateResponse{} }
+func (m *SdkVolumeSnapshotCreateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeSnapshotCreateResponse) ProtoMessage()    {}
+func (*SdkVolumeSnapshotCreateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{88}
+}
+func (m *SdkVolumeSnapshotCreateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeSnapshotCreateResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeSnapshotCreateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeSnapshotCreateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeSnapshotCreateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeSnapshotCreateResponse.Merge(dst, src)
+}
+func (m *SdkVolumeSnapshotCreateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeSnapshotCreateResponse.Size(m)
+}
+func (m *SdkVolumeSnapshotCreateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeSnapshotCreateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeSnapshotCreateResponse proto.InternalMessageInfo
+
+func (m *SdkVolumeSnapshotCreateResponse) GetSnapshotId() string {
+	if m != nil {
+		return m.SnapshotId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a response when inspecting a node
 type SdkNodeInspectResponse struct {
 	// Node information
@@ -7903,11 +13140,65 @@ func (m *SdkNodeInspectResponse) GetNode() *StorageNode {
 
 // Empty request
 type SdkNodeInspectCurrentRequest struct {
+=======
+// Defines a request to restore a volume to a snapshot
+type SdkVolumeSnapshotRestoreRequest struct {
+	// Id of volume
+	VolumeId string `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	// Snapshot id to apply to `volume_id`
+	SnapshotId           string   `protobuf:"bytes,2,opt,name=snapshot_id,json=snapshotId" json:"snapshot_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+func (m *SdkVolumeSnapshotRestoreRequest) Reset()         { *m = SdkVolumeSnapshotRestoreRequest{} }
+func (m *SdkVolumeSnapshotRestoreRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeSnapshotRestoreRequest) ProtoMessage()    {}
+func (*SdkVolumeSnapshotRestoreRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{89}
+}
+func (m *SdkVolumeSnapshotRestoreRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeSnapshotRestoreRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeSnapshotRestoreRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeSnapshotRestoreRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeSnapshotRestoreRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeSnapshotRestoreRequest.Merge(dst, src)
+}
+func (m *SdkVolumeSnapshotRestoreRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeSnapshotRestoreRequest.Size(m)
+}
+func (m *SdkVolumeSnapshotRestoreRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeSnapshotRestoreRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeSnapshotRestoreRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeSnapshotRestoreRequest) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+	}
+	return ""
+}
+
+func (m *SdkVolumeSnapshotRestoreRequest) GetSnapshotId() string {
+	if m != nil {
+		return m.SnapshotId
+	}
+	return ""
+}
+
+// Empty response
+type SdkVolumeSnapshotRestoreResponse struct {
+>>>>>>> Govendor update
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkNodeInspectCurrentRequest) Reset()         { *m = SdkNodeInspectCurrentRequest{} }
 func (m *SdkNodeInspectCurrentRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkNodeInspectCurrentRequest) ProtoMessage()    {}
@@ -8007,11 +13298,82 @@ var xxx_messageInfo_SdkNodeEnumerateRequest proto.InternalMessageInfo
 type SdkNodeEnumerateResponse struct {
 	// List of all the node ids in the cluster
 	NodeIds              []string `protobuf:"bytes,1,rep,name=node_ids,json=nodeIds" json:"node_ids,omitempty"`
+=======
+func (m *SdkVolumeSnapshotRestoreResponse) Reset()         { *m = SdkVolumeSnapshotRestoreResponse{} }
+func (m *SdkVolumeSnapshotRestoreResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeSnapshotRestoreResponse) ProtoMessage()    {}
+func (*SdkVolumeSnapshotRestoreResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{90}
+}
+func (m *SdkVolumeSnapshotRestoreResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeSnapshotRestoreResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeSnapshotRestoreResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeSnapshotRestoreResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeSnapshotRestoreResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeSnapshotRestoreResponse.Merge(dst, src)
+}
+func (m *SdkVolumeSnapshotRestoreResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeSnapshotRestoreResponse.Size(m)
+}
+func (m *SdkVolumeSnapshotRestoreResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeSnapshotRestoreResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeSnapshotRestoreResponse proto.InternalMessageInfo
+
+// Defines a request to list the snaphots
+type SdkVolumeSnapshotEnumerateRequest struct {
+	// Get the snapshots for this volume id
+	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+func (m *SdkVolumeSnapshotEnumerateRequest) Reset()         { *m = SdkVolumeSnapshotEnumerateRequest{} }
+func (m *SdkVolumeSnapshotEnumerateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeSnapshotEnumerateRequest) ProtoMessage()    {}
+func (*SdkVolumeSnapshotEnumerateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{91}
+}
+func (m *SdkVolumeSnapshotEnumerateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeSnapshotEnumerateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeSnapshotEnumerateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeSnapshotEnumerateRequest.Merge(dst, src)
+}
+func (m *SdkVolumeSnapshotEnumerateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateRequest.Size(m)
+}
+func (m *SdkVolumeSnapshotEnumerateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeSnapshotEnumerateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeSnapshotEnumerateRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeSnapshotEnumerateRequest) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+	}
+	return ""
+}
+
+// Defines a response when listing snapshots
+type SdkVolumeSnapshotEnumerateResponse struct {
+	// List of immutable snapshots
+	VolumeSnapshotIds    []string `protobuf:"bytes,1,rep,name=volume_snapshot_ids,json=volumeSnapshotIds" json:"volume_snapshot_ids,omitempty"`
+>>>>>>> Govendor update
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkNodeEnumerateResponse) Reset()         { *m = SdkNodeEnumerateResponse{} }
 func (m *SdkNodeEnumerateResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkNodeEnumerateResponse) ProtoMessage()    {}
@@ -8039,10 +13401,40 @@ var xxx_messageInfo_SdkNodeEnumerateResponse proto.InternalMessageInfo
 func (m *SdkNodeEnumerateResponse) GetNodeIds() []string {
 	if m != nil {
 		return m.NodeIds
+=======
+func (m *SdkVolumeSnapshotEnumerateResponse) Reset()         { *m = SdkVolumeSnapshotEnumerateResponse{} }
+func (m *SdkVolumeSnapshotEnumerateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkVolumeSnapshotEnumerateResponse) ProtoMessage()    {}
+func (*SdkVolumeSnapshotEnumerateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{92}
+}
+func (m *SdkVolumeSnapshotEnumerateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeSnapshotEnumerateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeSnapshotEnumerateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeSnapshotEnumerateResponse.Merge(dst, src)
+}
+func (m *SdkVolumeSnapshotEnumerateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateResponse.Size(m)
+}
+func (m *SdkVolumeSnapshotEnumerateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeSnapshotEnumerateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeSnapshotEnumerateResponse proto.InternalMessageInfo
+
+func (m *SdkVolumeSnapshotEnumerateResponse) GetVolumeSnapshotIds() []string {
+	if m != nil {
+		return m.VolumeSnapshotIds
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a request contains the information needed to get alerts from
 // the storage system. For REST you will need to pass these
 // as query parameters. See swagger documentation for more information.
@@ -8092,10 +13484,62 @@ func (m *SdkClusterAlertEnumerateRequest) GetTimeStart() *timestamp.Timestamp {
 func (m *SdkClusterAlertEnumerateRequest) GetTimeEnd() *timestamp.Timestamp {
 	if m != nil {
 		return m.TimeEnd
+=======
+// Defines a request to list the snaphots
+type SdkVolumeSnapshotEnumerateWithFiltersRequest struct {
+	// Get the snapshots for this volume id
+	VolumeId string `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	// Get snapshots that match these labels
+	Labels               map[string]string `protobuf:"bytes,2,rep,name=labels" json:"labels,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *SdkVolumeSnapshotEnumerateWithFiltersRequest) Reset() {
+	*m = SdkVolumeSnapshotEnumerateWithFiltersRequest{}
+}
+func (m *SdkVolumeSnapshotEnumerateWithFiltersRequest) String() string {
+	return proto.CompactTextString(m)
+}
+func (*SdkVolumeSnapshotEnumerateWithFiltersRequest) ProtoMessage() {}
+func (*SdkVolumeSnapshotEnumerateWithFiltersRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{93}
+}
+func (m *SdkVolumeSnapshotEnumerateWithFiltersRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersRequest.Unmarshal(m, b)
+}
+func (m *SdkVolumeSnapshotEnumerateWithFiltersRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeSnapshotEnumerateWithFiltersRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersRequest.Merge(dst, src)
+}
+func (m *SdkVolumeSnapshotEnumerateWithFiltersRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersRequest.Size(m)
+}
+func (m *SdkVolumeSnapshotEnumerateWithFiltersRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersRequest proto.InternalMessageInfo
+
+func (m *SdkVolumeSnapshotEnumerateWithFiltersRequest) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+	}
+	return ""
+}
+
+func (m *SdkVolumeSnapshotEnumerateWithFiltersRequest) GetLabels() map[string]string {
+	if m != nil {
+		return m.Labels
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkClusterAlertEnumerateRequest) GetResource() ResourceType {
 	if m != nil {
 		return m.Resource
@@ -8107,11 +13551,18 @@ func (m *SdkClusterAlertEnumerateRequest) GetResource() ResourceType {
 type SdkClusterAlertEnumerateResponse struct {
 	// Information on the alerts requested
 	Alerts               []*Alert `protobuf:"bytes,1,rep,name=alerts" json:"alerts,omitempty"`
+=======
+// Defines a response when listing snapshots
+type SdkVolumeSnapshotEnumerateWithFiltersResponse struct {
+	// List of immutable snapshots
+	VolumeSnapshotIds    []string `protobuf:"bytes,1,rep,name=volume_snapshot_ids,json=volumeSnapshotIds" json:"volume_snapshot_ids,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkClusterAlertEnumerateResponse) Reset()         { *m = SdkClusterAlertEnumerateResponse{} }
 func (m *SdkClusterAlertEnumerateResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkClusterAlertEnumerateResponse) ProtoMessage()    {}
@@ -8139,21 +13590,60 @@ var xxx_messageInfo_SdkClusterAlertEnumerateResponse proto.InternalMessageInfo
 func (m *SdkClusterAlertEnumerateResponse) GetAlerts() []*Alert {
 	if m != nil {
 		return m.Alerts
+=======
+func (m *SdkVolumeSnapshotEnumerateWithFiltersResponse) Reset() {
+	*m = SdkVolumeSnapshotEnumerateWithFiltersResponse{}
+}
+func (m *SdkVolumeSnapshotEnumerateWithFiltersResponse) String() string {
+	return proto.CompactTextString(m)
+}
+func (*SdkVolumeSnapshotEnumerateWithFiltersResponse) ProtoMessage() {}
+func (*SdkVolumeSnapshotEnumerateWithFiltersResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{94}
+}
+func (m *SdkVolumeSnapshotEnumerateWithFiltersResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersResponse.Unmarshal(m, b)
+}
+func (m *SdkVolumeSnapshotEnumerateWithFiltersResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkVolumeSnapshotEnumerateWithFiltersResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersResponse.Merge(dst, src)
+}
+func (m *SdkVolumeSnapshotEnumerateWithFiltersResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersResponse.Size(m)
+}
+func (m *SdkVolumeSnapshotEnumerateWithFiltersResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkVolumeSnapshotEnumerateWithFiltersResponse proto.InternalMessageInfo
+
+func (m *SdkVolumeSnapshotEnumerateWithFiltersResponse) GetVolumeSnapshotIds() []string {
+	if m != nil {
+		return m.VolumeSnapshotIds
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a request to clear an alert
 type SdkClusterAlertClearRequest struct {
 	// Type of resource (required)
 	Resource ResourceType `protobuf:"varint,1,opt,name=resource,enum=openstorage.api.ResourceType" json:"resource,omitempty"`
 	// Id of alert as returned by ClusterEnumerateAlertResponse (required)
 	AlertId              int64    `protobuf:"varint,2,opt,name=alert_id,json=alertId" json:"alert_id,omitempty"`
+=======
+// Empty request
+type SdkClusterInspectCurrentRequest struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkClusterAlertClearRequest) Reset()         { *m = SdkClusterAlertClearRequest{} }
 func (m *SdkClusterAlertClearRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkClusterAlertClearRequest) ProtoMessage()    {}
@@ -8229,11 +13719,82 @@ type SdkClusterAlertDeleteRequest struct {
 	Resource ResourceType `protobuf:"varint,1,opt,name=resource,enum=openstorage.api.ResourceType" json:"resource,omitempty"`
 	// Id of alert as returned by ClusterEnumerateAlertResponse (required)
 	AlertId              int64    `protobuf:"varint,2,opt,name=alert_id,json=alertId" json:"alert_id,omitempty"`
+=======
+func (m *SdkClusterInspectCurrentRequest) Reset()         { *m = SdkClusterInspectCurrentRequest{} }
+func (m *SdkClusterInspectCurrentRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkClusterInspectCurrentRequest) ProtoMessage()    {}
+func (*SdkClusterInspectCurrentRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{95}
+}
+func (m *SdkClusterInspectCurrentRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkClusterInspectCurrentRequest.Unmarshal(m, b)
+}
+func (m *SdkClusterInspectCurrentRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkClusterInspectCurrentRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkClusterInspectCurrentRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkClusterInspectCurrentRequest.Merge(dst, src)
+}
+func (m *SdkClusterInspectCurrentRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkClusterInspectCurrentRequest.Size(m)
+}
+func (m *SdkClusterInspectCurrentRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkClusterInspectCurrentRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkClusterInspectCurrentRequest proto.InternalMessageInfo
+
+// Defines a response when inspecting the current cluster
+type SdkClusterInspectCurrentResponse struct {
+	// Cluster information
+	Cluster              *StorageCluster `protobuf:"bytes,1,opt,name=cluster" json:"cluster,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
+}
+
+func (m *SdkClusterInspectCurrentResponse) Reset()         { *m = SdkClusterInspectCurrentResponse{} }
+func (m *SdkClusterInspectCurrentResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkClusterInspectCurrentResponse) ProtoMessage()    {}
+func (*SdkClusterInspectCurrentResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{96}
+}
+func (m *SdkClusterInspectCurrentResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkClusterInspectCurrentResponse.Unmarshal(m, b)
+}
+func (m *SdkClusterInspectCurrentResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkClusterInspectCurrentResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkClusterInspectCurrentResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkClusterInspectCurrentResponse.Merge(dst, src)
+}
+func (m *SdkClusterInspectCurrentResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkClusterInspectCurrentResponse.Size(m)
+}
+func (m *SdkClusterInspectCurrentResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkClusterInspectCurrentResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkClusterInspectCurrentResponse proto.InternalMessageInfo
+
+func (m *SdkClusterInspectCurrentResponse) GetCluster() *StorageCluster {
+	if m != nil {
+		return m.Cluster
+	}
+	return nil
+}
+
+// Defines a request when inspecting a node
+type SdkNodeInspectRequest struct {
+	// Id of node to inspect
+	NodeId               string   `protobuf:"bytes,1,opt,name=node_id,json=nodeId" json:"node_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkClusterAlertDeleteRequest) Reset()         { *m = SdkClusterAlertDeleteRequest{} }
 func (m *SdkClusterAlertDeleteRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkClusterAlertDeleteRequest) ProtoMessage()    {}
@@ -8307,11 +13868,87 @@ var xxx_messageInfo_SdkClusterAlertDeleteResponse proto.InternalMessageInfo
 type SdkObjectstoreInspectRequest struct {
 	// Id of the object store
 	ObjectstoreId        string   `protobuf:"bytes,1,opt,name=objectstore_id,json=objectstoreId" json:"objectstore_id,omitempty"`
+=======
+func (m *SdkNodeInspectRequest) Reset()         { *m = SdkNodeInspectRequest{} }
+func (m *SdkNodeInspectRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkNodeInspectRequest) ProtoMessage()    {}
+func (*SdkNodeInspectRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{97}
+}
+func (m *SdkNodeInspectRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkNodeInspectRequest.Unmarshal(m, b)
+}
+func (m *SdkNodeInspectRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkNodeInspectRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkNodeInspectRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkNodeInspectRequest.Merge(dst, src)
+}
+func (m *SdkNodeInspectRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkNodeInspectRequest.Size(m)
+}
+func (m *SdkNodeInspectRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkNodeInspectRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkNodeInspectRequest proto.InternalMessageInfo
+
+func (m *SdkNodeInspectRequest) GetNodeId() string {
+	if m != nil {
+		return m.NodeId
+	}
+	return ""
+}
+
+// Defines a response when inspecting a node
+type SdkNodeInspectResponse struct {
+	// Node information
+	Node                 *StorageNode `protobuf:"bytes,1,opt,name=node" json:"node,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
+	XXX_unrecognized     []byte       `json:"-"`
+	XXX_sizecache        int32        `json:"-"`
+}
+
+func (m *SdkNodeInspectResponse) Reset()         { *m = SdkNodeInspectResponse{} }
+func (m *SdkNodeInspectResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkNodeInspectResponse) ProtoMessage()    {}
+func (*SdkNodeInspectResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{98}
+}
+func (m *SdkNodeInspectResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkNodeInspectResponse.Unmarshal(m, b)
+}
+func (m *SdkNodeInspectResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkNodeInspectResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkNodeInspectResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkNodeInspectResponse.Merge(dst, src)
+}
+func (m *SdkNodeInspectResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkNodeInspectResponse.Size(m)
+}
+func (m *SdkNodeInspectResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkNodeInspectResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkNodeInspectResponse proto.InternalMessageInfo
+
+func (m *SdkNodeInspectResponse) GetNode() *StorageNode {
+	if m != nil {
+		return m.Node
+	}
+	return nil
+}
+
+// Empty request
+type SdkNodeInspectCurrentRequest struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkObjectstoreInspectRequest) Reset()         { *m = SdkObjectstoreInspectRequest{} }
 func (m *SdkObjectstoreInspectRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkObjectstoreInspectRequest) ProtoMessage()    {}
@@ -8379,19 +14016,87 @@ var xxx_messageInfo_SdkObjectstoreInspectResponse proto.InternalMessageInfo
 func (m *SdkObjectstoreInspectResponse) GetObjectstoreStatus() *ObjectstoreInfo {
 	if m != nil {
 		return m.ObjectstoreStatus
+=======
+func (m *SdkNodeInspectCurrentRequest) Reset()         { *m = SdkNodeInspectCurrentRequest{} }
+func (m *SdkNodeInspectCurrentRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkNodeInspectCurrentRequest) ProtoMessage()    {}
+func (*SdkNodeInspectCurrentRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{99}
+}
+func (m *SdkNodeInspectCurrentRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkNodeInspectCurrentRequest.Unmarshal(m, b)
+}
+func (m *SdkNodeInspectCurrentRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkNodeInspectCurrentRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkNodeInspectCurrentRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkNodeInspectCurrentRequest.Merge(dst, src)
+}
+func (m *SdkNodeInspectCurrentRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkNodeInspectCurrentRequest.Size(m)
+}
+func (m *SdkNodeInspectCurrentRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkNodeInspectCurrentRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkNodeInspectCurrentRequest proto.InternalMessageInfo
+
+// Defines a response when inspecting a node
+type SdkNodeInspectCurrentResponse struct {
+	// Node information
+	Node                 *StorageNode `protobuf:"bytes,1,opt,name=node" json:"node,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
+	XXX_unrecognized     []byte       `json:"-"`
+	XXX_sizecache        int32        `json:"-"`
+}
+
+func (m *SdkNodeInspectCurrentResponse) Reset()         { *m = SdkNodeInspectCurrentResponse{} }
+func (m *SdkNodeInspectCurrentResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkNodeInspectCurrentResponse) ProtoMessage()    {}
+func (*SdkNodeInspectCurrentResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{100}
+}
+func (m *SdkNodeInspectCurrentResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkNodeInspectCurrentResponse.Unmarshal(m, b)
+}
+func (m *SdkNodeInspectCurrentResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkNodeInspectCurrentResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkNodeInspectCurrentResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkNodeInspectCurrentResponse.Merge(dst, src)
+}
+func (m *SdkNodeInspectCurrentResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkNodeInspectCurrentResponse.Size(m)
+}
+func (m *SdkNodeInspectCurrentResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkNodeInspectCurrentResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkNodeInspectCurrentResponse proto.InternalMessageInfo
+
+func (m *SdkNodeInspectCurrentResponse) GetNode() *StorageNode {
+	if m != nil {
+		return m.Node
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a request to create an object store
 type SdkObjectstoreCreateRequest struct {
 	// Volume on which objectstore will be running
 	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+=======
+// Empty request
+type SdkNodeEnumerateRequest struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkObjectstoreCreateRequest) Reset()         { *m = SdkObjectstoreCreateRequest{} }
 func (m *SdkObjectstoreCreateRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkObjectstoreCreateRequest) ProtoMessage()    {}
@@ -8460,10 +14165,73 @@ var xxx_messageInfo_SdkObjectstoreCreateResponse proto.InternalMessageInfo
 func (m *SdkObjectstoreCreateResponse) GetObjectstoreStatus() *ObjectstoreInfo {
 	if m != nil {
 		return m.ObjectstoreStatus
+=======
+func (m *SdkNodeEnumerateRequest) Reset()         { *m = SdkNodeEnumerateRequest{} }
+func (m *SdkNodeEnumerateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkNodeEnumerateRequest) ProtoMessage()    {}
+func (*SdkNodeEnumerateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{101}
+}
+func (m *SdkNodeEnumerateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkNodeEnumerateRequest.Unmarshal(m, b)
+}
+func (m *SdkNodeEnumerateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkNodeEnumerateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkNodeEnumerateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkNodeEnumerateRequest.Merge(dst, src)
+}
+func (m *SdkNodeEnumerateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkNodeEnumerateRequest.Size(m)
+}
+func (m *SdkNodeEnumerateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkNodeEnumerateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkNodeEnumerateRequest proto.InternalMessageInfo
+
+// Defines a response with a list of nodes
+type SdkNodeEnumerateResponse struct {
+	// List of all the node ids in the cluster
+	NodeIds              []string `protobuf:"bytes,1,rep,name=node_ids,json=nodeIds" json:"node_ids,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkNodeEnumerateResponse) Reset()         { *m = SdkNodeEnumerateResponse{} }
+func (m *SdkNodeEnumerateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkNodeEnumerateResponse) ProtoMessage()    {}
+func (*SdkNodeEnumerateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{102}
+}
+func (m *SdkNodeEnumerateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkNodeEnumerateResponse.Unmarshal(m, b)
+}
+func (m *SdkNodeEnumerateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkNodeEnumerateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkNodeEnumerateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkNodeEnumerateResponse.Merge(dst, src)
+}
+func (m *SdkNodeEnumerateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkNodeEnumerateResponse.Size(m)
+}
+func (m *SdkNodeEnumerateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkNodeEnumerateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkNodeEnumerateResponse proto.InternalMessageInfo
+
+func (m *SdkNodeEnumerateResponse) GetNodeIds() []string {
+	if m != nil {
+		return m.NodeIds
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a request to delete an object store service from a volume
 type SdkObjectstoreDeleteRequest struct {
 	// Id of the object store to delete
@@ -8506,11 +14274,78 @@ func (m *SdkObjectstoreDeleteRequest) GetObjectstoreId() string {
 
 // Empty response
 type SdkObjectstoreDeleteResponse struct {
+=======
+// Defines a request contains the information needed to get alerts from
+// the storage system. For REST you will need to pass these
+// as query parameters. See swagger documentation for more information.
+type SdkClusterAlertEnumerateRequest struct {
+	// Start time of alerts
+	TimeStart *timestamp.Timestamp `protobuf:"bytes,1,opt,name=time_start,json=timeStart" json:"time_start,omitempty"`
+	// End time of alerts
+	TimeEnd *timestamp.Timestamp `protobuf:"bytes,2,opt,name=time_end,json=timeEnd" json:"time_end,omitempty"`
+	// Type of resource
+	Resource             ResourceType `protobuf:"varint,3,opt,name=resource,enum=openstorage.api.ResourceType" json:"resource,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
+	XXX_unrecognized     []byte       `json:"-"`
+	XXX_sizecache        int32        `json:"-"`
+}
+
+func (m *SdkClusterAlertEnumerateRequest) Reset()         { *m = SdkClusterAlertEnumerateRequest{} }
+func (m *SdkClusterAlertEnumerateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkClusterAlertEnumerateRequest) ProtoMessage()    {}
+func (*SdkClusterAlertEnumerateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{103}
+}
+func (m *SdkClusterAlertEnumerateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkClusterAlertEnumerateRequest.Unmarshal(m, b)
+}
+func (m *SdkClusterAlertEnumerateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkClusterAlertEnumerateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkClusterAlertEnumerateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkClusterAlertEnumerateRequest.Merge(dst, src)
+}
+func (m *SdkClusterAlertEnumerateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkClusterAlertEnumerateRequest.Size(m)
+}
+func (m *SdkClusterAlertEnumerateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkClusterAlertEnumerateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkClusterAlertEnumerateRequest proto.InternalMessageInfo
+
+func (m *SdkClusterAlertEnumerateRequest) GetTimeStart() *timestamp.Timestamp {
+	if m != nil {
+		return m.TimeStart
+	}
+	return nil
+}
+
+func (m *SdkClusterAlertEnumerateRequest) GetTimeEnd() *timestamp.Timestamp {
+	if m != nil {
+		return m.TimeEnd
+	}
+	return nil
+}
+
+func (m *SdkClusterAlertEnumerateRequest) GetResource() ResourceType {
+	if m != nil {
+		return m.Resource
+	}
+	return ResourceType_RESOURCE_TYPE_NONE
+}
+
+// Defines a response providing a list of alerts
+type SdkClusterAlertEnumerateResponse struct {
+	// Information on the alerts requested
+	Alerts               []*Alert `protobuf:"bytes,1,rep,name=alerts" json:"alerts,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkObjectstoreDeleteResponse) Reset()         { *m = SdkObjectstoreDeleteResponse{} }
 func (m *SdkObjectstoreDeleteResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkObjectstoreDeleteResponse) ProtoMessage()    {}
@@ -8541,11 +14376,51 @@ type SdkObjectstoreUpdateRequest struct {
 	ObjectstoreId string `protobuf:"bytes,1,opt,name=objectstore_id,json=objectstoreId" json:"objectstore_id,omitempty"`
 	// enable/disable objectstore
 	Enable               bool     `protobuf:"varint,2,opt,name=enable" json:"enable,omitempty"`
+=======
+func (m *SdkClusterAlertEnumerateResponse) Reset()         { *m = SdkClusterAlertEnumerateResponse{} }
+func (m *SdkClusterAlertEnumerateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkClusterAlertEnumerateResponse) ProtoMessage()    {}
+func (*SdkClusterAlertEnumerateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{104}
+}
+func (m *SdkClusterAlertEnumerateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkClusterAlertEnumerateResponse.Unmarshal(m, b)
+}
+func (m *SdkClusterAlertEnumerateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkClusterAlertEnumerateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkClusterAlertEnumerateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkClusterAlertEnumerateResponse.Merge(dst, src)
+}
+func (m *SdkClusterAlertEnumerateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkClusterAlertEnumerateResponse.Size(m)
+}
+func (m *SdkClusterAlertEnumerateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkClusterAlertEnumerateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkClusterAlertEnumerateResponse proto.InternalMessageInfo
+
+func (m *SdkClusterAlertEnumerateResponse) GetAlerts() []*Alert {
+	if m != nil {
+		return m.Alerts
+	}
+	return nil
+}
+
+// Defines a request to clear an alert
+type SdkClusterAlertClearRequest struct {
+	// Type of resource (required)
+	Resource ResourceType `protobuf:"varint,1,opt,name=resource,enum=openstorage.api.ResourceType" json:"resource,omitempty"`
+	// Id of alert as returned by ClusterEnumerateAlertResponse (required)
+	AlertId              int64    `protobuf:"varint,2,opt,name=alert_id,json=alertId" json:"alert_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkObjectstoreUpdateRequest) Reset()         { *m = SdkObjectstoreUpdateRequest{} }
 func (m *SdkObjectstoreUpdateRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkObjectstoreUpdateRequest) ProtoMessage()    {}
@@ -8586,11 +14461,54 @@ func (m *SdkObjectstoreUpdateRequest) GetEnable() bool {
 
 // Empty response
 type SdkObjectstoreUpdateResponse struct {
+=======
+func (m *SdkClusterAlertClearRequest) Reset()         { *m = SdkClusterAlertClearRequest{} }
+func (m *SdkClusterAlertClearRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkClusterAlertClearRequest) ProtoMessage()    {}
+func (*SdkClusterAlertClearRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{105}
+}
+func (m *SdkClusterAlertClearRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkClusterAlertClearRequest.Unmarshal(m, b)
+}
+func (m *SdkClusterAlertClearRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkClusterAlertClearRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkClusterAlertClearRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkClusterAlertClearRequest.Merge(dst, src)
+}
+func (m *SdkClusterAlertClearRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkClusterAlertClearRequest.Size(m)
+}
+func (m *SdkClusterAlertClearRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkClusterAlertClearRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkClusterAlertClearRequest proto.InternalMessageInfo
+
+func (m *SdkClusterAlertClearRequest) GetResource() ResourceType {
+	if m != nil {
+		return m.Resource
+	}
+	return ResourceType_RESOURCE_TYPE_NONE
+}
+
+func (m *SdkClusterAlertClearRequest) GetAlertId() int64 {
+	if m != nil {
+		return m.AlertId
+	}
+	return 0
+}
+
+// Empty response
+type SdkClusterAlertClearResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkObjectstoreUpdateResponse) Reset()         { *m = SdkObjectstoreUpdateResponse{} }
 func (m *SdkObjectstoreUpdateResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkObjectstoreUpdateResponse) ProtoMessage()    {}
@@ -8623,11 +14541,44 @@ type SdkCloudBackupCreateRequest struct {
 	CredentialId string `protobuf:"bytes,2,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
 	// Full indicates if full backup is desired even though incremental is possible
 	Full                 bool     `protobuf:"varint,3,opt,name=full" json:"full,omitempty"`
+=======
+func (m *SdkClusterAlertClearResponse) Reset()         { *m = SdkClusterAlertClearResponse{} }
+func (m *SdkClusterAlertClearResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkClusterAlertClearResponse) ProtoMessage()    {}
+func (*SdkClusterAlertClearResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{106}
+}
+func (m *SdkClusterAlertClearResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkClusterAlertClearResponse.Unmarshal(m, b)
+}
+func (m *SdkClusterAlertClearResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkClusterAlertClearResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkClusterAlertClearResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkClusterAlertClearResponse.Merge(dst, src)
+}
+func (m *SdkClusterAlertClearResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkClusterAlertClearResponse.Size(m)
+}
+func (m *SdkClusterAlertClearResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkClusterAlertClearResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkClusterAlertClearResponse proto.InternalMessageInfo
+
+// Defines a request to delete an alert
+type SdkClusterAlertDeleteRequest struct {
+	// Type of resource (required)
+	Resource ResourceType `protobuf:"varint,1,opt,name=resource,enum=openstorage.api.ResourceType" json:"resource,omitempty"`
+	// Id of alert as returned by ClusterEnumerateAlertResponse (required)
+	AlertId              int64    `protobuf:"varint,2,opt,name=alert_id,json=alertId" json:"alert_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupCreateRequest) Reset()         { *m = SdkCloudBackupCreateRequest{} }
 func (m *SdkCloudBackupCreateRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupCreateRequest) ProtoMessage()    {}
@@ -8675,11 +14626,54 @@ func (m *SdkCloudBackupCreateRequest) GetFull() bool {
 
 // Empty response
 type SdkCloudBackupCreateResponse struct {
+=======
+func (m *SdkClusterAlertDeleteRequest) Reset()         { *m = SdkClusterAlertDeleteRequest{} }
+func (m *SdkClusterAlertDeleteRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkClusterAlertDeleteRequest) ProtoMessage()    {}
+func (*SdkClusterAlertDeleteRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{107}
+}
+func (m *SdkClusterAlertDeleteRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkClusterAlertDeleteRequest.Unmarshal(m, b)
+}
+func (m *SdkClusterAlertDeleteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkClusterAlertDeleteRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkClusterAlertDeleteRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkClusterAlertDeleteRequest.Merge(dst, src)
+}
+func (m *SdkClusterAlertDeleteRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkClusterAlertDeleteRequest.Size(m)
+}
+func (m *SdkClusterAlertDeleteRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkClusterAlertDeleteRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkClusterAlertDeleteRequest proto.InternalMessageInfo
+
+func (m *SdkClusterAlertDeleteRequest) GetResource() ResourceType {
+	if m != nil {
+		return m.Resource
+	}
+	return ResourceType_RESOURCE_TYPE_NONE
+}
+
+func (m *SdkClusterAlertDeleteRequest) GetAlertId() int64 {
+	if m != nil {
+		return m.AlertId
+	}
+	return 0
+}
+
+// Empty response
+type SdkClusterAlertDeleteResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupCreateResponse) Reset()         { *m = SdkCloudBackupCreateResponse{} }
 func (m *SdkCloudBackupCreateResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupCreateResponse) ProtoMessage()    {}
@@ -8717,11 +14711,42 @@ type SdkCloudBackupRestoreRequest struct {
 	// Optional for provisioning restore
 	// volume (ResoreVolumeName should not be specified)
 	NodeId               string   `protobuf:"bytes,4,opt,name=node_id,json=nodeId" json:"node_id,omitempty"`
+=======
+func (m *SdkClusterAlertDeleteResponse) Reset()         { *m = SdkClusterAlertDeleteResponse{} }
+func (m *SdkClusterAlertDeleteResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkClusterAlertDeleteResponse) ProtoMessage()    {}
+func (*SdkClusterAlertDeleteResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{108}
+}
+func (m *SdkClusterAlertDeleteResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkClusterAlertDeleteResponse.Unmarshal(m, b)
+}
+func (m *SdkClusterAlertDeleteResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkClusterAlertDeleteResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkClusterAlertDeleteResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkClusterAlertDeleteResponse.Merge(dst, src)
+}
+func (m *SdkClusterAlertDeleteResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkClusterAlertDeleteResponse.Size(m)
+}
+func (m *SdkClusterAlertDeleteResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkClusterAlertDeleteResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkClusterAlertDeleteResponse proto.InternalMessageInfo
+
+// Defines a request to get information about an object store endpoint
+type SdkObjectstoreInspectRequest struct {
+	// Id of the object store
+	ObjectstoreId        string   `protobuf:"bytes,1,opt,name=objectstore_id,json=objectstoreId" json:"objectstore_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupRestoreRequest) Reset()         { *m = SdkCloudBackupRestoreRequest{} }
 func (m *SdkCloudBackupRestoreRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupRestoreRequest) ProtoMessage()    {}
@@ -8770,10 +14795,40 @@ func (m *SdkCloudBackupRestoreRequest) GetCredentialId() string {
 func (m *SdkCloudBackupRestoreRequest) GetNodeId() string {
 	if m != nil {
 		return m.NodeId
+=======
+func (m *SdkObjectstoreInspectRequest) Reset()         { *m = SdkObjectstoreInspectRequest{} }
+func (m *SdkObjectstoreInspectRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkObjectstoreInspectRequest) ProtoMessage()    {}
+func (*SdkObjectstoreInspectRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{109}
+}
+func (m *SdkObjectstoreInspectRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkObjectstoreInspectRequest.Unmarshal(m, b)
+}
+func (m *SdkObjectstoreInspectRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkObjectstoreInspectRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkObjectstoreInspectRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkObjectstoreInspectRequest.Merge(dst, src)
+}
+func (m *SdkObjectstoreInspectRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkObjectstoreInspectRequest.Size(m)
+}
+func (m *SdkObjectstoreInspectRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkObjectstoreInspectRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkObjectstoreInspectRequest proto.InternalMessageInfo
+
+func (m *SdkObjectstoreInspectRequest) GetObjectstoreId() string {
+	if m != nil {
+		return m.ObjectstoreId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a response when restoring a volume from a backup stored by
 // a cloud provider
 type SdkCloudBackupRestoreResponse struct {
@@ -8825,11 +14880,58 @@ type SdkCloudBackupDeleteRequest struct {
 	// needed if the backup is an incremental backup and subsequent backups
 	// depend on this backup specified by `backup_id`.
 	Force                bool     `protobuf:"varint,3,opt,name=force" json:"force,omitempty"`
+=======
+// Defines a response when inspecting an object store endpoint
+type SdkObjectstoreInspectResponse struct {
+	// Contains information about the object store requested
+	ObjectstoreStatus    *ObjectstoreInfo `protobuf:"bytes,1,opt,name=objectstore_status,json=objectstoreStatus" json:"objectstore_status,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
+	XXX_unrecognized     []byte           `json:"-"`
+	XXX_sizecache        int32            `json:"-"`
+}
+
+func (m *SdkObjectstoreInspectResponse) Reset()         { *m = SdkObjectstoreInspectResponse{} }
+func (m *SdkObjectstoreInspectResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkObjectstoreInspectResponse) ProtoMessage()    {}
+func (*SdkObjectstoreInspectResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{110}
+}
+func (m *SdkObjectstoreInspectResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkObjectstoreInspectResponse.Unmarshal(m, b)
+}
+func (m *SdkObjectstoreInspectResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkObjectstoreInspectResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkObjectstoreInspectResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkObjectstoreInspectResponse.Merge(dst, src)
+}
+func (m *SdkObjectstoreInspectResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkObjectstoreInspectResponse.Size(m)
+}
+func (m *SdkObjectstoreInspectResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkObjectstoreInspectResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkObjectstoreInspectResponse proto.InternalMessageInfo
+
+func (m *SdkObjectstoreInspectResponse) GetObjectstoreStatus() *ObjectstoreInfo {
+	if m != nil {
+		return m.ObjectstoreStatus
+	}
+	return nil
+}
+
+// Defines a request to create an object store
+type SdkObjectstoreCreateRequest struct {
+	// Volume on which objectstore will be running
+	VolumeId             string   `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupDeleteRequest) Reset()         { *m = SdkCloudBackupDeleteRequest{} }
 func (m *SdkCloudBackupDeleteRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupDeleteRequest) ProtoMessage()    {}
@@ -8864,10 +14966,40 @@ func (m *SdkCloudBackupDeleteRequest) GetBackupId() string {
 func (m *SdkCloudBackupDeleteRequest) GetCredentialId() string {
 	if m != nil {
 		return m.CredentialId
+=======
+func (m *SdkObjectstoreCreateRequest) Reset()         { *m = SdkObjectstoreCreateRequest{} }
+func (m *SdkObjectstoreCreateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkObjectstoreCreateRequest) ProtoMessage()    {}
+func (*SdkObjectstoreCreateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{111}
+}
+func (m *SdkObjectstoreCreateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkObjectstoreCreateRequest.Unmarshal(m, b)
+}
+func (m *SdkObjectstoreCreateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkObjectstoreCreateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkObjectstoreCreateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkObjectstoreCreateRequest.Merge(dst, src)
+}
+func (m *SdkObjectstoreCreateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkObjectstoreCreateRequest.Size(m)
+}
+func (m *SdkObjectstoreCreateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkObjectstoreCreateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkObjectstoreCreateRequest proto.InternalMessageInfo
+
+func (m *SdkObjectstoreCreateRequest) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupDeleteRequest) GetForce() bool {
 	if m != nil {
 		return m.Force
@@ -8913,11 +15045,59 @@ type SdkCloudBackupDeleteAllRequest struct {
 	SrcVolumeId string `protobuf:"bytes,1,opt,name=src_volume_id,json=srcVolumeId" json:"src_volume_id,omitempty"`
 	// Credential id is the credential for cloud to be used for the request
 	CredentialId         string   `protobuf:"bytes,2,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+=======
+// Defines a response when an object store has been created for a
+// specified volume
+type SdkObjectstoreCreateResponse struct {
+	// Created objecstore status
+	ObjectstoreStatus    *ObjectstoreInfo `protobuf:"bytes,1,opt,name=objectstore_status,json=objectstoreStatus" json:"objectstore_status,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
+	XXX_unrecognized     []byte           `json:"-"`
+	XXX_sizecache        int32            `json:"-"`
+}
+
+func (m *SdkObjectstoreCreateResponse) Reset()         { *m = SdkObjectstoreCreateResponse{} }
+func (m *SdkObjectstoreCreateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkObjectstoreCreateResponse) ProtoMessage()    {}
+func (*SdkObjectstoreCreateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{112}
+}
+func (m *SdkObjectstoreCreateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkObjectstoreCreateResponse.Unmarshal(m, b)
+}
+func (m *SdkObjectstoreCreateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkObjectstoreCreateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkObjectstoreCreateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkObjectstoreCreateResponse.Merge(dst, src)
+}
+func (m *SdkObjectstoreCreateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkObjectstoreCreateResponse.Size(m)
+}
+func (m *SdkObjectstoreCreateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkObjectstoreCreateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkObjectstoreCreateResponse proto.InternalMessageInfo
+
+func (m *SdkObjectstoreCreateResponse) GetObjectstoreStatus() *ObjectstoreInfo {
+	if m != nil {
+		return m.ObjectstoreStatus
+	}
+	return nil
+}
+
+// Defines a request to delete an object store service from a volume
+type SdkObjectstoreDeleteRequest struct {
+	// Id of the object store to delete
+	ObjectstoreId        string   `protobuf:"bytes,1,opt,name=objectstore_id,json=objectstoreId" json:"objectstore_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupDeleteAllRequest) Reset()         { *m = SdkCloudBackupDeleteAllRequest{} }
 func (m *SdkCloudBackupDeleteAllRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupDeleteAllRequest) ProtoMessage()    {}
@@ -8952,17 +15132,51 @@ func (m *SdkCloudBackupDeleteAllRequest) GetSrcVolumeId() string {
 func (m *SdkCloudBackupDeleteAllRequest) GetCredentialId() string {
 	if m != nil {
 		return m.CredentialId
+=======
+func (m *SdkObjectstoreDeleteRequest) Reset()         { *m = SdkObjectstoreDeleteRequest{} }
+func (m *SdkObjectstoreDeleteRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkObjectstoreDeleteRequest) ProtoMessage()    {}
+func (*SdkObjectstoreDeleteRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{113}
+}
+func (m *SdkObjectstoreDeleteRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkObjectstoreDeleteRequest.Unmarshal(m, b)
+}
+func (m *SdkObjectstoreDeleteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkObjectstoreDeleteRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkObjectstoreDeleteRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkObjectstoreDeleteRequest.Merge(dst, src)
+}
+func (m *SdkObjectstoreDeleteRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkObjectstoreDeleteRequest.Size(m)
+}
+func (m *SdkObjectstoreDeleteRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkObjectstoreDeleteRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkObjectstoreDeleteRequest proto.InternalMessageInfo
+
+func (m *SdkObjectstoreDeleteRequest) GetObjectstoreId() string {
+	if m != nil {
+		return m.ObjectstoreId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
 // Empty response
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 type SdkCloudBackupDeleteAllResponse struct {
+=======
+type SdkObjectstoreDeleteResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupDeleteAllResponse) Reset()         { *m = SdkCloudBackupDeleteAllResponse{} }
 func (m *SdkCloudBackupDeleteAllResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupDeleteAllResponse) ProtoMessage()    {}
@@ -8997,11 +15211,44 @@ type SdkCloudBackupEnumerateRequest struct {
 	CredentialId string `protobuf:"bytes,3,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
 	// All if set to true, backups for all clusters in the cloud are processed
 	All                  bool     `protobuf:"varint,4,opt,name=all" json:"all,omitempty"`
+=======
+func (m *SdkObjectstoreDeleteResponse) Reset()         { *m = SdkObjectstoreDeleteResponse{} }
+func (m *SdkObjectstoreDeleteResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkObjectstoreDeleteResponse) ProtoMessage()    {}
+func (*SdkObjectstoreDeleteResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{114}
+}
+func (m *SdkObjectstoreDeleteResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkObjectstoreDeleteResponse.Unmarshal(m, b)
+}
+func (m *SdkObjectstoreDeleteResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkObjectstoreDeleteResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkObjectstoreDeleteResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkObjectstoreDeleteResponse.Merge(dst, src)
+}
+func (m *SdkObjectstoreDeleteResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkObjectstoreDeleteResponse.Size(m)
+}
+func (m *SdkObjectstoreDeleteResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkObjectstoreDeleteResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkObjectstoreDeleteResponse proto.InternalMessageInfo
+
+// Defines a request to update an object store
+type SdkObjectstoreUpdateRequest struct {
+	// Objectstore Id to update
+	ObjectstoreId string `protobuf:"bytes,1,opt,name=objectstore_id,json=objectstoreId" json:"objectstore_id,omitempty"`
+	// enable/disable objectstore
+	Enable               bool     `protobuf:"varint,2,opt,name=enable" json:"enable,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupEnumerateRequest) Reset()         { *m = SdkCloudBackupEnumerateRequest{} }
 func (m *SdkCloudBackupEnumerateRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupEnumerateRequest) ProtoMessage()    {}
@@ -9029,10 +15276,40 @@ var xxx_messageInfo_SdkCloudBackupEnumerateRequest proto.InternalMessageInfo
 func (m *SdkCloudBackupEnumerateRequest) GetSrcVolumeId() string {
 	if m != nil {
 		return m.SrcVolumeId
+=======
+func (m *SdkObjectstoreUpdateRequest) Reset()         { *m = SdkObjectstoreUpdateRequest{} }
+func (m *SdkObjectstoreUpdateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkObjectstoreUpdateRequest) ProtoMessage()    {}
+func (*SdkObjectstoreUpdateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{115}
+}
+func (m *SdkObjectstoreUpdateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkObjectstoreUpdateRequest.Unmarshal(m, b)
+}
+func (m *SdkObjectstoreUpdateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkObjectstoreUpdateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkObjectstoreUpdateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkObjectstoreUpdateRequest.Merge(dst, src)
+}
+func (m *SdkObjectstoreUpdateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkObjectstoreUpdateRequest.Size(m)
+}
+func (m *SdkObjectstoreUpdateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkObjectstoreUpdateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkObjectstoreUpdateRequest proto.InternalMessageInfo
+
+func (m *SdkObjectstoreUpdateRequest) GetObjectstoreId() string {
+	if m != nil {
+		return m.ObjectstoreId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupEnumerateRequest) GetClusterId() string {
 	if m != nil {
 		return m.ClusterId
@@ -9108,17 +15385,104 @@ func (m *SdkCloudBackupInfo) GetId() string {
 func (m *SdkCloudBackupInfo) GetSrcVolumeId() string {
 	if m != nil {
 		return m.SrcVolumeId
+=======
+func (m *SdkObjectstoreUpdateRequest) GetEnable() bool {
+	if m != nil {
+		return m.Enable
+	}
+	return false
+}
+
+// Empty response
+type SdkObjectstoreUpdateResponse struct {
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkObjectstoreUpdateResponse) Reset()         { *m = SdkObjectstoreUpdateResponse{} }
+func (m *SdkObjectstoreUpdateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkObjectstoreUpdateResponse) ProtoMessage()    {}
+func (*SdkObjectstoreUpdateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{116}
+}
+func (m *SdkObjectstoreUpdateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkObjectstoreUpdateResponse.Unmarshal(m, b)
+}
+func (m *SdkObjectstoreUpdateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkObjectstoreUpdateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkObjectstoreUpdateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkObjectstoreUpdateResponse.Merge(dst, src)
+}
+func (m *SdkObjectstoreUpdateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkObjectstoreUpdateResponse.Size(m)
+}
+func (m *SdkObjectstoreUpdateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkObjectstoreUpdateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkObjectstoreUpdateResponse proto.InternalMessageInfo
+
+// Defines a request to create a backup of a volume to the cloud
+type SdkCloudBackupCreateRequest struct {
+	// VolumeID of the volume for which cloudbackup is requested
+	VolumeId string `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	// Credential id refers to the cloud credentials needed to backup
+	CredentialId string `protobuf:"bytes,2,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+	// Full indicates if full backup is desired even though incremental is possible
+	Full                 bool     `protobuf:"varint,3,opt,name=full" json:"full,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkCloudBackupCreateRequest) Reset()         { *m = SdkCloudBackupCreateRequest{} }
+func (m *SdkCloudBackupCreateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupCreateRequest) ProtoMessage()    {}
+func (*SdkCloudBackupCreateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{117}
+}
+func (m *SdkCloudBackupCreateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupCreateRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupCreateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupCreateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupCreateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupCreateRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupCreateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupCreateRequest.Size(m)
+}
+func (m *SdkCloudBackupCreateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupCreateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupCreateRequest proto.InternalMessageInfo
+
+func (m *SdkCloudBackupCreateRequest) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupInfo) GetSrcVolumeName() string {
 	if m != nil {
 		return m.SrcVolumeName
+=======
+func (m *SdkCloudBackupCreateRequest) GetCredentialId() string {
+	if m != nil {
+		return m.CredentialId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupInfo) GetTimestamp() *timestamp.Timestamp {
 	if m != nil {
 		return m.Timestamp
@@ -9195,11 +15559,65 @@ type SdkCloudBackupStatus struct {
 	CompletedTime *timestamp.Timestamp `protobuf:"bytes,6,opt,name=completed_time,json=completedTime" json:"completed_time,omitempty"`
 	// NodeID is the ID of the node where this Op is active
 	NodeId               string   `protobuf:"bytes,7,opt,name=node_id,json=nodeId" json:"node_id,omitempty"`
+=======
+func (m *SdkCloudBackupCreateRequest) GetFull() bool {
+	if m != nil {
+		return m.Full
+	}
+	return false
+}
+
+// Empty response
+type SdkCloudBackupCreateResponse struct {
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+func (m *SdkCloudBackupCreateResponse) Reset()         { *m = SdkCloudBackupCreateResponse{} }
+func (m *SdkCloudBackupCreateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupCreateResponse) ProtoMessage()    {}
+func (*SdkCloudBackupCreateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{118}
+}
+func (m *SdkCloudBackupCreateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupCreateResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupCreateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupCreateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupCreateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupCreateResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupCreateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupCreateResponse.Size(m)
+}
+func (m *SdkCloudBackupCreateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupCreateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupCreateResponse proto.InternalMessageInfo
+
+// Defines a request to restore a volume from an existing backup stored by
+// a cloud provider
+type SdkCloudBackupRestoreRequest struct {
+	// Backup ID being restored
+	BackupId string `protobuf:"bytes,1,opt,name=backup_id,json=backupId" json:"backup_id,omitempty"`
+	// Optional volume Name of the new volume to be created
+	// in the cluster for restoring the cloudbackup
+	RestoreVolumeName string `protobuf:"bytes,2,opt,name=restore_volume_name,json=restoreVolumeName" json:"restore_volume_name,omitempty"`
+	// The credential to be used for restore operation
+	CredentialId string `protobuf:"bytes,3,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+	// Optional for provisioning restore
+	// volume (ResoreVolumeName should not be specified)
+	NodeId               string   `protobuf:"bytes,4,opt,name=node_id,json=nodeId" json:"node_id,omitempty"`
+>>>>>>> Govendor update
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupStatus) Reset()         { *m = SdkCloudBackupStatus{} }
 func (m *SdkCloudBackupStatus) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupStatus) ProtoMessage()    {}
@@ -9225,12 +15643,40 @@ func (m *SdkCloudBackupStatus) XXX_DiscardUnknown() {
 var xxx_messageInfo_SdkCloudBackupStatus proto.InternalMessageInfo
 
 func (m *SdkCloudBackupStatus) GetBackupId() string {
+=======
+func (m *SdkCloudBackupRestoreRequest) Reset()         { *m = SdkCloudBackupRestoreRequest{} }
+func (m *SdkCloudBackupRestoreRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupRestoreRequest) ProtoMessage()    {}
+func (*SdkCloudBackupRestoreRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{119}
+}
+func (m *SdkCloudBackupRestoreRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupRestoreRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupRestoreRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupRestoreRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupRestoreRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupRestoreRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupRestoreRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupRestoreRequest.Size(m)
+}
+func (m *SdkCloudBackupRestoreRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupRestoreRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupRestoreRequest proto.InternalMessageInfo
+
+func (m *SdkCloudBackupRestoreRequest) GetBackupId() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.BackupId
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupStatus) GetOptype() SdkCloudBackupOpType {
 	if m != nil {
 		return m.Optype
@@ -9269,10 +15715,71 @@ func (m *SdkCloudBackupStatus) GetCompletedTime() *timestamp.Timestamp {
 func (m *SdkCloudBackupStatus) GetNodeId() string {
 	if m != nil {
 		return m.NodeId
+=======
+func (m *SdkCloudBackupRestoreRequest) GetRestoreVolumeName() string {
+	if m != nil {
+		return m.RestoreVolumeName
 	}
 	return ""
 }
 
+func (m *SdkCloudBackupRestoreRequest) GetCredentialId() string {
+	if m != nil {
+		return m.CredentialId
+	}
+	return ""
+}
+
+func (m *SdkCloudBackupRestoreRequest) GetNodeId() string {
+	if m != nil {
+		return m.NodeId
+	}
+	return ""
+}
+
+// Defines a response when restoring a volume from a backup stored by
+// a cloud provider
+type SdkCloudBackupRestoreResponse struct {
+	// VolumeID to which the backup is being restored
+	RestoreVolumeId      string   `protobuf:"bytes,1,opt,name=restore_volume_id,json=restoreVolumeId" json:"restore_volume_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkCloudBackupRestoreResponse) Reset()         { *m = SdkCloudBackupRestoreResponse{} }
+func (m *SdkCloudBackupRestoreResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupRestoreResponse) ProtoMessage()    {}
+func (*SdkCloudBackupRestoreResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{120}
+}
+func (m *SdkCloudBackupRestoreResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupRestoreResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupRestoreResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupRestoreResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupRestoreResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupRestoreResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupRestoreResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupRestoreResponse.Size(m)
+}
+func (m *SdkCloudBackupRestoreResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupRestoreResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupRestoreResponse proto.InternalMessageInfo
+
+func (m *SdkCloudBackupRestoreResponse) GetRestoreVolumeId() string {
+	if m != nil {
+		return m.RestoreVolumeId
+>>>>>>> Govendor update
+	}
+	return ""
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a request to retreive the status of a backup or restore for a
 // specified volume
 type SdkCloudBackupStatusRequest struct {
@@ -9283,11 +15790,24 @@ type SdkCloudBackupStatusRequest struct {
 	// Local indicates if only those backups/restores that are
 	// active on current node must be returned
 	Local                bool     `protobuf:"varint,2,opt,name=local" json:"local,omitempty"`
+=======
+// Defines a request to delete a single backup stored by a cloud provider
+type SdkCloudBackupDeleteRequest struct {
+	// ID is the ID of the cloud backup
+	BackupId string `protobuf:"bytes,1,opt,name=backup_id,json=backupId" json:"backup_id,omitempty"`
+	// Credential id is the credential for cloud to be used for the request
+	CredentialId string `protobuf:"bytes,2,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+	// Force Delete cloudbackup even if there are dependencies. This may be
+	// needed if the backup is an incremental backup and subsequent backups
+	// depend on this backup specified by `backup_id`.
+	Force                bool     `protobuf:"varint,3,opt,name=force" json:"force,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupStatusRequest) Reset()         { *m = SdkCloudBackupStatusRequest{} }
 func (m *SdkCloudBackupStatusRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupStatusRequest) ProtoMessage()    {}
@@ -9315,17 +15835,60 @@ var xxx_messageInfo_SdkCloudBackupStatusRequest proto.InternalMessageInfo
 func (m *SdkCloudBackupStatusRequest) GetVolumeId() string {
 	if m != nil {
 		return m.VolumeId
+=======
+func (m *SdkCloudBackupDeleteRequest) Reset()         { *m = SdkCloudBackupDeleteRequest{} }
+func (m *SdkCloudBackupDeleteRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupDeleteRequest) ProtoMessage()    {}
+func (*SdkCloudBackupDeleteRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{121}
+}
+func (m *SdkCloudBackupDeleteRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupDeleteRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupDeleteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupDeleteRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupDeleteRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupDeleteRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupDeleteRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupDeleteRequest.Size(m)
+}
+func (m *SdkCloudBackupDeleteRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupDeleteRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupDeleteRequest proto.InternalMessageInfo
+
+func (m *SdkCloudBackupDeleteRequest) GetBackupId() string {
+	if m != nil {
+		return m.BackupId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupStatusRequest) GetLocal() bool {
 	if m != nil {
 		return m.Local
+=======
+func (m *SdkCloudBackupDeleteRequest) GetCredentialId() string {
+	if m != nil {
+		return m.CredentialId
+	}
+	return ""
+}
+
+func (m *SdkCloudBackupDeleteRequest) GetForce() bool {
+	if m != nil {
+		return m.Force
+>>>>>>> Govendor update
 	}
 	return false
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a response containing the status of the backups for a specified volume
 type SdkCloudBackupStatusResponse struct {
 	// Statuses is list of currently active/failed/done backup/restores where
@@ -9372,12 +15935,52 @@ type SdkCloudBackupCatalogRequest struct {
 	// Id of the backup
 	BackupId string `protobuf:"bytes,1,opt,name=backup_id,json=backupId" json:"backup_id,omitempty"`
 	// Credential id describe the credentials for the cloud
+=======
+// Empty response
+type SdkCloudBackupDeleteResponse struct {
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkCloudBackupDeleteResponse) Reset()         { *m = SdkCloudBackupDeleteResponse{} }
+func (m *SdkCloudBackupDeleteResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupDeleteResponse) ProtoMessage()    {}
+func (*SdkCloudBackupDeleteResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{122}
+}
+func (m *SdkCloudBackupDeleteResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupDeleteResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupDeleteResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupDeleteResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupDeleteResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupDeleteResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupDeleteResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupDeleteResponse.Size(m)
+}
+func (m *SdkCloudBackupDeleteResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupDeleteResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupDeleteResponse proto.InternalMessageInfo
+
+// Defines a request to delete all the backups stored by a cloud provider
+// for a specified volume
+type SdkCloudBackupDeleteAllRequest struct {
+	// id of the volume for the request
+	SrcVolumeId string `protobuf:"bytes,1,opt,name=src_volume_id,json=srcVolumeId" json:"src_volume_id,omitempty"`
+	// Credential id is the credential for cloud to be used for the request
+>>>>>>> Govendor update
 	CredentialId         string   `protobuf:"bytes,2,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupCatalogRequest) Reset()         { *m = SdkCloudBackupCatalogRequest{} }
 func (m *SdkCloudBackupCatalogRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupCatalogRequest) ProtoMessage()    {}
@@ -9405,26 +16008,65 @@ var xxx_messageInfo_SdkCloudBackupCatalogRequest proto.InternalMessageInfo
 func (m *SdkCloudBackupCatalogRequest) GetBackupId() string {
 	if m != nil {
 		return m.BackupId
+=======
+func (m *SdkCloudBackupDeleteAllRequest) Reset()         { *m = SdkCloudBackupDeleteAllRequest{} }
+func (m *SdkCloudBackupDeleteAllRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupDeleteAllRequest) ProtoMessage()    {}
+func (*SdkCloudBackupDeleteAllRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{123}
+}
+func (m *SdkCloudBackupDeleteAllRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupDeleteAllRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupDeleteAllRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupDeleteAllRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupDeleteAllRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupDeleteAllRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupDeleteAllRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupDeleteAllRequest.Size(m)
+}
+func (m *SdkCloudBackupDeleteAllRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupDeleteAllRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupDeleteAllRequest proto.InternalMessageInfo
+
+func (m *SdkCloudBackupDeleteAllRequest) GetSrcVolumeId() string {
+	if m != nil {
+		return m.SrcVolumeId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupCatalogRequest) GetCredentialId() string {
+=======
+func (m *SdkCloudBackupDeleteAllRequest) GetCredentialId() string {
+>>>>>>> Govendor update
 	if m != nil {
 		return m.CredentialId
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a response containing the contents of a backup stored by a cloud provider
 type SdkCloudBackupCatalogResponse struct {
 	// Contents is listing of backup contents
 	Contents             []string `protobuf:"bytes,1,rep,name=contents" json:"contents,omitempty"`
+=======
+// Empty response
+type SdkCloudBackupDeleteAllResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupCatalogResponse) Reset()         { *m = SdkCloudBackupCatalogResponse{} }
 func (m *SdkCloudBackupCatalogResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupCatalogResponse) ProtoMessage()    {}
@@ -9465,11 +16107,120 @@ type SdkCloudBackupHistoryItem struct {
 	Timestamp *timestamp.Timestamp `protobuf:"bytes,2,opt,name=timestamp" json:"timestamp,omitempty"`
 	// Status indicates whether backup was completed/failed
 	Status               SdkCloudBackupStatusType `protobuf:"varint,3,opt,name=status,enum=openstorage.api.SdkCloudBackupStatusType" json:"status,omitempty"`
+=======
+func (m *SdkCloudBackupDeleteAllResponse) Reset()         { *m = SdkCloudBackupDeleteAllResponse{} }
+func (m *SdkCloudBackupDeleteAllResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupDeleteAllResponse) ProtoMessage()    {}
+func (*SdkCloudBackupDeleteAllResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{124}
+}
+func (m *SdkCloudBackupDeleteAllResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupDeleteAllResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupDeleteAllResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupDeleteAllResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupDeleteAllResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupDeleteAllResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupDeleteAllResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupDeleteAllResponse.Size(m)
+}
+func (m *SdkCloudBackupDeleteAllResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupDeleteAllResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupDeleteAllResponse proto.InternalMessageInfo
+
+// Defines a request to list the backups stored by a cloud provider
+type SdkCloudBackupEnumerateRequest struct {
+	// Optional source id of the volume for the request
+	SrcVolumeId string `protobuf:"bytes,1,opt,name=src_volume_id,json=srcVolumeId" json:"src_volume_id,omitempty"`
+	// Cluster id is an optional parameter which defines the cluster
+	ClusterId string `protobuf:"bytes,2,opt,name=cluster_id,json=clusterId" json:"cluster_id,omitempty"`
+	// Credential id is the credential for cloud to be used for the request
+	CredentialId string `protobuf:"bytes,3,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+	// All if set to true, backups for all clusters in the cloud are processed
+	All                  bool     `protobuf:"varint,4,opt,name=all" json:"all,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkCloudBackupEnumerateRequest) Reset()         { *m = SdkCloudBackupEnumerateRequest{} }
+func (m *SdkCloudBackupEnumerateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupEnumerateRequest) ProtoMessage()    {}
+func (*SdkCloudBackupEnumerateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{125}
+}
+func (m *SdkCloudBackupEnumerateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupEnumerateRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupEnumerateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupEnumerateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupEnumerateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupEnumerateRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupEnumerateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupEnumerateRequest.Size(m)
+}
+func (m *SdkCloudBackupEnumerateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupEnumerateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupEnumerateRequest proto.InternalMessageInfo
+
+func (m *SdkCloudBackupEnumerateRequest) GetSrcVolumeId() string {
+	if m != nil {
+		return m.SrcVolumeId
+	}
+	return ""
+}
+
+func (m *SdkCloudBackupEnumerateRequest) GetClusterId() string {
+	if m != nil {
+		return m.ClusterId
+	}
+	return ""
+}
+
+func (m *SdkCloudBackupEnumerateRequest) GetCredentialId() string {
+	if m != nil {
+		return m.CredentialId
+	}
+	return ""
+}
+
+func (m *SdkCloudBackupEnumerateRequest) GetAll() bool {
+	if m != nil {
+		return m.All
+	}
+	return false
+}
+
+// SdkCloudBackupInfo has information about a backup stored by a cloud provider
+type SdkCloudBackupInfo struct {
+	// This is the id as represented by the cloud provider
+	Id string `protobuf:"bytes,1,opt,name=id" json:"id,omitempty"`
+	// Source volumeID of the backup
+	SrcVolumeId string `protobuf:"bytes,2,opt,name=src_volume_id,json=srcVolumeId" json:"src_volume_id,omitempty"`
+	// Name of the sourceVolume of the backup
+	SrcVolumeName string `protobuf:"bytes,3,opt,name=src_volume_name,json=srcVolumeName" json:"src_volume_name,omitempty"`
+	// Timestamp is the timestamp at which the source volume
+	// was backed up to cloud
+	Timestamp *timestamp.Timestamp `protobuf:"bytes,4,opt,name=timestamp" json:"timestamp,omitempty"`
+	// Metadata associated with the backup
+	Metadata map[string]string `protobuf:"bytes,5,rep,name=metadata" json:"metadata,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	// Status indicates the status of the backup
+	Status               SdkCloudBackupStatusType `protobuf:"varint,6,opt,name=status,enum=openstorage.api.SdkCloudBackupStatusType" json:"status,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{}                 `json:"-"`
 	XXX_unrecognized     []byte                   `json:"-"`
 	XXX_sizecache        int32                    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupHistoryItem) Reset()         { *m = SdkCloudBackupHistoryItem{} }
 func (m *SdkCloudBackupHistoryItem) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupHistoryItem) ProtoMessage()    {}
@@ -9497,10 +16248,40 @@ var xxx_messageInfo_SdkCloudBackupHistoryItem proto.InternalMessageInfo
 func (m *SdkCloudBackupHistoryItem) GetSrcVolumeId() string {
 	if m != nil {
 		return m.SrcVolumeId
+=======
+func (m *SdkCloudBackupInfo) Reset()         { *m = SdkCloudBackupInfo{} }
+func (m *SdkCloudBackupInfo) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupInfo) ProtoMessage()    {}
+func (*SdkCloudBackupInfo) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{126}
+}
+func (m *SdkCloudBackupInfo) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupInfo.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupInfo.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupInfo) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupInfo.Merge(dst, src)
+}
+func (m *SdkCloudBackupInfo) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupInfo.Size(m)
+}
+func (m *SdkCloudBackupInfo) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupInfo.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupInfo proto.InternalMessageInfo
+
+func (m *SdkCloudBackupInfo) GetId() string {
+	if m != nil {
+		return m.Id
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupHistoryItem) GetTimestamp() *timestamp.Timestamp {
 	if m != nil {
 		return m.Timestamp
@@ -9593,10 +16374,83 @@ var xxx_messageInfo_SdkCloudBackupHistoryResponse proto.InternalMessageInfo
 func (m *SdkCloudBackupHistoryResponse) GetHistoryList() []*SdkCloudBackupHistoryItem {
 	if m != nil {
 		return m.HistoryList
+=======
+func (m *SdkCloudBackupInfo) GetSrcVolumeId() string {
+	if m != nil {
+		return m.SrcVolumeId
+	}
+	return ""
+}
+
+func (m *SdkCloudBackupInfo) GetSrcVolumeName() string {
+	if m != nil {
+		return m.SrcVolumeName
+	}
+	return ""
+}
+
+func (m *SdkCloudBackupInfo) GetTimestamp() *timestamp.Timestamp {
+	if m != nil {
+		return m.Timestamp
 	}
 	return nil
 }
 
+func (m *SdkCloudBackupInfo) GetMetadata() map[string]string {
+	if m != nil {
+		return m.Metadata
+	}
+	return nil
+}
+
+func (m *SdkCloudBackupInfo) GetStatus() SdkCloudBackupStatusType {
+	if m != nil {
+		return m.Status
+	}
+	return SdkCloudBackupStatusType_SdkCloudBackupStatusTypeUnknown
+}
+
+// Defines a response which lists all the backups stored by a cloud provider
+type SdkCloudBackupEnumerateResponse struct {
+	Backups              []*SdkCloudBackupInfo `protobuf:"bytes,1,rep,name=backups" json:"backups,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
+	XXX_unrecognized     []byte                `json:"-"`
+	XXX_sizecache        int32                 `json:"-"`
+}
+
+func (m *SdkCloudBackupEnumerateResponse) Reset()         { *m = SdkCloudBackupEnumerateResponse{} }
+func (m *SdkCloudBackupEnumerateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupEnumerateResponse) ProtoMessage()    {}
+func (*SdkCloudBackupEnumerateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{127}
+}
+func (m *SdkCloudBackupEnumerateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupEnumerateResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupEnumerateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupEnumerateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupEnumerateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupEnumerateResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupEnumerateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupEnumerateResponse.Size(m)
+}
+func (m *SdkCloudBackupEnumerateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupEnumerateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupEnumerateResponse proto.InternalMessageInfo
+
+func (m *SdkCloudBackupEnumerateResponse) GetBackups() []*SdkCloudBackupInfo {
+	if m != nil {
+		return m.Backups
+>>>>>>> Govendor update
+	}
+	return nil
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a request to change the state of a backup or restore to or
 // from a cloud provider
 type SdkCloudBackupStateChangeRequest struct {
@@ -9637,10 +16491,61 @@ var xxx_messageInfo_SdkCloudBackupStateChangeRequest proto.InternalMessageInfo
 func (m *SdkCloudBackupStateChangeRequest) GetSrcVolumeId() string {
 	if m != nil {
 		return m.SrcVolumeId
+=======
+// SdkCloudBackupStatus defines the status of a backup stored by a cloud provider
+type SdkCloudBackupStatus struct {
+	// This is the id as represented by the cloud provider
+	BackupId string `protobuf:"bytes,1,opt,name=backup_id,json=backupId" json:"backup_id,omitempty"`
+	// OpType indicates if this is a backup or restore
+	Optype SdkCloudBackupOpType `protobuf:"varint,2,opt,name=optype,enum=openstorage.api.SdkCloudBackupOpType" json:"optype,omitempty"`
+	// State indicates if the op is currently active/done/failed
+	Status SdkCloudBackupStatusType `protobuf:"varint,3,opt,name=status,enum=openstorage.api.SdkCloudBackupStatusType" json:"status,omitempty"`
+	// BytesDone indicates total Bytes uploaded/downloaded
+	BytesDone uint64 `protobuf:"varint,4,opt,name=bytes_done,json=bytesDone" json:"bytes_done,omitempty"`
+	// StartTime indicates Op's start time
+	StartTime *timestamp.Timestamp `protobuf:"bytes,5,opt,name=start_time,json=startTime" json:"start_time,omitempty"`
+	// CompletedTime indicates Op's completed time
+	CompletedTime *timestamp.Timestamp `protobuf:"bytes,6,opt,name=completed_time,json=completedTime" json:"completed_time,omitempty"`
+	// NodeID is the ID of the node where this Op is active
+	NodeId               string   `protobuf:"bytes,7,opt,name=node_id,json=nodeId" json:"node_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkCloudBackupStatus) Reset()         { *m = SdkCloudBackupStatus{} }
+func (m *SdkCloudBackupStatus) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupStatus) ProtoMessage()    {}
+func (*SdkCloudBackupStatus) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{128}
+}
+func (m *SdkCloudBackupStatus) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupStatus.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupStatus.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupStatus) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupStatus.Merge(dst, src)
+}
+func (m *SdkCloudBackupStatus) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupStatus.Size(m)
+}
+func (m *SdkCloudBackupStatus) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupStatus.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupStatus proto.InternalMessageInfo
+
+func (m *SdkCloudBackupStatus) GetBackupId() string {
+	if m != nil {
+		return m.BackupId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupStateChangeRequest) GetRequestedState() SdkCloudBackupRequestedState {
 	if m != nil {
 		return m.RequestedState
@@ -9691,11 +16596,66 @@ type SdkCloudBackupScheduleInfo struct {
 	// MaxBackups are the maximum number of backups retained
 	// in cloud.Older backups are deleted
 	MaxBackups           uint64   `protobuf:"varint,4,opt,name=max_backups,json=maxBackups" json:"max_backups,omitempty"`
+=======
+func (m *SdkCloudBackupStatus) GetOptype() SdkCloudBackupOpType {
+	if m != nil {
+		return m.Optype
+	}
+	return SdkCloudBackupOpType_SdkCloudBackupOpTypeUnknown
+}
+
+func (m *SdkCloudBackupStatus) GetStatus() SdkCloudBackupStatusType {
+	if m != nil {
+		return m.Status
+	}
+	return SdkCloudBackupStatusType_SdkCloudBackupStatusTypeUnknown
+}
+
+func (m *SdkCloudBackupStatus) GetBytesDone() uint64 {
+	if m != nil {
+		return m.BytesDone
+	}
+	return 0
+}
+
+func (m *SdkCloudBackupStatus) GetStartTime() *timestamp.Timestamp {
+	if m != nil {
+		return m.StartTime
+	}
+	return nil
+}
+
+func (m *SdkCloudBackupStatus) GetCompletedTime() *timestamp.Timestamp {
+	if m != nil {
+		return m.CompletedTime
+	}
+	return nil
+}
+
+func (m *SdkCloudBackupStatus) GetNodeId() string {
+	if m != nil {
+		return m.NodeId
+	}
+	return ""
+}
+
+// Defines a request to retreive the status of a backup or restore for a
+// specified volume
+type SdkCloudBackupStatusRequest struct {
+	// This is an optional value which is used to get information on the
+	// status of a backup for the specified volume. If no volume id is provided,
+	// then status for all volumes is returned.
+	VolumeId string `protobuf:"bytes,1,opt,name=volume_id,json=volumeId" json:"volume_id,omitempty"`
+	// Local indicates if only those backups/restores that are
+	// active on current node must be returned
+	Local                bool     `protobuf:"varint,2,opt,name=local" json:"local,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupScheduleInfo) Reset()         { *m = SdkCloudBackupScheduleInfo{} }
 func (m *SdkCloudBackupScheduleInfo) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupScheduleInfo) ProtoMessage()    {}
@@ -9730,10 +16690,40 @@ func (m *SdkCloudBackupScheduleInfo) GetSrcVolumeId() string {
 func (m *SdkCloudBackupScheduleInfo) GetCredentialId() string {
 	if m != nil {
 		return m.CredentialId
+=======
+func (m *SdkCloudBackupStatusRequest) Reset()         { *m = SdkCloudBackupStatusRequest{} }
+func (m *SdkCloudBackupStatusRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupStatusRequest) ProtoMessage()    {}
+func (*SdkCloudBackupStatusRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{129}
+}
+func (m *SdkCloudBackupStatusRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupStatusRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupStatusRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupStatusRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupStatusRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupStatusRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupStatusRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupStatusRequest.Size(m)
+}
+func (m *SdkCloudBackupStatusRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupStatusRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupStatusRequest proto.InternalMessageInfo
+
+func (m *SdkCloudBackupStatusRequest) GetVolumeId() string {
+	if m != nil {
+		return m.VolumeId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupScheduleInfo) GetSchedules() []*SdkSchedulePolicyInterval {
 	if m != nil {
 		return m.Schedules
@@ -9785,20 +16775,76 @@ var xxx_messageInfo_SdkCloudBackupSchedCreateRequest proto.InternalMessageInfo
 func (m *SdkCloudBackupSchedCreateRequest) GetCloudSchedInfo() *SdkCloudBackupScheduleInfo {
 	if m != nil {
 		return m.CloudSchedInfo
+=======
+func (m *SdkCloudBackupStatusRequest) GetLocal() bool {
+	if m != nil {
+		return m.Local
+	}
+	return false
+}
+
+// Defines a response containing the status of the backups for a specified volume
+type SdkCloudBackupStatusResponse struct {
+	// Statuses is list of currently active/failed/done backup/restores where
+	// the key is the volume ids of current volumes being backed up or restored
+	Statuses             map[string]*SdkCloudBackupStatus `protobuf:"bytes,1,rep,name=statuses" json:"statuses,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	XXX_NoUnkeyedLiteral struct{}                         `json:"-"`
+	XXX_unrecognized     []byte                           `json:"-"`
+	XXX_sizecache        int32                            `json:"-"`
+}
+
+func (m *SdkCloudBackupStatusResponse) Reset()         { *m = SdkCloudBackupStatusResponse{} }
+func (m *SdkCloudBackupStatusResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupStatusResponse) ProtoMessage()    {}
+func (*SdkCloudBackupStatusResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{130}
+}
+func (m *SdkCloudBackupStatusResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupStatusResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupStatusResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupStatusResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupStatusResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupStatusResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupStatusResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupStatusResponse.Size(m)
+}
+func (m *SdkCloudBackupStatusResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupStatusResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupStatusResponse proto.InternalMessageInfo
+
+func (m *SdkCloudBackupStatusResponse) GetStatuses() map[string]*SdkCloudBackupStatus {
+	if m != nil {
+		return m.Statuses
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a response containing the id of a schedule for a volume backup
 // to a cloud provider
 type SdkCloudBackupSchedCreateResponse struct {
 	// Id of newly created backup schedule
 	BackupScheduleId     string   `protobuf:"bytes,1,opt,name=backup_schedule_id,json=backupScheduleId" json:"backup_schedule_id,omitempty"`
+=======
+// Defines a request to get catalog of a backup stored by a cloud provider
+type SdkCloudBackupCatalogRequest struct {
+	// Id of the backup
+	BackupId string `protobuf:"bytes,1,opt,name=backup_id,json=backupId" json:"backup_id,omitempty"`
+	// Credential id describe the credentials for the cloud
+	CredentialId         string   `protobuf:"bytes,2,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupSchedCreateResponse) Reset()         { *m = SdkCloudBackupSchedCreateResponse{} }
 func (m *SdkCloudBackupSchedCreateResponse) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupSchedCreateResponse) ProtoMessage()    {}
@@ -9826,19 +16872,63 @@ var xxx_messageInfo_SdkCloudBackupSchedCreateResponse proto.InternalMessageInfo
 func (m *SdkCloudBackupSchedCreateResponse) GetBackupScheduleId() string {
 	if m != nil {
 		return m.BackupScheduleId
+=======
+func (m *SdkCloudBackupCatalogRequest) Reset()         { *m = SdkCloudBackupCatalogRequest{} }
+func (m *SdkCloudBackupCatalogRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupCatalogRequest) ProtoMessage()    {}
+func (*SdkCloudBackupCatalogRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{131}
+}
+func (m *SdkCloudBackupCatalogRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupCatalogRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupCatalogRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupCatalogRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupCatalogRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupCatalogRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupCatalogRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupCatalogRequest.Size(m)
+}
+func (m *SdkCloudBackupCatalogRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupCatalogRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupCatalogRequest proto.InternalMessageInfo
+
+func (m *SdkCloudBackupCatalogRequest) GetBackupId() string {
+	if m != nil {
+		return m.BackupId
+>>>>>>> Govendor update
 	}
 	return ""
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a request to delete a backup schedule
 type SdkCloudBackupSchedDeleteRequest struct {
 	// Id of cloud backup to delete
 	BackupScheduleId     string   `protobuf:"bytes,1,opt,name=backup_schedule_id,json=backupScheduleId" json:"backup_schedule_id,omitempty"`
+=======
+func (m *SdkCloudBackupCatalogRequest) GetCredentialId() string {
+	if m != nil {
+		return m.CredentialId
+	}
+	return ""
+}
+
+// Defines a response containing the contents of a backup stored by a cloud provider
+type SdkCloudBackupCatalogResponse struct {
+	// Contents is listing of backup contents
+	Contents             []string `protobuf:"bytes,1,rep,name=contents" json:"contents,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupSchedDeleteRequest) Reset()         { *m = SdkCloudBackupSchedDeleteRequest{} }
 func (m *SdkCloudBackupSchedDeleteRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupSchedDeleteRequest) ProtoMessage()    {}
@@ -9903,11 +16993,110 @@ var xxx_messageInfo_SdkCloudBackupSchedDeleteResponse proto.InternalMessageInfo
 
 // Empty request
 type SdkCloudBackupSchedEnumerateRequest struct {
+=======
+func (m *SdkCloudBackupCatalogResponse) Reset()         { *m = SdkCloudBackupCatalogResponse{} }
+func (m *SdkCloudBackupCatalogResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupCatalogResponse) ProtoMessage()    {}
+func (*SdkCloudBackupCatalogResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{132}
+}
+func (m *SdkCloudBackupCatalogResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupCatalogResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupCatalogResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupCatalogResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupCatalogResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupCatalogResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupCatalogResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupCatalogResponse.Size(m)
+}
+func (m *SdkCloudBackupCatalogResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupCatalogResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupCatalogResponse proto.InternalMessageInfo
+
+func (m *SdkCloudBackupCatalogResponse) GetContents() []string {
+	if m != nil {
+		return m.Contents
+	}
+	return nil
+}
+
+// SdkCloudBackupHistoryItem contains information about a backup for a
+// specific volume
+type SdkCloudBackupHistoryItem struct {
+	// SrcVolumeID is volume ID which was backedup
+	SrcVolumeId string `protobuf:"bytes,1,opt,name=src_volume_id,json=srcVolumeId" json:"src_volume_id,omitempty"`
+	// TimeStamp is the time at which either backup completed/failed
+	Timestamp *timestamp.Timestamp `protobuf:"bytes,2,opt,name=timestamp" json:"timestamp,omitempty"`
+	// Status indicates whether backup was completed/failed
+	Status               SdkCloudBackupStatusType `protobuf:"varint,3,opt,name=status,enum=openstorage.api.SdkCloudBackupStatusType" json:"status,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}                 `json:"-"`
+	XXX_unrecognized     []byte                   `json:"-"`
+	XXX_sizecache        int32                    `json:"-"`
+}
+
+func (m *SdkCloudBackupHistoryItem) Reset()         { *m = SdkCloudBackupHistoryItem{} }
+func (m *SdkCloudBackupHistoryItem) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupHistoryItem) ProtoMessage()    {}
+func (*SdkCloudBackupHistoryItem) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{133}
+}
+func (m *SdkCloudBackupHistoryItem) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupHistoryItem.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupHistoryItem) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupHistoryItem.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupHistoryItem) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupHistoryItem.Merge(dst, src)
+}
+func (m *SdkCloudBackupHistoryItem) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupHistoryItem.Size(m)
+}
+func (m *SdkCloudBackupHistoryItem) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupHistoryItem.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupHistoryItem proto.InternalMessageInfo
+
+func (m *SdkCloudBackupHistoryItem) GetSrcVolumeId() string {
+	if m != nil {
+		return m.SrcVolumeId
+	}
+	return ""
+}
+
+func (m *SdkCloudBackupHistoryItem) GetTimestamp() *timestamp.Timestamp {
+	if m != nil {
+		return m.Timestamp
+	}
+	return nil
+}
+
+func (m *SdkCloudBackupHistoryItem) GetStatus() SdkCloudBackupStatusType {
+	if m != nil {
+		return m.Status
+	}
+	return SdkCloudBackupStatusType_SdkCloudBackupStatusTypeUnknown
+}
+
+// Defines a request to retreive the history of the backups for
+// a specific volume to a cloud provider
+type SdkCloudBackupHistoryRequest struct {
+	// This optional value defines which history of backups is being
+	// requested. If not provided, it will return the history for all volumes.
+	SrcVolumeId          string   `protobuf:"bytes,1,opt,name=src_volume_id,json=srcVolumeId" json:"src_volume_id,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkCloudBackupSchedEnumerateRequest) Reset()         { *m = SdkCloudBackupSchedEnumerateRequest{} }
 func (m *SdkCloudBackupSchedEnumerateRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkCloudBackupSchedEnumerateRequest) ProtoMessage()    {}
@@ -9969,10 +17158,80 @@ var xxx_messageInfo_SdkCloudBackupSchedEnumerateResponse proto.InternalMessageIn
 func (m *SdkCloudBackupSchedEnumerateResponse) GetCloudSchedList() map[string]*SdkCloudBackupScheduleInfo {
 	if m != nil {
 		return m.CloudSchedList
+=======
+func (m *SdkCloudBackupHistoryRequest) Reset()         { *m = SdkCloudBackupHistoryRequest{} }
+func (m *SdkCloudBackupHistoryRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupHistoryRequest) ProtoMessage()    {}
+func (*SdkCloudBackupHistoryRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{134}
+}
+func (m *SdkCloudBackupHistoryRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupHistoryRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupHistoryRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupHistoryRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupHistoryRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupHistoryRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupHistoryRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupHistoryRequest.Size(m)
+}
+func (m *SdkCloudBackupHistoryRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupHistoryRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupHistoryRequest proto.InternalMessageInfo
+
+func (m *SdkCloudBackupHistoryRequest) GetSrcVolumeId() string {
+	if m != nil {
+		return m.SrcVolumeId
+	}
+	return ""
+}
+
+// Defines a response containing a list of history of backups to a cloud provider
+type SdkCloudBackupHistoryResponse struct {
+	// HistoryList is list of past backups on this volume
+	HistoryList          []*SdkCloudBackupHistoryItem `protobuf:"bytes,1,rep,name=history_list,json=historyList" json:"history_list,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}                     `json:"-"`
+	XXX_unrecognized     []byte                       `json:"-"`
+	XXX_sizecache        int32                        `json:"-"`
+}
+
+func (m *SdkCloudBackupHistoryResponse) Reset()         { *m = SdkCloudBackupHistoryResponse{} }
+func (m *SdkCloudBackupHistoryResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupHistoryResponse) ProtoMessage()    {}
+func (*SdkCloudBackupHistoryResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{135}
+}
+func (m *SdkCloudBackupHistoryResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupHistoryResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupHistoryResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupHistoryResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupHistoryResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupHistoryResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupHistoryResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupHistoryResponse.Size(m)
+}
+func (m *SdkCloudBackupHistoryResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupHistoryResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupHistoryResponse proto.InternalMessageInfo
+
+func (m *SdkCloudBackupHistoryResponse) GetHistoryList() []*SdkCloudBackupHistoryItem {
+	if m != nil {
+		return m.HistoryList
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Empty request
 type SdkIdentityCapabilitiesRequest struct {
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -10046,11 +17305,67 @@ func (m *SdkIdentityCapabilitiesResponse) GetCapabilities() []*SdkServiceCapabil
 
 // Empty request
 type SdkIdentityVersionRequest struct {
+=======
+// Defines a request to change the state of a backup or restore to or
+// from a cloud provider
+type SdkCloudBackupStateChangeRequest struct {
+	// Describes the volume id on which backup/restore
+	// state change is being requested
+	SrcVolumeId string `protobuf:"bytes,1,opt,name=src_volume_id,json=srcVolumeId" json:"src_volume_id,omitempty"`
+	// The desired state of the operation
+	RequestedState       SdkCloudBackupRequestedState `protobuf:"varint,2,opt,name=requested_state,json=requestedState,enum=openstorage.api.SdkCloudBackupRequestedState" json:"requested_state,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}                     `json:"-"`
+	XXX_unrecognized     []byte                       `json:"-"`
+	XXX_sizecache        int32                        `json:"-"`
+}
+
+func (m *SdkCloudBackupStateChangeRequest) Reset()         { *m = SdkCloudBackupStateChangeRequest{} }
+func (m *SdkCloudBackupStateChangeRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupStateChangeRequest) ProtoMessage()    {}
+func (*SdkCloudBackupStateChangeRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{136}
+}
+func (m *SdkCloudBackupStateChangeRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupStateChangeRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupStateChangeRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupStateChangeRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupStateChangeRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupStateChangeRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupStateChangeRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupStateChangeRequest.Size(m)
+}
+func (m *SdkCloudBackupStateChangeRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupStateChangeRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupStateChangeRequest proto.InternalMessageInfo
+
+func (m *SdkCloudBackupStateChangeRequest) GetSrcVolumeId() string {
+	if m != nil {
+		return m.SrcVolumeId
+	}
+	return ""
+}
+
+func (m *SdkCloudBackupStateChangeRequest) GetRequestedState() SdkCloudBackupRequestedState {
+	if m != nil {
+		return m.RequestedState
+	}
+	return SdkCloudBackupRequestedState_SdkCloudBackupRequestedStateUnknown
+}
+
+// Empty response
+type SdkCloudBackupStateChangeResponse struct {
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkIdentityVersionRequest) Reset()         { *m = SdkIdentityVersionRequest{} }
 func (m *SdkIdentityVersionRequest) String() string { return proto.CompactTextString(m) }
 func (*SdkIdentityVersionRequest) ProtoMessage()    {}
@@ -10120,10 +17435,95 @@ func (m *SdkIdentityVersionResponse) GetSdkVersion() *SdkVersion {
 func (m *SdkIdentityVersionResponse) GetVersion() *StorageVersion {
 	if m != nil {
 		return m.Version
+=======
+func (m *SdkCloudBackupStateChangeResponse) Reset()         { *m = SdkCloudBackupStateChangeResponse{} }
+func (m *SdkCloudBackupStateChangeResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupStateChangeResponse) ProtoMessage()    {}
+func (*SdkCloudBackupStateChangeResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{137}
+}
+func (m *SdkCloudBackupStateChangeResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupStateChangeResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupStateChangeResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupStateChangeResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupStateChangeResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupStateChangeResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupStateChangeResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupStateChangeResponse.Size(m)
+}
+func (m *SdkCloudBackupStateChangeResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupStateChangeResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupStateChangeResponse proto.InternalMessageInfo
+
+// SdkCloudBackupScheduleInfo describes a schedule for volume backups to
+// a cloud provider
+type SdkCloudBackupScheduleInfo struct {
+	// The schedule's source volume
+	SrcVolumeId string `protobuf:"bytes,1,opt,name=src_volume_id,json=srcVolumeId" json:"src_volume_id,omitempty"`
+	// The cloud credential used with this schedule
+	CredentialId string `protobuf:"bytes,2,opt,name=credential_id,json=credentialId" json:"credential_id,omitempty"`
+	// Schedules are the frequencies of the backup
+	Schedules []*SdkSchedulePolicyInterval `protobuf:"bytes,3,rep,name=schedules" json:"schedules,omitempty"`
+	// MaxBackups are the maximum number of backups retained
+	// in cloud.Older backups are deleted
+	MaxBackups           uint64   `protobuf:"varint,4,opt,name=max_backups,json=maxBackups" json:"max_backups,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkCloudBackupScheduleInfo) Reset()         { *m = SdkCloudBackupScheduleInfo{} }
+func (m *SdkCloudBackupScheduleInfo) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupScheduleInfo) ProtoMessage()    {}
+func (*SdkCloudBackupScheduleInfo) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{138}
+}
+func (m *SdkCloudBackupScheduleInfo) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupScheduleInfo.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupScheduleInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupScheduleInfo.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupScheduleInfo) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupScheduleInfo.Merge(dst, src)
+}
+func (m *SdkCloudBackupScheduleInfo) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupScheduleInfo.Size(m)
+}
+func (m *SdkCloudBackupScheduleInfo) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupScheduleInfo.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupScheduleInfo proto.InternalMessageInfo
+
+func (m *SdkCloudBackupScheduleInfo) GetSrcVolumeId() string {
+	if m != nil {
+		return m.SrcVolumeId
+	}
+	return ""
+}
+
+func (m *SdkCloudBackupScheduleInfo) GetCredentialId() string {
+	if m != nil {
+		return m.CredentialId
+	}
+	return ""
+}
+
+func (m *SdkCloudBackupScheduleInfo) GetSchedules() []*SdkSchedulePolicyInterval {
+	if m != nil {
+		return m.Schedules
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Defines a capability of he cluster
 type SdkServiceCapability struct {
 	// Use oneof to have only one type of service defined making it
@@ -10132,11 +17532,26 @@ type SdkServiceCapability struct {
 	// Types that are valid to be assigned to Type:
 	//	*SdkServiceCapability_Service
 	Type                 isSdkServiceCapability_Type `protobuf_oneof:"type"`
+=======
+func (m *SdkCloudBackupScheduleInfo) GetMaxBackups() uint64 {
+	if m != nil {
+		return m.MaxBackups
+	}
+	return 0
+}
+
+// Defines a request to create a schedule for volume backups to a
+// cloud provider
+type SdkCloudBackupSchedCreateRequest struct {
+	// Cloud Backup Schedule info
+	CloudSchedInfo       *SdkCloudBackupScheduleInfo `protobuf:"bytes,1,opt,name=cloud_sched_info,json=cloudSchedInfo" json:"cloud_sched_info,omitempty"`
+>>>>>>> Govendor update
 	XXX_NoUnkeyedLiteral struct{}                    `json:"-"`
 	XXX_unrecognized     []byte                      `json:"-"`
 	XXX_sizecache        int32                       `json:"-"`
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkServiceCapability) Reset()         { *m = SdkServiceCapability{} }
 func (m *SdkServiceCapability) String() string { return proto.CompactTextString(m) }
 func (*SdkServiceCapability) ProtoMessage()    {}
@@ -10174,10 +17589,40 @@ func (*SdkServiceCapability_Service) isSdkServiceCapability_Type() {}
 func (m *SdkServiceCapability) GetType() isSdkServiceCapability_Type {
 	if m != nil {
 		return m.Type
+=======
+func (m *SdkCloudBackupSchedCreateRequest) Reset()         { *m = SdkCloudBackupSchedCreateRequest{} }
+func (m *SdkCloudBackupSchedCreateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupSchedCreateRequest) ProtoMessage()    {}
+func (*SdkCloudBackupSchedCreateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{139}
+}
+func (m *SdkCloudBackupSchedCreateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupSchedCreateRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupSchedCreateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupSchedCreateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupSchedCreateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupSchedCreateRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupSchedCreateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupSchedCreateRequest.Size(m)
+}
+func (m *SdkCloudBackupSchedCreateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupSchedCreateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupSchedCreateRequest proto.InternalMessageInfo
+
+func (m *SdkCloudBackupSchedCreateRequest) GetCloudSchedInfo() *SdkCloudBackupScheduleInfo {
+	if m != nil {
+		return m.CloudSchedInfo
+>>>>>>> Govendor update
 	}
 	return nil
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkServiceCapability) GetService() *SdkServiceCapability_OpenStorageService {
 	if x, ok := m.GetType().(*SdkServiceCapability_Service); ok {
 		return x.Service
@@ -10294,11 +17739,97 @@ type SdkVersion struct {
 	// String representation of the SDK version. Must be
 	// in `major.minor.patch` format.
 	Version              string   `protobuf:"bytes,4,opt,name=version" json:"version,omitempty"`
+=======
+// Defines a response containing the id of a schedule for a volume backup
+// to a cloud provider
+type SdkCloudBackupSchedCreateResponse struct {
+	// Id of newly created backup schedule
+	BackupScheduleId     string   `protobuf:"bytes,1,opt,name=backup_schedule_id,json=backupScheduleId" json:"backup_schedule_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
+func (m *SdkCloudBackupSchedCreateResponse) Reset()         { *m = SdkCloudBackupSchedCreateResponse{} }
+func (m *SdkCloudBackupSchedCreateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupSchedCreateResponse) ProtoMessage()    {}
+func (*SdkCloudBackupSchedCreateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{140}
+}
+func (m *SdkCloudBackupSchedCreateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupSchedCreateResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupSchedCreateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupSchedCreateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupSchedCreateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupSchedCreateResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupSchedCreateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupSchedCreateResponse.Size(m)
+}
+func (m *SdkCloudBackupSchedCreateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupSchedCreateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupSchedCreateResponse proto.InternalMessageInfo
+
+func (m *SdkCloudBackupSchedCreateResponse) GetBackupScheduleId() string {
+	if m != nil {
+		return m.BackupScheduleId
+	}
+	return ""
+}
+
+// Defines a request to delete a backup schedule
+type SdkCloudBackupSchedDeleteRequest struct {
+	// Id of cloud backup to delete
+	BackupScheduleId     string   `protobuf:"bytes,1,opt,name=backup_schedule_id,json=backupScheduleId" json:"backup_schedule_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkCloudBackupSchedDeleteRequest) Reset()         { *m = SdkCloudBackupSchedDeleteRequest{} }
+func (m *SdkCloudBackupSchedDeleteRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupSchedDeleteRequest) ProtoMessage()    {}
+func (*SdkCloudBackupSchedDeleteRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{141}
+}
+func (m *SdkCloudBackupSchedDeleteRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupSchedDeleteRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupSchedDeleteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupSchedDeleteRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupSchedDeleteRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupSchedDeleteRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupSchedDeleteRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupSchedDeleteRequest.Size(m)
+}
+func (m *SdkCloudBackupSchedDeleteRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupSchedDeleteRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupSchedDeleteRequest proto.InternalMessageInfo
+
+func (m *SdkCloudBackupSchedDeleteRequest) GetBackupScheduleId() string {
+	if m != nil {
+		return m.BackupScheduleId
+	}
+	return ""
+}
+
+// Empty response
+type SdkCloudBackupSchedDeleteResponse struct {
+>>>>>>> Govendor update
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func (m *SdkVersion) Reset()         { *m = SdkVersion{} }
 func (m *SdkVersion) String() string { return proto.CompactTextString(m) }
 func (*SdkVersion) ProtoMessage()    {}
@@ -10405,6 +17936,100 @@ func (m *StorageVersion) GetVersion() string {
 func (m *StorageVersion) GetDetails() map[string]string {
 	if m != nil {
 		return m.Details
+=======
+func (m *SdkCloudBackupSchedDeleteResponse) Reset()         { *m = SdkCloudBackupSchedDeleteResponse{} }
+func (m *SdkCloudBackupSchedDeleteResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupSchedDeleteResponse) ProtoMessage()    {}
+func (*SdkCloudBackupSchedDeleteResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{142}
+}
+func (m *SdkCloudBackupSchedDeleteResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupSchedDeleteResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupSchedDeleteResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupSchedDeleteResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupSchedDeleteResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupSchedDeleteResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupSchedDeleteResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupSchedDeleteResponse.Size(m)
+}
+func (m *SdkCloudBackupSchedDeleteResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupSchedDeleteResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupSchedDeleteResponse proto.InternalMessageInfo
+
+// Empty request
+type SdkCloudBackupSchedEnumerateRequest struct {
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *SdkCloudBackupSchedEnumerateRequest) Reset()         { *m = SdkCloudBackupSchedEnumerateRequest{} }
+func (m *SdkCloudBackupSchedEnumerateRequest) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupSchedEnumerateRequest) ProtoMessage()    {}
+func (*SdkCloudBackupSchedEnumerateRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{143}
+}
+func (m *SdkCloudBackupSchedEnumerateRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupSchedEnumerateRequest.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupSchedEnumerateRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupSchedEnumerateRequest.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupSchedEnumerateRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupSchedEnumerateRequest.Merge(dst, src)
+}
+func (m *SdkCloudBackupSchedEnumerateRequest) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupSchedEnumerateRequest.Size(m)
+}
+func (m *SdkCloudBackupSchedEnumerateRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupSchedEnumerateRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupSchedEnumerateRequest proto.InternalMessageInfo
+
+// Defines a response containing a map listing the schedules for volume
+// backups to a cloud provider
+type SdkCloudBackupSchedEnumerateResponse struct {
+	// Returns list of backup schedules
+	CloudSchedList       map[string]*SdkCloudBackupScheduleInfo `protobuf:"bytes,1,rep,name=cloud_sched_list,json=cloudSchedList" json:"cloud_sched_list,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	XXX_NoUnkeyedLiteral struct{}                               `json:"-"`
+	XXX_unrecognized     []byte                                 `json:"-"`
+	XXX_sizecache        int32                                  `json:"-"`
+}
+
+func (m *SdkCloudBackupSchedEnumerateResponse) Reset()         { *m = SdkCloudBackupSchedEnumerateResponse{} }
+func (m *SdkCloudBackupSchedEnumerateResponse) String() string { return proto.CompactTextString(m) }
+func (*SdkCloudBackupSchedEnumerateResponse) ProtoMessage()    {}
+func (*SdkCloudBackupSchedEnumerateResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_api_0cf30457993af864, []int{144}
+}
+func (m *SdkCloudBackupSchedEnumerateResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SdkCloudBackupSchedEnumerateResponse.Unmarshal(m, b)
+}
+func (m *SdkCloudBackupSchedEnumerateResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SdkCloudBackupSchedEnumerateResponse.Marshal(b, m, deterministic)
+}
+func (dst *SdkCloudBackupSchedEnumerateResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SdkCloudBackupSchedEnumerateResponse.Merge(dst, src)
+}
+func (m *SdkCloudBackupSchedEnumerateResponse) XXX_Size() int {
+	return xxx_messageInfo_SdkCloudBackupSchedEnumerateResponse.Size(m)
+}
+func (m *SdkCloudBackupSchedEnumerateResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SdkCloudBackupSchedEnumerateResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_SdkCloudBackupSchedEnumerateResponse proto.InternalMessageInfo
+
+func (m *SdkCloudBackupSchedEnumerateResponse) GetCloudSchedList() map[string]*SdkCloudBackupScheduleInfo {
+	if m != nil {
+		return m.CloudSchedList
+>>>>>>> Govendor update
 	}
 	return nil
 }
@@ -10419,7 +18044,11 @@ func (m *CloudMigrate) Reset()         { *m = CloudMigrate{} }
 func (m *CloudMigrate) String() string { return proto.CompactTextString(m) }
 func (*CloudMigrate) ProtoMessage()    {}
 func (*CloudMigrate) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{152}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{145}
+>>>>>>> Govendor update
 }
 func (m *CloudMigrate) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CloudMigrate.Unmarshal(m, b)
@@ -10456,7 +18085,11 @@ func (m *CloudMigrateStartRequest) Reset()         { *m = CloudMigrateStartReque
 func (m *CloudMigrateStartRequest) String() string { return proto.CompactTextString(m) }
 func (*CloudMigrateStartRequest) ProtoMessage()    {}
 func (*CloudMigrateStartRequest) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{153}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{146}
+>>>>>>> Govendor update
 }
 func (m *CloudMigrateStartRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CloudMigrateStartRequest.Unmarshal(m, b)
@@ -10514,7 +18147,11 @@ func (m *CloudMigrateCancelRequest) Reset()         { *m = CloudMigrateCancelReq
 func (m *CloudMigrateCancelRequest) String() string { return proto.CompactTextString(m) }
 func (*CloudMigrateCancelRequest) ProtoMessage()    {}
 func (*CloudMigrateCancelRequest) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{154}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{147}
+>>>>>>> Govendor update
 }
 func (m *CloudMigrateCancelRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CloudMigrateCancelRequest.Unmarshal(m, b)
@@ -10583,7 +18220,11 @@ func (m *CloudMigrateInfo) Reset()         { *m = CloudMigrateInfo{} }
 func (m *CloudMigrateInfo) String() string { return proto.CompactTextString(m) }
 func (*CloudMigrateInfo) ProtoMessage()    {}
 func (*CloudMigrateInfo) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{155}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{148}
+>>>>>>> Govendor update
 }
 func (m *CloudMigrateInfo) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CloudMigrateInfo.Unmarshal(m, b)
@@ -10677,7 +18318,11 @@ func (m *CloudMigrateInfoList) Reset()         { *m = CloudMigrateInfoList{} }
 func (m *CloudMigrateInfoList) String() string { return proto.CompactTextString(m) }
 func (*CloudMigrateInfoList) ProtoMessage()    {}
 func (*CloudMigrateInfoList) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{156}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{149}
+>>>>>>> Govendor update
 }
 func (m *CloudMigrateInfoList) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CloudMigrateInfoList.Unmarshal(m, b)
@@ -10717,7 +18362,11 @@ func (m *CloudMigrateStatusResponse) Reset()         { *m = CloudMigrateStatusRe
 func (m *CloudMigrateStatusResponse) String() string { return proto.CompactTextString(m) }
 func (*CloudMigrateStatusResponse) ProtoMessage()    {}
 func (*CloudMigrateStatusResponse) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{157}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{150}
+>>>>>>> Govendor update
 }
 func (m *CloudMigrateStatusResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CloudMigrateStatusResponse.Unmarshal(m, b)
@@ -10764,7 +18413,11 @@ func (m *ClusterPairCreateRequest) Reset()         { *m = ClusterPairCreateReque
 func (m *ClusterPairCreateRequest) String() string { return proto.CompactTextString(m) }
 func (*ClusterPairCreateRequest) ProtoMessage()    {}
 func (*ClusterPairCreateRequest) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{158}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{151}
+>>>>>>> Govendor update
 }
 func (m *ClusterPairCreateRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ClusterPairCreateRequest.Unmarshal(m, b)
@@ -10828,7 +18481,11 @@ func (m *ClusterPairCreateResponse) Reset()         { *m = ClusterPairCreateResp
 func (m *ClusterPairCreateResponse) String() string { return proto.CompactTextString(m) }
 func (*ClusterPairCreateResponse) ProtoMessage()    {}
 func (*ClusterPairCreateResponse) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{159}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{152}
+>>>>>>> Govendor update
 }
 func (m *ClusterPairCreateResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ClusterPairCreateResponse.Unmarshal(m, b)
@@ -10878,7 +18535,11 @@ func (m *ClusterPairProcessRequest) Reset()         { *m = ClusterPairProcessReq
 func (m *ClusterPairProcessRequest) String() string { return proto.CompactTextString(m) }
 func (*ClusterPairProcessRequest) ProtoMessage()    {}
 func (*ClusterPairProcessRequest) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{160}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{153}
+>>>>>>> Govendor update
 }
 func (m *ClusterPairProcessRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ClusterPairProcessRequest.Unmarshal(m, b)
@@ -10937,7 +18598,11 @@ func (m *ClusterPairProcessResponse) Reset()         { *m = ClusterPairProcessRe
 func (m *ClusterPairProcessResponse) String() string { return proto.CompactTextString(m) }
 func (*ClusterPairProcessResponse) ProtoMessage()    {}
 func (*ClusterPairProcessResponse) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{161}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{154}
+>>>>>>> Govendor update
 }
 func (m *ClusterPairProcessResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ClusterPairProcessResponse.Unmarshal(m, b)
@@ -10992,7 +18657,11 @@ func (m *ClusterPairDeleteRequest) Reset()         { *m = ClusterPairDeleteReque
 func (m *ClusterPairDeleteRequest) String() string { return proto.CompactTextString(m) }
 func (*ClusterPairDeleteRequest) ProtoMessage()    {}
 func (*ClusterPairDeleteRequest) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{162}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{155}
+>>>>>>> Govendor update
 }
 func (m *ClusterPairDeleteRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ClusterPairDeleteRequest.Unmarshal(m, b)
@@ -11033,7 +18702,11 @@ func (m *ClusterPairTokenGetRequest) Reset()         { *m = ClusterPairTokenGetR
 func (m *ClusterPairTokenGetRequest) String() string { return proto.CompactTextString(m) }
 func (*ClusterPairTokenGetRequest) ProtoMessage()    {}
 func (*ClusterPairTokenGetRequest) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{163}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{156}
+>>>>>>> Govendor update
 }
 func (m *ClusterPairTokenGetRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ClusterPairTokenGetRequest.Unmarshal(m, b)
@@ -11074,7 +18747,11 @@ func (m *ClusterPairTokenGetResponse) Reset()         { *m = ClusterPairTokenGet
 func (m *ClusterPairTokenGetResponse) String() string { return proto.CompactTextString(m) }
 func (*ClusterPairTokenGetResponse) ProtoMessage()    {}
 func (*ClusterPairTokenGetResponse) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{164}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{157}
+>>>>>>> Govendor update
 }
 func (m *ClusterPairTokenGetResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ClusterPairTokenGetResponse.Unmarshal(m, b)
@@ -11128,7 +18805,11 @@ func (m *ClusterPairInfo) Reset()         { *m = ClusterPairInfo{} }
 func (m *ClusterPairInfo) String() string { return proto.CompactTextString(m) }
 func (*ClusterPairInfo) ProtoMessage()    {}
 func (*ClusterPairInfo) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{165}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{158}
+>>>>>>> Govendor update
 }
 func (m *ClusterPairInfo) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ClusterPairInfo.Unmarshal(m, b)
@@ -11211,7 +18892,11 @@ func (m *ClusterPairGetRequest) Reset()         { *m = ClusterPairGetRequest{} }
 func (m *ClusterPairGetRequest) String() string { return proto.CompactTextString(m) }
 func (*ClusterPairGetRequest) ProtoMessage()    {}
 func (*ClusterPairGetRequest) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{166}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{159}
+>>>>>>> Govendor update
 }
 func (m *ClusterPairGetRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ClusterPairGetRequest.Unmarshal(m, b)
@@ -11254,7 +18939,11 @@ func (m *ClusterPairGetResponse) Reset()         { *m = ClusterPairGetResponse{}
 func (m *ClusterPairGetResponse) String() string { return proto.CompactTextString(m) }
 func (*ClusterPairGetResponse) ProtoMessage()    {}
 func (*ClusterPairGetResponse) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{167}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{160}
+>>>>>>> Govendor update
 }
 func (m *ClusterPairGetResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ClusterPairGetResponse.Unmarshal(m, b)
@@ -11302,7 +18991,11 @@ func (m *ClusterPairsEnumerateResponse) Reset()         { *m = ClusterPairsEnume
 func (m *ClusterPairsEnumerateResponse) String() string { return proto.CompactTextString(m) }
 func (*ClusterPairsEnumerateResponse) ProtoMessage()    {}
 func (*ClusterPairsEnumerateResponse) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{168}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{161}
+>>>>>>> Govendor update
 }
 func (m *ClusterPairsEnumerateResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ClusterPairsEnumerateResponse.Unmarshal(m, b)
@@ -11358,7 +19051,11 @@ func (m *Catalog) Reset()         { *m = Catalog{} }
 func (m *Catalog) String() string { return proto.CompactTextString(m) }
 func (*Catalog) ProtoMessage()    {}
 func (*Catalog) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{169}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{162}
+>>>>>>> Govendor update
 }
 func (m *Catalog) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Catalog.Unmarshal(m, b)
@@ -11434,7 +19131,11 @@ func (m *Report) Reset()         { *m = Report{} }
 func (m *Report) String() string { return proto.CompactTextString(m) }
 func (*Report) ProtoMessage()    {}
 func (*Report) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{170}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{163}
+>>>>>>> Govendor update
 }
 func (m *Report) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Report.Unmarshal(m, b)
@@ -11482,7 +19183,11 @@ func (m *CatalogResponse) Reset()         { *m = CatalogResponse{} }
 func (m *CatalogResponse) String() string { return proto.CompactTextString(m) }
 func (*CatalogResponse) ProtoMessage()    {}
 func (*CatalogResponse) Descriptor() ([]byte, []int) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	return fileDescriptor_api_0ad7204fc81c0401, []int{171}
+=======
+	return fileDescriptor_api_0cf30457993af864, []int{164}
+>>>>>>> Govendor update
 }
 func (m *CatalogResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CatalogResponse.Unmarshal(m, b)
@@ -11682,6 +19387,7 @@ func init() {
 	proto.RegisterType((*SdkCloudBackupSchedEnumerateRequest)(nil), "openstorage.api.SdkCloudBackupSchedEnumerateRequest")
 	proto.RegisterType((*SdkCloudBackupSchedEnumerateResponse)(nil), "openstorage.api.SdkCloudBackupSchedEnumerateResponse")
 	proto.RegisterMapType((map[string]*SdkCloudBackupScheduleInfo)(nil), "openstorage.api.SdkCloudBackupSchedEnumerateResponse.CloudSchedListEntry")
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	proto.RegisterType((*SdkIdentityCapabilitiesRequest)(nil), "openstorage.api.SdkIdentityCapabilitiesRequest")
 	proto.RegisterType((*SdkIdentityCapabilitiesResponse)(nil), "openstorage.api.SdkIdentityCapabilitiesResponse")
 	proto.RegisterType((*SdkIdentityVersionRequest)(nil), "openstorage.api.SdkIdentityVersionRequest")
@@ -11691,6 +19397,8 @@ func init() {
 	proto.RegisterType((*SdkVersion)(nil), "openstorage.api.SdkVersion")
 	proto.RegisterType((*StorageVersion)(nil), "openstorage.api.StorageVersion")
 	proto.RegisterMapType((map[string]string)(nil), "openstorage.api.StorageVersion.DetailsEntry")
+=======
+>>>>>>> Govendor update
 	proto.RegisterType((*CloudMigrate)(nil), "openstorage.api.CloudMigrate")
 	proto.RegisterType((*CloudMigrateStartRequest)(nil), "openstorage.api.CloudMigrateStartRequest")
 	proto.RegisterType((*CloudMigrateCancelRequest)(nil), "openstorage.api.CloudMigrateCancelRequest")
@@ -11735,8 +19443,11 @@ func init() {
 	proto.RegisterEnum("openstorage.api.SdkCloudBackupOpType", SdkCloudBackupOpType_name, SdkCloudBackupOpType_value)
 	proto.RegisterEnum("openstorage.api.SdkCloudBackupStatusType", SdkCloudBackupStatusType_name, SdkCloudBackupStatusType_value)
 	proto.RegisterEnum("openstorage.api.SdkCloudBackupRequestedState", SdkCloudBackupRequestedState_name, SdkCloudBackupRequestedState_value)
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	proto.RegisterEnum("openstorage.api.SdkServiceCapability_OpenStorageService_Type", SdkServiceCapability_OpenStorageService_Type_name, SdkServiceCapability_OpenStorageService_Type_value)
 	proto.RegisterEnum("openstorage.api.SdkVersion_Version", SdkVersion_Version_name, SdkVersion_Version_value)
+=======
+>>>>>>> Govendor update
 	proto.RegisterEnum("openstorage.api.CloudMigrate_OperationType", CloudMigrate_OperationType_name, CloudMigrate_OperationType_value)
 	proto.RegisterEnum("openstorage.api.CloudMigrate_Stage", CloudMigrate_Stage_name, CloudMigrate_Stage_value)
 	proto.RegisterEnum("openstorage.api.CloudMigrate_Status", CloudMigrate_Status_name, CloudMigrate_Status_value)
@@ -11750,6 +19461,7 @@ var _ grpc.ClientConn
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Client API for OpenStorageIdentity service
 
 type OpenStorageIdentityClient interface {
@@ -11859,6 +19571,8 @@ var _OpenStorageIdentity_serviceDesc = grpc.ServiceDesc{
 	Metadata: "api/api.proto",
 }
 
+=======
+>>>>>>> Govendor update
 // Client API for OpenStorageCluster service
 
 type OpenStorageClusterClient interface {
@@ -13905,6 +21619,7 @@ var _OpenStorageCloudBackup_serviceDesc = grpc.ServiceDesc{
 	Metadata: "api/api.proto",
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func init() { proto.RegisterFile("api/api.proto", fileDescriptor_api_0ad7204fc81c0401) }
 
 var fileDescriptor_api_0ad7204fc81c0401 = []byte{
@@ -14491,4 +22206,562 @@ var fileDescriptor_api_0ad7204fc81c0401 = []byte{
 	0x86, 0xab, 0x0d, 0x61, 0xeb, 0xc6, 0x25, 0x38, 0xdb, 0xb2, 0x8f, 0xa3, 0xf8, 0xf7, 0x95, 0x0f,
 	0xb3, 0x66, 0xcf, 0x7a, 0x92, 0xc3, 0xb3, 0xae, 0xaf, 0xff, 0xdf, 0x00, 0x00, 0x00, 0xff, 0xff,
 	0x55, 0x2b, 0x77, 0x45, 0x5c, 0x8a, 0x00, 0x00,
+=======
+func init() { proto.RegisterFile("api/api.proto", fileDescriptor_api_0cf30457993af864) }
+
+var fileDescriptor_api_0cf30457993af864 = []byte{
+	// 8818 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xcc, 0x7d, 0x6d, 0x8c, 0x1b, 0x47,
+	0x96, 0x98, 0x9a, 0x9c, 0xe1, 0x90, 0x6f, 0x86, 0x33, 0x3d, 0xa5, 0x91, 0x44, 0x51, 0x5f, 0xe3,
+	0x96, 0x65, 0xc9, 0x63, 0x69, 0x46, 0x1e, 0x5b, 0x5e, 0x7f, 0x9c, 0x37, 0x3b, 0x9a, 0xe1, 0x88,
+	0xb4, 0xe7, 0xcb, 0xcd, 0x19, 0xc9, 0xeb, 0xcd, 0x1e, 0xb7, 0x45, 0x96, 0x46, 0xb4, 0x48, 0x36,
+	0xdd, 0xdd, 0x1c, 0xdf, 0xd8, 0xeb, 0xbb, 0xe0, 0x80, 0x20, 0x41, 0xce, 0x9b, 0xcd, 0xee, 0xe6,
+	0x02, 0x5c, 0x0e, 0xf9, 0xb8, 0x04, 0xb9, 0x20, 0x38, 0x1c, 0x90, 0xfc, 0x49, 0x7e, 0x64, 0x83,
+	0x43, 0x7e, 0x05, 0x07, 0xe4, 0xf6, 0x02, 0xdc, 0xbf, 0x24, 0x08, 0x82, 0x20, 0x3f, 0x72, 0x38,
+	0x20, 0x7f, 0x93, 0xfd, 0x17, 0xd4, 0xab, 0xea, 0xee, 0xaa, 0xee, 0x26, 0xd9, 0xb4, 0xe5, 0xe0,
+	0xfe, 0x68, 0xd8, 0xaf, 0x5e, 0xbd, 0x7a, 0xf5, 0xea, 0xbd, 0x57, 0xaf, 0x5e, 0x7d, 0x08, 0x8a,
+	0x56, 0xbf, 0xbd, 0x66, 0xf5, 0xdb, 0xab, 0x7d, 0xc7, 0xf6, 0x6c, 0xb2, 0x60, 0xf7, 0x69, 0xcf,
+	0xf5, 0x6c, 0xc7, 0x3a, 0xa6, 0xab, 0x56, 0xbf, 0x5d, 0xbe, 0x76, 0x6c, 0xdb, 0xc7, 0x1d, 0xba,
+	0x86, 0xc5, 0x8f, 0x07, 0x4f, 0xd6, 0xbc, 0x76, 0x97, 0xba, 0x9e, 0xd5, 0xed, 0xf3, 0x1a, 0xe5,
+	0xcb, 0x02, 0x01, 0xe9, 0xf4, 0x7a, 0xb6, 0x67, 0x79, 0x6d, 0xbb, 0xe7, 0xf2, 0x52, 0xe3, 0x47,
+	0x59, 0x58, 0xa8, 0x73, 0x72, 0x26, 0x75, 0xed, 0x81, 0xd3, 0xa4, 0x64, 0x1e, 0x32, 0xed, 0x56,
+	0x49, 0x5b, 0xd6, 0x6e, 0x15, 0xcc, 0x4c, 0xbb, 0x45, 0x08, 0x4c, 0xf5, 0x2d, 0xef, 0x69, 0x29,
+	0x83, 0x10, 0xfc, 0x4d, 0xde, 0x80, 0x5c, 0x97, 0xb6, 0xda, 0x83, 0x6e, 0x29, 0xbb, 0xac, 0xdd,
+	0x9a, 0x5f, 0xbf, 0xba, 0x1a, 0x61, 0x6c, 0x55, 0x50, 0xdd, 0x45, 0x2c, 0x53, 0x60, 0x93, 0xf3,
+	0x90, 0xb3, 0x7b, 0x9d, 0x76, 0x8f, 0x96, 0xa6, 0x96, 0xb5, 0x5b, 0x79, 0x53, 0x7c, 0xb1, 0x36,
+	0xda, 0x76, 0xdf, 0x2d, 0x4d, 0x2f, 0x6b, 0xb7, 0xa6, 0x4c, 0xfc, 0x4d, 0x2e, 0x41, 0xc1, 0xa5,
+	0x9f, 0x34, 0x3e, 0x75, 0xda, 0x1e, 0x2d, 0xe5, 0x96, 0xb5, 0x5b, 0x9a, 0x99, 0x77, 0xe9, 0x27,
+	0x8f, 0xd8, 0x37, 0xb9, 0x08, 0xec, 0x77, 0xc3, 0xa1, 0x56, 0xab, 0x34, 0x83, 0x65, 0x33, 0x2e,
+	0xfd, 0xc4, 0xa4, 0x56, 0x8b, 0xb5, 0xe1, 0x58, 0xbd, 0x96, 0xf9, 0xa8, 0x94, 0xc7, 0x02, 0xf1,
+	0xc5, 0xda, 0x70, 0xdb, 0x9f, 0xd1, 0x52, 0x81, 0xb7, 0xc1, 0x7e, 0x33, 0xd8, 0xc0, 0xa5, 0xad,
+	0x12, 0x70, 0x18, 0xfb, 0x4d, 0x6e, 0xc0, 0xbc, 0x23, 0xc4, 0xd4, 0x70, 0xfb, 0x94, 0xb6, 0x4a,
+	0xb3, 0xd8, 0xf3, 0xa2, 0x0f, 0xad, 0x33, 0x20, 0xf9, 0x16, 0x14, 0x3a, 0x96, 0xeb, 0x35, 0xdc,
+	0xa6, 0xd5, 0x2b, 0xcd, 0x2d, 0x6b, 0xb7, 0x66, 0xd7, 0xcb, 0xab, 0x5c, 0xd8, 0xab, 0xfe, 0x68,
+	0xac, 0x1e, 0xfa, 0xa3, 0x61, 0xe6, 0x19, 0x72, 0xbd, 0x69, 0xf5, 0x48, 0x19, 0xf2, 0x5d, 0xea,
+	0x59, 0x2d, 0xcb, 0xb3, 0x4a, 0x45, 0x94, 0x42, 0xf0, 0x6d, 0xfc, 0x22, 0x03, 0xb3, 0x42, 0x72,
+	0x07, 0xb6, 0xdd, 0x61, 0x63, 0x51, 0xdb, 0xc2, 0xb1, 0x98, 0x36, 0x33, 0xb5, 0x2d, 0xb2, 0x02,
+	0xd9, 0x4d, 0xdb, 0xc5, 0xa1, 0x98, 0x5f, 0x2f, 0xc5, 0x84, 0xbe, 0x69, 0xbb, 0x87, 0xa7, 0x7d,
+	0x6a, 0x32, 0x24, 0x36, 0x46, 0xbb, 0x13, 0x8d, 0x11, 0xff, 0x4b, 0x2e, 0x43, 0xc1, 0xb4, 0xda,
+	0xad, 0x1d, 0x7a, 0x42, 0x3b, 0x38, 0x4c, 0x05, 0x33, 0x04, 0xb0, 0xd2, 0x43, 0xdb, 0xb3, 0x3a,
+	0x75, 0x26, 0xca, 0x19, 0x14, 0x5b, 0x08, 0x60, 0xf2, 0x3c, 0x62, 0xf2, 0xcc, 0x73, 0x79, 0xb2,
+	0xdf, 0xe4, 0x3b, 0x90, 0xeb, 0x58, 0x8f, 0x69, 0xc7, 0x2d, 0x15, 0x96, 0xb3, 0xb7, 0x66, 0xd7,
+	0x6f, 0x0d, 0xe3, 0x83, 0xf5, 0x78, 0x75, 0x07, 0x51, 0x2b, 0x3d, 0xcf, 0x39, 0x35, 0x45, 0xbd,
+	0xf2, 0x5b, 0x30, 0x2b, 0x81, 0x89, 0x0e, 0xd9, 0x67, 0xf4, 0x54, 0x68, 0x28, 0xfb, 0x49, 0x96,
+	0x60, 0xfa, 0xc4, 0xea, 0x0c, 0xa8, 0xd0, 0x51, 0xfe, 0xf1, 0x76, 0xe6, 0x4d, 0xcd, 0xf8, 0xb7,
+	0x1a, 0x14, 0x1f, 0xda, 0x9d, 0x41, 0x97, 0xee, 0xd8, 0x4d, 0xcb, 0xb3, 0x1d, 0xc6, 0x62, 0xcf,
+	0xea, 0x52, 0x51, 0x1d, 0x7f, 0x93, 0x23, 0x28, 0x9e, 0x20, 0x52, 0x43, 0x70, 0x9a, 0x41, 0x4e,
+	0xef, 0xc6, 0x38, 0x55, 0x48, 0xf9, 0x5f, 0x12, 0xc7, 0x73, 0x27, 0x12, 0xa8, 0xfc, 0x57, 0x60,
+	0x31, 0x86, 0x32, 0x11, 0xf7, 0xaf, 0x43, 0xae, 0xce, 0x8d, 0xf2, 0x3c, 0xe4, 0xfa, 0x96, 0x43,
+	0x7b, 0x9e, 0xa8, 0x28, 0xbe, 0x50, 0xa9, 0x99, 0x8a, 0x0a, 0xe3, 0x64, 0xbf, 0x8d, 0x0b, 0x30,
+	0xfd, 0xc0, 0xb1, 0x07, 0xfd, 0xa8, 0x25, 0x1b, 0x7f, 0x32, 0x03, 0xc0, 0x19, 0xaa, 0xf7, 0x69,
+	0x93, 0x0d, 0x25, 0xed, 0x3f, 0xa5, 0x5d, 0xea, 0x58, 0x1d, 0xc4, 0xca, 0x9b, 0x21, 0x20, 0x30,
+	0x97, 0x8c, 0x64, 0x2e, 0x6b, 0x90, 0x7b, 0x62, 0x3b, 0x5d, 0xcb, 0x13, 0x2a, 0x75, 0x21, 0x26,
+	0xa0, 0xed, 0x3a, 0x2a, 0xa0, 0x40, 0x23, 0x57, 0x00, 0x1e, 0x77, 0xec, 0xe6, 0xb3, 0x06, 0x92,
+	0x62, 0xca, 0x94, 0x35, 0x0b, 0x08, 0x41, 0x75, 0xb9, 0x08, 0xf9, 0xa7, 0x56, 0xa3, 0x83, 0x9a,
+	0x36, 0x8d, 0x85, 0x33, 0x4f, 0x2d, 0xae, 0x67, 0x2b, 0x90, 0x6d, 0xda, 0x2e, 0xda, 0xfd, 0x48,
+	0x4d, 0x6f, 0xda, 0x2e, 0x79, 0x0b, 0xa0, 0x6d, 0x37, 0xfa, 0x8e, 0xfd, 0xa4, 0xdd, 0xe1, 0x4a,
+	0x39, 0xbf, 0x5e, 0x8e, 0x55, 0xa9, 0xd9, 0x07, 0x1c, 0xc3, 0x2c, 0xb4, 0xfd, 0x9f, 0x4c, 0xae,
+	0x2d, 0xda, 0x1a, 0xf4, 0x29, 0xaa, 0x6c, 0xde, 0x14, 0x5f, 0xe4, 0x15, 0x58, 0x74, 0x7b, 0x56,
+	0xdf, 0x7d, 0x6a, 0x7b, 0x8d, 0x76, 0xcf, 0xa3, 0xce, 0x89, 0xd5, 0x41, 0xcf, 0x51, 0x34, 0x75,
+	0xbf, 0xa0, 0x26, 0xe0, 0xc4, 0x8c, 0xaa, 0x0f, 0xa0, 0xfa, 0xdc, 0x19, 0xa2, 0x3e, 0x4c, 0xf8,
+	0xe3, 0x74, 0x87, 0x31, 0xe6, 0x3e, 0xb5, 0x1c, 0xe1, 0x7d, 0xf2, 0xa6, 0xf8, 0x22, 0xbf, 0x02,
+	0xb3, 0x0e, 0xed, 0x77, 0xda, 0x4d, 0xab, 0xe1, 0x52, 0x4f, 0x38, 0x9e, 0x4b, 0xb1, 0x96, 0x4c,
+	0x8e, 0x53, 0xa7, 0x9e, 0x09, 0x4e, 0xf0, 0x9b, 0x75, 0xcb, 0x3a, 0x3e, 0x76, 0xe8, 0x31, 0x77,
+	0x6f, 0x5c, 0xf2, 0x45, 0xde, 0x2d, 0xa9, 0x20, 0x30, 0x75, 0xda, 0x6b, 0x3a, 0xa7, 0x7d, 0x8f,
+	0xb6, 0x4a, 0xf3, 0x42, 0x3f, 0x7c, 0x00, 0xb9, 0x0a, 0xd0, 0xb7, 0x5c, 0xb7, 0xff, 0xd4, 0xb1,
+	0x5c, 0x5a, 0x5a, 0x40, 0x25, 0x93, 0x20, 0x8a, 0x04, 0xdd, 0xe6, 0x53, 0xda, 0x1a, 0x74, 0x68,
+	0x49, 0x47, 0xb4, 0x40, 0x82, 0x75, 0x01, 0x67, 0x26, 0xe0, 0x36, 0xad, 0x0e, 0x2d, 0x2d, 0x22,
+	0x2f, 0xfc, 0x03, 0x65, 0xe0, 0xb5, 0x9b, 0xcf, 0x4e, 0x4b, 0x44, 0xc8, 0x00, 0xbf, 0xc8, 0x6d,
+	0x98, 0x3e, 0x66, 0x0a, 0x5e, 0x3a, 0x87, 0xbd, 0x3f, 0x1f, 0xeb, 0x3d, 0xaa, 0xbf, 0xc9, 0x91,
+	0x98, 0x3f, 0xc7, 0x1f, 0x0d, 0xda, 0x7b, 0x62, 0x3b, 0x4d, 0xda, 0x2a, 0x9d, 0x47, 0x6a, 0x45,
+	0x84, 0x56, 0x04, 0x90, 0xf5, 0xa7, 0x69, 0x77, 0xfb, 0x0e, 0x75, 0x99, 0x03, 0xbb, 0x80, 0x28,
+	0x12, 0x84, 0xb9, 0xed, 0xa6, 0xe5, 0x36, 0xad, 0x16, 0x6d, 0x95, 0x4a, 0xdc, 0x6d, 0xfb, 0xdf,
+	0xa4, 0x04, 0x33, 0x1f, 0xdb, 0x03, 0xa7, 0x67, 0x75, 0x4a, 0x17, 0xb1, 0xc8, 0xff, 0x64, 0xb5,
+	0xf8, 0xc0, 0x9d, 0xbc, 0x5e, 0x2a, 0xf3, 0x5a, 0xfe, 0xf7, 0xd7, 0x77, 0x0f, 0xff, 0x17, 0x40,
+	0x0f, 0x55, 0xea, 0xa8, 0xdf, 0xb2, 0x3c, 0x4a, 0xae, 0xc6, 0xac, 0xba, 0x7a, 0x46, 0xb6, 0xeb,
+	0x25, 0xd9, 0xae, 0xab, 0x9a, 0xb0, 0xec, 0x57, 0x53, 0x5a, 0x76, 0x35, 0x13, 0xd8, 0xf6, 0xb5,
+	0xb8, 0x6d, 0x57, 0x15, 0xeb, 0xbe, 0x14, 0xb5, 0xee, 0xea, 0x54, 0x68, 0xdf, 0xb7, 0x53, 0xd9,
+	0x77, 0x75, 0x9a, 0x5b, 0xf8, 0x3b, 0x93, 0x59, 0x78, 0x35, 0x27, 0xdb, 0x78, 0x49, 0xb5, 0xf1,
+	0xea, 0x4c, 0x60, 0xe5, 0x77, 0x86, 0x5a, 0x79, 0x35, 0x9f, 0x60, 0xe7, 0x1f, 0x26, 0xdb, 0xf9,
+	0x6b, 0x23, 0xec, 0x9c, 0x0f, 0xca, 0x58, 0x6b, 0x2f, 0xa9, 0xd6, 0x5e, 0x2d, 0x3c, 0x27, 0x7b,
+	0xbf, 0x33, 0xd4, 0xde, 0xab, 0x90, 0x60, 0xf1, 0x57, 0x63, 0x16, 0x5f, 0x9d, 0x95, 0x6d, 0x7e,
+	0x39, 0x6e, 0xf3, 0xd5, 0x39, 0xc5, 0xea, 0xef, 0x0c, 0xb5, 0xfa, 0x6a, 0x31, 0xc1, 0xee, 0xcf,
+	0x2b, 0x76, 0x5f, 0x9d, 0xf7, 0x2d, 0xbf, 0xa4, 0x5a, 0x7e, 0x75, 0x21, 0xb0, 0xfd, 0x55, 0xdf,
+	0xf6, 0xcf, 0x8e, 0xb2, 0xfd, 0xaa, 0xee, 0x5b, 0xff, 0xcd, 0x98, 0xf5, 0x2f, 0x21, 0xc5, 0xc5,
+	0xa8, 0xfd, 0x2f, 0x2b, 0xf6, 0x7f, 0x0e, 0x91, 0x88, 0xe2, 0x01, 0x2e, 0x4b, 0x1e, 0x00, 0x5d,
+	0x48, 0xf5, 0xac, 0xe4, 0x03, 0xca, 0xa1, 0x0f, 0x40, 0xe7, 0x51, 0x5d, 0x0a, 0xbd, 0xc0, 0x65,
+	0xc9, 0x0b, 0xa0, 0xef, 0xa8, 0x9e, 0x7b, 0x8e, 0x7e, 0xe0, 0xfe, 0x02, 0x14, 0x03, 0xfb, 0x6e,
+	0xd8, 0x7d, 0xef, 0x3e, 0x40, 0x9e, 0x19, 0x25, 0xfe, 0x9e, 0x03, 0xe0, 0x06, 0x8b, 0x5f, 0x3a,
+	0xcc, 0x87, 0x46, 0x8b, 0x90, 0x79, 0x98, 0xf3, 0xad, 0x14, 0xbf, 0x0b, 0x30, 0xd3, 0xb4, 0x5d,
+	0x1f, 0x39, 0xb4, 0x3a, 0x9f, 0x18, 0x37, 0x1d, 0xfc, 0xba, 0x00, 0xe7, 0x62, 0xe6, 0xe3, 0xa3,
+	0xf1, 0xde, 0xf9, 0x68, 0x31, 0x25, 0xc4, 0x02, 0xc6, 0xb7, 0xaf, 0x5b, 0x7e, 0x83, 0xa1, 0x2e,
+	0xc5, 0x9a, 0xf0, 0xf5, 0x09, 0x0b, 0x66, 0xa1, 0x80, 0xaa, 0x12, 0xb4, 0x87, 0xea, 0xe1, 0x17,
+	0xf1, 0x21, 0x67, 0x1f, 0x4b, 0x40, 0xd4, 0xf1, 0xf7, 0x1b, 0x0a, 0x07, 0xd6, 0x17, 0x83, 0x3f,
+	0x94, 0xf8, 0x5d, 0x84, 0x59, 0x31, 0x7a, 0x7e, 0xb1, 0x3f, 0x5e, 0xec, 0xdb, 0x30, 0x00, 0x42,
+	0x93, 0x63, 0x43, 0xd3, 0xb3, 0x5b, 0xd4, 0x2d, 0x69, 0xcb, 0x59, 0x36, 0x34, 0xf8, 0x61, 0xfc,
+	0x81, 0x06, 0x0b, 0xe6, 0xa0, 0xc7, 0x56, 0x64, 0x75, 0xcf, 0xf2, 0xe8, 0xae, 0xd5, 0x27, 0x8f,
+	0xa0, 0xe8, 0x70, 0x50, 0xc3, 0x65, 0x30, 0xac, 0x31, 0xbb, 0xbe, 0x1e, 0x37, 0x68, 0xb5, 0xa2,
+	0xf2, 0x2d, 0x3c, 0x88, 0x23, 0x81, 0x98, 0x12, 0xc5, 0x50, 0x26, 0x9a, 0x4c, 0x7e, 0x52, 0x80,
+	0x1c, 0x57, 0xc3, 0xd8, 0x0a, 0x70, 0x0d, 0x72, 0x7c, 0x6d, 0x88, 0xb5, 0x66, 0x13, 0x26, 0x07,
+	0x1e, 0xa5, 0x9a, 0x02, 0x2d, 0x9c, 0xa0, 0xb3, 0x69, 0x26, 0xe8, 0x32, 0xe4, 0xd9, 0x3a, 0xce,
+	0xee, 0x75, 0x4e, 0xc5, 0xb2, 0x30, 0xf8, 0x26, 0x6f, 0xc2, 0x4c, 0x87, 0x47, 0xdb, 0x38, 0x85,
+	0xcc, 0x26, 0xac, 0x62, 0x94, 0x98, 0xdc, 0xf4, 0xd1, 0xc9, 0x5d, 0x98, 0x6e, 0x32, 0x71, 0xe0,
+	0x14, 0x33, 0x7a, 0x6d, 0xc6, 0x11, 0xc9, 0x1a, 0x4c, 0xb9, 0x7d, 0xda, 0xc4, 0xe9, 0x25, 0xc9,
+	0xc7, 0x86, 0x5e, 0xdd, 0x44, 0x44, 0x26, 0xcc, 0x81, 0x6b, 0x1d, 0x53, 0xb1, 0xdc, 0xe1, 0x1f,
+	0xea, 0xc2, 0xb0, 0x30, 0xc1, 0xc2, 0x30, 0x8c, 0xae, 0x21, 0x5d, 0x74, 0x7d, 0x8f, 0x79, 0x49,
+	0xcb, 0x1b, 0xb8, 0x38, 0x6b, 0xcc, 0xaf, 0x5f, 0x19, 0xc6, 0x32, 0x22, 0x99, 0x02, 0x99, 0xac,
+	0xc3, 0x34, 0xd7, 0xbd, 0x39, 0xac, 0x75, 0x79, 0x44, 0x2d, 0x6a, 0x72, 0x54, 0x72, 0x0d, 0x66,
+	0x2d, 0xcf, 0xb3, 0x98, 0x05, 0x36, 0xec, 0x1e, 0x4e, 0x21, 0x05, 0x13, 0x7c, 0xd0, 0x7e, 0x8f,
+	0x6c, 0xc2, 0x7c, 0x80, 0xc0, 0xa9, 0xcf, 0x0f, 0xa1, 0xbe, 0x81, 0x68, 0x9c, 0x7a, 0xd1, 0xaf,
+	0x53, 0xf7, 0x5b, 0x69, 0xd1, 0x93, 0x76, 0x93, 0x36, 0x30, 0xe3, 0x20, 0x82, 0x4a, 0x0e, 0x3a,
+	0xb0, 0xbc, 0xa7, 0xe4, 0x36, 0x10, 0x97, 0x36, 0x07, 0x0e, 0x6d, 0xc8, 0x78, 0x7e, 0x54, 0x89,
+	0x25, 0x5b, 0x21, 0x76, 0xc0, 0x34, 0x47, 0x5b, 0x44, 0xe3, 0x14, 0x4c, 0x23, 0x42, 0x35, 0x40,
+	0x68, 0xf7, 0x9e, 0xd8, 0x25, 0x82, 0xb6, 0x78, 0x73, 0x88, 0x3c, 0x04, 0xe3, 0xb5, 0xde, 0x13,
+	0x9b, 0x1b, 0xa0, 0xa0, 0xc4, 0x00, 0xe4, 0xdb, 0x30, 0x27, 0x4d, 0xd3, 0x6e, 0xe9, 0x2c, 0x92,
+	0x1a, 0x39, 0x4f, 0xcf, 0x86, 0xf3, 0xb4, 0x4b, 0x2a, 0x51, 0xbf, 0xb0, 0x84, 0x04, 0x96, 0xc7,
+	0xf9, 0x05, 0xd5, 0x0b, 0x30, 0x8d, 0xa4, 0x8e, 0x63, 0x3b, 0x38, 0x7f, 0x15, 0x4c, 0xfe, 0x41,
+	0xde, 0x03, 0x5d, 0xc4, 0x2d, 0x4d, 0xbb, 0xe7, 0x0e, 0xba, 0xd4, 0x71, 0x4b, 0xe7, 0x91, 0xfe,
+	0xb5, 0x21, 0x7d, 0xdd, 0x14, 0x78, 0xe6, 0xc2, 0x89, 0xf2, 0xed, 0xb2, 0x11, 0x78, 0xe2, 0x36,
+	0x1c, 0x8a, 0xf3, 0x87, 0x43, 0x3f, 0x19, 0xb4, 0x9d, 0x20, 0x5c, 0xd6, 0x9f, 0xb8, 0x26, 0x16,
+	0x98, 0x02, 0x5e, 0x7e, 0x17, 0x16, 0x22, 0x52, 0x9b, 0xc8, 0x27, 0xfd, 0xa3, 0x0c, 0x4c, 0xb3,
+	0x8e, 0xb9, 0x0c, 0x87, 0xf9, 0x04, 0x17, 0xeb, 0x4d, 0x99, 0xfc, 0x83, 0x5c, 0x80, 0x19, 0xf6,
+	0xa3, 0xd1, 0x75, 0xc5, 0x32, 0x35, 0xc7, 0x3e, 0x77, 0x5d, 0xb6, 0xee, 0xc4, 0x82, 0xc7, 0xa7,
+	0x1e, 0x75, 0xd1, 0x0b, 0x4d, 0x99, 0x05, 0x06, 0xb9, 0xcf, 0x00, 0x6c, 0x61, 0x81, 0x69, 0x25,
+	0x17, 0xfd, 0xcd, 0x94, 0x29, 0xbe, 0xd8, 0x7a, 0x14, 0x7f, 0x31, 0x82, 0x3c, 0x15, 0x35, 0x83,
+	0xdf, 0xbb, 0x2e, 0xd3, 0x25, 0x5e, 0xc4, 0x49, 0xe6, 0xb0, 0x14, 0x10, 0xc4, 0x69, 0x5e, 0x83,
+	0x59, 0x3e, 0x59, 0x1e, 0xb3, 0x59, 0x45, 0xa4, 0x46, 0x00, 0xa3, 0x50, 0x84, 0x90, 0xb3, 0x30,
+	0xdd, 0xb6, 0x19, 0xe5, 0xbc, 0x9f, 0xe4, 0xe2, 0x8c, 0x22, 0xc1, 0x06, 0xa6, 0xa1, 0x78, 0x6a,
+	0xaa, 0x80, 0x10, 0xcc, 0x9d, 0x30, 0xa2, 0xfe, 0xc4, 0xda, 0x75, 0x45, 0x9a, 0x0a, 0x7c, 0xd0,
+	0xae, 0x6b, 0xfc, 0xbb, 0x2c, 0x4c, 0x6f, 0x74, 0xa8, 0xe3, 0x49, 0x4e, 0x3b, 0x8b, 0x4e, 0xfb,
+	0x2d, 0xc8, 0xbb, 0xf4, 0x84, 0x3a, 0x6d, 0xef, 0x54, 0xe4, 0x8b, 0xe2, 0xee, 0xa1, 0x2e, 0x10,
+	0xd0, 0xab, 0x04, 0xe8, 0x8c, 0x29, 0x8b, 0xd1, 0x6c, 0x78, 0xa7, 0x7d, 0x8a, 0xd2, 0xcb, 0x9a,
+	0x05, 0x84, 0x30, 0x44, 0xb6, 0xda, 0xe9, 0x52, 0x17, 0x1d, 0x1f, 0x4f, 0x0f, 0xf9, 0x9f, 0xe4,
+	0x4d, 0x28, 0x04, 0xf9, 0x47, 0xe1, 0xaf, 0x47, 0xb9, 0xbe, 0x10, 0x99, 0x75, 0xd4, 0x11, 0x09,
+	0xc8, 0x46, 0xbb, 0x85, 0xe2, 0x2d, 0xb0, 0x48, 0x96, 0x83, 0x6a, 0xd8, 0x1d, 0xff, 0x4b, 0xc4,
+	0xff, 0x57, 0x12, 0x8c, 0x8b, 0x23, 0xf0, 0xee, 0xf8, 0xe8, 0x8c, 0xdf, 0x66, 0x87, 0x62, 0x74,
+	0xcd, 0x17, 0xf9, 0xfe, 0x27, 0xd3, 0x45, 0xcf, 0xeb, 0x08, 0xb1, 0xb3, 0x9f, 0xac, 0xeb, 0x83,
+	0x5e, 0xfb, 0x93, 0x01, 0x6d, 0x78, 0xd6, 0x31, 0xca, 0xbb, 0x60, 0x16, 0x38, 0xe4, 0xd0, 0x3a,
+	0x66, 0x6a, 0xd8, 0xb4, 0x07, 0x3d, 0x0f, 0x1d, 0x6e, 0xd6, 0xe4, 0x1f, 0xe4, 0x2d, 0x80, 0x27,
+	0x6d, 0x87, 0xb9, 0x7c, 0x4a, 0xd3, 0xe4, 0x02, 0x0b, 0x88, 0x5d, 0xa7, 0xb4, 0x67, 0xbc, 0x01,
+	0x39, 0x1c, 0x3e, 0x66, 0x58, 0xd3, 0x28, 0x62, 0x11, 0x11, 0xc4, 0xe7, 0x4c, 0xc4, 0x33, 0x39,
+	0x92, 0xf1, 0x1f, 0x33, 0xb0, 0xb0, 0xff, 0xf8, 0x63, 0xda, 0xf4, 0x18, 0x0a, 0x45, 0x1f, 0x44,
+	0x60, 0x6a, 0x30, 0x08, 0x26, 0x6e, 0xfc, 0x4d, 0x2e, 0x41, 0x41, 0x98, 0x7e, 0xdb, 0x4f, 0x12,
+	0xe5, 0x39, 0xa0, 0x86, 0xcb, 0x56, 0xda, 0xb3, 0x1e, 0x77, 0x68, 0x0b, 0x07, 0x39, 0x6f, 0xfa,
+	0x9f, 0x7c, 0xe5, 0x8d, 0x33, 0x0b, 0x1f, 0x61, 0x7f, 0xea, 0x38, 0x0f, 0x39, 0xab, 0xc9, 0xa2,
+	0x38, 0x91, 0xae, 0x11, 0x5f, 0xa8, 0x31, 0xcd, 0x26, 0x75, 0xdd, 0x06, 0xb3, 0x6d, 0x3e, 0x7a,
+	0x05, 0x0e, 0x79, 0x9f, 0xa2, 0x42, 0xb9, 0xb4, 0xe9, 0x50, 0x0f, 0x8b, 0x67, 0x78, 0x31, 0x87,
+	0xb0, 0x62, 0x4c, 0x34, 0xb4, 0xfa, 0x76, 0xbb, 0xe7, 0x31, 0xeb, 0x60, 0x5e, 0x3a, 0x04, 0x90,
+	0x97, 0x41, 0x6f, 0x0e, 0x1c, 0x87, 0xf6, 0xbc, 0x86, 0x0f, 0xc4, 0x11, 0x2b, 0x98, 0x0b, 0x02,
+	0x5e, 0x11, 0x60, 0x74, 0xf8, 0x9c, 0x8d, 0xbe, 0xed, 0xf0, 0x69, 0x34, 0x6b, 0x0a, 0xce, 0x0e,
+	0x6c, 0xc7, 0xc3, 0xdc, 0x30, 0x3d, 0x66, 0xfc, 0xf3, 0x9c, 0xae, 0xf8, 0x32, 0xfe, 0x95, 0x06,
+	0x67, 0x85, 0xe7, 0x73, 0x28, 0x9b, 0x98, 0xe8, 0x27, 0x03, 0xea, 0x7a, 0x72, 0xf8, 0xa1, 0x4d,
+	0x16, 0x7e, 0x4c, 0x1c, 0x33, 0xf9, 0xd1, 0x47, 0x36, 0x65, 0xf4, 0x61, 0xbc, 0x04, 0xf3, 0x1c,
+	0x66, 0x52, 0xb7, 0x6f, 0xf7, 0x5c, 0xc9, 0xfb, 0x6b, 0x92, 0xf7, 0x37, 0xfa, 0xb0, 0xa4, 0x76,
+	0x4d, 0x60, 0x47, 0xa3, 0xbc, 0x2a, 0x08, 0x67, 0xcf, 0xbc, 0x3b, 0xa2, 0x08, 0xd6, 0x87, 0x4d,
+	0x12, 0x3e, 0x25, 0x73, 0xfe, 0x44, 0xf9, 0x36, 0xfe, 0x58, 0xf3, 0x57, 0x34, 0x38, 0x2b, 0x6d,
+	0x70, 0x1d, 0x79, 0x1b, 0x72, 0x7c, 0xc2, 0xc4, 0x36, 0xe7, 0xd7, 0x8d, 0x21, 0x64, 0x39, 0xfa,
+	0x81, 0xe5, 0x58, 0x5d, 0x53, 0xd4, 0x20, 0x6f, 0xc2, 0x74, 0x17, 0xed, 0x2e, 0x93, 0xba, 0x2a,
+	0xaf, 0xc0, 0x54, 0x0f, 0x7f, 0xf0, 0x10, 0x20, 0xcb, 0x55, 0x0f, 0x21, 0x7e, 0x88, 0x20, 0x47,
+	0x12, 0x53, 0xd1, 0x88, 0xc3, 0xf8, 0xa3, 0x4c, 0x90, 0x63, 0xa1, 0xde, 0xf3, 0x50, 0x0b, 0x3e,
+	0xca, 0x99, 0xb4, 0x31, 0xe6, 0xdb, 0x81, 0xc5, 0x71, 0xc5, 0x30, 0x46, 0x45, 0x6b, 0xbc, 0xff,
+	0x81, 0x55, 0x56, 0x61, 0xc6, 0xee, 0xe3, 0x76, 0x4f, 0x69, 0x0a, 0x9d, 0xca, 0xea, 0xb0, 0xca,
+	0x41, 0xd7, 0x56, 0xf7, 0x79, 0x05, 0x1e, 0xe1, 0xf8, 0xd5, 0xcb, 0x6f, 0xc3, 0x9c, 0x5c, 0x30,
+	0xd1, 0x24, 0xfe, 0xb7, 0x43, 0x6d, 0x60, 0xcd, 0x08, 0xed, 0x5b, 0x83, 0x1c, 0xd7, 0x1a, 0x21,
+	0xc1, 0x0b, 0xc3, 0x94, 0x4c, 0xa0, 0x3d, 0x47, 0xf5, 0x3c, 0x85, 0xc5, 0x7a, 0xcf, 0xea, 0xab,
+	0x96, 0x1e, 0xb5, 0x06, 0x69, 0x88, 0x33, 0x93, 0x0d, 0xb1, 0xbc, 0x9c, 0xc9, 0xaa, 0xcb, 0x19,
+	0xe3, 0x13, 0x20, 0x72, 0xd3, 0x42, 0x16, 0xdf, 0x83, 0xf3, 0x7e, 0x7c, 0x86, 0x05, 0x61, 0x0f,
+	0xb9, 0x6c, 0x6e, 0x0c, 0x8b, 0xd2, 0x14, 0x32, 0xe6, 0xd2, 0x49, 0x02, 0xd4, 0xf0, 0xfc, 0x9c,
+	0x3f, 0xce, 0x11, 0xca, 0x7c, 0xa0, 0x45, 0xe6, 0x83, 0xa4, 0x9d, 0xbe, 0x7b, 0x30, 0x23, 0x1a,
+	0x4e, 0xe3, 0x99, 0x7c, 0x5c, 0xe3, 0x0f, 0x35, 0xdf, 0x3b, 0xf9, 0xa1, 0x63, 0xe2, 0xc6, 0xcb,
+	0x65, 0x28, 0xb0, 0xbf, 0x6e, 0xdf, 0x6a, 0xfa, 0x9a, 0x13, 0x02, 0x58, 0x8d, 0x20, 0x02, 0x29,
+	0x98, 0xf8, 0x9b, 0x85, 0x7c, 0x6c, 0x75, 0xcd, 0xd8, 0x17, 0x53, 0x13, 0xfb, 0xac, 0xb5, 0x98,
+	0xa1, 0xdb, 0x9f, 0xf6, 0xa8, 0xd3, 0xc0, 0x46, 0xa6, 0x39, 0x2d, 0x84, 0xec, 0xb1, 0x96, 0x82,
+	0x62, 0xa4, 0x98, 0x93, 0x8a, 0x59, 0xb4, 0x60, 0xb4, 0x80, 0x3c, 0x70, 0xac, 0xfe, 0xd3, 0x2d,
+	0xa7, 0x7d, 0x42, 0x9d, 0xcd, 0xa7, 0x56, 0xef, 0x98, 0xba, 0x81, 0x40, 0x34, 0x49, 0x20, 0x6f,
+	0xc3, 0xd4, 0xb3, 0x76, 0xaf, 0x25, 0x3c, 0xd1, 0x4b, 0x09, 0x4b, 0xdb, 0x08, 0x19, 0x8c, 0x46,
+	0xb0, 0x8e, 0x71, 0x13, 0x16, 0x36, 0x3b, 0x03, 0xd7, 0xa3, 0xce, 0x18, 0x9f, 0xfd, 0xf7, 0x34,
+	0x28, 0x32, 0x63, 0x3e, 0x09, 0xf4, 0xb3, 0x0a, 0x79, 0x93, 0x7e, 0x42, 0x5d, 0xef, 0xfd, 0x87,
+	0x22, 0x42, 0xb8, 0x1d, 0x8f, 0x10, 0xe4, 0x1a, 0xab, 0x3e, 0x3a, 0x37, 0xe5, 0xa0, 0x76, 0xf9,
+	0x1d, 0x28, 0x2a, 0x45, 0xb2, 0x31, 0x67, 0xc7, 0x19, 0xf3, 0x67, 0x30, 0xaf, 0xb4, 0xe2, 0x12,
+	0x03, 0xe6, 0xc4, 0xef, 0x4d, 0xf4, 0xd0, 0x9c, 0x8c, 0x02, 0x23, 0x5b, 0x91, 0xde, 0x88, 0xfd,
+	0xb5, 0xab, 0xa3, 0x7b, 0x60, 0xaa, 0x95, 0x8c, 0x7f, 0xa9, 0xc1, 0x79, 0x4c, 0x1c, 0x8c, 0xb7,
+	0xde, 0xf7, 0x21, 0xb7, 0x23, 0xef, 0xe4, 0xbd, 0x96, 0x9c, 0x81, 0x88, 0x11, 0x52, 0xb7, 0x1f,
+	0x77, 0xbe, 0xf6, 0xf6, 0xe3, 0x9f, 0x6b, 0x70, 0x21, 0xd6, 0x92, 0x18, 0xf9, 0x23, 0x28, 0xf8,
+	0xa9, 0x2d, 0x57, 0x0c, 0xe9, 0xb7, 0xc6, 0xb3, 0xc9, 0x2b, 0xaf, 0xd6, 0xfd, 0x9a, 0x9c, 0xd5,
+	0x90, 0x52, 0xa8, 0x50, 0x19, 0x49, 0xa1, 0xca, 0x16, 0xcc, 0xab, 0x55, 0x12, 0xba, 0xf1, 0x96,
+	0xdc, 0x8d, 0xd9, 0xf5, 0xeb, 0xf1, 0x88, 0x25, 0xc6, 0x87, 0xdc, 0xd7, 0x5f, 0x4e, 0x05, 0x7b,
+	0xd7, 0x7b, 0x76, 0x2b, 0x1e, 0x5f, 0xe8, 0x90, 0x6d, 0xf6, 0x07, 0x48, 0x5c, 0x33, 0xd9, 0x4f,
+	0xe6, 0x8c, 0xba, 0xb4, 0xdb, 0xf0, 0x6c, 0xcf, 0xea, 0x88, 0x45, 0x5a, 0xbe, 0x4b, 0xbb, 0xb8,
+	0x9d, 0xcc, 0xd6, 0x62, 0xac, 0x10, 0xd7, 0x45, 0x7c, 0x95, 0x36, 0xd3, 0xa5, 0x5d, 0x5c, 0x15,
+	0x89, 0xa2, 0x27, 0x0e, 0xa5, 0xfe, 0x32, 0xad, 0x4b, 0xbb, 0xdb, 0x0e, 0xc5, 0x1d, 0x45, 0xeb,
+	0xe4, 0xb8, 0xd1, 0xb1, 0x2d, 0xbe, 0x88, 0xc8, 0x9a, 0x33, 0xd6, 0xc9, 0xf1, 0x8e, 0x6d, 0xf1,
+	0x2c, 0x16, 0x8f, 0x69, 0x67, 0x86, 0xa4, 0x57, 0x22, 0x79, 0x92, 0x77, 0x61, 0xba, 0xd5, 0x76,
+	0x9f, 0xf9, 0xfb, 0xd6, 0x37, 0x87, 0xed, 0x5b, 0xb3, 0xde, 0xae, 0x6e, 0x31, 0x4c, 0x3e, 0x18,
+	0xbc, 0x16, 0x59, 0x87, 0xe9, 0xbe, 0x6d, 0x07, 0xbb, 0x04, 0x97, 0x47, 0x6d, 0x7b, 0x9b, 0x1c,
+	0x95, 0x79, 0xb7, 0xee, 0x71, 0xd7, 0x6b, 0xb4, 0xfb, 0x7e, 0x80, 0xca, 0x3e, 0x6b, 0x7d, 0x56,
+	0xd0, 0xb2, 0x3c, 0x8b, 0x15, 0xcc, 0xf1, 0x02, 0xf6, 0x59, 0xc3, 0xe4, 0xd9, 0x53, 0xdb, 0xf5,
+	0xd0, 0xe9, 0xf1, 0x7c, 0x49, 0xf0, 0x4d, 0x76, 0x61, 0x16, 0x7d, 0xa5, 0xd8, 0xad, 0xd0, 0x87,
+	0xb8, 0x0d, 0xb9, 0x1b, 0xec, 0x1f, 0xd9, 0x06, 0xa0, 0x17, 0x00, 0xca, 0x1f, 0x01, 0x84, 0xbd,
+	0x4c, 0xd0, 0x9f, 0x37, 0x54, 0xfd, 0x59, 0x1e, 0xd6, 0x90, 0xbf, 0x4c, 0x93, 0x94, 0xa7, 0xfc,
+	0x2e, 0x2c, 0x44, 0x9a, 0x9e, 0xc8, 0xce, 0x3e, 0x80, 0x79, 0x41, 0x5c, 0xf8, 0x57, 0x69, 0xb4,
+	0xb5, 0x74, 0xa3, 0xcd, 0xd5, 0x35, 0x13, 0x6c, 0x96, 0x77, 0xe0, 0x6a, 0xbd, 0xf5, 0xcc, 0xdf,
+	0xa9, 0x38, 0xb0, 0x3b, 0xed, 0xe6, 0xa9, 0xea, 0x74, 0xde, 0x83, 0x79, 0xb5, 0x58, 0x4c, 0xd7,
+	0xf1, 0x10, 0x2d, 0x46, 0xc8, 0x8c, 0xd4, 0x34, 0x5e, 0x80, 0x6b, 0x43, 0x5b, 0x13, 0x13, 0x79,
+	0x12, 0x43, 0x7c, 0x7b, 0xe9, 0xff, 0x17, 0x43, 0x7e, 0x6b, 0x82, 0xa1, 0xeb, 0xf0, 0x42, 0x0c,
+	0xa5, 0xd2, 0x63, 0x73, 0x7d, 0xc8, 0x93, 0xd1, 0x02, 0x63, 0x14, 0x92, 0xf0, 0x85, 0xdf, 0x86,
+	0x7c, 0x9f, 0x15, 0xb5, 0xa9, 0xef, 0x0a, 0xd3, 0xf0, 0x1c, 0xd4, 0x31, 0xee, 0x25, 0x70, 0x5b,
+	0xeb, 0xb1, 0x00, 0x3a, 0x88, 0xd9, 0x13, 0xc2, 0x0f, 0xe3, 0x57, 0x61, 0x79, 0x78, 0x35, 0xc1,
+	0xda, 0xdb, 0x90, 0xeb, 0x4f, 0x2a, 0x4c, 0x51, 0xc3, 0x78, 0x3d, 0x61, 0xc8, 0xb6, 0x68, 0x87,
+	0x86, 0x43, 0x96, 0xc4, 0x55, 0x92, 0xe8, 0xfd, 0x5a, 0x42, 0xf4, 0x3b, 0x09, 0x84, 0xfd, 0x6d,
+	0xca, 0x2d, 0xab, 0xdd, 0x39, 0x65, 0x84, 0x9f, 0xda, 0x03, 0x47, 0x9c, 0x1d, 0xc2, 0xdf, 0x6c,
+	0xf5, 0xdb, 0x6d, 0xf7, 0x06, 0x1e, 0x37, 0xa0, 0x69, 0x53, 0x7c, 0x19, 0x7f, 0x4d, 0x4b, 0x14,
+	0x1f, 0x27, 0xf7, 0x88, 0xd2, 0x67, 0x9d, 0x53, 0xf2, 0x2a, 0x64, 0x5b, 0xd6, 0xa9, 0x30, 0xa6,
+	0x6b, 0x49, 0x32, 0x38, 0x6c, 0x77, 0x29, 0x43, 0x6e, 0x59, 0xa7, 0x26, 0xc3, 0x0d, 0x58, 0xc8,
+	0x24, 0xb2, 0x90, 0x55, 0x58, 0xf8, 0x41, 0xe2, 0x48, 0x88, 0x34, 0x97, 0xdd, 0xf3, 0x9e, 0x76,
+	0xd0, 0x21, 0xf8, 0x2c, 0x4c, 0x4f, 0xde, 0xc2, 0xef, 0x67, 0xe0, 0xe2, 0xd0, 0x26, 0x78, 0x62,
+	0xc0, 0xb3, 0xda, 0x3d, 0x11, 0xbf, 0x88, 0x2f, 0xf2, 0x00, 0xa6, 0x5b, 0x4c, 0x9e, 0xc2, 0xa7,
+	0xad, 0x8d, 0x1f, 0x7c, 0x65, 0x18, 0xaa, 0x67, 0x4c, 0x5e, 0x9f, 0xbc, 0x07, 0xb9, 0x4f, 0x51,
+	0x92, 0x22, 0x8c, 0xbe, 0x9b, 0x9e, 0x12, 0x1f, 0x81, 0xea, 0x19, 0x53, 0x50, 0x20, 0xbb, 0x30,
+	0xd3, 0xe5, 0x32, 0xc1, 0x99, 0x71, 0x76, 0xfd, 0xd5, 0xf4, 0xc4, 0x84, 0x30, 0xab, 0x67, 0x4c,
+	0x9f, 0xc6, 0xfd, 0x22, 0xcc, 0xf6, 0xa9, 0xd3, 0xb6, 0x5b, 0x18, 0x1b, 0x1b, 0x9f, 0xc0, 0x62,
+	0xac, 0x76, 0x62, 0xf0, 0x5e, 0x85, 0x82, 0xbf, 0x25, 0xe7, 0xc7, 0x59, 0x2b, 0xe9, 0x19, 0x31,
+	0xc3, 0xca, 0xc6, 0xbf, 0xc9, 0x40, 0xb9, 0xde, 0x7a, 0xb6, 0xe9, 0xd0, 0x16, 0xed, 0x79, 0x6d,
+	0xab, 0xa3, 0x3a, 0xda, 0x0f, 0x60, 0xde, 0xfa, 0xd4, 0x65, 0x8b, 0x23, 0x51, 0x2c, 0x4c, 0xf1,
+	0x56, 0x52, 0x6b, 0x1b, 0x9f, 0xba, 0x21, 0x1d, 0x41, 0xa1, 0x7a, 0xc6, 0x2c, 0x5a, 0x32, 0x9c,
+	0x3c, 0x02, 0xdd, 0xfa, 0x6c, 0xe0, 0x50, 0x99, 0x28, 0x1f, 0xe2, 0xc4, 0x2e, 0x6c, 0x30, 0xdc,
+	0x24, 0xb2, 0x0b, 0x96, 0x5a, 0x42, 0x3e, 0x82, 0x45, 0x9e, 0xf8, 0x93, 0x29, 0xf3, 0x21, 0x7f,
+	0x25, 0x89, 0xf2, 0x03, 0x44, 0x4e, 0x22, 0xad, 0x1f, 0x47, 0x8a, 0xee, 0x2f, 0xc2, 0x42, 0x48,
+	0x94, 0x0f, 0xd6, 0x7d, 0xb8, 0x94, 0x28, 0x38, 0xe1, 0xbc, 0xae, 0x43, 0x51, 0xaa, 0x11, 0x84,
+	0x63, 0x73, 0x21, 0xb0, 0xd6, 0x32, 0x7e, 0x4b, 0x83, 0x0b, 0x43, 0x04, 0x17, 0x49, 0xec, 0x69,
+	0xa3, 0x13, 0x7b, 0x99, 0x68, 0x62, 0xaf, 0x0c, 0xf9, 0x20, 0x65, 0xc7, 0x17, 0x71, 0xc1, 0xb7,
+	0x94, 0x8a, 0x9b, 0x52, 0x52, 0x71, 0x0d, 0x34, 0xd3, 0x64, 0x81, 0x93, 0x17, 0x60, 0xce, 0x6a,
+	0x62, 0xd2, 0xb5, 0x21, 0xa9, 0xe3, 0xac, 0x80, 0xe1, 0x42, 0x8f, 0xe7, 0x00, 0x11, 0x25, 0xe4,
+	0x09, 0x04, 0xe8, 0x7d, 0x7a, 0x6a, 0x3c, 0x44, 0x5d, 0x1b, 0x22, 0x77, 0xd6, 0xa3, 0xbe, 0x63,
+	0x7f, 0x4c, 0x9b, 0x5e, 0x28, 0xae, 0x82, 0x80, 0xd4, 0x30, 0xf4, 0xfc, 0xd8, 0xb5, 0x7b, 0x12,
+	0xe9, 0x19, 0xf6, 0xcd, 0xe8, 0xfe, 0x54, 0x83, 0x52, 0x5c, 0x8c, 0x13, 0x0c, 0x44, 0x44, 0xd8,
+	0x99, 0xa8, 0xb0, 0xbf, 0x8a, 0x34, 0x5b, 0xd8, 0xd9, 0x98, 0x34, 0x27, 0xe1, 0x2a, 0x2a, 0xf3,
+	0x4c, 0x4c, 0xe6, 0x86, 0x85, 0x5a, 0x18, 0x17, 0xe9, 0x84, 0x9d, 0x97, 0x04, 0x9f, 0x89, 0x08,
+	0xde, 0xb8, 0x06, 0x57, 0x14, 0x45, 0x8f, 0x05, 0x1a, 0x0f, 0x70, 0x4a, 0x4c, 0x44, 0x10, 0x6c,
+	0xdc, 0x80, 0x79, 0x85, 0x0d, 0x7f, 0xbb, 0xbe, 0x28, 0xf3, 0xe1, 0xc6, 0x4c, 0x2a, 0x12, 0x47,
+	0xa4, 0x32, 0xa9, 0x9f, 0x67, 0xe0, 0x72, 0x32, 0x11, 0xc1, 0x8b, 0x39, 0xc4, 0xa5, 0xbd, 0x9c,
+	0xc2, 0xa5, 0x71, 0x12, 0x71, 0x9f, 0xf6, 0xe1, 0x50, 0x9f, 0xf6, 0x4a, 0x2a, 0x9f, 0x16, 0xd0,
+	0x8d, 0x39, 0xb5, 0xef, 0x0d, 0x77, 0x6a, 0xb7, 0xd3, 0x39, 0xb5, 0x80, 0x76, 0x2a, 0xaf, 0xb6,
+	0x11, 0x99, 0x0e, 0xd4, 0x98, 0x29, 0xd5, 0x08, 0x5c, 0x89, 0x8c, 0x62, 0x24, 0x80, 0xda, 0x8c,
+	0x8c, 0xcf, 0x43, 0xab, 0xd3, 0x96, 0x43, 0xe9, 0x54, 0x6d, 0x44, 0x75, 0x32, 0x24, 0x22, 0x5a,
+	0xf9, 0x6f, 0x1a, 0x9c, 0xab, 0xb7, 0x9e, 0xf1, 0x44, 0xd8, 0x2e, 0x33, 0x17, 0x9f, 0xfe, 0xc8,
+	0x3c, 0x9c, 0x9a, 0xb3, 0xce, 0x44, 0x73, 0xd6, 0xbb, 0x61, 0x5a, 0x37, 0x3b, 0x24, 0xbb, 0x91,
+	0xd8, 0xe8, 0x37, 0x90, 0xdb, 0x2d, 0xc1, 0xf9, 0x68, 0x53, 0xa2, 0xeb, 0xff, 0x83, 0x4f, 0x2a,
+	0xbc, 0xe8, 0xa8, 0xd7, 0x7d, 0x5e, 0x9d, 0xdf, 0x8f, 0x76, 0xfe, 0xde, 0xf0, 0xce, 0xab, 0xcd,
+	0x7e, 0x03, 0xdd, 0x2f, 0xa3, 0xc7, 0x8f, 0x34, 0x26, 0x04, 0xf0, 0xef, 0x35, 0x49, 0x36, 0x7c,
+	0x13, 0x3c, 0x55, 0xff, 0xf7, 0xc2, 0x0e, 0xf2, 0x98, 0xea, 0xf5, 0xe1, 0x1d, 0x54, 0xc8, 0x7e,
+	0x03, 0xfd, 0x7b, 0x5b, 0x1a, 0x43, 0xbf, 0x2d, 0xe1, 0xc0, 0x22, 0x1b, 0x27, 0x5a, 0x6c, 0xe3,
+	0xe4, 0x9e, 0xd4, 0xfd, 0x2d, 0x9a, 0xb6, 0xfb, 0xc6, 0x45, 0xa9, 0x49, 0xbf, 0x9a, 0x90, 0xe8,
+	0xf7, 0x25, 0x8a, 0x6a, 0x80, 0x98, 0x14, 0x9d, 0x4e, 0xba, 0xd3, 0x62, 0xbc, 0x21, 0xb5, 0x1c,
+	0x09, 0xa3, 0x46, 0x72, 0x5c, 0x95, 0x6c, 0x7c, 0xb3, 0x63, 0xf7, 0x46, 0x72, 0x75, 0x09, 0x0a,
+	0xfc, 0xe4, 0xbe, 0xb4, 0x1f, 0xcb, 0x01, 0xb5, 0x96, 0x22, 0x32, 0x41, 0x29, 0x0d, 0x03, 0xaa,
+	0xa4, 0x65, 0x4f, 0x39, 0x81, 0xa4, 0x15, 0xef, 0x28, 0x8b, 0x22, 0x32, 0xfd, 0x8d, 0x24, 0xf9,
+	0xbe, 0x64, 0x0f, 0xd1, 0x19, 0x6f, 0xd2, 0x0d, 0x1f, 0xe3, 0xf7, 0x65, 0x03, 0x52, 0x13, 0x1d,
+	0x23, 0x0d, 0xe8, 0xab, 0xef, 0xdc, 0xdc, 0x13, 0x2a, 0xc3, 0x17, 0x55, 0x2f, 0x8c, 0x3d, 0xd6,
+	0x2b, 0x14, 0x47, 0x16, 0x64, 0x24, 0x45, 0xf2, 0x3d, 0x49, 0x37, 0xf0, 0x20, 0x4b, 0xaa, 0x1e,
+	0xdc, 0x80, 0xf9, 0x9e, 0xed, 0x35, 0x9a, 0x83, 0xee, 0xa0, 0x63, 0x79, 0xed, 0x13, 0x6e, 0x99,
+	0x79, 0xb3, 0xd8, 0xb3, 0xbd, 0xcd, 0x00, 0x68, 0x6c, 0x4b, 0xf2, 0x11, 0xc4, 0x85, 0xac, 0x6f,
+	0xf3, 0x13, 0x5e, 0xae, 0x10, 0xf5, 0xf9, 0xc4, 0xdc, 0x97, 0xcb, 0xcf, 0x76, 0xb9, 0xc6, 0x25,
+	0x8c, 0xb8, 0x39, 0x9d, 0x58, 0x58, 0xf5, 0x0e, 0x4e, 0xc5, 0xb1, 0x42, 0xd1, 0xd0, 0x15, 0x80,
+	0xa0, 0x1b, 0x7e, 0x38, 0x55, 0xf0, 0xfb, 0xe1, 0x1a, 0x3f, 0x80, 0x17, 0xe3, 0x95, 0x1f, 0xb5,
+	0xbd, 0xa7, 0xdb, 0xed, 0x8e, 0x47, 0x1d, 0xf7, 0x6b, 0xef, 0xa7, 0x1a, 0xdb, 0x70, 0x63, 0x4c,
+	0x0b, 0xe9, 0x38, 0xfd, 0x13, 0x0d, 0xc3, 0x47, 0x21, 0x4c, 0x91, 0x29, 0x57, 0x9d, 0xcc, 0xc8,
+	0x21, 0xab, 0x07, 0x97, 0x9c, 0xb8, 0xd3, 0x7e, 0x67, 0xb8, 0xd3, 0x4e, 0xa4, 0xfe, 0xbc, 0xef,
+	0x3d, 0xdd, 0xc7, 0x8c, 0x4e, 0x72, 0x83, 0xa1, 0x07, 0x0f, 0x4f, 0xef, 0xfa, 0x3d, 0x82, 0xe0,
+	0xd0, 0x7b, 0xcb, 0x68, 0x24, 0xd0, 0x30, 0x29, 0x9e, 0x37, 0x49, 0x25, 0x93, 0x48, 0x03, 0x99,
+	0x58, 0x03, 0x06, 0x26, 0x7d, 0x86, 0x34, 0x20, 0x2c, 0xe8, 0x3b, 0x98, 0x64, 0x54, 0x71, 0xa2,
+	0x4a, 0x3a, 0xda, 0x29, 0x1d, 0x62, 0x06, 0x72, 0x28, 0x05, 0x21, 0x8d, 0x55, 0x38, 0x2b, 0x48,
+	0x48, 0x3c, 0xfb, 0x8a, 0xb2, 0x78, 0xa2, 0xd4, 0x66, 0x0a, 0xf3, 0xe7, 0x1a, 0xdc, 0x1e, 0x4e,
+	0x36, 0x41, 0xc7, 0x47, 0x8a, 0xca, 0x8a, 0xa8, 0x4f, 0x6d, 0xbc, 0xfa, 0x8c, 0x68, 0xeb, 0x79,
+	0x2b, 0x53, 0x03, 0xee, 0xa4, 0x6c, 0xfe, 0x2b, 0x0a, 0x93, 0x67, 0x3c, 0x45, 0xea, 0x5e, 0x4c,
+	0x1c, 0x9b, 0xfc, 0x6c, 0x8f, 0xef, 0x87, 0xbe, 0x8f, 0xba, 0x32, 0x04, 0x45, 0x34, 0xfb, 0x16,
+	0xcc, 0x34, 0x39, 0x82, 0x70, 0x23, 0xd7, 0x86, 0x6d, 0x41, 0xf8, 0xbb, 0xb0, 0x3e, 0xbe, 0x71,
+	0x17, 0x1d, 0xf5, 0x9e, 0xdd, 0x8a, 0xce, 0x77, 0xd2, 0x7e, 0xb3, 0x26, 0xef, 0x37, 0x1b, 0xef,
+	0xa1, 0xf7, 0x55, 0x6a, 0x08, 0x36, 0xee, 0xc2, 0x14, 0xc3, 0x11, 0x3c, 0x5c, 0x1e, 0xb5, 0xdf,
+	0x62, 0x22, 0xa6, 0x71, 0x15, 0x57, 0x23, 0x12, 0xad, 0x48, 0xe7, 0x3f, 0xc0, 0x85, 0x46, 0x52,
+	0xf9, 0x57, 0x6e, 0x92, 0x4f, 0x5a, 0x0c, 0x10, 0x73, 0xf9, 0xf7, 0x70, 0x16, 0x8f, 0x14, 0x89,
+	0x86, 0x2e, 0x42, 0x5e, 0x88, 0xc3, 0x1f, 0xce, 0x19, 0x2e, 0x0f, 0xd7, 0xf8, 0x85, 0x26, 0x8f,
+	0x22, 0x9e, 0x56, 0x8b, 0x19, 0xea, 0x5b, 0x00, 0xfe, 0x19, 0x57, 0xc7, 0x13, 0xdc, 0x8e, 0x3d,
+	0x21, 0x58, 0x67, 0xc8, 0xe4, 0x1e, 0xe4, 0xb1, 0x2a, 0x15, 0x7b, 0xef, 0xa3, 0x2b, 0xce, 0x30,
+	0xdc, 0x4a, 0x4f, 0x3d, 0x37, 0x98, 0x9d, 0xe8, 0xdc, 0xa0, 0x61, 0xca, 0x2a, 0x17, 0xed, 0x4f,
+	0xa0, 0xe9, 0x39, 0x3c, 0x90, 0xe7, 0x8e, 0x39, 0xb6, 0x27, 0xb0, 0x0c, 0x97, 0x2f, 0x4b, 0x25,
+	0x9a, 0x9b, 0x1d, 0x6a, 0x39, 0xa1, 0x7c, 0x42, 0x6e, 0xb5, 0xc9, 0x4e, 0x39, 0x5e, 0x84, 0x3c,
+	0x3f, 0xb4, 0x29, 0x5c, 0x6d, 0xd6, 0x9c, 0xc1, 0xef, 0x5a, 0x4b, 0xa8, 0x57, 0x42, 0xa3, 0xc1,
+	0x11, 0x91, 0x68, 0xb9, 0x1a, 0x46, 0x7e, 0x33, 0x5c, 0x89, 0xd5, 0x73, 0x42, 0xab, 0x82, 0xad,
+	0x0a, 0xb2, 0xa5, 0x9c, 0x72, 0x54, 0x4c, 0xf3, 0x06, 0xcc, 0xdb, 0x61, 0x61, 0x68, 0xa1, 0x45,
+	0x09, 0x5a, 0x6b, 0x19, 0x7d, 0x6c, 0x27, 0x89, 0x8c, 0x18, 0xc3, 0x7d, 0x20, 0x32, 0x1d, 0x69,
+	0xdb, 0x30, 0x69, 0x13, 0x33, 0x72, 0xea, 0xd2, 0x5c, 0x94, 0xea, 0xf2, 0x2d, 0x45, 0xe3, 0x6d,
+	0x1c, 0x64, 0x09, 0x31, 0x7d, 0x20, 0x61, 0xd8, 0xd1, 0x4e, 0x47, 0x66, 0xed, 0xe7, 0xce, 0xec,
+	0x56, 0x94, 0x59, 0x75, 0xec, 0x53, 0x0a, 0xf9, 0x6a, 0x94, 0xed, 0xc8, 0x58, 0xfe, 0xd5, 0x68,
+	0x2b, 0x6a, 0x40, 0x9f, 0xae, 0x15, 0x72, 0x1e, 0x72, 0xfc, 0x84, 0xaa, 0x08, 0x88, 0xc5, 0x57,
+	0xbc, 0xf5, 0x48, 0x18, 0xee, 0x5b, 0x9d, 0x3d, 0x68, 0xdd, 0xb7, 0x9a, 0xcf, 0x06, 0xfd, 0x09,
+	0x22, 0xbb, 0x58, 0x26, 0x28, 0x93, 0x90, 0xbc, 0x24, 0x30, 0xf5, 0x64, 0xd0, 0xe9, 0x88, 0xf3,
+	0x5e, 0xf8, 0x3b, 0xb0, 0xba, 0x58, 0xa3, 0x82, 0xa9, 0x7f, 0xa1, 0x45, 0x11, 0xe2, 0xc1, 0xd5,
+	0x63, 0x84, 0x4b, 0x6c, 0x71, 0x40, 0xad, 0xc5, 0xa6, 0x58, 0x87, 0xa3, 0x37, 0x04, 0xef, 0x52,
+	0x72, 0x76, 0x51, 0x14, 0xf1, 0x29, 0x1b, 0xd3, 0xe2, 0xb1, 0x6e, 0x64, 0x13, 0xba, 0x31, 0xec,
+	0x70, 0x95, 0xf1, 0xbe, 0xb0, 0xd5, 0x38, 0xab, 0x42, 0x2d, 0x57, 0x60, 0x31, 0xc2, 0x4e, 0xc0,
+	0xf3, 0x82, 0xc2, 0x4c, 0xad, 0x65, 0x0c, 0xa2, 0xa3, 0x11, 0x5b, 0xb4, 0x0e, 0xef, 0x76, 0xaa,
+	0xd1, 0x58, 0x82, 0x69, 0xbc, 0xeb, 0x25, 0x86, 0x83, 0x7f, 0xc4, 0xc7, 0x23, 0xa2, 0xa2, 0x6d,
+	0x9e, 0x40, 0x8e, 0x96, 0x6f, 0x74, 0x82, 0xbd, 0x01, 0x03, 0x8a, 0xae, 0xd3, 0x8c, 0x75, 0x70,
+	0xd6, 0x75, 0x9a, 0x0f, 0x27, 0x51, 0x97, 0x20, 0xde, 0x49, 0x6a, 0x4a, 0x70, 0xf3, 0xf7, 0xb5,
+	0x28, 0x3b, 0xb1, 0xc9, 0x34, 0x0d, 0x3b, 0x57, 0x00, 0x44, 0x88, 0x23, 0x65, 0xd5, 0x05, 0x24,
+	0x89, 0xdb, 0x24, 0xad, 0xd0, 0x21, 0x6b, 0x75, 0x3a, 0xe2, 0x6a, 0x16, 0xfb, 0x69, 0xfc, 0x32,
+	0x03, 0x44, 0x65, 0x0e, 0x0f, 0x17, 0x46, 0x4f, 0xfc, 0xc4, 0x18, 0xcc, 0xc4, 0x19, 0x7c, 0x09,
+	0x16, 0x24, 0x1c, 0xd4, 0x61, 0xce, 0x43, 0x31, 0xc0, 0x42, 0xfd, 0x55, 0xae, 0x16, 0x4c, 0x4d,
+	0x72, 0xb5, 0x60, 0x57, 0x7a, 0x6f, 0x63, 0x1a, 0x27, 0xe9, 0xc4, 0xed, 0xd2, 0x48, 0x67, 0x56,
+	0x77, 0x45, 0x1d, 0x71, 0x7c, 0xce, 0x27, 0x41, 0x36, 0x82, 0x83, 0x25, 0xfc, 0xee, 0xf2, 0xcb,
+	0x63, 0x88, 0x71, 0x37, 0xcb, 0xef, 0x6d, 0xf1, 0x8a, 0xe5, 0x77, 0xa0, 0xa8, 0x50, 0x9f, 0x28,
+	0x18, 0xff, 0x41, 0x54, 0x77, 0xe2, 0x41, 0xc9, 0xbb, 0x30, 0xc3, 0x0d, 0xc6, 0x8f, 0x4a, 0xae,
+	0xa7, 0xe8, 0xb0, 0xe9, 0xd7, 0x31, 0xfe, 0x22, 0x03, 0x4b, 0x49, 0x7d, 0x18, 0x6d, 0x99, 0xef,
+	0x42, 0xce, 0xee, 0xe3, 0xe1, 0x4a, 0x7e, 0x32, 0xf2, 0xc6, 0x98, 0x36, 0xf7, 0xfb, 0x5c, 0x26,
+	0xbc, 0x92, 0x24, 0xd6, 0xec, 0x57, 0x14, 0x6b, 0x78, 0x97, 0xa6, 0x65, 0x8b, 0x07, 0x66, 0xfc,
+	0xbb, 0x34, 0x5b, 0x76, 0x8f, 0xad, 0x0e, 0x00, 0xc3, 0xce, 0x06, 0xde, 0x0a, 0x4c, 0x71, 0x3b,
+	0x05, 0xb1, 0xd9, 0x37, 0xd9, 0xe0, 0xd7, 0x45, 0x99, 0x8d, 0xb6, 0x1a, 0x29, 0x2f, 0x15, 0x16,
+	0x83, 0x1a, 0x48, 0x42, 0x72, 0xad, 0x33, 0x8a, 0x6b, 0x3d, 0x88, 0x7a, 0x43, 0x71, 0x2e, 0x29,
+	0xcd, 0xdc, 0xb4, 0x04, 0xd3, 0x1d, 0xbb, 0x29, 0xb6, 0x79, 0xf2, 0x26, 0xff, 0x30, 0xfe, 0x4b,
+	0x6c, 0x62, 0xf1, 0x49, 0x0a, 0xfd, 0x78, 0x04, 0x79, 0x2e, 0xb2, 0xe0, 0xb4, 0xcd, 0x3b, 0xa9,
+	0xa4, 0x1d, 0x9e, 0x3e, 0x14, 0xb5, 0x85, 0x6d, 0xf8, 0xc4, 0xca, 0x8f, 0xa1, 0xa8, 0x14, 0x25,
+	0x28, 0xf6, 0x3b, 0xea, 0x21, 0xb1, 0x1b, 0xe9, 0x1a, 0x56, 0xf4, 0x3f, 0x3a, 0xad, 0x5a, 0x9e,
+	0xd5, 0xb1, 0x8f, 0x9f, 0xdb, 0xf4, 0x61, 0xbc, 0x13, 0x9d, 0xec, 0x82, 0x16, 0x84, 0xfc, 0xca,
+	0x90, 0x6f, 0xda, 0x3d, 0x8f, 0xf6, 0x3c, 0x7f, 0x11, 0x14, 0x7c, 0x1b, 0x3f, 0xd7, 0x30, 0x9b,
+	0x26, 0xd5, 0xae, 0xb6, 0x59, 0xf7, 0x4e, 0x6b, 0x1e, 0xed, 0xa6, 0x72, 0xd9, 0x8a, 0xa7, 0xcb,
+	0x4c, 0xe2, 0xe9, 0xbe, 0xbe, 0x0d, 0x19, 0xf7, 0xa3, 0xd2, 0x15, 0xdc, 0x4f, 0x30, 0xe7, 0x18,
+	0xbd, 0xa8, 0xfc, 0x02, 0x1a, 0x42, 0x7e, 0xbb, 0x30, 0xf7, 0x94, 0x83, 0x1a, 0x9d, 0xb6, 0xeb,
+	0xdf, 0x78, 0x5a, 0x19, 0xc3, 0xad, 0x24, 0x47, 0x73, 0x56, 0xd4, 0xdf, 0x69, 0xbb, 0x9e, 0xf1,
+	0x0f, 0x35, 0xb1, 0x50, 0x53, 0x3a, 0x46, 0xf9, 0xe9, 0xeb, 0x49, 0x26, 0xcb, 0x87, 0xb0, 0xe0,
+	0x70, 0xf4, 0xe0, 0x12, 0x2b, 0xf7, 0x65, 0x77, 0xc6, 0xb0, 0x66, 0xfa, 0xb5, 0xf8, 0xad, 0xd6,
+	0x79, 0x47, 0xf9, 0x16, 0x07, 0xe5, 0x86, 0xf1, 0x27, 0x26, 0xfc, 0xff, 0xa4, 0xf1, 0x4d, 0x4f,
+	0x09, 0x4b, 0x9c, 0x8f, 0xc1, 0xb9, 0xf5, 0x79, 0xc5, 0x1e, 0xea, 0xa9, 0x9d, 0xec, 0xd7, 0x38,
+	0xb5, 0x43, 0xae, 0xc1, 0x6c, 0xd7, 0xfa, 0xb5, 0x86, 0x3f, 0xd5, 0x70, 0x87, 0x0b, 0x5d, 0xeb,
+	0xd7, 0xee, 0x8b, 0x89, 0xe4, 0x34, 0x36, 0x2e, 0xac, 0xae, 0x1a, 0x7b, 0x1f, 0x81, 0xde, 0x64,
+	0x08, 0xfc, 0x76, 0x3f, 0xbf, 0x87, 0xab, 0x0d, 0xdf, 0xb4, 0x1e, 0x22, 0x1e, 0x73, 0x1e, 0x89,
+	0x20, 0x88, 0x7d, 0x1b, 0x1f, 0xc4, 0x44, 0x2e, 0x37, 0x1d, 0xa4, 0xc9, 0x89, 0x70, 0x15, 0xc1,
+	0xd3, 0x02, 0x81, 0x60, 0xf5, 0xc7, 0x6a, 0x23, 0xcc, 0x51, 0x27, 0xf5, 0x46, 0x8d, 0x5d, 0x27,
+	0xa3, 0x78, 0x3d, 0x91, 0xc9, 0x48, 0x58, 0x7a, 0x03, 0xae, 0x27, 0x20, 0xc5, 0x92, 0x36, 0xbf,
+	0x95, 0xc1, 0x5c, 0xfb, 0x08, 0x3c, 0xd1, 0x69, 0x57, 0x15, 0xb8, 0x64, 0x80, 0xb5, 0x34, 0x02,
+	0x8f, 0x11, 0x5c, 0xdd, 0x0c, 0x24, 0xcf, 0xac, 0x91, 0x4f, 0x09, 0xd2, 0x70, 0x30, 0x60, 0xb9,
+	0x07, 0x67, 0x13, 0xd0, 0x12, 0xa6, 0x87, 0x0d, 0x75, 0x7a, 0x98, 0x48, 0x07, 0xa4, 0x49, 0xe2,
+	0x9f, 0x66, 0x60, 0x0e, 0xd1, 0x76, 0xdb, 0xc7, 0x8c, 0x59, 0xa3, 0x01, 0xc5, 0xfd, 0x3e, 0xe3,
+	0xbb, 0x6d, 0xf7, 0xf0, 0x12, 0xeb, 0x02, 0xcc, 0xd6, 0x7a, 0x27, 0x56, 0xa7, 0xdd, 0x62, 0x9f,
+	0xfa, 0x19, 0x42, 0x60, 0x5e, 0x20, 0x8b, 0x94, 0x84, 0xae, 0x91, 0x45, 0x28, 0x0a, 0x18, 0xb7,
+	0x31, 0x3d, 0x43, 0xce, 0x03, 0x51, 0x40, 0x78, 0x40, 0x5f, 0xcf, 0x1a, 0x7b, 0x78, 0x53, 0xf9,
+	0x98, 0x12, 0x1d, 0xe6, 0x04, 0x61, 0xfc, 0xd6, 0xcf, 0x10, 0x80, 0x1c, 0xe7, 0x56, 0xd7, 0xc8,
+	0x2c, 0xcc, 0x88, 0xa5, 0x93, 0x9e, 0x61, 0xa8, 0xf2, 0xae, 0x91, 0x9e, 0x25, 0x79, 0x98, 0x62,
+	0xb1, 0x8a, 0x3e, 0x65, 0x3c, 0x86, 0x9c, 0x88, 0xba, 0x16, 0xa1, 0x18, 0x12, 0xf4, 0x06, 0x2e,
+	0xa7, 0xf8, 0xc1, 0x80, 0x0e, 0x68, 0x4b, 0xd7, 0x78, 0x47, 0xda, 0xcc, 0xb8, 0xdb, 0x9f, 0xd1,
+	0x96, 0x9e, 0x21, 0xf3, 0x00, 0xb5, 0x9e, 0x7f, 0xeb, 0x58, 0xcf, 0x32, 0xe4, 0x6d, 0xab, 0xdd,
+	0xa1, 0x2d, 0x7d, 0x8a, 0xcc, 0x41, 0x7e, 0x53, 0x84, 0x25, 0xfa, 0xb4, 0xf1, 0x7b, 0x1a, 0x94,
+	0x64, 0x29, 0x61, 0xa2, 0xcd, 0x57, 0xe5, 0x1a, 0x14, 0x6c, 0x5f, 0x62, 0x22, 0xeb, 0x13, 0x1f,
+	0x0d, 0xb9, 0xf6, 0xaa, 0x22, 0x60, 0x33, 0xac, 0x3d, 0x6e, 0x11, 0x72, 0x09, 0x0a, 0x9e, 0xe5,
+	0x1c, 0x53, 0x2f, 0x5c, 0x80, 0xe4, 0x39, 0xa0, 0xd6, 0x32, 0xfe, 0x89, 0x06, 0x17, 0xe5, 0x56,
+	0x36, 0xad, 0x5e, 0x93, 0x76, 0xfe, 0x92, 0x31, 0xf9, 0x9f, 0xb3, 0xa0, 0xcb, 0xad, 0xa0, 0xc7,
+	0x56, 0x09, 0x6a, 0x51, 0x82, 0x2f, 0xc1, 0x02, 0x86, 0x6b, 0xb1, 0xe5, 0x51, 0x11, 0xc1, 0x81,
+	0x53, 0x5f, 0x81, 0x45, 0x05, 0x4f, 0x5a, 0x22, 0x2d, 0x48, 0x98, 0xb8, 0x48, 0xba, 0x05, 0xba,
+	0x43, 0xbb, 0xb6, 0x27, 0x2f, 0xc2, 0xf9, 0x42, 0x7e, 0x9e, 0xc3, 0x1f, 0x4a, 0x5b, 0x8c, 0x68,
+	0xa2, 0x61, 0xa8, 0xc4, 0x6f, 0x4c, 0x15, 0x25, 0x28, 0x4e, 0x16, 0x45, 0xff, 0xee, 0xad, 0xcb,
+	0xb4, 0x59, 0xac, 0x79, 0xae, 0x8f, 0x96, 0x31, 0x2a, 0xbe, 0x39, 0x27, 0x6a, 0x72, 0xb3, 0xf8,
+	0x95, 0xc8, 0xed, 0x8b, 0x17, 0xc7, 0x92, 0x90, 0x0f, 0xe7, 0xbf, 0x03, 0xb3, 0xf8, 0xa6, 0xc6,
+	0x00, 0x0d, 0x05, 0xaf, 0x71, 0x8f, 0x8e, 0x8a, 0x80, 0xa1, 0x8b, 0x17, 0xb1, 0xde, 0x85, 0x39,
+	0xfe, 0x20, 0xc7, 0x00, 0x8f, 0xd2, 0xa5, 0x78, 0x93, 0x03, 0x1b, 0xab, 0x73, 0x74, 0x63, 0x17,
+	0x96, 0xa2, 0x63, 0xcb, 0x3c, 0x18, 0xb9, 0x07, 0x53, 0x92, 0xf3, 0x7c, 0x61, 0x64, 0x7f, 0xd0,
+	0x3f, 0x21, 0xba, 0xf1, 0x1f, 0x34, 0x28, 0x47, 0x8c, 0x4e, 0x8e, 0xcd, 0x6b, 0x30, 0x25, 0xe6,
+	0xc0, 0xe4, 0xc3, 0x2d, 0xc3, 0xab, 0xae, 0x86, 0x2f, 0x53, 0x20, 0x89, 0xf2, 0xaf, 0x42, 0x61,
+	0xd4, 0xb3, 0x0b, 0x63, 0x23, 0xf1, 0xa4, 0x5e, 0xcb, 0x4e, 0xf6, 0x8f, 0xd1, 0x7d, 0xa0, 0x3e,
+	0x1f, 0x58, 0x6d, 0x47, 0x9d, 0xd7, 0x31, 0x21, 0x84, 0xaa, 0x18, 0x18, 0x41, 0x3f, 0x4c, 0x08,
+	0xb1, 0x02, 0x7f, 0x2f, 0xa7, 0xcf, 0x73, 0x59, 0x0a, 0x2e, 0x5e, 0xdf, 0xce, 0xe0, 0x5b, 0x70,
+	0x8b, 0x0a, 0x36, 0xde, 0xe2, 0xbe, 0x0b, 0x4b, 0x11, 0x7c, 0xcf, 0x7e, 0x46, 0x7b, 0xc2, 0x2a,
+	0x88, 0x52, 0xe1, 0x90, 0x95, 0xe0, 0x56, 0x24, 0xf5, 0x1a, 0x2d, 0xfa, 0xc4, 0x1a, 0x74, 0x3c,
+	0x91, 0xca, 0x00, 0x97, 0x7a, 0x5b, 0x1c, 0x62, 0x7c, 0xca, 0xbc, 0x4c, 0xac, 0x2b, 0x72, 0x72,
+	0x4b, 0xed, 0x4b, 0x2b, 0xb9, 0x2f, 0xad, 0x84, 0xbe, 0xa8, 0x79, 0x39, 0x09, 0x1b, 0x8f, 0x4e,
+	0x9e, 0x2a, 0x0d, 0x1f, 0x38, 0x36, 0xd3, 0x39, 0x49, 0x88, 0xe2, 0x4d, 0x84, 0x78, 0xc3, 0xbc,
+	0x20, 0x6c, 0x78, 0x98, 0x50, 0x32, 0xc3, 0x84, 0x62, 0xfc, 0xcd, 0x0c, 0xd3, 0xc4, 0x78, 0xdb,
+	0xdf, 0x7c, 0xaf, 0x89, 0x19, 0x3d, 0xc5, 0xf5, 0x66, 0x82, 0xf6, 0x0d, 0xe3, 0xec, 0x1b, 0x38,
+	0xe8, 0xf4, 0x96, 0xa2, 0xc9, 0x6a, 0x4c, 0x37, 0xda, 0x8f, 0x1b, 0xef, 0x2a, 0x42, 0x44, 0xc9,
+	0x3e, 0x08, 0x6f, 0x8a, 0xf3, 0x77, 0x2d, 0xa8, 0x27, 0x06, 0x83, 0xbf, 0xb2, 0x09, 0x08, 0xe2,
+	0x83, 0xf0, 0x1a, 0x5c, 0x4a, 0xac, 0x1e, 0x5e, 0x0f, 0x0d, 0x6b, 0x16, 0x4c, 0xfe, 0x61, 0x7c,
+	0x99, 0x09, 0x2e, 0x92, 0xb2, 0x5a, 0x89, 0xc9, 0x37, 0xff, 0xf4, 0x51, 0x46, 0x3a, 0x7d, 0xc4,
+	0x70, 0xfa, 0xc2, 0x4c, 0x32, 0xed, 0x3e, 0xde, 0x6f, 0x65, 0x96, 0x36, 0x85, 0x96, 0x86, 0xbf,
+	0xf1, 0xe9, 0x07, 0x7c, 0x48, 0x07, 0x67, 0x84, 0xbc, 0x29, 0xbe, 0x42, 0x4e, 0x72, 0x12, 0x27,
+	0xe4, 0x41, 0x38, 0x90, 0x33, 0x43, 0x1e, 0xbd, 0x8c, 0x30, 0xfa, 0x0d, 0x8c, 0xde, 0x4d, 0x38,
+	0x27, 0x35, 0x22, 0x49, 0x3f, 0xfa, 0x00, 0xea, 0x23, 0x38, 0x1f, 0x45, 0x0c, 0x52, 0x66, 0x85,
+	0xbe, 0xd5, 0x76, 0xe4, 0xf5, 0xc7, 0xf2, 0xb8, 0x9e, 0x98, 0xf9, 0xbe, 0xf8, 0x65, 0xfc, 0x85,
+	0x06, 0x57, 0xa4, 0x52, 0x37, 0xf1, 0xa4, 0x8c, 0xf0, 0x3e, 0x92, 0x16, 0x09, 0x48, 0xad, 0x45,
+	0xf6, 0x61, 0x9a, 0x11, 0xf3, 0xf7, 0xff, 0xdf, 0x1a, 0xd5, 0x76, 0x9c, 0xfa, 0xaa, 0x00, 0xe3,
+	0xed, 0x43, 0xa4, 0x53, 0xfe, 0x08, 0x20, 0x04, 0x7e, 0x95, 0xcb, 0x7a, 0xd1, 0xce, 0x4a, 0xf2,
+	0xfe, 0x53, 0x0d, 0x66, 0x44, 0x4e, 0x24, 0xf1, 0x90, 0x5b, 0xd2, 0x3d, 0xf2, 0xa4, 0xbb, 0xdc,
+	0xfe, 0x13, 0xb3, 0x53, 0xd2, 0x13, 0xb3, 0xdf, 0x86, 0xb9, 0x1d, 0xcb, 0xf5, 0x76, 0xed, 0x56,
+	0xfb, 0x49, 0x9b, 0xb6, 0x52, 0xe4, 0xe9, 0x14, 0x7c, 0xf2, 0x3a, 0xe4, 0x9b, 0x4f, 0xdb, 0x9d,
+	0x96, 0x83, 0x9a, 0xca, 0x64, 0x99, 0xf0, 0xb8, 0xa4, 0xc8, 0xe7, 0x04, 0x98, 0xc6, 0x77, 0x20,
+	0x67, 0x52, 0x54, 0xff, 0x65, 0x98, 0x6d, 0xb5, 0x1d, 0xda, 0xf4, 0x6c, 0xa7, 0x4d, 0x5d, 0xb1,
+	0x67, 0x29, 0x83, 0x70, 0x77, 0xa1, 0xdd, 0x11, 0xcf, 0x0a, 0x65, 0x4d, 0xfe, 0x61, 0xf4, 0x61,
+	0x21, 0x9a, 0x26, 0xba, 0x0d, 0x53, 0x8e, 0x6d, 0xfb, 0xdb, 0xdc, 0xc3, 0xd9, 0x40, 0x2c, 0xb2,
+	0x06, 0x39, 0x87, 0x06, 0xf3, 0x5e, 0xd2, 0xf9, 0x38, 0xce, 0xa1, 0x29, 0xd0, 0x56, 0xfe, 0x77,
+	0x26, 0x58, 0x22, 0x2c, 0xc0, 0x6c, 0xfd, 0x70, 0xe3, 0xf0, 0xa8, 0xde, 0xd8, 0xdb, 0xdf, 0xab,
+	0xe8, 0x67, 0x24, 0x40, 0x6d, 0xaf, 0x76, 0xa8, 0x6b, 0xa4, 0x08, 0x05, 0x01, 0xd8, 0x7f, 0x5f,
+	0xcf, 0xb0, 0xc5, 0x8e, 0xff, 0xb9, 0xbd, 0xbd, 0x53, 0xdb, 0xab, 0xe8, 0x59, 0xb6, 0x1a, 0x11,
+	0xb0, 0x8a, 0x69, 0xee, 0x9b, 0xfa, 0x14, 0x29, 0xc1, 0x52, 0x40, 0xf6, 0xb0, 0x51, 0xdb, 0x6b,
+	0x7c, 0x70, 0xb4, 0x6f, 0x1e, 0xed, 0xea, 0xd3, 0xe4, 0x02, 0x9c, 0x15, 0x25, 0x5b, 0x95, 0xcd,
+	0xfd, 0xdd, 0xdd, 0x5a, 0xbd, 0x5e, 0xdb, 0xdf, 0xd3, 0x73, 0x6c, 0x79, 0x24, 0x0a, 0x76, 0x37,
+	0x6a, 0x7b, 0x87, 0x95, 0xbd, 0x8d, 0xbd, 0xcd, 0x8a, 0x3e, 0x23, 0x55, 0xa8, 0x1f, 0xee, 0x9b,
+	0x1b, 0x0f, 0x2a, 0x8d, 0xad, 0xfd, 0x47, 0x7b, 0x7a, 0x9e, 0x5c, 0x82, 0x0b, 0xd1, 0x82, 0xca,
+	0x03, 0x73, 0x63, 0xab, 0xb2, 0xa5, 0x17, 0xa4, 0x5a, 0x7b, 0x95, 0xca, 0x56, 0xbd, 0x61, 0x56,
+	0xee, 0xef, 0xef, 0x1f, 0xea, 0x40, 0x2e, 0x43, 0x29, 0x52, 0xcb, 0xac, 0xdc, 0xdf, 0xd8, 0xc1,
+	0xc6, 0x66, 0xc9, 0x32, 0x5c, 0x8e, 0xd2, 0x34, 0x6b, 0x0f, 0x19, 0xce, 0xc1, 0xce, 0xc6, 0x66,
+	0x45, 0x9f, 0x23, 0xd7, 0xe1, 0x5a, 0x52, 0xcf, 0x1a, 0x7b, 0xfb, 0x7e, 0x15, 0xbd, 0xc8, 0x16,
+	0x52, 0x41, 0x5f, 0x3e, 0xd4, 0xe7, 0x57, 0x7e, 0x47, 0x03, 0xe0, 0x17, 0xfb, 0x71, 0x05, 0xb9,
+	0x04, 0x3a, 0x92, 0x35, 0x1b, 0x87, 0xdf, 0x3d, 0xa8, 0xf8, 0x92, 0x8f, 0x40, 0xb7, 0x6b, 0x3b,
+	0x15, 0x5d, 0x23, 0xe7, 0x60, 0x51, 0x86, 0xde, 0xdf, 0xd9, 0xdf, 0x7c, 0x9f, 0x2f, 0x26, 0x65,
+	0xf0, 0xfe, 0xfd, 0xf7, 0x2a, 0x9b, 0x87, 0x7a, 0x96, 0x5c, 0x84, 0x73, 0x32, 0x7c, 0x73, 0xe7,
+	0xa8, 0x7e, 0x58, 0x31, 0x2b, 0x5b, 0xfa, 0x54, 0x94, 0xd2, 0x03, 0x73, 0xe3, 0xa0, 0xaa, 0x4f,
+	0xaf, 0xfc, 0xb6, 0x06, 0x39, 0xfe, 0x3a, 0x1c, 0x1b, 0xc7, 0xed, 0xba, 0xc2, 0xd3, 0x22, 0x14,
+	0x7d, 0xc8, 0xfd, 0x43, 0x73, 0xbb, 0xae, 0x6b, 0x32, 0x52, 0xe5, 0xc3, 0xc3, 0xd7, 0xf9, 0x62,
+	0xd4, 0x87, 0x6c, 0x1f, 0xd5, 0x99, 0x42, 0x2c, 0xc0, 0x6c, 0x40, 0x68, 0xbb, 0xae, 0x4f, 0xc9,
+	0x80, 0x87, 0xdb, 0x75, 0x7d, 0x5a, 0x06, 0x7c, 0xb8, 0x5d, 0xd7, 0x73, 0x32, 0xe0, 0xa3, 0xed,
+	0xba, 0x3e, 0xb3, 0xf2, 0x07, 0x1a, 0x9c, 0x4b, 0x7c, 0x11, 0x81, 0xbc, 0x00, 0x57, 0x90, 0xf9,
+	0x86, 0xe8, 0xce, 0x66, 0x75, 0x63, 0xef, 0x41, 0x45, 0xe1, 0xfb, 0x06, 0xbc, 0x30, 0x14, 0x65,
+	0x77, 0x7f, 0xab, 0xb6, 0x5d, 0xab, 0x6c, 0xe9, 0x1a, 0x31, 0xe0, 0xea, 0x50, 0xb4, 0x8d, 0x2d,
+	0xa6, 0x49, 0x19, 0xf2, 0x22, 0x2c, 0x0f, 0xc5, 0xd9, 0xaa, 0xec, 0x54, 0x0e, 0x2b, 0x5b, 0x7a,
+	0x76, 0xc5, 0x83, 0x39, 0xf9, 0x49, 0x2c, 0xd4, 0xe6, 0xca, 0xc3, 0x8a, 0x59, 0x3b, 0xfc, 0xae,
+	0xc2, 0x18, 0xd3, 0x4b, 0x05, 0xbe, 0xb1, 0xb3, 0x61, 0xee, 0xea, 0x1a, 0x1b, 0x38, 0xb5, 0xe0,
+	0xd1, 0x86, 0xb9, 0x57, 0xdb, 0x7b, 0xa0, 0x67, 0xd0, 0x98, 0x22, 0xb4, 0x0e, 0x6b, 0xdb, 0xdf,
+	0xd5, 0xb3, 0x2b, 0x5f, 0x6a, 0x30, 0x27, 0x1f, 0x9f, 0x60, 0xcd, 0x9a, 0x95, 0xfa, 0xfe, 0x91,
+	0xb9, 0xa9, 0xca, 0xa3, 0x04, 0x4b, 0x2a, 0xfc, 0xe1, 0xfe, 0xce, 0xd1, 0x2e, 0xd3, 0xaf, 0x84,
+	0x1a, 0x5b, 0x15, 0x3d, 0xc3, 0xf8, 0x51, 0xe1, 0x42, 0x95, 0xf4, 0x2c, 0xeb, 0x83, 0x5a, 0x84,
+	0x92, 0xd1, 0xa7, 0x56, 0xfe, 0x86, 0x06, 0x0b, 0x78, 0x1c, 0x83, 0xbf, 0x26, 0x83, 0x1c, 0x95,
+	0xe1, 0xfc, 0xc6, 0x4e, 0xc5, 0x3c, 0x6c, 0x6c, 0x6c, 0x1e, 0xd6, 0xf6, 0xf7, 0x14, 0xae, 0x2e,
+	0x43, 0x29, 0x5e, 0xc6, 0x65, 0xaa, 0x6b, 0xc9, 0xa5, 0x9b, 0x66, 0x65, 0xe3, 0x90, 0xf1, 0x97,
+	0x58, 0x7a, 0x74, 0xb0, 0xc5, 0x4a, 0xb3, 0x2b, 0x1f, 0xfb, 0x0f, 0xc7, 0x48, 0xef, 0xfa, 0xb0,
+	0x2a, 0xbc, 0xdb, 0x7e, 0x9d, 0x83, 0x0d, 0x73, 0x63, 0xd7, 0x67, 0xe6, 0x12, 0x5c, 0x48, 0x2a,
+	0xdd, 0xdf, 0xde, 0xd6, 0x35, 0xd6, 0x8b, 0xc4, 0xc2, 0x3d, 0x3d, 0xb3, 0xb2, 0x0e, 0x33, 0xe2,
+	0xcd, 0x61, 0x92, 0x87, 0x29, 0x41, 0x6d, 0x06, 0xb2, 0x3b, 0xfb, 0x8f, 0x74, 0x8d, 0x00, 0xe4,
+	0x76, 0x2b, 0x5b, 0xb5, 0xa3, 0x5d, 0x3d, 0xc3, 0x8a, 0xab, 0xb5, 0x07, 0x55, 0x3d, 0xbb, 0xf2,
+	0xeb, 0x50, 0x08, 0x9e, 0x1c, 0x66, 0xa2, 0xae, 0xed, 0x37, 0x0e, 0xcc, 0x7d, 0x66, 0xf2, 0x8d,
+	0x7a, 0xe5, 0x83, 0xa3, 0xca, 0xde, 0x61, 0x6d, 0x63, 0x47, 0x3f, 0xc3, 0x6c, 0x56, 0x2a, 0x32,
+	0x37, 0xf6, 0xb6, 0xf6, 0x77, 0x79, 0x76, 0x49, 0x02, 0x6f, 0xdd, 0xe7, 0x4a, 0xa2, 0x80, 0x1a,
+	0x66, 0x65, 0x77, 0x9f, 0xc9, 0x82, 0x79, 0x6c, 0xa9, 0x64, 0x73, 0xb7, 0xae, 0x4f, 0xad, 0xfc,
+	0x4e, 0x06, 0x66, 0xa5, 0xd7, 0x7f, 0x58, 0x3b, 0xa2, 0x7f, 0xcc, 0x6f, 0xc9, 0x6a, 0xa3, 0x80,
+	0x0f, 0x2a, 0x7b, 0x5b, 0x4c, 0x27, 0x65, 0x81, 0xf0, 0x92, 0x8d, 0x87, 0x1b, 0xb5, 0x9d, 0x8d,
+	0xfb, 0x3b, 0x42, 0x75, 0xd4, 0xb2, 0xc3, 0xc3, 0x8d, 0xcd, 0x2a, 0x33, 0x93, 0x58, 0xd1, 0x56,
+	0x45, 0x14, 0x4d, 0x49, 0xf2, 0x0f, 0x8b, 0x0e, 0x37, 0xab, 0xac, 0xb9, 0x69, 0xa6, 0xa5, 0x4a,
+	0x21, 0x9f, 0x67, 0x72, 0x31, 0x06, 0x7d, 0x83, 0x9c, 0x21, 0x57, 0xa1, 0xac, 0x94, 0x1c, 0x9a,
+	0xdf, 0x15, 0xad, 0x31, 0x8a, 0xf9, 0x58, 0x4d, 0xb3, 0xc2, 0xdc, 0x77, 0x45, 0x2f, 0xac, 0xfc,
+	0x58, 0xf3, 0x93, 0x6b, 0x75, 0xff, 0xe9, 0x32, 0xb9, 0xf1, 0x70, 0xaa, 0xbc, 0x02, 0x17, 0xa3,
+	0xf0, 0xc3, 0xc6, 0x81, 0x59, 0xa9, 0x57, 0xf6, 0xd8, 0xc4, 0xb9, 0x04, 0xba, 0x5a, 0x7c, 0x74,
+	0xc0, 0x1d, 0xb7, 0x0a, 0xc5, 0xd9, 0x2c, 0x1b, 0x11, 0x28, 0x4e, 0x8f, 0x62, 0x32, 0x9b, 0x5a,
+	0xf9, 0x3e, 0x14, 0x95, 0xff, 0x70, 0x81, 0x4f, 0x7d, 0x7c, 0x7e, 0xe2, 0xca, 0xd5, 0xd8, 0xdd,
+	0x78, 0xb0, 0x57, 0x39, 0xac, 0x6d, 0xea, 0x67, 0xf8, 0x44, 0xaa, 0x14, 0xd6, 0xeb, 0xcc, 0xd9,
+	0xe1, 0x94, 0xa8, 0xc0, 0xf7, 0x1e, 0xee, 0x56, 0xf4, 0xcc, 0xca, 0x2d, 0x28, 0xfa, 0x2b, 0x2c,
+	0xdb, 0x6b, 0x3f, 0x39, 0x65, 0x98, 0xc2, 0xda, 0x85, 0xab, 0xe1, 0x4c, 0x9e, 0x59, 0xa1, 0x30,
+	0x2b, 0xbd, 0xc1, 0xc9, 0x46, 0x93, 0x8f, 0xad, 0x3f, 0x2a, 0x1f, 0x1e, 0x56, 0xcc, 0x3d, 0x54,
+	0xdc, 0x68, 0x11, 0x9b, 0xd1, 0xb1, 0x48, 0x63, 0x73, 0x6c, 0x62, 0x51, 0xa3, 0xfe, 0xa8, 0x76,
+	0xb8, 0x59, 0xd5, 0x33, 0x2b, 0x87, 0x30, 0x1f, 0x24, 0xdb, 0xb6, 0x3b, 0xd6, 0x31, 0x8b, 0x9c,
+	0xf4, 0xfd, 0x83, 0xc6, 0xf6, 0xce, 0xc6, 0x83, 0x7a, 0xe3, 0x68, 0xef, 0xfd, 0x3d, 0x64, 0x87,
+	0x99, 0x41, 0x00, 0xc5, 0x31, 0x41, 0x37, 0x1a, 0x80, 0xf8, 0x70, 0x37, 0xb6, 0xf7, 0xcd, 0x4d,
+	0xd6, 0xcd, 0x5f, 0x68, 0x30, 0xaf, 0x5e, 0x36, 0x47, 0xcf, 0xaa, 0x40, 0xea, 0x83, 0x5e, 0xcb,
+	0x3a, 0xe5, 0x9a, 0xaf, 0x96, 0xec, 0xda, 0x58, 0xc2, 0x1d, 0xb5, 0x52, 0x72, 0x38, 0xa0, 0x2e,
+	0x2b, 0xca, 0xe0, 0xb0, 0x28, 0x45, 0x8f, 0x68, 0xab, 0xc7, 0x0b, 0x71, 0x80, 0x23, 0xf5, 0x9e,
+	0x0e, 0x1c, 0x2c, 0x9b, 0x8a, 0xb7, 0xb6, 0xed, 0xb4, 0x59, 0xc9, 0x74, 0xbc, 0x56, 0xdd, 0xf2,
+	0x06, 0x0e, 0x2b, 0xcb, 0xad, 0xfc, 0x30, 0xba, 0xd9, 0xce, 0x37, 0xc6, 0xc9, 0xb5, 0xe8, 0xbe,
+	0x30, 0x87, 0x1f, 0xf5, 0x9e, 0xf5, 0xec, 0x4f, 0x7b, 0xfa, 0x19, 0x8c, 0x72, 0x12, 0x10, 0xfc,
+	0xdf, 0xba, 0xc6, 0xa6, 0xd8, 0xc4, 0x3d, 0x77, 0x9e, 0x80, 0xde, 0xef, 0xeb, 0x99, 0x95, 0x3f,
+	0xca, 0xe0, 0x61, 0xcf, 0xc4, 0x4d, 0x41, 0x8c, 0x92, 0x86, 0x94, 0x85, 0x6c, 0xbc, 0x84, 0xc7,
+	0xab, 0x13, 0x91, 0xf6, 0x6c, 0x0f, 0x53, 0xca, 0x98, 0xa7, 0x5e, 0x4e, 0xde, 0x94, 0x66, 0x78,
+	0x98, 0xf2, 0xce, 0x8c, 0x6a, 0x6e, 0xe3, 0xb1, 0x8d, 0x64, 0xb2, 0x6c, 0xb2, 0x1f, 0x86, 0x74,
+	0x60, 0x0d, 0x5c, 0xcc, 0x72, 0x8f, 0x20, 0x54, 0xf7, 0xec, 0x7e, 0x9f, 0xb6, 0xf4, 0xe9, 0x51,
+	0x84, 0xf8, 0xb3, 0x43, 0x7a, 0x6e, 0x14, 0x8e, 0x48, 0xa9, 0xcf, 0xac, 0xfc, 0x3c, 0xe1, 0x18,
+	0x97, 0xbc, 0xfb, 0x47, 0x6e, 0x46, 0x37, 0x70, 0xd4, 0xf2, 0x50, 0x92, 0x37, 0xa2, 0xdb, 0x41,
+	0x2a, 0x22, 0x76, 0x4f, 0xd7, 0xe2, 0x02, 0x8f, 0xec, 0x3e, 0x52, 0x97, 0xef, 0x54, 0xbc, 0x18,
+	0xdd, 0xaf, 0x52, 0xf1, 0x98, 0x24, 0xf4, 0xec, 0xfa, 0xff, 0x9a, 0x02, 0xb2, 0xdf, 0xa7, 0xbd,
+	0xc8, 0xf3, 0x29, 0x3f, 0xd3, 0x60, 0x5e, 0x3d, 0x6b, 0x4c, 0xee, 0x26, 0xef, 0xc5, 0x0c, 0x3f,
+	0xb3, 0x5d, 0x7e, 0x75, 0x82, 0x1a, 0x62, 0xb7, 0xeb, 0xf2, 0x6f, 0xfe, 0xd9, 0xff, 0xfc, 0x59,
+	0xe6, 0x3c, 0x59, 0x5a, 0x3b, 0x79, 0x75, 0x4d, 0x24, 0x59, 0xdc, 0x35, 0x91, 0x49, 0x26, 0x3f,
+	0xd5, 0x60, 0x5e, 0x3d, 0x88, 0x3b, 0x92, 0xab, 0xc4, 0x33, 0xc8, 0x23, 0xb9, 0x4a, 0x3e, 0xe5,
+	0x6b, 0x5c, 0x42, 0xae, 0xce, 0x91, 0xb3, 0x0a, 0x57, 0xfc, 0x48, 0x2f, 0xf9, 0xb1, 0x06, 0x10,
+	0x1e, 0xaa, 0x25, 0xb7, 0xc7, 0x91, 0x97, 0x0f, 0xfc, 0x96, 0xef, 0xa4, 0xc4, 0x16, 0x8c, 0xbc,
+	0x88, 0x8c, 0x5c, 0x35, 0x2e, 0x26, 0x30, 0xb2, 0x86, 0xaf, 0x9a, 0xbe, 0xad, 0xad, 0x90, 0xbf,
+	0xab, 0xc1, 0xac, 0x74, 0xa0, 0x96, 0x8c, 0x6d, 0x44, 0x49, 0x78, 0x95, 0x57, 0xd3, 0xa2, 0x0b,
+	0xa6, 0x5e, 0x42, 0xa6, 0x96, 0x57, 0xae, 0x26, 0x31, 0xf5, 0xb9, 0x7f, 0xfc, 0xf7, 0x8b, 0xf5,
+	0x9f, 0x64, 0x61, 0x41, 0x52, 0x35, 0x7c, 0x24, 0xea, 0x87, 0x30, 0x23, 0x34, 0x81, 0xbc, 0x94,
+	0xd4, 0x6c, 0xfc, 0x44, 0x7e, 0xf9, 0xe6, 0x58, 0x3c, 0xc1, 0xd7, 0x32, 0xf2, 0x55, 0x26, 0x25,
+	0xc6, 0x17, 0x3e, 0xc9, 0x8e, 0xff, 0xae, 0x7d, 0x2e, 0x0e, 0xe2, 0x7c, 0x41, 0xfe, 0x56, 0x5c,
+	0xcb, 0xef, 0x8c, 0xa1, 0x1e, 0x51, 0xf1, 0xd5, 0xb4, 0xe8, 0x82, 0xa7, 0x8b, 0xc8, 0xd3, 0x59,
+	0xb2, 0x18, 0xf2, 0xe4, 0x2b, 0xb7, 0x0b, 0x85, 0x50, 0xad, 0x6f, 0x0d, 0xa3, 0x1b, 0x53, 0xe7,
+	0x97, 0x53, 0x60, 0x8a, 0xc6, 0x17, 0xb1, 0xf1, 0x59, 0x52, 0x08, 0x1a, 0x5f, 0xff, 0xd3, 0x45,
+	0x58, 0x94, 0xc6, 0x44, 0x3c, 0x00, 0xef, 0x42, 0x8e, 0xa7, 0xc0, 0xc9, 0xcd, 0xe1, 0x17, 0x51,
+	0x94, 0x7c, 0x7f, 0xf9, 0xd6, 0x78, 0x44, 0xc1, 0xc5, 0x79, 0xe4, 0x42, 0x37, 0x66, 0x19, 0x17,
+	0x7c, 0x9f, 0xca, 0x65, 0x5a, 0x7b, 0x02, 0xd3, 0x78, 0xe9, 0x31, 0x59, 0x11, 0xe2, 0xf7, 0x2b,
+	0xcb, 0x37, 0xc7, 0xe2, 0xa9, 0x4e, 0xc5, 0x58, 0x94, 0x5a, 0x5c, 0x6b, 0x32, 0x14, 0xd6, 0xee,
+	0x0f, 0x21, 0x27, 0xec, 0x64, 0x04, 0x41, 0xd5, 0x42, 0x6e, 0x8d, 0x47, 0x14, 0x4d, 0x5f, 0xc3,
+	0xa6, 0x2f, 0xae, 0x5c, 0x90, 0x9b, 0xfe, 0x3c, 0xd8, 0x9d, 0xfb, 0x82, 0xfc, 0x46, 0x68, 0x00,
+	0x23, 0xa8, 0x46, 0x4c, 0xe0, 0xe5, 0x14, 0x98, 0x2a, 0x03, 0x64, 0x04, 0x03, 0x39, 0xb1, 0x4f,
+	0x36, 0xa2, 0xfb, 0xca, 0x69, 0xed, 0x51, 0xdd, 0x8f, 0x1c, 0xbc, 0x36, 0xb0, 0xf5, 0xcb, 0xe5,
+	0x61, 0xad, 0x33, 0xf9, 0xff, 0x86, 0xff, 0xc6, 0xf7, 0x88, 0x71, 0x97, 0xef, 0x4e, 0x8e, 0x1a,
+	0x77, 0xe5, 0x1a, 0xa4, 0x71, 0x03, 0x5b, 0xbf, 0x46, 0xae, 0xc8, 0xad, 0xe3, 0x9d, 0x47, 0x45,
+	0x02, 0xa7, 0xb2, 0xe1, 0xad, 0x0c, 0x27, 0x1e, 0x33, 0xbd, 0x57, 0x52, 0xe1, 0x0a, 0x66, 0xce,
+	0x22, 0x33, 0x45, 0x22, 0xab, 0x3d, 0xf9, 0x67, 0x1a, 0x2c, 0x25, 0xdd, 0xa4, 0x22, 0xf7, 0x52,
+	0x90, 0x8e, 0x5f, 0xfc, 0x2a, 0xbf, 0x31, 0x69, 0x35, 0xc1, 0xdc, 0x55, 0x64, 0xae, 0x64, 0x9c,
+	0x95, 0x25, 0xf5, 0x84, 0x23, 0xb1, 0x31, 0xfa, 0x6d, 0x2d, 0x7c, 0x3f, 0x50, 0x78, 0x86, 0xb5,
+	0x09, 0x6f, 0x38, 0x96, 0xef, 0xa6, 0xaf, 0xa0, 0x3a, 0x70, 0xe3, 0x9c, 0x32, 0x7e, 0xfe, 0x33,
+	0x86, 0x8c, 0xaf, 0x7f, 0xac, 0xc1, 0x42, 0xe4, 0xe6, 0x20, 0x49, 0xd1, 0x8e, 0x7a, 0xd0, 0x3e,
+	0x39, 0x22, 0x18, 0x7d, 0x2d, 0xf1, 0x16, 0xb2, 0x66, 0x18, 0x57, 0x12, 0x59, 0x5b, 0x13, 0x47,
+	0xde, 0x19, 0x8b, 0xff, 0x5c, 0xe3, 0xcf, 0xcd, 0x2a, 0x97, 0xe6, 0xc8, 0xfa, 0x04, 0x17, 0xfc,
+	0x7c, 0x36, 0x5f, 0x9b, 0xa8, 0x8e, 0x60, 0xf4, 0x65, 0x64, 0xf4, 0x3a, 0x79, 0x21, 0x99, 0x51,
+	0xd9, 0x0e, 0xfe, 0x8c, 0x45, 0xb2, 0x23, 0xae, 0xf7, 0x91, 0x77, 0xbf, 0xd6, 0xad, 0xc4, 0xf2,
+	0xb7, 0xbf, 0x6a, 0x75, 0xd1, 0x95, 0xd7, 0xb1, 0x2b, 0xab, 0xc6, 0xcb, 0x63, 0xbb, 0x22, 0xab,
+	0xee, 0x67, 0x90, 0xe3, 0xab, 0xdd, 0x51, 0xfe, 0x4d, 0x79, 0x48, 0x61, 0x94, 0x7f, 0x53, 0x5f,
+	0x41, 0x30, 0xae, 0x20, 0x4b, 0x17, 0x0c, 0x22, 0xb3, 0xc4, 0xdf, 0xac, 0x16, 0x6d, 0xf3, 0x37,
+	0x0c, 0x46, 0x4f, 0x2d, 0x29, 0xdb, 0x8e, 0x3c, 0x87, 0x90, 0xd8, 0x76, 0x8b, 0xfa, 0x6d, 0x9f,
+	0xc0, 0x34, 0xbe, 0xc8, 0x31, 0xca, 0xad, 0xca, 0xaf, 0x83, 0x8c, 0x72, 0xab, 0xea, 0xd3, 0x1e,
+	0x89, 0xd3, 0x29, 0x3e, 0x7e, 0xc1, 0xda, 0xfd, 0x75, 0x98, 0x11, 0x4f, 0x61, 0x8c, 0x9a, 0xd0,
+	0xd4, 0xa7, 0x39, 0x46, 0x4d, 0x68, 0xd1, 0x77, 0x35, 0x12, 0x5d, 0xd5, 0xa0, 0xe7, 0xb7, 0xbf,
+	0xfe, 0x5f, 0xa7, 0xe0, 0xbc, 0x14, 0xd1, 0x48, 0x97, 0x82, 0xd8, 0xa2, 0x26, 0x98, 0x6c, 0x13,
+	0xe3, 0xbc, 0xa1, 0x77, 0xcd, 0x92, 0xe3, 0xbc, 0xe1, 0x77, 0xca, 0x54, 0xb3, 0x93, 0x2e, 0x31,
+	0xb9, 0x6b, 0x9f, 0xab, 0x17, 0x9d, 0xbe, 0x20, 0xbf, 0xa9, 0x05, 0xd1, 0xd6, 0xed, 0x31, 0xad,
+	0xa8, 0x0e, 0xf5, 0x4e, 0x4a, 0x6c, 0x75, 0x11, 0x63, 0xe8, 0x51, 0x96, 0xd8, 0xa8, 0xfd, 0x1d,
+	0x2d, 0x88, 0x82, 0xc6, 0x31, 0xa1, 0x86, 0x42, 0x77, 0x52, 0x62, 0xab, 0x72, 0x59, 0x49, 0x21,
+	0x97, 0x9f, 0x69, 0x41, 0x64, 0x32, 0x8e, 0x25, 0x35, 0x3c, 0xb9, 0x93, 0x12, 0x5b, 0xb0, 0x74,
+	0x1b, 0x59, 0x7a, 0xa9, 0x3c, 0x9e, 0x25, 0xa6, 0x5e, 0xff, 0x7d, 0x5a, 0x51, 0xaf, 0xf0, 0xf1,
+	0x1f, 0x97, 0x45, 0x52, 0x62, 0x1c, 0x93, 0x8f, 0x2d, 0x26, 0xbf, 0x6e, 0x57, 0xbe, 0x9d, 0x0e,
+	0x59, 0x70, 0x5b, 0x46, 0x6e, 0x97, 0x8c, 0x05, 0x5c, 0x6c, 0x85, 0xad, 0xb3, 0x41, 0xfc, 0xeb,
+	0x9a, 0x1c, 0xc9, 0xac, 0x8e, 0xa6, 0x1b, 0x9b, 0x5e, 0xd6, 0x52, 0xe3, 0x0b, 0x56, 0x2e, 0x20,
+	0x2b, 0x8b, 0x24, 0xca, 0x0a, 0x5b, 0x11, 0x07, 0x76, 0x36, 0xa6, 0x77, 0x11, 0x33, 0xbb, 0x93,
+	0x12, 0x5b, 0x70, 0x70, 0x13, 0x39, 0x78, 0x81, 0x5c, 0x8b, 0x70, 0xb0, 0xf6, 0xb9, 0x72, 0x0e,
+	0xfa, 0x0b, 0xf2, 0x65, 0xa8, 0xde, 0x63, 0xc6, 0x46, 0xd5, 0xee, 0xdb, 0xe9, 0x90, 0x55, 0x76,
+	0x56, 0xc6, 0xb2, 0xf3, 0xbb, 0x1a, 0xe4, 0xfd, 0xc7, 0xa2, 0xc8, 0x98, 0x3e, 0x47, 0x5e, 0xa6,
+	0x2a, 0xaf, 0xa6, 0x45, 0x17, 0x4c, 0xdd, 0x45, 0xa6, 0x56, 0xc8, 0xad, 0x31, 0x4c, 0xad, 0x9d,
+	0x88, 0x9a, 0xeb, 0xff, 0x67, 0x1a, 0x2e, 0x4a, 0x2a, 0x1e, 0x79, 0x09, 0xf2, 0xcb, 0xd0, 0x5d,
+	0xa5, 0x78, 0x0d, 0x33, 0x45, 0x08, 0x38, 0xf2, 0xd1, 0x5b, 0xb1, 0x7c, 0x31, 0x30, 0x1f, 0xe4,
+	0x9f, 0xa9, 0xf6, 0x9f, 0x7d, 0x65, 0x3a, 0xff, 0x65, 0xe8, 0x25, 0x52, 0xb0, 0xa3, 0x3a, 0x8a,
+	0xbb, 0xe9, 0x2b, 0xa8, 0xec, 0x94, 0x87, 0xb2, 0xf3, 0x53, 0xc5, 0x04, 0xd7, 0xc7, 0x37, 0x90,
+	0x2e, 0xca, 0x1b, 0xf3, 0x7e, 0xae, 0x9a, 0x36, 0x8b, 0xf2, 0xa5, 0xcc, 0x7b, 0xa9, 0xde, 0x1d,
+	0x55, 0x6c, 0xf2, 0xd5, 0x09, 0x6a, 0xf8, 0x2f, 0x03, 0x23, 0x3b, 0x57, 0xc8, 0xa5, 0x24, 0x76,
+	0xd6, 0x3e, 0xef, 0x59, 0x5d, 0xfa, 0x85, 0x3c, 0xe5, 0xa4, 0x18, 0x39, 0xd5, 0x2e, 0xef, 0xa6,
+	0xaf, 0xa0, 0xb2, 0xb4, 0x32, 0x8a, 0xa5, 0xf5, 0x7f, 0x3d, 0xaf, 0x3a, 0xf7, 0x30, 0x77, 0x3a,
+	0x76, 0x96, 0x1e, 0x76, 0xb9, 0xb8, 0x7c, 0x27, 0x25, 0x76, 0xd2, 0x2c, 0x2d, 0x1d, 0xc6, 0x45,
+	0xed, 0xfa, 0x91, 0x16, 0x1c, 0x1f, 0x27, 0xe3, 0xef, 0xa4, 0x28, 0x6b, 0x9c, 0xd5, 0xb4, 0xe8,
+	0xaa, 0xbc, 0x8c, 0x52, 0x94, 0x0f, 0x79, 0x6d, 0xf3, 0xd3, 0x31, 0x51, 0xc3, 0xb0, 0x3b, 0xbe,
+	0x63, 0x85, 0x12, 0x19, 0xbc, 0x57, 0x90, 0x99, 0x1b, 0x2b, 0xd7, 0x63, 0xcc, 0xf0, 0xbf, 0x6b,
+	0x9f, 0x07, 0xe7, 0x98, 0xbf, 0x60, 0x6b, 0xd5, 0x42, 0x70, 0x9f, 0x36, 0x59, 0xb5, 0x46, 0x5c,
+	0xf2, 0x2d, 0xdf, 0x4d, 0x5f, 0x41, 0x4d, 0x33, 0x18, 0xe5, 0x18, 0x77, 0x2d, 0xc4, 0xb5, 0x3a,
+	0x1d, 0x26, 0xac, 0x1f, 0x2b, 0xae, 0x61, 0x1c, 0x5f, 0x31, 0xbf, 0x70, 0x37, 0x7d, 0x85, 0xa4,
+	0xd4, 0x8f, 0xc2, 0x97, 0xf8, 0x2f, 0x55, 0x7e, 0xa4, 0x05, 0x27, 0x88, 0x6e, 0xa7, 0xbc, 0x00,
+	0x98, 0x6e, 0xf8, 0xd4, 0x83, 0xc9, 0x7e, 0x82, 0x98, 0x5c, 0x1d, 0xc2, 0xc8, 0x9a, 0x38, 0xe5,
+	0xfd, 0x13, 0xe9, 0x5c, 0xd9, 0x58, 0xb3, 0x51, 0x6e, 0xfd, 0x8d, 0x55, 0xef, 0xc8, 0xd9, 0xac,
+	0x48, 0xe4, 0x90, 0xa0, 0x51, 0x4d, 0xc1, 0x07, 0xe3, 0x49, 0xdc, 0x3c, 0x1b, 0xcb, 0x93, 0x7a,
+	0x57, 0x6e, 0x2c, 0x4f, 0x91, 0x6b, 0x71, 0x23, 0x78, 0x12, 0x62, 0x12, 0x97, 0xde, 0xc8, 0x3f,
+	0xd0, 0x60, 0x56, 0xba, 0x42, 0x46, 0x5e, 0x4d, 0x31, 0x1c, 0xea, 0x75, 0xb8, 0xf2, 0xfa, 0x24,
+	0x55, 0x54, 0xfe, 0x8c, 0xcb, 0x31, 0xfe, 0xf0, 0xae, 0x5c, 0x13, 0xb1, 0x99, 0xa6, 0xff, 0x2e,
+	0xe3, 0x2f, 0xbc, 0x6f, 0x35, 0x9e, 0xbf, 0xd8, 0xb5, 0xb0, 0xf1, 0xfc, 0xc5, 0xaf, 0x73, 0x8d,
+	0xb0, 0xc3, 0xe0, 0xce, 0x1a, 0xe3, 0xee, 0x0f, 0x7d, 0xee, 0x84, 0xe7, 0x4a, 0xc5, 0x9d, 0xea,
+	0xbe, 0xd6, 0x27, 0xa9, 0x22, 0xb8, 0xfb, 0x16, 0x72, 0xf7, 0xea, 0xca, 0xda, 0x70, 0xee, 0x02,
+	0x37, 0x26, 0x5d, 0x1e, 0xfb, 0x82, 0xfc, 0x9e, 0x26, 0x9e, 0xf5, 0x0f, 0x9d, 0xc7, 0xeb, 0x13,
+	0xde, 0xd4, 0xe2, 0x5c, 0xdf, 0xfb, 0x4a, 0xf7, 0xbb, 0xfc, 0x1c, 0x2e, 0x19, 0x21, 0xd6, 0xfb,
+	0x97, 0xe1, 0x6c, 0xd3, 0xee, 0x46, 0xe9, 0x1f, 0x68, 0x1f, 0x65, 0xad, 0x7e, 0xfb, 0x71, 0x0e,
+	0x4f, 0x6d, 0xbe, 0xf6, 0xff, 0x02, 0x00, 0x00, 0xff, 0xff, 0xcf, 0x9f, 0xd4, 0xc7, 0xcd, 0x84,
+	0x00, 0x00,
+>>>>>>> Govendor update
 }

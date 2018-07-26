@@ -4,7 +4,11 @@ import (
 	"io"
 	"net/http"
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	"context"
+=======
+	"golang.org/x/net/context"
+>>>>>>> Govendor update
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/grpclog"
 	"google.golang.org/grpc/status"
@@ -36,17 +40,28 @@ func DefaultHTTPProtoErrorHandler(ctx context.Context, mux *ServeMux, marshaler 
 
 	buf, merr := marshaler.Marshal(s.Proto())
 	if merr != nil {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 		grpclog.Infof("Failed to marshal error message %q: %v", s.Proto(), merr)
 		w.WriteHeader(http.StatusInternalServerError)
 		if _, err := io.WriteString(w, fallback); err != nil {
 			grpclog.Infof("Failed to write response: %v", err)
+=======
+		grpclog.Printf("Failed to marshal error message %q: %v", s.Proto(), merr)
+		w.WriteHeader(http.StatusInternalServerError)
+		if _, err := io.WriteString(w, fallback); err != nil {
+			grpclog.Printf("Failed to write response: %v", err)
+>>>>>>> Govendor update
 		}
 		return
 	}
 
 	md, ok := ServerMetadataFromContext(ctx)
 	if !ok {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 		grpclog.Infof("Failed to extract ServerMetadata from context")
+=======
+		grpclog.Printf("Failed to extract ServerMetadata from context")
+>>>>>>> Govendor update
 	}
 
 	handleForwardResponseServerMetadata(w, mux, md)
@@ -54,7 +69,11 @@ func DefaultHTTPProtoErrorHandler(ctx context.Context, mux *ServeMux, marshaler 
 	st := HTTPStatusFromCode(s.Code())
 	w.WriteHeader(st)
 	if _, err := w.Write(buf); err != nil {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 		grpclog.Infof("Failed to write response: %v", err)
+=======
+		grpclog.Printf("Failed to write response: %v", err)
+>>>>>>> Govendor update
 	}
 
 	handleForwardResponseTrailer(w, md)

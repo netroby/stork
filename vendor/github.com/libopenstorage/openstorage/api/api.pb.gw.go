@@ -28,6 +28,7 @@ var _ status.Status
 var _ = runtime.String
 var _ = utilities.NewDoubleArray
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 func request_OpenStorageIdentity_Capabilities_0(ctx context.Context, marshaler runtime.Marshaler, client OpenStorageIdentityClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq SdkIdentityCapabilitiesRequest
 	var metadata runtime.ServerMetadata
@@ -46,6 +47,8 @@ func request_OpenStorageIdentity_Version_0(ctx context.Context, marshaler runtim
 
 }
 
+=======
+>>>>>>> Govendor update
 func request_OpenStorageCluster_InspectCurrent_0(ctx context.Context, marshaler runtime.Marshaler, client OpenStorageClusterClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq SdkClusterInspectCurrentRequest
 	var metadata runtime.ServerMetadata
@@ -963,6 +966,7 @@ func request_OpenStorageCloudBackup_SchedEnumerate_0(ctx context.Context, marsha
 
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // RegisterOpenStorageIdentityHandlerFromEndpoint is same as RegisterOpenStorageIdentityHandler but
 // automatically dials to "endpoint" and closes the connection when "ctx" gets done.
 func RegisterOpenStorageIdentityHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
@@ -1074,6 +1078,8 @@ var (
 	forward_OpenStorageIdentity_Version_0 = runtime.ForwardResponseMessage
 )
 
+=======
+>>>>>>> Govendor update
 // RegisterOpenStorageClusterHandlerFromEndpoint is same as RegisterOpenStorageClusterHandler but
 // automatically dials to "endpoint" and closes the connection when "ctx" gets done.
 func RegisterOpenStorageClusterHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {

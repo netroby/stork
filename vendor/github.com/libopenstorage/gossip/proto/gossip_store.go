@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/libopenstorage/gossip/types"
 	"github.com/sirupsen/logrus"
+	"github.com/libopenstorage/gossip/types"
 )
 
 const (

@@ -68,7 +68,11 @@ func (m marshalerRegistry) add(mime string, marshaler Marshaler) error {
 // It allows for a mapping of case-sensitive Content-Type MIME type string to runtime.Marshaler interfaces.
 //
 // For example, you could allow the client to specify the use of the runtime.JSONPb marshaler
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // with a "application/jsonpb" Content-Type and the use of the runtime.JSONBuiltin marshaler
+=======
+// with a "applicaton/jsonpb" Content-Type and the use of the runtime.JSONBuiltin marshaler
+>>>>>>> Govendor update
 // with a "application/json" Content-Type.
 // "*" can be used to match any Content-Type.
 // This can be attached to a ServerMux with the marshaler option.

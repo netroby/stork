@@ -40,9 +40,12 @@ type EncoderFunc func(v interface{}) error
 
 // Encode delegates invocations to the underlying function itself.
 func (f EncoderFunc) Encode(v interface{}) error { return f(v) }
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 
 // Delimited defines the streaming delimiter.
 type Delimited interface {
 	// Delimiter returns the record seperator for the stream.
 	Delimiter() []byte
 }
+=======
+>>>>>>> Govendor update

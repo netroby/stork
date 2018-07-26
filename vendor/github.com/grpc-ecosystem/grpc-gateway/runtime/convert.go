@@ -1,12 +1,16 @@
 package runtime
 
 import (
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	"encoding/base64"
 	"strconv"
 
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/golang/protobuf/ptypes/duration"
 	"github.com/golang/protobuf/ptypes/timestamp"
+=======
+	"strconv"
+>>>>>>> Govendor update
 )
 
 // String just returns the given string.
@@ -61,6 +65,7 @@ func Uint32(val string) (uint32, error) {
 	}
 	return uint32(i), nil
 }
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 
 // Bytes converts the given string representation of a byte sequence into a slice of bytes
 // A bytes sequence is encoded in URL-safe base64 without padding
@@ -85,3 +90,5 @@ func Duration(val string) (*duration.Duration, error) {
 	err := jsonpb.UnmarshalString(val, r)
 	return r, err
 }
+=======
+>>>>>>> Govendor update

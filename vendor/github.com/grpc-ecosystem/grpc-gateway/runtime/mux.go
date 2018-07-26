@@ -6,8 +6,13 @@ import (
 	"net/textproto"
 	"strings"
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	"context"
 	"github.com/golang/protobuf/proto"
+=======
+	"github.com/golang/protobuf/proto"
+	"golang.org/x/net/context"
+>>>>>>> Govendor update
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
@@ -25,7 +30,11 @@ type ServeMux struct {
 	marshalers             marshalerRegistry
 	incomingHeaderMatcher  HeaderMatcherFunc
 	outgoingHeaderMatcher  HeaderMatcherFunc
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	metadataAnnotators     []func(context.Context, *http.Request) metadata.MD
+=======
+	metadataAnnotator      func(context.Context, *http.Request) metadata.MD
+>>>>>>> Govendor update
 	protoErrorHandler      ProtoErrorHandlerFunc
 }
 
@@ -87,7 +96,11 @@ func WithOutgoingHeaderMatcher(fn HeaderMatcherFunc) ServeMuxOption {
 // is reading token from cookie and adding it in gRPC context.
 func WithMetadata(annotator func(context.Context, *http.Request) metadata.MD) ServeMuxOption {
 	return func(serveMux *ServeMux) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 		serveMux.metadataAnnotators = append(serveMux.metadataAnnotators, annotator)
+=======
+		serveMux.metadataAnnotator = annotator
+>>>>>>> Govendor update
 	}
 }
 
@@ -146,7 +159,12 @@ func (s *ServeMux) Handle(meth string, pat Pattern, h HandlerFunc) {
 
 // ServeHTTP dispatches the request to the first handler whose pattern matches to r.Method and r.Path.
 func (s *ServeMux) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 	ctx := r.Context()
+=======
+	// TODO: use r.Context for go 1.7+
+	ctx := context.Background()
+>>>>>>> Govendor update
 
 	path := r.URL.Path
 	if !strings.HasPrefix(path, "/") {

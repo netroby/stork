@@ -738,6 +738,7 @@ message StorageCluster {
   string id = 2;
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // OpenStorageIdentity service provides methods to obtain information
 // about the cluster
 service OpenStorageIdentity {
@@ -764,6 +765,8 @@ service OpenStorageIdentity {
 
 }
 
+=======
+>>>>>>> Govendor update
 // OpenStorageCluster service provides the methods to manage the cluster
 service OpenStorageCluster {
   // InspectCurrent returns information about the current cluster
@@ -1690,10 +1693,15 @@ message SdkVolumeEnumerateWithFiltersResponse {
 message SdkVolumeSnapshotCreateRequest {
   // Id of volume to take the snapshot from
   string volume_id = 1;
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
   // Name of the snapshot.
   string name = 2;
   // Labels to apply to snapshot
   map<string, string> labels = 3;
+=======
+  // Labels to apply to snapshot
+  map<string, string> labels = 2;
+>>>>>>> Govendor update
 }
 
 // Defines a response after creating a snapshot of a volume
@@ -2152,6 +2160,7 @@ message SdkCloudBackupSchedEnumerateResponse{
   map<string, SdkCloudBackupScheduleInfo> cloud_sched_list = 1;
 }
 
+<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 // Empty request
 message SdkIdentityCapabilitiesRequest {
 }
@@ -2255,6 +2264,8 @@ message StorageVersion {
    map<string, string> details = 3;
 }
 
+=======
+>>>>>>> Govendor update
 message CloudMigrate {
     enum OperationType {
         InvalidType = 0;
