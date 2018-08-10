@@ -20,4 +20,6 @@ package v1alpha1
 
 type ClusterPairExpansion interface{}
 
+type MigrationExpansion interface{}
+
 type StorkRuleExpansion interface{}

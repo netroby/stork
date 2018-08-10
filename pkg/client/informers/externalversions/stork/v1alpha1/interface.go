@@ -26,6 +26,8 @@ import (
 type Interface interface {
 	// ClusterPairs returns a ClusterPairInformer.
 	ClusterPairs() ClusterPairInformer
+	// Migrations returns a MigrationInformer.
+	Migrations() MigrationInformer
 	// StorkRules returns a StorkRuleInformer.
 	StorkRules() StorkRuleInformer
 }
@@ -44,6 +46,11 @@ func New(f internalinterfaces.SharedInformerFactory, namespace string, tweakList
 // ClusterPairs returns a ClusterPairInformer.
 func (v *version) ClusterPairs() ClusterPairInformer {
 	return &clusterPairInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// Migrations returns a MigrationInformer.
+func (v *version) Migrations() MigrationInformer {
+	return &migrationInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // StorkRules returns a StorkRuleInformer.

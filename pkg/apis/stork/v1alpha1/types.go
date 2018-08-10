@@ -13,6 +13,8 @@ const (
 	StorkRuleActionCommand StorkRuleActionType = "command"
 	// StorkClusterPairResourcePlural is plural for "clusterpair" resource
 	StorkClusterPairResourcePlural = "clusterpairs"
+	// StorkMigrationResourcePlural is plural for "migration" resource
+	StorkMigrationResourcePlural = "migration"
 )
 
 // +genclient
@@ -114,4 +116,55 @@ type ClusterPairList struct {
 	meta.ListMeta `json:"metadata,omitempty"`
 
 	Items []ClusterPair `json:"items"`
+}
+
+// +genclient
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+
+// Migration represents migration status
+type Migration struct {
+	meta.TypeMeta   `json:",inline"`
+	meta.ObjectMeta `json:"metadata,omitempty"`
+	ClusterPair     string              `json:"clusterpair"`
+	Namespaces      []string            `json:"namespaces"`
+	Options         map[string]string   `json:"options"`
+	Selectors       map[string]string   `json:"selectors"`
+	Stage           MigrationStageType  `json:"stage"`
+	Status          MigrationStatusType `json:"status"`
+}
+
+// MigrationStatusType is the status of the migration
+type MigrationStatusType string
+
+const (
+	// MigrationStatusPending for when migration is still pending
+	MigrationStatusPending MigrationStatusType = "Pending"
+	// MigrationStatusInProgress for when migration is in progress
+	MigrationStatusInProgress MigrationStatusType = "InProgress"
+	// MigrationStatusFailed for when migration has failed
+	MigrationStatusFailed MigrationStatusType = "Failed"
+	// MigrationStatusSuccessful for when migration has completed successfully
+	MigrationStatusSuccessful MigrationStatusType = "Successful"
+)
+
+// MigrationStageType is the stage of the migration
+type MigrationStageType string
+
+const (
+	// MigrationStageInitializing for when migration is in Initializing stage
+	MigrationStageInitializing MigrationStageType = "Initializing"
+	// MigrationStageVolumes for when volumes are being migrated
+	MigrationStageVolumes MigrationStageType = "Volumes"
+	// MigrationStageApplications for when applications are being migrated
+	MigrationStageApplications MigrationStageType = "Applications"
+)
+
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+
+// MigrationList is a list of Migrations
+type MigrationList struct {
+	meta.TypeMeta `json:",inline"`
+	meta.ListMeta `json:"metadata,omitempty"`
+
+	Items []Migration `json:"items"`
 }

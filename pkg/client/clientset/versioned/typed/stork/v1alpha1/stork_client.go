@@ -28,6 +28,7 @@ import (
 type StorkV1alpha1Interface interface {
 	RESTClient() rest.Interface
 	ClusterPairsGetter
+	MigrationsGetter
 	StorkRulesGetter
 }
 
@@ -38,6 +39,10 @@ type StorkV1alpha1Client struct {
 
 func (c *StorkV1alpha1Client) ClusterPairs(namespace string) ClusterPairInterface {
 	return newClusterPairs(c, namespace)
+}
+
+func (c *StorkV1alpha1Client) Migrations(namespace string) MigrationInterface {
+	return newMigrations(c, namespace)
 }
 
 func (c *StorkV1alpha1Client) StorkRules(namespace string) StorkRuleInterface {

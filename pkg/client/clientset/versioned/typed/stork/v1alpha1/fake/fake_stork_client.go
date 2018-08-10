@@ -32,6 +32,10 @@ func (c *FakeStorkV1alpha1) ClusterPairs(namespace string) v1alpha1.ClusterPairI
 	return &FakeClusterPairs{c, namespace}
 }
 
+func (c *FakeStorkV1alpha1) Migrations(namespace string) v1alpha1.MigrationInterface {
+	return &FakeMigrations{c, namespace}
+}
+
 func (c *FakeStorkV1alpha1) StorkRules(namespace string) v1alpha1.StorkRuleInterface {
 	return &FakeStorkRules{c, namespace}
 }

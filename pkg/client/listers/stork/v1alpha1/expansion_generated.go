@@ -26,6 +26,14 @@ type ClusterPairListerExpansion interface{}
 // ClusterPairNamespaceLister.
 type ClusterPairNamespaceListerExpansion interface{}
 
+// MigrationListerExpansion allows custom methods to be added to
+// MigrationLister.
+type MigrationListerExpansion interface{}
+
+// MigrationNamespaceListerExpansion allows custom methods to be added to
+// MigrationNamespaceLister.
+type MigrationNamespaceListerExpansion interface{}
+
 // StorkRuleListerExpansion allows custom methods to be added to
 // StorkRuleLister.
 type StorkRuleListerExpansion interface{}
