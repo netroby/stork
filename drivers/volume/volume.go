@@ -39,7 +39,8 @@ type Driver interface {
 
 	// ClusterPairPluginInterface Interface to pair clusters
 	ClusterPairPluginInterface
-	//MigratePluginInterface
+	// MigratePluginInterface Interface to migrate data between clusters
+	MigratePluginInterface
 }
 
 // ClusterPairPluginInterface Interface to pair clusters
@@ -48,6 +49,13 @@ type ClusterPairPluginInterface interface {
 	CreatePair(*stork_crd.ClusterPair) (string, error)
 	// Deletes a paring with a remote cluster
 	DeletePair(*stork_crd.ClusterPair) error
+}
+
+// MigratePluginInterface Interface to migrate data between clusters
+type MigratePluginInterface interface {
+	StartMigration(*stork_crd.Migration) error
+	GetMigrationStatus(*stork_crd.Migration) (map[string]error, error)
+	CancelMigration(*stork_crd.Migration) error
 }
 
 // Info Information about a volume
@@ -133,5 +141,23 @@ func (c *ClusterPairNotSupported) CreatePair(*stork_crd.ClusterPair) (string, er
 
 // DeletePair Returns ErrNotSupported
 func (c *ClusterPairNotSupported) DeletePair(*stork_crd.ClusterPair) error {
+	return &errors.ErrNotSupported{}
+}
+
+// MigrationNotSupported to be used by drivers that don't support migration
+type MigrationNotSupported struct{}
+
+// StartMigration returns ErrNotSupported
+func (m *MigrationNotSupported) StartMigration(*stork_crd.Migration) error {
+	return &errors.ErrNotSupported{}
+}
+
+// GetMigrationStatus returns ErrNotSupported
+func (m *MigrationNotSupported) GetMigrationStatus(*stork_crd.Migration) (map[string]error, error) {
+	return nil, &errors.ErrNotSupported{}
+}
+
+// CancelMigration returns ErrNotSupported
+func (m *MigrationNotSupported) CancelMigration(*stork_crd.Migration) error {
 	return &errors.ErrNotSupported{}
 }

@@ -45,7 +45,7 @@ func New(f internalinterfaces.SharedInformerFactory, namespace string, tweakList
 
 // ClusterPairs returns a ClusterPairInformer.
 func (v *version) ClusterPairs() ClusterPairInformer {
-	return &clusterPairInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+	return &clusterPairInformer{factory: v.factory, tweakListOptions: v.tweakListOptions}
 }
 
 // Migrations returns a MigrationInformer.

@@ -61,7 +61,7 @@ func (c *ClusterPairController) Handle(ctx context.Context, event sdk.Event) err
 
 		clusterPair := o
 		if event.Deleted {
-			if clusterPair.RemoteStorageID != "" {
+			if clusterPair.Status.RemoteStorageID != "" {
 				return c.Driver.DeletePair(clusterPair)
 			}
 		}
@@ -73,7 +73,7 @@ func (c *ClusterPairController) Handle(ctx context.Context, event sdk.Event) err
 				return err
 			}
 			clusterPair.Status.StorageStatus = stork_crd.ClusterPairStatusReady
-			clusterPair.RemoteStorageID = remoteID
+			clusterPair.Status.RemoteStorageID = remoteID
 		}
 		if clusterPair.Status.SchedulerStatus == "" {
 			// TODO: Verify we can talk to the scheduler on the other side
@@ -82,7 +82,7 @@ func (c *ClusterPairController) Handle(ctx context.Context, event sdk.Event) err
 
 		if clusterPair.Status.StorageStatus == stork_crd.ClusterPairStatusReady &&
 			clusterPair.Status.SchedulerStatus == stork_crd.ClusterPairStatusReady {
-			clusterPair.Status.OverallStatus = stork_crd.ClusterPairStatusReady
+			//clusterPair.Status.OverallStatus = stork_crd.ClusterPairStatusReady
 		}
 		err := sdk.Update(clusterPair)
 		if err != nil {

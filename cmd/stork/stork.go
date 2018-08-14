@@ -9,9 +9,9 @@ import (
 	"github.com/golang/glog"
 	"github.com/libopenstorage/stork/drivers/volume"
 	_ "github.com/libopenstorage/stork/drivers/volume/portworx"
-	"github.com/libopenstorage/stork/pkg/clusterpair"
 	"github.com/libopenstorage/stork/pkg/extender"
 	"github.com/libopenstorage/stork/pkg/initializer"
+	"github.com/libopenstorage/stork/pkg/migration"
 	"github.com/libopenstorage/stork/pkg/monitor"
 	"github.com/libopenstorage/stork/pkg/snapshot"
 	log "github.com/sirupsen/logrus"
@@ -133,11 +133,11 @@ func run(c *cli.Context) {
 		log.Fatalf("Error getting apiextention client, %v", err)
 	}
 
-	clusterController := clusterpair.ClusterPair{
+	migration := migration.Migration{
 		Driver: d,
 	}
-	if err = clusterController.Init(config, aeclientset); err != nil {
-		log.Fatalf("Error initializing cluster pair: %v", err)
+	if err = migration.Init(config, aeclientset); err != nil {
+		log.Fatalf("Error initializing migration: %v", err)
 	}
 
 	if c.Bool("extender") {

@@ -34,7 +34,9 @@ func addKnownTypes(scheme *runtime.Scheme) error {
 		&StorkRule{},
 		&StorkRuleList{},
 		&ClusterPair{},
-		&ClusterPairList{})
+		&ClusterPairList{},
+		&Migration{},
+		&MigrationList{})
 
 	metav1.AddToGroupVersion(scheme, SchemeGroupVersion)
 	return nil

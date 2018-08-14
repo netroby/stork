@@ -3,6 +3,7 @@ package controllers
 import (
 	"context"
 	"reflect"
+	"time"
 
 	"github.com/libopenstorage/stork/drivers/volume"
 	stork "github.com/libopenstorage/stork/pkg/apis/stork"
@@ -17,7 +18,7 @@ import (
 )
 
 const (
-	resyncPeriod = 5
+	resyncPeriod = int(60 * time.Minute)
 )
 
 // MigrationController migrationcontroller

@@ -61,17 +61,22 @@ type StorkRuleList struct {
 	Items []StorkRule `json:"items"`
 }
 
+// ClusterPairSpec is the spec to create the cluster pair
+type ClusterPairSpec struct {
+	Config  api.Config        `json:"config"`
+	Options map[string]string `json:"options"`
+}
+
 // +genclient
+// +genclient:nonNamespaced
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // ClusterPair represents pairing with other clusters
 type ClusterPair struct {
 	meta.TypeMeta   `json:",inline"`
 	meta.ObjectMeta `json:"metadata,omitempty"`
-	Config          api.Config        `json:"config"`
-	Options         map[string]string `json:"options"`
-	Status          ClusterPairStatus `json:"status"`
-	RemoteStorageID string            `json:"remoteStorageId"`
+	Spec            ClusterPairSpec   `json:"spec"`
+	Status          ClusterPairStatus `json:"status,omitempty"`
 }
 
 // ClusterPairStatusType is the status of the pair
@@ -94,18 +99,16 @@ const (
 type ClusterPairStatus struct {
 	// Overall status of the pairing
 	// +optional
-	OverallStatus ClusterPairStatusType `json:"overallStatus"`
+	//OverallStatus ClusterPairStatusType `json:"overallStatus"`
 	// Status of the pairing with the scheduler
 	// +optional
 	SchedulerStatus ClusterPairStatusType `json:"schedulerStatus"`
 	// Status of pairing with the storage driver
 	// +optional
 	StorageStatus ClusterPairStatusType `json:"storageStatus"`
-}
-
-// ClusterPairSpec is the desired state of the cluster pair
-type ClusterPairSpec struct {
-	Config api.Config `json:"config"`
+	// ID of the remote storage which is paired
+	// +optional
+	RemoteStorageID string `json:"remoteStorageId"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -118,6 +121,27 @@ type ClusterPairList struct {
 	Items []ClusterPair `json:"items"`
 }
 
+// MigrationSpec is the spec used to migrate apps between clusterpairs
+type MigrationSpec struct {
+	ClusterPair string            `json:"clusterpair"`
+	Namespaces  []string          `json:"namespaces"`
+	Selectors   map[string]string `json:"selectors"`
+	Options     map[string]string `json:"options"`
+}
+
+// MigrationStatus is the status of a migration operation
+type MigrationStatus struct {
+	Stage      MigrationStageType        `json:"stage"`
+	Status     MigrationStatusType       `json:"status"`
+	ItemStatus map[string]*MigrationInfo `json:"volumes"`
+}
+
+// MigrationInfo is the info for the migration of a resource
+type MigrationInfo struct {
+	meta.TypeMeta `json:",inline"`
+	Status        MigrationStatusType `json:"status"`
+}
+
 // +genclient
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
@@ -125,12 +149,8 @@ type ClusterPairList struct {
 type Migration struct {
 	meta.TypeMeta   `json:",inline"`
 	meta.ObjectMeta `json:"metadata,omitempty"`
-	ClusterPair     string              `json:"clusterpair"`
-	Namespaces      []string            `json:"namespaces"`
-	Options         map[string]string   `json:"options"`
-	Selectors       map[string]string   `json:"selectors"`
-	Stage           MigrationStageType  `json:"stage"`
-	Status          MigrationStatusType `json:"status"`
+	Spec            MigrationSpec   `json:"spec"`
+	Status          MigrationStatus `json:"status,omitempty"`
 }
 
 // MigrationStatusType is the status of the migration
@@ -139,6 +159,8 @@ type MigrationStatusType string
 const (
 	// MigrationStatusPending for when migration is still pending
 	MigrationStatusPending MigrationStatusType = "Pending"
+	// MigrationStatusCaptured for when migration specs have been captured
+	MigrationStatusCaptured MigrationStatusType = "Captured"
 	// MigrationStatusInProgress for when migration is in progress
 	MigrationStatusInProgress MigrationStatusType = "InProgress"
 	// MigrationStatusFailed for when migration has failed

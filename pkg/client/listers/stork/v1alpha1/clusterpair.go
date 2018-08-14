@@ -29,8 +29,8 @@ import (
 type ClusterPairLister interface {
 	// List lists all ClusterPairs in the indexer.
 	List(selector labels.Selector) (ret []*v1alpha1.ClusterPair, err error)
-	// ClusterPairs returns an object that can list and get ClusterPairs.
-	ClusterPairs(namespace string) ClusterPairNamespaceLister
+	// Get retrieves the ClusterPair from the index for a given name.
+	Get(name string) (*v1alpha1.ClusterPair, error)
 	ClusterPairListerExpansion
 }
 
@@ -52,38 +52,9 @@ func (s *clusterPairLister) List(selector labels.Selector) (ret []*v1alpha1.Clus
 	return ret, err
 }
 
-// ClusterPairs returns an object that can list and get ClusterPairs.
-func (s *clusterPairLister) ClusterPairs(namespace string) ClusterPairNamespaceLister {
-	return clusterPairNamespaceLister{indexer: s.indexer, namespace: namespace}
-}
-
-// ClusterPairNamespaceLister helps list and get ClusterPairs.
-type ClusterPairNamespaceLister interface {
-	// List lists all ClusterPairs in the indexer for a given namespace.
-	List(selector labels.Selector) (ret []*v1alpha1.ClusterPair, err error)
-	// Get retrieves the ClusterPair from the indexer for a given namespace and name.
-	Get(name string) (*v1alpha1.ClusterPair, error)
-	ClusterPairNamespaceListerExpansion
-}
-
-// clusterPairNamespaceLister implements the ClusterPairNamespaceLister
-// interface.
-type clusterPairNamespaceLister struct {
-	indexer   cache.Indexer
-	namespace string
-}
-
-// List lists all ClusterPairs in the indexer for a given namespace.
-func (s clusterPairNamespaceLister) List(selector labels.Selector) (ret []*v1alpha1.ClusterPair, err error) {
-	err = cache.ListAllByNamespace(s.indexer, s.namespace, selector, func(m interface{}) {
-		ret = append(ret, m.(*v1alpha1.ClusterPair))
-	})
-	return ret, err
-}
-
-// Get retrieves the ClusterPair from the indexer for a given namespace and name.
-func (s clusterPairNamespaceLister) Get(name string) (*v1alpha1.ClusterPair, error) {
-	obj, exists, err := s.indexer.GetByKey(s.namespace + "/" + name)
+// Get retrieves the ClusterPair from the index for a given name.
+func (s *clusterPairLister) Get(name string) (*v1alpha1.ClusterPair, error) {
+	obj, exists, err := s.indexer.GetByKey(name)
 	if err != nil {
 		return nil, err
 	}

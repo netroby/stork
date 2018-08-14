@@ -1431,15 +1431,15 @@ func getCloudSnapStatusString(status *api.CloudBackupStatus) string {
 func (p *portworx) CreatePair(pair *stork_crd.ClusterPair) (string, error) {
 	port := uint64(9001)
 	var err error
-	if p, ok := pair.Options["port"]; ok {
+	if p, ok := pair.Spec.Options["port"]; ok {
 		port, err = strconv.ParseUint(p, 10, 64)
 		if err != nil {
 			return "", fmt.Errorf("invalid port specified for cluster pair: %v", err)
 		}
 	}
 	resp, err := p.clusterManager.CreatePair(&api.ClusterPairCreateRequest{
-		RemoteClusterIp:    pair.Options["ip"],
-		RemoteClusterToken: pair.Options["token"],
+		RemoteClusterIp:    pair.Spec.Options["ip"],
+		RemoteClusterToken: pair.Spec.Options["token"],
 		RemoteClusterPort:  uint32(port),
 	})
 	if err != nil {
@@ -1447,8 +1447,52 @@ func (p *portworx) CreatePair(pair *stork_crd.ClusterPair) (string, error) {
 	}
 	return resp.RemoteClusterId, nil
 }
+
 func (p *portworx) DeletePair(pair *stork_crd.ClusterPair) error {
-	return p.clusterManager.DeletePair(pair.RemoteStorageID)
+	return p.clusterManager.DeletePair(pair.Status.RemoteStorageID)
+}
+
+func (p *portworx) StartMigration(migration *stork_crd.Migration) error {
+	if migration.Spec.Selectors != nil && len(migration.Spec.Selectors) != 0 {
+		return fmt.Errorf("selectors are not supported yet")
+	}
+	if len(migration.Spec.Namespaces) == 0 {
+		return fmt.Errorf("namespaces for migration cannot be empty")
+	}
+	if migration.Spec.ClusterPair == "" {
+		return fmt.Errorf("clusterPair to migrate to cannot be empty")
+	}
+	clusterPair, err := k8s.Instance().GetClusterPair(migration.Spec.ClusterPair)
+	if err != nil {
+		return fmt.Errorf("error getting clusterpair: %v", err)
+	}
+	pvcList, err := k8s.Instance().GetPersistentVolumeClaims(migration.Namespace, migration.Spec.Selectors)
+	if err != nil {
+		return fmt.Errorf("error getting list of volumes to migrate: %v", err)
+	}
+	for _, pvc := range pvcList.Items {
+		volume, err := k8s.Instance().GetVolumeForPersistentVolumeClaim(&pvc)
+		if err != nil {
+			// TODO: Update status in migration for failed pvc
+			logrus.Errorf("Error getting volume for PVC %v: %v", pvc.Name, err)
+			continue
+		}
+		p.volDriver.CloudMigrateStart(&api.CloudMigrateStartRequest{
+			Operation: api.CloudMigrate_MigrateVolume,
+			ClusterId: clusterPair.Status.RemoteStorageID,
+			TargetId:  volume,
+		})
+	}
+
+	return nil
+}
+
+func (p *portworx) GetMigrationStatus(migration *stork_crd.Migration) (map[string]error, error) {
+	return nil, nil
+}
+
+func (p *portworx) CancelMigration(migration *stork_crd.Migration) error {
+	return nil
 }
 
 func init() {

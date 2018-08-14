@@ -37,8 +37,8 @@ type StorkV1alpha1Client struct {
 	restClient rest.Interface
 }
 
-func (c *StorkV1alpha1Client) ClusterPairs(namespace string) ClusterPairInterface {
-	return newClusterPairs(c, namespace)
+func (c *StorkV1alpha1Client) ClusterPairs() ClusterPairInterface {
+	return newClusterPairs(c)
 }
 
 func (c *StorkV1alpha1Client) Migrations(namespace string) MigrationInterface {
