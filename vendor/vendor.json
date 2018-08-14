@@ -852,7 +852,7 @@
 			"revisionTime": "2018-07-24T19:53:34Z"
 		},
 		{
-			"checksumSHA1": "yvJwlIyPv4KU6NNf1R36qdaGySY=",
+			"checksumSHA1": "uIcSxUF7hBM9/AH7H3QUVz1c0Ec=",
 			"path": "github.com/portworx/sched-ops/k8s",
 			"revision": "cee4bab7f0e2f4bb3e9616744c760b0fff73f0e5",
 			"revisionTime": "2018-07-27T22:24:55Z"
