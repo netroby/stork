@@ -53,8 +53,8 @@ type ClusterPairPluginInterface interface {
 
 // MigratePluginInterface Interface to migrate data between clusters
 type MigratePluginInterface interface {
-	StartMigration(*stork_crd.Migration) error
-	GetMigrationStatus(*stork_crd.Migration) (map[string]error, error)
+	StartMigration(*stork_crd.Migration) ([]*stork_crd.VolumeInfo, error)
+	GetMigrationStatus(*stork_crd.Migration) ([]*stork_crd.VolumeInfo, error)
 	CancelMigration(*stork_crd.Migration) error
 }
 
@@ -148,12 +148,12 @@ func (c *ClusterPairNotSupported) DeletePair(*stork_crd.ClusterPair) error {
 type MigrationNotSupported struct{}
 
 // StartMigration returns ErrNotSupported
-func (m *MigrationNotSupported) StartMigration(*stork_crd.Migration) error {
-	return &errors.ErrNotSupported{}
+func (m *MigrationNotSupported) StartMigration(*stork_crd.Migration) ([]*stork_crd.VolumeInfo, error) {
+	return nil, &errors.ErrNotSupported{}
 }
 
 // GetMigrationStatus returns ErrNotSupported
-func (m *MigrationNotSupported) GetMigrationStatus(*stork_crd.Migration) (map[string]error, error) {
+func (m *MigrationNotSupported) GetMigrationStatus(*stork_crd.Migration) ([]*stork_crd.VolumeInfo, error) {
 	return nil, &errors.ErrNotSupported{}
 }
 

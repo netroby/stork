@@ -1452,43 +1452,94 @@ func (p *portworx) DeletePair(pair *stork_crd.ClusterPair) error {
 	return p.clusterManager.DeletePair(pair.Status.RemoteStorageID)
 }
 
-func (p *portworx) StartMigration(migration *stork_crd.Migration) error {
+func (p *portworx) StartMigration(migration *stork_crd.Migration) ([]*stork_crd.VolumeInfo, error) {
 	if migration.Spec.Selectors != nil && len(migration.Spec.Selectors) != 0 {
-		return fmt.Errorf("selectors are not supported yet")
+		return nil, fmt.Errorf("selectors are not supported yet")
 	}
 	if len(migration.Spec.Namespaces) == 0 {
-		return fmt.Errorf("namespaces for migration cannot be empty")
-	}
-	if migration.Spec.ClusterPair == "" {
-		return fmt.Errorf("clusterPair to migrate to cannot be empty")
+		return nil, fmt.Errorf("namespaces for migration cannot be empty")
 	}
 	clusterPair, err := k8s.Instance().GetClusterPair(migration.Spec.ClusterPair)
 	if err != nil {
-		return fmt.Errorf("error getting clusterpair: %v", err)
+		return nil, fmt.Errorf("error getting clusterpair: %v", err)
 	}
 	pvcList, err := k8s.Instance().GetPersistentVolumeClaims(migration.Namespace, migration.Spec.Selectors)
 	if err != nil {
-		return fmt.Errorf("error getting list of volumes to migrate: %v", err)
+		return nil, fmt.Errorf("error getting list of volumes to migrate: %v", err)
 	}
+	volumeInfos := make([]*stork_crd.VolumeInfo, 0)
 	for _, pvc := range pvcList.Items {
+		volumeInfo := &stork_crd.VolumeInfo{}
+		volumeInfo.PersistentVolumeClaim = pvc.Name
+		volumeInfo.Namespace = pvc.Namespace
+		volumeInfos = append(volumeInfos, volumeInfo)
+
 		volume, err := k8s.Instance().GetVolumeForPersistentVolumeClaim(&pvc)
 		if err != nil {
-			// TODO: Update status in migration for failed pvc
-			logrus.Errorf("Error getting volume for PVC %v: %v", pvc.Name, err)
+			volumeInfo.Status = stork_crd.MigrationStatusFailed
+			volumeInfo.Reason = fmt.Sprintf("Error getting volume for PVC: %v", err)
+			logrus.Errorf("%v: %v", pvc.Name, volumeInfo.Reason)
 			continue
 		}
-		p.volDriver.CloudMigrateStart(&api.CloudMigrateStartRequest{
+		volumeInfo.Volume = volume
+		err = p.volDriver.CloudMigrateStart(&api.CloudMigrateStartRequest{
 			Operation: api.CloudMigrate_MigrateVolume,
 			ClusterId: clusterPair.Status.RemoteStorageID,
 			TargetId:  volume,
 		})
+		if err != nil {
+			volumeInfo.Status = stork_crd.MigrationStatusFailed
+			volumeInfo.Reason = fmt.Sprintf("Error starting migration for volume: %v", err)
+			logrus.Errorf("%v: %v", pvc.Name, volumeInfo.Reason)
+			continue
+		}
+		volumeInfo.Status = stork_crd.MigrationStatusInProgress
+		volumeInfo.Reason = fmt.Sprintf("Volume migration has started")
 	}
 
-	return nil
+	return volumeInfos, nil
 }
 
-func (p *portworx) GetMigrationStatus(migration *stork_crd.Migration) (map[string]error, error) {
-	return nil, nil
+func (p *portworx) GetMigrationStatus(migration *stork_crd.Migration) ([]*stork_crd.VolumeInfo, error) {
+	status, err := p.volDriver.CloudMigrateStatus()
+	if err != nil {
+		return nil, err
+	}
+
+	clusterPair, err := k8s.Instance().GetClusterPair(migration.Spec.ClusterPair)
+	if err != nil {
+		return nil, fmt.Errorf("error getting clusterpair: %v", err)
+	}
+
+	clusterInfo, ok := status.Info[clusterPair.Status.RemoteStorageID]
+	if !ok {
+		return nil, fmt.Errorf("Migration status not found for remote cluster")
+	}
+
+	for _, vInfo := range migration.Status.Volumes {
+		found := false
+		for _, mInfo := range clusterInfo.List {
+			if vInfo.Volume == mInfo.LocalVolumeName {
+				found = true
+				if mInfo.Status == api.CloudMigrate_Failed {
+					vInfo.Status = stork_crd.MigrationStatusFailed
+					vInfo.Reason = fmt.Sprintf("Migration failed for volume")
+				} else if mInfo.CurrentStage == api.CloudMigrate_Done &&
+					mInfo.Status == api.CloudMigrate_Complete {
+					vInfo.Status = stork_crd.MigrationStatusSuccessful
+					vInfo.Reason = fmt.Sprintf("Migration succesful for volume")
+				}
+				continue
+			}
+		}
+
+		// If we didn't get the status for a volume mark it as failed
+		if !found {
+			vInfo.Status = stork_crd.MigrationStatusFailed
+		}
+	}
+
+	return migration.Status.Volumes, nil
 }
 
 func (p *portworx) CancelMigration(migration *stork_crd.Migration) error {

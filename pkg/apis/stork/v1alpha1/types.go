@@ -123,7 +123,7 @@ type ClusterPairList struct {
 
 // MigrationSpec is the spec used to migrate apps between clusterpairs
 type MigrationSpec struct {
-	ClusterPair string            `json:"clusterpair"`
+	ClusterPair string            `json:"clusterPair"`
 	Namespaces  []string          `json:"namespaces"`
 	Selectors   map[string]string `json:"selectors"`
 	Options     map[string]string `json:"options"`
@@ -131,15 +131,26 @@ type MigrationSpec struct {
 
 // MigrationStatus is the status of a migration operation
 type MigrationStatus struct {
-	Stage      MigrationStageType        `json:"stage"`
-	Status     MigrationStatusType       `json:"status"`
-	ItemStatus map[string]*MigrationInfo `json:"volumes"`
+	Stage     MigrationStageType  `json:"stage"`
+	Status    MigrationStatusType `json:"status"`
+	Resources []*ResourceInfo     `json:"resources"`
+	Volumes   []*VolumeInfo       `json:"volumes"`
 }
 
-// MigrationInfo is the info for the migration of a resource
-type MigrationInfo struct {
-	meta.TypeMeta `json:",inline"`
-	Status        MigrationStatusType `json:"status"`
+// ResourceInfo is the info for the migration of a resource
+type ResourceInfo struct {
+	meta.TypeMeta   `json:",inline"`
+	meta.ObjectMeta `json:"metadata,omitempty"`
+	Status          MigrationStatusType `json:"status"`
+}
+
+// VolumeInfo is the info for the migration of a volume
+type VolumeInfo struct {
+	PersistentVolumeClaim string
+	Namespace             string
+	Volume                string
+	Status                MigrationStatusType `json:"status"`
+	Reason                string              `json:"reason"`
 }
 
 // +genclient
@@ -150,7 +161,7 @@ type Migration struct {
 	meta.TypeMeta   `json:",inline"`
 	meta.ObjectMeta `json:"metadata,omitempty"`
 	Spec            MigrationSpec   `json:"spec"`
-	Status          MigrationStatus `json:"status,omitempty"`
+	Status          MigrationStatus `json:"status"`
 }
 
 // MigrationStatusType is the status of the migration
@@ -179,6 +190,8 @@ const (
 	MigrationStageVolumes MigrationStageType = "Volumes"
 	// MigrationStageApplications for when applications are being migrated
 	MigrationStageApplications MigrationStageType = "Applications"
+	// MigrationStageFinal is the final stage for migration
+	MigrationStageFinal MigrationStageType = "Final"
 )
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object

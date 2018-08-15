@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"context"
+	"fmt"
 	"reflect"
 	"time"
 
@@ -34,28 +35,6 @@ func (m *MigrationController) Init(config *rest.Config, client apiextensionsclie
 	}
 
 	sdk.Watch(stork_crd.SchemeGroupVersion.String(), reflect.TypeOf(stork_crd.Migration{}).Name(), "", resyncPeriod)
-
-	/*
-		storkClient, err := stork_client.NewForConfig(config)
-		remotePair, err := storkClient.StorkV1alpha1().ClusterPairs("default").Get("localcluster", metav1.GetOptions{})
-		if err != nil {
-			logrus.Errorf("Error getting pair: %v", err)
-			return nil
-		}
-			remoteClientConfig := clientcmd.NewNonInteractiveClientConfig(remotePair.Config, remotePair.Config.CurrentContext, &clientcmd.ConfigOverrides{}, nil)
-			remoteConfig, err := remoteClientConfig.ClientConfig()
-			if err != nil {
-				return err
-			}
-
-			remoteK8sClient, err := clientset.NewForConfig(remoteConfig)
-			if err != nil {
-				logrus.Fatalf("Error getting client, %v", err)
-			}
-			podList, err := remoteK8sClient.CoreV1().Pods("").List(metav1.ListOptions{})
-			for _, p := range podList.Items {
-				log.PodLog(&p).Infof("listing pods")
-			}*/
 	return nil
 }
 
@@ -63,8 +42,75 @@ func (m *MigrationController) Init(config *rest.Config, client apiextensionsclie
 func (m *MigrationController) Handle(ctx context.Context, event sdk.Event) error {
 	switch o := event.Object.(type) {
 	case *stork_crd.Migration:
+		logrus.Debugf("Update for migration %v Deleted: %v", o, event.Deleted)
+		migration := o
+		if event.Deleted {
+			return m.Driver.CancelMigration(migration)
+		}
 
-		logrus.Infof("Update for migration %v", o)
+		if migration.Spec.ClusterPair == "" {
+			return fmt.Errorf("clusterPair to migrate to cannot be empty")
+		}
+
+		if migration.Status.Stage == "" {
+			migration.Status = stork_crd.MigrationStatus{
+				Stage:  stork_crd.MigrationStageInitializing,
+				Status: stork_crd.MigrationStatusPending,
+			}
+		}
+		if migration.Status.Stage == stork_crd.MigrationStageInitializing ||
+			migration.Status.Stage == stork_crd.MigrationStageVolumes {
+			migration.Status.Stage = stork_crd.MigrationStageVolumes
+			// Trigger the migration if we don't have any status
+			if migration.Status.Volumes == nil {
+				volumeInfos, err := m.Driver.StartMigration(migration)
+				if err != nil {
+					return err
+				}
+				if volumeInfos == nil {
+					volumeInfos = make([]*stork_crd.VolumeInfo, 0)
+				}
+				migration.Status.Volumes = volumeInfos
+				err = sdk.Update(migration)
+				if err != nil {
+					return err
+				}
+			}
+
+			// Now check the status
+			volumeInfos, err := m.Driver.GetMigrationStatus(migration)
+			if err != nil {
+				return err
+			}
+			if volumeInfos == nil {
+				volumeInfos = make([]*stork_crd.VolumeInfo, 0)
+			}
+			migration.Status.Volumes = volumeInfos
+			err = sdk.Update(migration)
+			if err != nil {
+				return err
+			}
+
+			// Now check if there is any failure or success
+			// TODO: On failure of one volume cancel other migrations
+			for _, vInfo := range volumeInfos {
+				if vInfo.Status == stork_crd.MigrationStatusInProgress {
+					return fmt.Errorf("Migration still in progress")
+				} else if vInfo.Status == stork_crd.MigrationStatusFailed {
+					migration.Status.Stage = stork_crd.MigrationStageFinal
+					migration.Status.Status = stork_crd.MigrationStatusFailed
+				}
+			}
+
+			if migration.Status.Status != stork_crd.MigrationStatusFailed {
+				migration.Status.Stage = stork_crd.MigrationStageFinal
+				migration.Status.Status = stork_crd.MigrationStatusSuccessful
+			}
+			err = sdk.Update(migration)
+			if err != nil {
+				return err
+			}
+		}
 	}
 	return nil
 }
