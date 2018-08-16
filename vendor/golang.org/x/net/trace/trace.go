@@ -368,15 +368,7 @@ func New(family, title string) Trace {
 }
 
 func (tr *trace) Finish() {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	elapsed := time.Now().Sub(tr.Start)
-	tr.mu.Lock()
-	tr.Elapsed = elapsed
-	tr.mu.Unlock()
-
-=======
 	tr.Elapsed = time.Now().Sub(tr.Start)
->>>>>>> Govendor update
 	if DebugUseAfterFinish {
 		buf := make([]byte, 4<<10) // 4 KB should be enough
 		n := runtime.Stack(buf, false)
@@ -389,26 +381,14 @@ func (tr *trace) Finish() {
 	m.Remove(tr)
 
 	f := getFamily(tr.Family, true)
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	tr.mu.RLock() // protects tr fields in Cond.match calls
-=======
->>>>>>> Govendor update
 	for _, b := range f.Buckets {
 		if b.Cond.match(tr) {
 			b.Add(tr)
 		}
 	}
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	tr.mu.RUnlock()
-
-	// Add a sample of elapsed time as microseconds to the family's timeseries
-	h := new(histogram)
-	h.addMeasurement(elapsed.Nanoseconds() / 1e3)
-=======
 	// Add a sample of elapsed time as microseconds to the family's timeseries
 	h := new(histogram)
 	h.addMeasurement(tr.Elapsed.Nanoseconds() / 1e3)
->>>>>>> Govendor update
 	f.LatencyMu.Lock()
 	f.Latency.Add(h)
 	f.LatencyMu.Unlock()
@@ -704,22 +684,6 @@ type trace struct {
 	// Title is the title of this trace.
 	Title string
 
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	// Start time of the this trace.
-	Start time.Time
-
-	mu        sync.RWMutex
-	events    []event // Append-only sequence of events (modulo discards).
-	maxEvents int
-	recycler  func(interface{})
-	IsError   bool          // Whether this trace resulted in an error.
-	Elapsed   time.Duration // Elapsed time for this trace, zero while active.
-	traceID   uint64        // Trace information if non-zero.
-	spanID    uint64
-
-	refs int32     // how many buckets this is in
-	disc discarded // scratch space to avoid allocation
-=======
 	// Timing information.
 	Start   time.Time
 	Elapsed time.Duration // zero while active
@@ -739,7 +703,6 @@ type trace struct {
 	refs     int32 // how many buckets this is in
 	recycler func(interface{})
 	disc     discarded // scratch space to avoid allocation
->>>>>>> Govendor update
 
 	finishStack []byte // where finish was called, if DebugUseAfterFinish is set
 
@@ -751,26 +714,14 @@ func (tr *trace) reset() {
 	tr.Family = ""
 	tr.Title = ""
 	tr.Start = time.Time{}
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-
-	tr.mu.Lock()
-=======
->>>>>>> Govendor update
 	tr.Elapsed = 0
 	tr.traceID = 0
 	tr.spanID = 0
 	tr.IsError = false
 	tr.maxEvents = 0
 	tr.events = nil
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	tr.recycler = nil
-	tr.mu.Unlock()
-
-	tr.refs = 0
-=======
 	tr.refs = 0
 	tr.recycler = nil
->>>>>>> Govendor update
 	tr.disc = 0
 	tr.finishStack = nil
 	for i := range tr.eventsBuf {
@@ -850,28 +801,6 @@ func (tr *trace) LazyPrintf(format string, a ...interface{}) {
 	tr.addEvent(&lazySprintf{format, a}, false, false)
 }
 
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-func (tr *trace) SetError() {
-	tr.mu.Lock()
-	tr.IsError = true
-	tr.mu.Unlock()
-}
-
-func (tr *trace) SetRecycler(f func(interface{})) {
-	tr.mu.Lock()
-	tr.recycler = f
-	tr.mu.Unlock()
-}
-
-func (tr *trace) SetTraceInfo(traceID, spanID uint64) {
-	tr.mu.Lock()
-	tr.traceID, tr.spanID = traceID, spanID
-	tr.mu.Unlock()
-}
-
-func (tr *trace) SetMaxEvents(m int) {
-	tr.mu.Lock()
-=======
 func (tr *trace) SetError() { tr.IsError = true }
 
 func (tr *trace) SetRecycler(f func(interface{})) {
@@ -883,15 +812,10 @@ func (tr *trace) SetTraceInfo(traceID, spanID uint64) {
 }
 
 func (tr *trace) SetMaxEvents(m int) {
->>>>>>> Govendor update
 	// Always keep at least three events: first, discarded count, last.
 	if len(tr.events) == 0 && m > 3 {
 		tr.maxEvents = m
 	}
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	tr.mu.Unlock()
-=======
->>>>>>> Govendor update
 }
 
 func (tr *trace) ref() {
@@ -900,10 +824,6 @@ func (tr *trace) ref() {
 
 func (tr *trace) unref() {
 	if atomic.AddInt32(&tr.refs, -1) == 0 {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		tr.mu.RLock()
-=======
->>>>>>> Govendor update
 		if tr.recycler != nil {
 			// freeTrace clears tr, so we hold tr.recycler and tr.events here.
 			go func(f func(interface{}), es []event) {
@@ -914,10 +834,6 @@ func (tr *trace) unref() {
 				}
 			}(tr.recycler, tr.events)
 		}
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		tr.mu.RUnlock()
-=======
->>>>>>> Govendor update
 
 		freeTrace(tr)
 	}
@@ -928,14 +844,7 @@ func (tr *trace) When() string {
 }
 
 func (tr *trace) ElapsedTime() string {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	tr.mu.RLock()
 	t := tr.Elapsed
-	tr.mu.RUnlock()
-
-=======
-	t := tr.Elapsed
->>>>>>> Govendor update
 	if t == 0 {
 		// Active trace.
 		t = time.Since(tr.Start)

@@ -44,21 +44,13 @@ type Pattern struct {
 // It returns an error if the given definition is invalid.
 func NewPattern(version int, ops []int, pool []string, verb string) (Pattern, error) {
 	if version != 1 {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		grpclog.Infof("unsupported version: %d", version)
-=======
 		grpclog.Printf("unsupported version: %d", version)
->>>>>>> Govendor update
 		return Pattern{}, ErrInvalidPattern
 	}
 
 	l := len(ops)
 	if l%2 != 0 {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		grpclog.Infof("odd number of ops codes: %d", l)
-=======
 		grpclog.Printf("odd number of ops codes: %d", l)
->>>>>>> Govendor update
 		return Pattern{}, ErrInvalidPattern
 	}
 
@@ -81,22 +73,14 @@ func NewPattern(version int, ops []int, pool []string, verb string) (Pattern, er
 			stack++
 		case utilities.OpPushM:
 			if pushMSeen {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-				grpclog.Infof("pushM appears twice")
-=======
 				grpclog.Printf("pushM appears twice")
->>>>>>> Govendor update
 				return Pattern{}, ErrInvalidPattern
 			}
 			pushMSeen = true
 			stack++
 		case utilities.OpLitPush:
 			if op.operand < 0 || len(pool) <= op.operand {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-				grpclog.Infof("negative literal index: %d", op.operand)
-=======
 				grpclog.Printf("negative literal index: %d", op.operand)
->>>>>>> Govendor update
 				return Pattern{}, ErrInvalidPattern
 			}
 			if pushMSeen {
@@ -105,11 +89,7 @@ func NewPattern(version int, ops []int, pool []string, verb string) (Pattern, er
 			stack++
 		case utilities.OpConcatN:
 			if op.operand <= 0 {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-				grpclog.Infof("negative concat size: %d", op.operand)
-=======
 				grpclog.Printf("negative concat size: %d", op.operand)
->>>>>>> Govendor update
 				return Pattern{}, ErrInvalidPattern
 			}
 			stack -= op.operand
@@ -120,11 +100,7 @@ func NewPattern(version int, ops []int, pool []string, verb string) (Pattern, er
 			stack++
 		case utilities.OpCapture:
 			if op.operand < 0 || len(pool) <= op.operand {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-				grpclog.Infof("variable name index out of bound: %d", op.operand)
-=======
 				grpclog.Printf("variable name index out of bound: %d", op.operand)
->>>>>>> Govendor update
 				return Pattern{}, ErrInvalidPattern
 			}
 			v := pool[op.operand]
@@ -132,19 +108,11 @@ func NewPattern(version int, ops []int, pool []string, verb string) (Pattern, er
 			vars = append(vars, v)
 			stack--
 			if stack < 0 {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-				grpclog.Infof("stack underflow")
-				return Pattern{}, ErrInvalidPattern
-			}
-		default:
-			grpclog.Infof("invalid opcode: %d", op.code)
-=======
 				grpclog.Printf("stack underflow")
 				return Pattern{}, ErrInvalidPattern
 			}
 		default:
 			grpclog.Printf("invalid opcode: %d", op.code)
->>>>>>> Govendor update
 			return Pattern{}, ErrInvalidPattern
 		}
 

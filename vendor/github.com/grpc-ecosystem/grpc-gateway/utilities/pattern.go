@@ -17,10 +17,6 @@ const (
 	OpConcatN
 	// OpCapture pops an item and binds it to the variable
 	OpCapture
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	// OpEnd is the least positive invalid opcode.
-=======
 	// OpEnd is the least postive invalid opcode.
->>>>>>> Govendor update
 	OpEnd
 )

@@ -58,10 +58,6 @@ type Config struct {
 	// new backups that should be triggered based on schedules.
 	ScheduleSyncPeriod metav1.Duration `json:"scheduleSyncPeriod"`
 
-	// PodVolumeOperationTimeout is how long backups/restores of pod volumes (i.e.
-	// using restic) should be allowed to run before timing out.
-	PodVolumeOperationTimeout metav1.Duration `json:"podVolumeOperationTimeout"`
-
 	// ResourcePriorities is an ordered slice of resources specifying the desired
 	// order of resource restores. Any resources not in the list will be restored
 	// alphabetically after the prioritized resources.
@@ -90,10 +86,4 @@ type ObjectStorageProviderConfig struct {
 	// Bucket is the name of the bucket in object storage where Ark backups
 	// are stored.
 	Bucket string `json:"bucket"`
-
-	// ResticLocation is the bucket and optional prefix in object storage where
-	// Ark stores restic backups of pod volumes, specified either as "bucket" or
-	// "bucket/prefix". This bucket must be different than the `Bucket` field.
-	// Optional.
-	ResticLocation string `json:"resticLocation"`
 }

@@ -44,7 +44,7 @@ type BackupSpec struct {
 	// SnapshotVolumes specifies whether to take cloud snapshots
 	// of any PV's referenced in the set of objects included
 	// in the Backup.
-	SnapshotVolumes *bool `json:"snapshotVolumes,omitempty"`
+	SnapshotVolumes *bool `json:"snapshotVolumes"`
 
 	// TTL is a time.Duration-parseable string describing how long
 	// the Backup should be retained for.
@@ -80,7 +80,7 @@ type BackupResourceHookSpec struct {
 	// ExcludedResources specifies the resources to which this hook spec does not apply.
 	ExcludedResources []string `json:"excludedResources"`
 	// LabelSelector, if specified, filters the resources to which this hook spec applies.
-	LabelSelector *metav1.LabelSelector `json:"labelSelector,omitempty"`
+	LabelSelector *metav1.LabelSelector `json:"labelSelector"`
 	// Hooks is a list of BackupResourceHooks to execute. DEPRECATED. Replaced by PreHooks.
 	Hooks []BackupResourceHook `json:"hooks"`
 	// PreHooks is a list of BackupResourceHooks to execute prior to storing the item in the backup.
@@ -170,18 +170,6 @@ type BackupStatus struct {
 	// ValidationErrors is a slice of all validation errors (if
 	// applicable).
 	ValidationErrors []string `json:"validationErrors"`
-
-	// StartTimestamp records the time a backup was started.
-	// Separate from CreationTimestamp, since that value changes
-	// on restores.
-	// The server's time is used for StartTimestamps
-	StartTimestamp metav1.Time `json:"startTimestamp"`
-
-	// CompletionTimestamp records the time a backup was completed.
-	// Completion time is recorded even on failed backups.
-	// Completion time is recorded before uploading the backup object.
-	// The server's time is used for CompletionTimestamps
-	CompletionTimestamp metav1.Time `json:"completionTimestamp"`
 }
 
 // VolumeBackupInfo captures the required information about

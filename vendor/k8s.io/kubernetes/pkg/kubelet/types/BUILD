@@ -12,14 +12,12 @@ go_library(
         "constants.go",
         "doc.go",
         "labels.go",
-        "pod_status.go",
         "pod_update.go",
         "types.go",
     ],
     importpath = "k8s.io/kubernetes/pkg/kubelet/types",
     deps = [
         "//pkg/apis/core:go_default_library",
-        "//pkg/apis/scheduling:go_default_library",
         "//vendor/k8s.io/api/core/v1:go_default_library",
         "//vendor/k8s.io/apimachinery/pkg/apis/meta/v1:go_default_library",
         "//vendor/k8s.io/apimachinery/pkg/types:go_default_library",
@@ -30,7 +28,6 @@ go_test(
     name = "go_default_test",
     srcs = [
         "labels_test.go",
-        "pod_status_test.go",
         "pod_update_test.go",
         "types_test.go",
     ],

@@ -1,16 +1,7 @@
 package runtime
 
 import (
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	"encoding/base64"
 	"strconv"
-
-	"github.com/golang/protobuf/jsonpb"
-	"github.com/golang/protobuf/ptypes/duration"
-	"github.com/golang/protobuf/ptypes/timestamp"
-=======
-	"strconv"
->>>>>>> Govendor update
 )
 
 // String just returns the given string.
@@ -65,30 +56,3 @@ func Uint32(val string) (uint32, error) {
 	}
 	return uint32(i), nil
 }
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-
-// Bytes converts the given string representation of a byte sequence into a slice of bytes
-// A bytes sequence is encoded in URL-safe base64 without padding
-func Bytes(val string) ([]byte, error) {
-	b, err := base64.StdEncoding.DecodeString(val)
-	if err != nil {
-		return nil, err
-	}
-	return b, nil
-}
-
-// Timestamp converts the given RFC3339 formatted string into a timestamp.Timestamp.
-func Timestamp(val string) (*timestamp.Timestamp, error) {
-	var r *timestamp.Timestamp
-	err := jsonpb.UnmarshalString(val, r)
-	return r, err
-}
-
-// Duration converts the given string into a timestamp.Duration.
-func Duration(val string) (*duration.Duration, error) {
-	var r *duration.Duration
-	err := jsonpb.UnmarshalString(val, r)
-	return r, err
-}
-=======
->>>>>>> Govendor update

@@ -8,11 +8,7 @@ import (
 	"strings"
 	"time"
 
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	"context"
-=======
 	"golang.org/x/net/context"
->>>>>>> Govendor update
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/grpclog"
 	"google.golang.org/grpc/metadata"
@@ -23,12 +19,7 @@ import (
 // parameters to or from a gRPC call.
 const MetadataHeaderPrefix = "Grpc-Metadata-"
 
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-// MetadataPrefix is prepended to permanent HTTP header keys (as specified
-// by the IANA) when added to the gRPC context.
-=======
 // MetadataPrefix is the prefix for grpc-gateway supplied custom metadata fields.
->>>>>>> Govendor update
 const MetadataPrefix = "grpcgateway-"
 
 // MetadataTrailerPrefix is prepended to gRPC metadata as it is converted to
@@ -89,11 +80,7 @@ func AnnotateContext(ctx context.Context, mux *ServeMux, req *http.Request) (con
 				pairs = append(pairs, strings.ToLower(xForwardedFor), fmt.Sprintf("%s, %s", fwd, remoteIP))
 			}
 		} else {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-			grpclog.Infof("invalid remote addr: %s", addr)
-=======
 			grpclog.Printf("invalid remote addr: %s", addr)
->>>>>>> Govendor update
 		}
 	}
 
@@ -104,13 +91,8 @@ func AnnotateContext(ctx context.Context, mux *ServeMux, req *http.Request) (con
 		return ctx, nil
 	}
 	md := metadata.Pairs(pairs...)
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	for _, mda := range mux.metadataAnnotators {
-		md = metadata.Join(md, mda(ctx, req))
-=======
 	if mux.metadataAnnotator != nil {
 		md = metadata.Join(md, mux.metadataAnnotator(ctx, req))
->>>>>>> Govendor update
 	}
 	return metadata.NewOutgoingContext(ctx, md), nil
 }

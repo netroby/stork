@@ -26,7 +26,6 @@ import (
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3manager"
 	"github.com/pkg/errors"
-	"github.com/sirupsen/logrus"
 
 	"github.com/heptio/ark/pkg/cloudprovider"
 )
@@ -35,18 +34,16 @@ const (
 	s3URLKey            = "s3Url"
 	kmsKeyIDKey         = "kmsKeyId"
 	s3ForcePathStyleKey = "s3ForcePathStyle"
-	bucketKey           = "bucket"
 )
 
 type objectStore struct {
-	log        logrus.FieldLogger
 	s3         *s3.S3
 	s3Uploader *s3manager.Uploader
 	kmsKeyID   string
 }
 
-func NewObjectStore(logger logrus.FieldLogger) cloudprovider.ObjectStore {
-	return &objectStore{log: logger}
+func NewObjectStore() cloudprovider.ObjectStore {
+	return &objectStore{}
 }
 
 func (o *objectStore) Init(config map[string]string) error {
@@ -55,30 +52,17 @@ func (o *objectStore) Init(config map[string]string) error {
 		s3URL               = config[s3URLKey]
 		kmsKeyID            = config[kmsKeyIDKey]
 		s3ForcePathStyleVal = config[s3ForcePathStyleKey]
-
-		// note that bucket is automatically added to the config map
-		// by the server from the ObjectStorageProviderConfig so
-		// doesn't need to be explicitly set by the user within
-		// config.
-		bucket           = config[bucketKey]
-		s3ForcePathStyle bool
-		err              error
+		s3ForcePathStyle    bool
+		err                 error
 	)
+
+	if region == "" {
+		return errors.Errorf("missing %s in aws configuration", regionKey)
+	}
 
 	if s3ForcePathStyleVal != "" {
 		if s3ForcePathStyle, err = strconv.ParseBool(s3ForcePathStyleVal); err != nil {
 			return errors.Wrapf(err, "could not parse %s (expected bool)", s3ForcePathStyleKey)
-		}
-	}
-
-	// AWS (not an alternate S3-compatible API) and region not
-	// explicitly specified: determine the bucket's region
-	if s3URL == "" && region == "" {
-		var err error
-
-		region, err = GetBucketRegion(bucket)
-		if err != nil {
-			return err
 		}
 	}
 
@@ -87,10 +71,6 @@ func (o *objectStore) Init(config map[string]string) error {
 		WithS3ForcePathStyle(s3ForcePathStyle)
 
 	if s3URL != "" {
-		if !IsValidS3URLScheme(s3URL) {
-			return errors.Errorf("Invalid s3Url: %s", s3URL)
-		}
-
 		awsConfig = awsConfig.WithEndpointResolver(
 			endpoints.ResolverFunc(func(service, region string, optFns ...func(*endpoints.Options)) (endpoints.ResolvedEndpoint, error) {
 				if service == endpoints.S3ServiceID {

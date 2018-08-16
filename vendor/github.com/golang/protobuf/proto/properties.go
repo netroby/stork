@@ -148,15 +148,9 @@ type Properties struct {
 	stype reflect.Type      // set for struct types only
 	sprop *StructProperties // set for struct types only
 
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	mtype    reflect.Type // set for map types only
-	mkeyprop *Properties  // set for map types only
-	mvalprop *Properties  // set for map types only
-=======
 	mtype      reflect.Type // set for map types only
 	MapKeyProp *Properties  // set for map types only
 	MapValProp *Properties  // set for map types only
->>>>>>> Govendor update
 }
 
 // String formats the properties in the protobuf struct field tag style.

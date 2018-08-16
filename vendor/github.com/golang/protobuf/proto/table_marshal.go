@@ -279,8 +279,6 @@ func (u *marshalInfo) marshal(b []byte, ptr pointer, deterministic bool) ([]byte
 			if err == errRepeatedHasNil {
 				err = errors.New("proto: repeated field " + f.name + " has nil element")
 			}
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 			if err == errInvalidUTF8 {
 				if errLater == nil {
 					fullName := revProtoTypes[reflect.PtrTo(u.typ)] + "." + f.name
@@ -288,7 +286,6 @@ func (u *marshalInfo) marshal(b []byte, ptr pointer, deterministic bool) ([]byte
 				}
 				continue
 			}
->>>>>>> Govendor update
 			return b, err
 		}
 	}
@@ -542,10 +539,7 @@ func typeMarshaler(t reflect.Type, tags []string, nozero, oneof bool) (sizer, ma
 
 	packed := false
 	proto3 := false
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 	validateUTF8 := true
->>>>>>> Govendor update
 	for i := 2; i < len(tags); i++ {
 		if tags[i] == "packed" {
 			packed = true
@@ -554,10 +548,7 @@ func typeMarshaler(t reflect.Type, tags []string, nozero, oneof bool) (sizer, ma
 			proto3 = true
 		}
 	}
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 	validateUTF8 = validateUTF8 && proto3
->>>>>>> Govendor update
 
 	switch t.Kind() {
 	case reflect.Bool:
@@ -755,8 +746,6 @@ func typeMarshaler(t reflect.Type, tags []string, nozero, oneof bool) (sizer, ma
 		}
 		return sizeFloat64Value, appendFloat64Value
 	case reflect.String:
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 		if validateUTF8 {
 			if pointer {
 				return sizeStringPtr, appendUTF8StringPtr
@@ -769,7 +758,6 @@ func typeMarshaler(t reflect.Type, tags []string, nozero, oneof bool) (sizer, ma
 			}
 			return sizeStringValue, appendUTF8StringValue
 		}
->>>>>>> Govendor update
 		if pointer {
 			return sizeStringPtr, appendStringPtr
 		}
@@ -2019,8 +2007,6 @@ func appendBoolPackedSlice(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byt
 }
 func appendStringValue(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byte, error) {
 	v := *ptr.toString()
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 	b = appendVarint(b, wiretag)
 	b = appendVarint(b, uint64(len(v)))
 	b = append(b, v...)
@@ -2059,7 +2045,6 @@ func appendStringSlice(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byte, e
 func appendUTF8StringValue(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byte, error) {
 	var invalidUTF8 bool
 	v := *ptr.toString()
->>>>>>> Govendor update
 	if !utf8.ValidString(v) {
 		invalidUTF8 = true
 	}
@@ -2071,15 +2056,8 @@ func appendUTF8StringValue(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byt
 	}
 	return b, nil
 }
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-func appendStringValueNoZero(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byte, error) {
-=======
 func appendUTF8StringValueNoZero(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byte, error) {
-<<<<<<< 4d179741979ddb6489666669565a9139528df35b
->>>>>>> Govendor update
-=======
 	var invalidUTF8 bool
->>>>>>> make vendor update
 	v := *ptr.toString()
 	if v == "" {
 		return b, nil
@@ -2095,15 +2073,8 @@ func appendUTF8StringValueNoZero(b []byte, ptr pointer, wiretag uint64, _ bool) 
 	}
 	return b, nil
 }
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-func appendStringPtr(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byte, error) {
-=======
 func appendUTF8StringPtr(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byte, error) {
-<<<<<<< 4d179741979ddb6489666669565a9139528df35b
->>>>>>> Govendor update
-=======
 	var invalidUTF8 bool
->>>>>>> make vendor update
 	p := *ptr.toStringPtr()
 	if p == nil {
 		return b, nil
@@ -2120,15 +2091,8 @@ func appendUTF8StringPtr(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byte,
 	}
 	return b, nil
 }
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-func appendStringSlice(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byte, error) {
-=======
 func appendUTF8StringSlice(b []byte, ptr pointer, wiretag uint64, _ bool) ([]byte, error) {
-<<<<<<< 4d179741979ddb6489666669565a9139528df35b
->>>>>>> Govendor update
-=======
 	var invalidUTF8 bool
->>>>>>> make vendor update
 	s := *ptr.toStringSlice()
 	for _, v := range s {
 		if !utf8.ValidString(v) {
@@ -2321,8 +2285,6 @@ func makeMapMarshaler(f *reflect.StructField) (sizer, marshaler) {
 	// value.
 	// Key cannot be pointer-typed.
 	valIsPtr := valType.Kind() == reflect.Ptr
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 
 	// If value is a message with nested maps, calling
 	// valSizer in marshal may be quadratic. We should use
@@ -2342,7 +2304,6 @@ func makeMapMarshaler(f *reflect.StructField) (sizer, marshaler) {
 			return siz + SizeVarint(uint64(siz)) + tagsize
 		}
 	}
->>>>>>> Govendor update
 	return func(ptr pointer, tagsize int) int {
 			m := ptr.asPointerTo(t).Elem() // the map
 			n := 0
@@ -2371,11 +2332,7 @@ func makeMapMarshaler(f *reflect.StructField) (sizer, marshaler) {
 				kaddr := toAddrPointer(&ki, false)    // pointer to key
 				vaddr := toAddrPointer(&vi, valIsPtr) // pointer to value
 				b = appendVarint(b, tag)
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-				siz := keySizer(kaddr, 1) + valSizer(vaddr, 1) // tag of key = 1 (size=1), tag of val = 2 (size=1)
-=======
 				siz := keySizer(kaddr, 1) + valCachedSizer(vaddr, 1) // tag of key = 1 (size=1), tag of val = 2 (size=1)
->>>>>>> Govendor update
 				b = appendVarint(b, uint64(siz))
 				b, err = keyMarshaler(b, kaddr, keyWireTag, deterministic)
 				if !nerr.Merge(err) {
@@ -2770,17 +2727,6 @@ func Marshal(pb Message) ([]byte, error) {
 // a Buffer for most applications.
 func (p *Buffer) Marshal(pb Message) error {
 	var err error
-<<<<<<< 4d179741979ddb6489666669565a9139528df35b
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
-	if p.deterministic {
-		if _, ok := pb.(Marshaler); ok {
-			return fmt.Errorf("proto: deterministic not supported by the Marshal method of %T", pb)
-		}
-	}
->>>>>>> Govendor update
-=======
->>>>>>> make vendor update
 	if m, ok := pb.(newMarshaler); ok {
 		siz := m.XXX_Size()
 		p.grow(siz) // make sure buf has enough capacity

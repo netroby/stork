@@ -97,11 +97,8 @@ type unmarshalFieldInfo struct {
 
 	// if a required field, contains a single set bit at this field's index in the required field list.
 	reqMask uint64
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 
 	name string // name of the field, for error reporting
->>>>>>> Govendor update
 }
 
 var (
@@ -188,8 +185,6 @@ func (u *unmarshalInfo) unmarshal(m pointer, b []byte) error {
 				continue
 			}
 			if err != errInternalBadWireType {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 				if err == errInvalidUTF8 {
 					if errLater == nil {
 						fullName := revProtoTypes[reflect.PtrTo(u.typ)] + "." + f.name
@@ -197,7 +192,6 @@ func (u *unmarshalInfo) unmarshal(m pointer, b []byte) error {
 					}
 					continue
 				}
->>>>>>> Govendor update
 				return err
 			}
 			// Fragments with bad wire type are treated as unknown fields.
@@ -364,11 +358,7 @@ func (u *unmarshalInfo) computeUnmarshalInfo() {
 		}
 
 		// Store the info in the correct slot in the message.
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		u.setTag(tag, toField(&f), unmarshal, reqMask)
-=======
 		u.setTag(tag, toField(&f), unmarshal, reqMask, name)
->>>>>>> Govendor update
 	}
 
 	// Find any types associated with oneof fields.
@@ -383,12 +373,6 @@ func (u *unmarshalInfo) computeUnmarshalInfo() {
 
 			f := typ.Field(0) // oneof implementers have one field
 			baseUnmarshal := fieldUnmarshaler(&f)
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-			tagstr := strings.Split(f.Tag.Get("protobuf"), ",")[1]
-			tag, err := strconv.Atoi(tagstr)
-			if err != nil {
-				panic("protobuf tag field not an integer: " + tagstr)
-=======
 			tags := strings.Split(f.Tag.Get("protobuf"), ",")
 			fieldNum, err := strconv.Atoi(tags[1])
 			if err != nil {
@@ -400,7 +384,6 @@ func (u *unmarshalInfo) computeUnmarshalInfo() {
 					name = strings.TrimPrefix(tag, "name=")
 					break
 				}
->>>>>>> Govendor update
 			}
 
 			// Find the oneof field that this struct implements.
@@ -411,11 +394,7 @@ func (u *unmarshalInfo) computeUnmarshalInfo() {
 					// That lets us know where this struct should be stored
 					// when we encounter it during unmarshaling.
 					unmarshal := makeUnmarshalOneof(typ, of.ityp, baseUnmarshal)
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-					u.setTag(tag, of.field, unmarshal, 0)
-=======
 					u.setTag(fieldNum, of.field, unmarshal, 0, name)
->>>>>>> Govendor update
 				}
 			}
 		}
@@ -436,11 +415,7 @@ func (u *unmarshalInfo) computeUnmarshalInfo() {
 	// [0 0] is [tag=0/wiretype=varint varint-encoded-0].
 	u.setTag(0, zeroField, func(b []byte, f pointer, w int) ([]byte, error) {
 		return nil, fmt.Errorf("proto: %s: illegal tag 0 (wire type %d)", t, w)
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	}, 0)
-=======
 	}, 0, "")
->>>>>>> Govendor update
 
 	// Set mask for required field check.
 	u.reqMask = uint64(1)<<uint(len(u.reqFields)) - 1
@@ -452,14 +427,9 @@ func (u *unmarshalInfo) computeUnmarshalInfo() {
 // tag = tag # for field
 // field/unmarshal = unmarshal info for that field.
 // reqMask = if required, bitmask for field position in required field list. 0 otherwise.
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-func (u *unmarshalInfo) setTag(tag int, field field, unmarshal unmarshaler, reqMask uint64) {
-	i := unmarshalFieldInfo{field: field, unmarshal: unmarshal, reqMask: reqMask}
-=======
 // name = short name of the field.
 func (u *unmarshalInfo) setTag(tag int, field field, unmarshal unmarshaler, reqMask uint64, name string) {
 	i := unmarshalFieldInfo{field: field, unmarshal: unmarshal, reqMask: reqMask, name: name}
->>>>>>> Govendor update
 	n := u.typ.NumField()
 	if tag >= 0 && (tag < 16 || tag < 2*n) { // TODO: what are the right numbers here?
 		for len(u.dense) <= tag {
@@ -487,24 +457,17 @@ func typeUnmarshaler(t reflect.Type, tags string) unmarshaler {
 	tagArray := strings.Split(tags, ",")
 	encoding := tagArray[0]
 	name := "unknown"
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 	proto3 := false
 	validateUTF8 := true
->>>>>>> Govendor update
 	for _, tag := range tagArray[3:] {
 		if strings.HasPrefix(tag, "name=") {
 			name = tag[5:]
 		}
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	}
-=======
 		if tag == "proto3" {
 			proto3 = true
 		}
 	}
 	validateUTF8 = validateUTF8 && proto3
->>>>>>> Govendor update
 
 	// Figure out packaging (pointer, slice, or both)
 	slice := false
@@ -652,8 +615,6 @@ func typeUnmarshaler(t reflect.Type, tags string) unmarshaler {
 		}
 		return unmarshalBytesValue
 	case reflect.String:
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 		if validateUTF8 {
 			if pointer {
 				return unmarshalUTF8StringPtr
@@ -663,7 +624,6 @@ func typeUnmarshaler(t reflect.Type, tags string) unmarshaler {
 			}
 			return unmarshalUTF8StringValue
 		}
->>>>>>> Govendor update
 		if pointer {
 			return unmarshalStringPtr
 		}
@@ -1518,8 +1478,6 @@ func unmarshalStringValue(b []byte, f pointer, w int) ([]byte, error) {
 		return nil, io.ErrUnexpectedEOF
 	}
 	v := string(b[:x])
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 	*f.toString() = v
 	return b[x:], nil
 }
@@ -1572,22 +1530,14 @@ func unmarshalUTF8StringValue(b []byte, f pointer, w int) ([]byte, error) {
 		return nil, io.ErrUnexpectedEOF
 	}
 	v := string(b[:x])
-<<<<<<< 4d179741979ddb6489666669565a9139528df35b
->>>>>>> Govendor update
-=======
 	*f.toString() = v
->>>>>>> make vendor update
 	if !utf8.ValidString(v) {
 		return b[x:], errInvalidUTF8
 	}
 	return b[x:], nil
 }
 
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-func unmarshalStringPtr(b []byte, f pointer, w int) ([]byte, error) {
-=======
 func unmarshalUTF8StringPtr(b []byte, f pointer, w int) ([]byte, error) {
->>>>>>> Govendor update
 	if w != WireBytes {
 		return b, errInternalBadWireType
 	}
@@ -1607,11 +1557,7 @@ func unmarshalUTF8StringPtr(b []byte, f pointer, w int) ([]byte, error) {
 	return b[x:], nil
 }
 
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-func unmarshalStringSlice(b []byte, f pointer, w int) ([]byte, error) {
-=======
 func unmarshalUTF8StringSlice(b []byte, f pointer, w int) ([]byte, error) {
->>>>>>> Govendor update
 	if w != WireBytes {
 		return b, errInternalBadWireType
 	}

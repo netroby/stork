@@ -14,12 +14,6 @@ import (
 // JSONPb is a Marshaler which marshals/unmarshals into/from JSON
 // with the "github.com/golang/protobuf/jsonpb".
 // It supports fully functionality of protobuf unlike JSONBuiltin.
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-//
-// The NewDecoder method returns a DecoderWrapper, so the underlying
-// *json.Decoder methods can be used.
-=======
->>>>>>> Govendor update
 type JSONPb jsonpb.Marshaler
 
 // ContentType always returns "application/json".
@@ -27,13 +21,9 @@ func (*JSONPb) ContentType() string {
 	return "application/json"
 }
 
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-// Marshal marshals "v" into JSON.
-=======
 // Marshal marshals "v" into JSON
 // Currently it can marshal only proto.Message.
 // TODO(yugui) Support fields of primitive types in a message.
->>>>>>> Govendor update
 func (j *JSONPb) Marshal(v interface{}) ([]byte, error) {
 	if _, ok := v.(proto.Message); !ok {
 		return j.marshalNonProtoField(v)
@@ -60,21 +50,11 @@ func (j *JSONPb) marshalTo(w io.Writer, v interface{}) error {
 }
 
 // marshalNonProto marshals a non-message field of a protobuf message.
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-// This function does not correctly marshals arbitrary data structure into JSON,
-=======
 // This function does not correctly marshals arbitary data structure into JSON,
->>>>>>> Govendor update
 // but it is only capable of marshaling non-message field values of protobuf,
 // i.e. primitive types, enums; pointers to primitives or enums; maps from
 // integer/string types to primitives/enums/pointers to messages.
 func (j *JSONPb) marshalNonProtoField(v interface{}) ([]byte, error) {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	if v == nil {
-		return []byte("null"), nil
-	}
-=======
->>>>>>> Govendor update
 	rv := reflect.ValueOf(v)
 	for rv.Kind() == reflect.Ptr {
 		if rv.IsNil() {
@@ -104,11 +84,8 @@ func (j *JSONPb) marshalNonProtoField(v interface{}) ([]byte, error) {
 }
 
 // Unmarshal unmarshals JSON "data" into "v"
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
 // Currently it can marshal only proto.Message.
 // TODO(yugui) Support fields of primitive types in a message.
->>>>>>> Govendor update
 func (j *JSONPb) Unmarshal(data []byte, v interface{}) error {
 	return unmarshalJSONPb(data, v)
 }
@@ -116,23 +93,7 @@ func (j *JSONPb) Unmarshal(data []byte, v interface{}) error {
 // NewDecoder returns a Decoder which reads JSON stream from "r".
 func (j *JSONPb) NewDecoder(r io.Reader) Decoder {
 	d := json.NewDecoder(r)
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	return DecoderWrapper{Decoder: d}
-}
-
-// DecoderWrapper is a wrapper around a *json.Decoder that adds
-// support for protos to the Decode method.
-type DecoderWrapper struct {
-	*json.Decoder
-}
-
-// Decode wraps the embedded decoder's Decode method to support
-// protos using a jsonpb.Unmarshaler.
-func (d DecoderWrapper) Decode(v interface{}) error {
-	return decodeJSONPb(d.Decoder, v)
-=======
 	return DecoderFunc(func(v interface{}) error { return decodeJSONPb(d, v) })
->>>>>>> Govendor update
 }
 
 // NewEncoder returns an Encoder which writes JSON stream into "w".
@@ -221,11 +182,3 @@ type protoEnum interface {
 }
 
 var typeProtoMessage = reflect.TypeOf((*proto.Message)(nil)).Elem()
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-
-// Delimiter for newline encoded JSON streams.
-func (j *JSONPb) Delimiter() []byte {
-	return []byte("\n")
-}
-=======
->>>>>>> Govendor update

@@ -21,11 +21,12 @@ import (
 
 	"github.com/pkg/errors"
 
-	corev1api "k8s.io/api/core/v1"
+	"k8s.io/api/core/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	corev1client "k8s.io/client-go/kubernetes/typed/core/v1"
-	corev1listers "k8s.io/client-go/listers/core/v1"
+	"k8s.io/client-go/discovery"
+	corev1 "k8s.io/client-go/kubernetes/typed/core/v1"
+	"k8s.io/kubernetes/pkg/util/version"
 )
 
 // NamespaceAndName returns a string in the format <namespace>/<name>
@@ -40,7 +41,7 @@ func NamespaceAndName(objMeta metav1.Object) string {
 // a bool indicating whether or not the namespace was created, and an error if the create failed
 // for a reason other than that the namespace already exists. Note that in the case where the
 // namespace already exists, this function will return (false, nil).
-func EnsureNamespaceExists(namespace *corev1api.Namespace, client corev1client.NamespaceInterface) (bool, error) {
+func EnsureNamespaceExists(namespace *v1.Namespace, client corev1.NamespaceInterface) (bool, error) {
 	if _, err := client.Create(namespace); err == nil {
 		return true, nil
 	} else if apierrors.IsAlreadyExists(err) {
@@ -50,30 +51,16 @@ func EnsureNamespaceExists(namespace *corev1api.Namespace, client corev1client.N
 	}
 }
 
-// GetVolumeDirectory gets the name of the directory on the host, under /var/lib/kubelet/pods/<podUID>/volumes/,
-// where the specified volume lives.
-func GetVolumeDirectory(pod *corev1api.Pod, volumeName string, pvcLister corev1listers.PersistentVolumeClaimLister) (string, error) {
-	var volume *corev1api.Volume
-
-	for _, item := range pod.Spec.Volumes {
-		if item.Name == volumeName {
-			volume = &item
-			break
-		}
-	}
-
-	if volume == nil {
-		return "", errors.New("volume not found in pod")
-	}
-
-	if volume.VolumeSource.PersistentVolumeClaim == nil {
-		return volume.Name, nil
-	}
-
-	pvc, err := pvcLister.PersistentVolumeClaims(pod.Namespace).Get(volume.VolumeSource.PersistentVolumeClaim.ClaimName)
+func ServerVersion(client discovery.DiscoveryInterface) (*version.Version, error) {
+	versionInfo, err := client.ServerVersion()
 	if err != nil {
-		return "", errors.WithStack(err)
+		return nil, errors.Wrap(err, "error getting server version")
 	}
 
-	return pvc.Spec.VolumeName, nil
+	semVer, err := version.ParseSemantic(versionInfo.String())
+	if err != nil {
+		return nil, errors.Wrap(err, "error parsing server version")
+	}
+
+	return semVer, err
 }

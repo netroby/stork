@@ -2,11 +2,6 @@ syntax = "proto3";
 package grpc.gateway.runtime;
 option go_package = "internal";
 
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-import "google/protobuf/any.proto";
-
-=======
->>>>>>> Govendor update
 // StreamError is a response type which is returned when
 // streaming rpc returns an error.
 message StreamError {
@@ -14,8 +9,4 @@ message StreamError {
 	int32 http_code = 2;
 	string message = 3;
 	string http_status = 4;
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	repeated google.protobuf.Any details = 5;
-=======
->>>>>>> Govendor update
 }

@@ -28,10 +28,6 @@ var _ status.Status
 var _ = runtime.String
 var _ = utilities.NewDoubleArray
 
-<<<<<<< 4d179741979ddb6489666669565a9139528df35b
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
->>>>>>> make vendor update
 func request_OpenStorageIdentity_Capabilities_0(ctx context.Context, marshaler runtime.Marshaler, client OpenStorageIdentityClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq SdkIdentityCapabilitiesRequest
 	var metadata runtime.ServerMetadata
@@ -50,11 +46,6 @@ func request_OpenStorageIdentity_Version_0(ctx context.Context, marshaler runtim
 
 }
 
-<<<<<<< 4d179741979ddb6489666669565a9139528df35b
-=======
->>>>>>> Govendor update
-=======
->>>>>>> make vendor update
 func request_OpenStorageCluster_InspectCurrent_0(ctx context.Context, marshaler runtime.Marshaler, client OpenStorageClusterClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq SdkClusterInspectCurrentRequest
 	var metadata runtime.ServerMetadata
@@ -972,10 +963,6 @@ func request_OpenStorageCloudBackup_SchedEnumerate_0(ctx context.Context, marsha
 
 }
 
-<<<<<<< 4d179741979ddb6489666669565a9139528df35b
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-=======
->>>>>>> make vendor update
 // RegisterOpenStorageIdentityHandlerFromEndpoint is same as RegisterOpenStorageIdentityHandler but
 // automatically dials to "endpoint" and closes the connection when "ctx" gets done.
 func RegisterOpenStorageIdentityHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
@@ -1087,11 +1074,6 @@ var (
 	forward_OpenStorageIdentity_Version_0 = runtime.ForwardResponseMessage
 )
 
-<<<<<<< 4d179741979ddb6489666669565a9139528df35b
-=======
->>>>>>> Govendor update
-=======
->>>>>>> make vendor update
 // RegisterOpenStorageClusterHandlerFromEndpoint is same as RegisterOpenStorageClusterHandler but
 // automatically dials to "endpoint" and closes the connection when "ctx" gets done.
 func RegisterOpenStorageClusterHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {

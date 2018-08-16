@@ -20,11 +20,9 @@ import (
 	"regexp"
 
 	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/pkg/errors"
-	"github.com/sirupsen/logrus"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/sets"
@@ -41,7 +39,6 @@ const regionKey = "region"
 var iopsVolumeTypes = sets.NewString("io1")
 
 type blockStore struct {
-	log logrus.FieldLogger
 	ec2 *ec2.EC2
 }
 
@@ -58,8 +55,8 @@ func getSession(config *aws.Config) (*session.Session, error) {
 	return sess, nil
 }
 
-func NewBlockStore(logger logrus.FieldLogger) cloudprovider.BlockStore {
-	return &blockStore{log: logger}
+func NewBlockStore() cloudprovider.BlockStore {
+	return &blockStore{}
 }
 
 func (b *blockStore) Init(config map[string]string) error {
@@ -141,6 +138,15 @@ func (b *blockStore) GetVolumeInfo(volumeID, volumeAZ string) (string, *int64, e
 	return volumeType, iops, nil
 }
 
+func (b *blockStore) IsVolumeReady(volumeID, volumeAZ string) (ready bool, err error) {
+	volumeInfo, err := b.describeVolume(volumeID)
+	if err != nil {
+		return false, err
+	}
+
+	return *volumeInfo.State == ec2.VolumeStateAvailable, nil
+}
+
 func (b *blockStore) describeVolume(volumeID string) (*ec2.Volume, error) {
 	req := &ec2.DescribeVolumesInput{
 		VolumeIds: []*string{&volumeID},
@@ -213,17 +219,7 @@ func (b *blockStore) DeleteSnapshot(snapshotID string) error {
 
 	_, err := b.ec2.DeleteSnapshot(req)
 
-	// if it's a NotFound error, we don't need to return an error
-	// since the snapshot is not there.
-	// see https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html
-	if awsErr, ok := err.(awserr.Error); ok && awsErr.Code() == "InvalidSnapshot.NotFound" {
-		return nil
-	}
-	if err != nil {
-		return errors.WithStack(err)
-	}
-
-	return nil
+	return errors.WithStack(err)
 }
 
 var ebsVolumeIDRegex = regexp.MustCompile("vol-.*")

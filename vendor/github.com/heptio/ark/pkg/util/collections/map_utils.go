@@ -123,13 +123,13 @@ func Exists(root map[string]interface{}, path string) bool {
 	return err == nil
 }
 
-// MergeMaps takes two map[string]string and merges missing keys from the second into the first.
-// If a key already exists, its value is not overwritten.
-func MergeMaps(first, second map[string]string) {
-	for k, v := range second {
-		_, ok := first[k]
-		if !ok {
-			first[k] = v
-		}
+// HasKeyAndVal returns true if root[path] exists and the value
+// contained is equal to val, or false otherwise.
+func HasKeyAndVal(root map[string]interface{}, path string, val interface{}) bool {
+	valObj, err := GetValue(root, path)
+	if err != nil {
+		return false
 	}
+
+	return valObj == val
 }

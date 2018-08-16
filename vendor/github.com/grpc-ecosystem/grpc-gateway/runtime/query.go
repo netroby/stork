@@ -1,17 +1,9 @@
 package runtime
 
 import (
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	"encoding/base64"
 	"fmt"
 	"net/url"
 	"reflect"
-	"regexp"
-=======
-	"fmt"
-	"net/url"
-	"reflect"
->>>>>>> Govendor update
 	"strconv"
 	"strings"
 	"time"
@@ -25,18 +17,6 @@ import (
 // A value is ignored if its key starts with one of the elements in "filter".
 func PopulateQueryParameters(msg proto.Message, values url.Values, filter *utilities.DoubleArray) error {
 	for key, values := range values {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		re, err := regexp.Compile("^(.*)\\[(.*)\\]$")
-		if err != nil {
-			return err
-		}
-		match := re.FindStringSubmatch(key)
-		if len(match) == 3 {
-			key = match[1]
-			values = append([]string{match[2]}, values...)
-		}
-=======
->>>>>>> Govendor update
 		fieldPath := strings.Split(key, ".")
 		if filter.HasCommonPrefix(fieldPath) {
 			continue
@@ -73,11 +53,7 @@ func populateFieldValueFromPath(msg proto.Message, fieldPath []string, values []
 		if err != nil {
 			return err
 		} else if !f.IsValid() {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-			grpclog.Infof("field not found in %T: %s", msg, strings.Join(fieldPath, "."))
-=======
 			grpclog.Printf("field not found in %T: %s", msg, strings.Join(fieldPath, "."))
->>>>>>> Govendor update
 			return nil
 		}
 
@@ -88,21 +64,10 @@ func populateFieldValueFromPath(msg proto.Message, fieldPath []string, values []
 			}
 			m = f
 		case reflect.Slice:
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-			if !isLast {
-				return fmt.Errorf("unexpected repeated field in %s", strings.Join(fieldPath, "."))
-			}
-			// Handle []byte
-			if f.Type().Elem().Kind() == reflect.Uint8 {
-				m = f
-				break
-			}
-=======
 			// TODO(yugui) Support []byte
 			if !isLast {
 				return fmt.Errorf("unexpected repeated field in %s", strings.Join(fieldPath, "."))
 			}
->>>>>>> Govendor update
 			return populateRepeatedField(f, values, props)
 		case reflect.Ptr:
 			if f.IsNil() {
@@ -114,14 +79,6 @@ func populateFieldValueFromPath(msg proto.Message, fieldPath []string, values []
 		case reflect.Struct:
 			m = f
 			continue
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		case reflect.Map:
-			if !isLast {
-				return fmt.Errorf("unexpected nested field %s in %s", fieldPath[i+1], strings.Join(fieldPath[:i+1], "."))
-			}
-			return populateMapField(f, values, props)
-=======
->>>>>>> Govendor update
 		default:
 			return fmt.Errorf("unexpected type %s in %T", f.Type(), msg)
 		}
@@ -131,11 +88,7 @@ func populateFieldValueFromPath(msg proto.Message, fieldPath []string, values []
 		return fmt.Errorf("no value of field: %s", strings.Join(fieldPath, "."))
 	case 1:
 	default:
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		grpclog.Infof("too many field values: %s", strings.Join(fieldPath, "."))
-=======
 		grpclog.Printf("too many field values: %s", strings.Join(fieldPath, "."))
->>>>>>> Govendor update
 	}
 	return populateField(m, values[0], props)
 }
@@ -160,54 +113,10 @@ func fieldByProtoName(m reflect.Value, name string) (reflect.Value, *proto.Prope
 		if p.OrigName == name {
 			return m.FieldByName(p.Name), p, nil
 		}
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		if p.JSONName == name {
-			return m.FieldByName(p.Name), p, nil
-		}
-=======
->>>>>>> Govendor update
 	}
 	return reflect.Value{}, nil, nil
 }
 
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-func populateMapField(f reflect.Value, values []string, props *proto.Properties) error {
-	if len(values) != 2 {
-		return fmt.Errorf("more than one value provided for key %s in map %s", values[0], props.Name)
-	}
-
-	key, value := values[0], values[1]
-	keyType := f.Type().Key()
-	valueType := f.Type().Elem()
-	if f.IsNil() {
-		f.Set(reflect.MakeMap(f.Type()))
-	}
-
-	keyConv, ok := convFromType[keyType.Kind()]
-	if !ok {
-		return fmt.Errorf("unsupported key type %s in map %s", keyType, props.Name)
-	}
-	valueConv, ok := convFromType[valueType.Kind()]
-	if !ok {
-		return fmt.Errorf("unsupported value type %s in map %s", valueType, props.Name)
-	}
-
-	keyV := keyConv.Call([]reflect.Value{reflect.ValueOf(key)})
-	if err := keyV[1].Interface(); err != nil {
-		return err.(error)
-	}
-	valueV := valueConv.Call([]reflect.Value{reflect.ValueOf(value)})
-	if err := valueV[1].Interface(); err != nil {
-		return err.(error)
-	}
-
-	f.SetMapIndex(keyV[0].Convert(keyType), valueV[0].Convert(valueType))
-
-	return nil
-}
-
-=======
->>>>>>> Govendor update
 func populateRepeatedField(f reflect.Value, values []string, props *proto.Properties) error {
 	elemType := f.Type().Elem()
 
@@ -232,21 +141,11 @@ func populateRepeatedField(f reflect.Value, values []string, props *proto.Proper
 }
 
 func populateField(f reflect.Value, value string, props *proto.Properties) error {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-	i := f.Addr().Interface()
-
-	// Handle protobuf well known types
-	type wkt interface {
-		XXX_WellKnownType() string
-	}
-	if wkt, ok := i.(wkt); ok {
-=======
 	// Handle well known type
 	type wkt interface {
 		XXX_WellKnownType() string
 	}
 	if wkt, ok := f.Addr().Interface().(wkt); ok {
->>>>>>> Govendor update
 		switch wkt.XXX_WellKnownType() {
 		case "Timestamp":
 			if value == "null" {
@@ -262,106 +161,7 @@ func populateField(f reflect.Value, value string, props *proto.Properties) error
 			f.Field(0).SetInt(int64(t.Unix()))
 			f.Field(1).SetInt(int64(t.Nanosecond()))
 			return nil
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		case "Duration":
-			if value == "null" {
-				f.Field(0).SetInt(0)
-				f.Field(1).SetInt(0)
-				return nil
-			}
-			d, err := time.ParseDuration(value)
-			if err != nil {
-				return fmt.Errorf("bad Duration: %v", err)
-			}
-
-			ns := d.Nanoseconds()
-			s := ns / 1e9
-			ns %= 1e9
-			f.Field(0).SetInt(s)
-			f.Field(1).SetInt(ns)
-			return nil
-		case "DoubleValue":
-			fallthrough
-		case "FloatValue":
-			float64Val, err := strconv.ParseFloat(value, 64)
-			if err != nil {
-				return fmt.Errorf("bad DoubleValue: %s", value)
-			}
-			f.Field(0).SetFloat(float64Val)
-			return nil
-		case "Int64Value":
-			fallthrough
-		case "Int32Value":
-			int64Val, err := strconv.ParseInt(value, 10, 64)
-			if err != nil {
-				return fmt.Errorf("bad DoubleValue: %s", value)
-			}
-			f.Field(0).SetInt(int64Val)
-			return nil
-		case "UInt64Value":
-			fallthrough
-		case "UInt32Value":
-			uint64Val, err := strconv.ParseUint(value, 10, 64)
-			if err != nil {
-				return fmt.Errorf("bad DoubleValue: %s", value)
-			}
-			f.Field(0).SetUint(uint64Val)
-			return nil
-		case "BoolValue":
-			if value == "true" {
-				f.Field(0).SetBool(true)
-			} else if value == "false" {
-				f.Field(0).SetBool(false)
-			} else {
-				return fmt.Errorf("bad BoolValue: %s", value)
-			}
-			return nil
-		case "StringValue":
-			f.Field(0).SetString(value)
-			return nil
-		case "BytesValue":
-			bytesVal, err := base64.StdEncoding.DecodeString(value)
-			if err != nil {
-				return fmt.Errorf("bad BytesValue: %s", value)
-			}
-			f.Field(0).SetBytes(bytesVal)
-			return nil
 		}
-	}
-
-	// Handle google well known types
-	if gwkt, ok := i.(proto.Message); ok {
-		switch proto.MessageName(gwkt) {
-		case "google.protobuf.FieldMask":
-			p := f.Field(0)
-			for _, v := range strings.Split(value, ",") {
-				if v != "" {
-					p.Set(reflect.Append(p, reflect.ValueOf(v)))
-				}
-			}
-			return nil
-		}
-	}
-
-	// Handle Time and Duration stdlib types
-	switch t := i.(type) {
-	case *time.Time:
-		pt, err := time.Parse(time.RFC3339Nano, value)
-		if err != nil {
-			return fmt.Errorf("bad Timestamp: %v", err)
-		}
-		*t = pt
-		return nil
-	case *time.Duration:
-		d, err := time.ParseDuration(value)
-		if err != nil {
-			return fmt.Errorf("bad Duration: %v", err)
-		}
-		*t = d
-		return nil
-=======
-		}
->>>>>>> Govendor update
 	}
 
 	// is the destination field an enumeration type?
@@ -371,11 +171,7 @@ func populateField(f reflect.Value, value string, props *proto.Properties) error
 
 	conv, ok := convFromType[f.Kind()]
 	if !ok {
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		return fmt.Errorf("field type %T is not supported in query parameters", i)
-=======
 		return fmt.Errorf("unsupported field type %T", f)
->>>>>>> Govendor update
 	}
 	result := conv.Call([]reflect.Value{reflect.ValueOf(value)})
 	if err := result[1].Interface(); err != nil {
@@ -436,10 +232,6 @@ var (
 		reflect.Int32:   reflect.ValueOf(Int32),
 		reflect.Uint64:  reflect.ValueOf(Uint64),
 		reflect.Uint32:  reflect.ValueOf(Uint32),
-<<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
-		reflect.Slice:   reflect.ValueOf(Bytes),
-=======
 		// TODO(yugui) Support []byte
->>>>>>> Govendor update
 	}
 )
