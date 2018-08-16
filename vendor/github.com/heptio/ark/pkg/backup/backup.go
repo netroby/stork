@@ -19,8 +19,10 @@ package backup
 import (
 	"archive/tar"
 	"compress/gzip"
+	"context"
 	"fmt"
 	"io"
+	"time"
 
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
@@ -34,25 +36,28 @@ import (
 	"github.com/heptio/ark/pkg/client"
 	"github.com/heptio/ark/pkg/cloudprovider"
 	"github.com/heptio/ark/pkg/discovery"
+	"github.com/heptio/ark/pkg/podexec"
+	"github.com/heptio/ark/pkg/restic"
 	"github.com/heptio/ark/pkg/util/collections"
 	kubeutil "github.com/heptio/ark/pkg/util/kube"
-	"github.com/heptio/ark/pkg/util/logging"
 )
 
 // Backupper performs backups.
 type Backupper interface {
 	// Backup takes a backup using the specification in the api.Backup and writes backup and log data
 	// to the given writers.
-	Backup(backup *api.Backup, backupFile, logFile io.Writer, actions []ItemAction) error
+	Backup(logger logrus.FieldLogger, backup *api.Backup, backupFile io.Writer, actions []ItemAction) error
 }
 
 // kubernetesBackupper implements Backupper.
 type kubernetesBackupper struct {
-	dynamicFactory        client.DynamicFactory
-	discoveryHelper       discovery.Helper
-	podCommandExecutor    podCommandExecutor
-	groupBackupperFactory groupBackupperFactory
-	snapshotService       cloudprovider.SnapshotService
+	dynamicFactory         client.DynamicFactory
+	discoveryHelper        discovery.Helper
+	podCommandExecutor     podexec.PodCommandExecutor
+	groupBackupperFactory  groupBackupperFactory
+	blockStore             cloudprovider.BlockStore
+	resticBackupperFactory restic.BackupperFactory
+	resticTimeout          time.Duration
 }
 
 type itemKey struct {
@@ -73,19 +78,33 @@ func (i *itemKey) String() string {
 	return fmt.Sprintf("resource=%s,namespace=%s,name=%s", i.resource, i.namespace, i.name)
 }
 
+func cohabitatingResources() map[string]*cohabitatingResource {
+	return map[string]*cohabitatingResource{
+		"deployments":     newCohabitatingResource("deployments", "extensions", "apps"),
+		"daemonsets":      newCohabitatingResource("daemonsets", "extensions", "apps"),
+		"replicasets":     newCohabitatingResource("replicasets", "extensions", "apps"),
+		"networkpolicies": newCohabitatingResource("networkpolicies", "extensions", "networking.k8s.io"),
+		"events":          newCohabitatingResource("events", "", "events.k8s.io"),
+	}
+}
+
 // NewKubernetesBackupper creates a new kubernetesBackupper.
 func NewKubernetesBackupper(
 	discoveryHelper discovery.Helper,
 	dynamicFactory client.DynamicFactory,
-	podCommandExecutor podCommandExecutor,
-	snapshotService cloudprovider.SnapshotService,
+	podCommandExecutor podexec.PodCommandExecutor,
+	blockStore cloudprovider.BlockStore,
+	resticBackupperFactory restic.BackupperFactory,
+	resticTimeout time.Duration,
 ) (Backupper, error) {
 	return &kubernetesBackupper{
-		discoveryHelper:       discoveryHelper,
-		dynamicFactory:        dynamicFactory,
-		podCommandExecutor:    podCommandExecutor,
-		groupBackupperFactory: &defaultGroupBackupperFactory{},
-		snapshotService:       snapshotService,
+		discoveryHelper:        discoveryHelper,
+		dynamicFactory:         dynamicFactory,
+		podCommandExecutor:     podCommandExecutor,
+		groupBackupperFactory:  &defaultGroupBackupperFactory{},
+		blockStore:             blockStore,
+		resticBackupperFactory: resticBackupperFactory,
+		resticTimeout:          resticTimeout,
 	}, nil
 }
 
@@ -192,20 +211,13 @@ func getResourceHook(hookSpec api.BackupResourceHookSpec, discoveryHelper discov
 
 // Backup backs up the items specified in the Backup, placing them in a gzip-compressed tar file
 // written to backupFile. The finalized api.Backup is written to metadata.
-func (kb *kubernetesBackupper) Backup(backup *api.Backup, backupFile, logFile io.Writer, actions []ItemAction) error {
+func (kb *kubernetesBackupper) Backup(logger logrus.FieldLogger, backup *api.Backup, backupFile io.Writer, actions []ItemAction) error {
 	gzippedData := gzip.NewWriter(backupFile)
 	defer gzippedData.Close()
 
 	tw := tar.NewWriter(gzippedData)
 	defer tw.Close()
 
-	gzippedLog := gzip.NewWriter(logFile)
-	defer gzippedLog.Close()
-
-	logger := logrus.New()
-	logger.Out = gzippedLog
-	logger.Hooks.Add(&logging.ErrorLocationHook{})
-	logger.Hooks.Add(&logging.LogLocationHook{})
 	log := logger.WithField("backup", kubeutil.NamespaceAndName(backup))
 	log.Info("Starting backup")
 
@@ -222,23 +234,33 @@ func (kb *kubernetesBackupper) Backup(backup *api.Backup, backupFile, logFile io
 		return err
 	}
 
-	var labelSelector string
-	if backup.Spec.LabelSelector != nil {
-		labelSelector = metav1.FormatLabelSelector(backup.Spec.LabelSelector)
-	}
-
 	backedUpItems := make(map[itemKey]struct{})
 	var errs []error
-
-	cohabitatingResources := map[string]*cohabitatingResource{
-		"deployments":     newCohabitatingResource("deployments", "extensions", "apps"),
-		"networkpolicies": newCohabitatingResource("networkpolicies", "extensions", "networking.k8s.io"),
-		"events":          newCohabitatingResource("events", "", "events.k8s.io"),
-	}
 
 	resolvedActions, err := resolveActions(actions, kb.discoveryHelper)
 	if err != nil {
 		return err
+	}
+
+	podVolumeTimeout := kb.resticTimeout
+	if val := backup.Annotations[api.PodVolumeOperationTimeoutAnnotation]; val != "" {
+		parsed, err := time.ParseDuration(val)
+		if err != nil {
+			log.WithError(errors.WithStack(err)).Errorf("Unable to parse pod volume timeout annotation %s, using server value.", val)
+		} else {
+			podVolumeTimeout = parsed
+		}
+	}
+
+	ctx, cancelFunc := context.WithTimeout(context.Background(), podVolumeTimeout)
+	defer cancelFunc()
+
+	var resticBackupper restic.Backupper
+	if kb.resticBackupperFactory != nil {
+		resticBackupper, err = kb.resticBackupperFactory.NewBackupper(ctx, backup)
+		if err != nil {
+			return errors.WithStack(err)
+		}
 	}
 
 	gb := kb.groupBackupperFactory.newGroupBackupper(
@@ -246,16 +268,17 @@ func (kb *kubernetesBackupper) Backup(backup *api.Backup, backupFile, logFile io
 		backup,
 		namespaceIncludesExcludes,
 		resourceIncludesExcludes,
-		labelSelector,
 		kb.dynamicFactory,
 		kb.discoveryHelper,
 		backedUpItems,
-		cohabitatingResources,
+		cohabitatingResources(),
 		resolvedActions,
 		kb.podCommandExecutor,
 		tw,
 		resourceHooks,
-		kb.snapshotService,
+		kb.blockStore,
+		resticBackupper,
+		newPVCSnapshotTracker(),
 	)
 
 	for _, group := range kb.discoveryHelper.Resources() {

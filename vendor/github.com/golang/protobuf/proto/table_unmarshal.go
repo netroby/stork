@@ -141,8 +141,8 @@ func (u *unmarshalInfo) unmarshal(m pointer, b []byte) error {
 	if u.isMessageSet {
 		return UnmarshalMessageSet(b, m.offset(u.extensions).toExtensions())
 	}
-	var reqMask uint64            // bitmask of required fields we've seen.
-	var rnse *RequiredNotSetError // an instance of a RequiredNotSetError returned by a submessage.
+	var reqMask uint64 // bitmask of required fields we've seen.
+	var errLater error
 	for len(b) > 0 {
 		// Read tag and wire type.
 		// Special case 1 and 2 byte varints.
@@ -181,7 +181,9 @@ func (u *unmarshalInfo) unmarshal(m pointer, b []byte) error {
 			if r, ok := err.(*RequiredNotSetError); ok {
 				// Remember this error, but keep parsing. We need to produce
 				// a full parse even if a required field is missing.
-				rnse = r
+				if errLater == nil {
+					errLater = r
+				}
 				reqMask |= f.reqMask
 				continue
 			}
@@ -189,8 +191,11 @@ func (u *unmarshalInfo) unmarshal(m pointer, b []byte) error {
 <<<<<<< 130c674ed2ee159bf86e770605d1b6c1f5bc6f64
 =======
 				if err == errInvalidUTF8 {
-					fullName := revProtoTypes[reflect.PtrTo(u.typ)] + "." + f.name
-					err = fmt.Errorf("proto: string field %q contains invalid UTF-8", fullName)
+					if errLater == nil {
+						fullName := revProtoTypes[reflect.PtrTo(u.typ)] + "." + f.name
+						errLater = &invalidUTF8Error{fullName}
+					}
+					continue
 				}
 >>>>>>> Govendor update
 				return err
@@ -251,20 +256,16 @@ func (u *unmarshalInfo) unmarshal(m pointer, b []byte) error {
 			emap[int32(tag)] = e
 		}
 	}
-	if rnse != nil {
-		// A required field of a submessage/group is missing. Return that error.
-		return rnse
-	}
-	if reqMask != u.reqMask {
+	if reqMask != u.reqMask && errLater == nil {
 		// A required field of this message is missing.
 		for _, n := range u.reqFields {
 			if reqMask&1 == 0 {
-				return &RequiredNotSetError{n}
+				errLater = &RequiredNotSetError{n}
 			}
 			reqMask >>= 1
 		}
 	}
-	return nil
+	return errLater
 }
 
 // computeUnmarshalInfo fills in u with information for use
@@ -1571,11 +1572,14 @@ func unmarshalUTF8StringValue(b []byte, f pointer, w int) ([]byte, error) {
 		return nil, io.ErrUnexpectedEOF
 	}
 	v := string(b[:x])
+<<<<<<< 4d179741979ddb6489666669565a9139528df35b
 >>>>>>> Govendor update
-	if !utf8.ValidString(v) {
-		return nil, errInvalidUTF8
-	}
+=======
 	*f.toString() = v
+>>>>>>> make vendor update
+	if !utf8.ValidString(v) {
+		return b[x:], errInvalidUTF8
+	}
 	return b[x:], nil
 }
 
@@ -1596,10 +1600,10 @@ func unmarshalUTF8StringPtr(b []byte, f pointer, w int) ([]byte, error) {
 		return nil, io.ErrUnexpectedEOF
 	}
 	v := string(b[:x])
-	if !utf8.ValidString(v) {
-		return nil, errInvalidUTF8
-	}
 	*f.toStringPtr() = &v
+	if !utf8.ValidString(v) {
+		return b[x:], errInvalidUTF8
+	}
 	return b[x:], nil
 }
 
@@ -1620,11 +1624,11 @@ func unmarshalUTF8StringSlice(b []byte, f pointer, w int) ([]byte, error) {
 		return nil, io.ErrUnexpectedEOF
 	}
 	v := string(b[:x])
-	if !utf8.ValidString(v) {
-		return nil, errInvalidUTF8
-	}
 	s := f.toStringSlice()
 	*s = append(*s, v)
+	if !utf8.ValidString(v) {
+		return b[x:], errInvalidUTF8
+	}
 	return b[x:], nil
 }
 
@@ -1806,6 +1810,7 @@ func makeUnmarshalMap(f *reflect.StructField) unmarshaler {
 		// Maps will be somewhat slow. Oh well.
 
 		// Read key and value from data.
+		var nerr nonFatal
 		k := reflect.New(kt)
 		v := reflect.New(vt)
 		for len(b) > 0 {
@@ -1826,7 +1831,7 @@ func makeUnmarshalMap(f *reflect.StructField) unmarshaler {
 				err = errInternalBadWireType // skip unknown tag
 			}
 
-			if err == nil {
+			if nerr.Merge(err) {
 				continue
 			}
 			if err != errInternalBadWireType {
@@ -1849,7 +1854,7 @@ func makeUnmarshalMap(f *reflect.StructField) unmarshaler {
 		// Insert into map.
 		m.SetMapIndex(k.Elem(), v.Elem())
 
-		return r, nil
+		return r, nerr.E
 	}
 }
 
@@ -1875,15 +1880,16 @@ func makeUnmarshalOneof(typ, ityp reflect.Type, unmarshal unmarshaler) unmarshal
 		// Unmarshal data into holder.
 		// We unmarshal into the first field of the holder object.
 		var err error
+		var nerr nonFatal
 		b, err = unmarshal(b, valToPointer(v).offset(field0), w)
-		if err != nil {
+		if !nerr.Merge(err) {
 			return nil, err
 		}
 
 		// Write pointer to holder into target field.
 		f.asPointerTo(ityp).Elem().Set(v)
 
-		return b, nil
+		return b, nerr.E
 	}
 }
 

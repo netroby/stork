@@ -21,15 +21,19 @@ import (
 	"fmt"
 	"time"
 
-	api "github.com/heptio/ark/pkg/apis/ark/v1"
-	"github.com/heptio/ark/pkg/util/collections"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
+
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	api "github.com/heptio/ark/pkg/apis/ark/v1"
+	"github.com/heptio/ark/pkg/kuberesource"
+	"github.com/heptio/ark/pkg/podexec"
+	"github.com/heptio/ark/pkg/util/collections"
 )
 
 type hookPhase string
@@ -56,7 +60,7 @@ type itemHookHandler interface {
 
 // defaultItemHookHandler is the default itemHookHandler.
 type defaultItemHookHandler struct {
-	podCommandExecutor podCommandExecutor
+	podCommandExecutor podexec.PodCommandExecutor
 }
 
 func (h *defaultItemHookHandler) handleHooks(
@@ -67,7 +71,7 @@ func (h *defaultItemHookHandler) handleHooks(
 	phase hookPhase,
 ) error {
 	// We only support hooks on pods right now
-	if groupResource != podsGroupResource {
+	if groupResource != kuberesource.Pods {
 		return nil
 	}
 
@@ -93,7 +97,7 @@ func (h *defaultItemHookHandler) handleHooks(
 				"hookPhase":  phase,
 			},
 		)
-		if err := h.podCommandExecutor.executePodCommand(hookLog, obj.UnstructuredContent(), namespace, name, "<from-annotation>", hookFromAnnotations); err != nil {
+		if err := h.podCommandExecutor.ExecutePodCommand(hookLog, obj.UnstructuredContent(), namespace, name, "<from-annotation>", hookFromAnnotations); err != nil {
 			hookLog.WithError(err).Error("Error executing hook")
 			if hookFromAnnotations.OnError == api.HookErrorModeFail {
 				return err
@@ -117,7 +121,7 @@ func (h *defaultItemHookHandler) handleHooks(
 			hooks = resourceHook.post
 		}
 		for _, hook := range hooks {
-			if groupResource == podsGroupResource {
+			if groupResource == kuberesource.Pods {
 				if hook.Exec != nil {
 					hookLog := log.WithFields(
 						logrus.Fields{
@@ -126,7 +130,7 @@ func (h *defaultItemHookHandler) handleHooks(
 							"hookPhase":  phase,
 						},
 					)
-					err := h.podCommandExecutor.executePodCommand(hookLog, obj.UnstructuredContent(), namespace, name, resourceHook.name, hook.Exec)
+					err := h.podCommandExecutor.ExecutePodCommand(hookLog, obj.UnstructuredContent(), namespace, name, resourceHook.name, hook.Exec)
 					if err != nil {
 						hookLog.WithError(err).Error("Error executing hook")
 						if hook.Exec.OnError == api.HookErrorModeFail {
@@ -146,8 +150,6 @@ const (
 	podBackupHookCommandAnnotationKey   = "hook.backup.ark.heptio.com/command"
 	podBackupHookOnErrorAnnotationKey   = "hook.backup.ark.heptio.com/on-error"
 	podBackupHookTimeoutAnnotationKey   = "hook.backup.ark.heptio.com/timeout"
-	defaultHookOnError                  = api.HookErrorModeFail
-	defaultHookTimeout                  = 30 * time.Second
 )
 
 func phasedKey(phase hookPhase, key string) string {
