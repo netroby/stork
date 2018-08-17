@@ -1,21 +1,13 @@
 package controllers
 
 import (
-	"archive/tar"
-	"bytes"
-	"compress/gzip"
 	"context"
-	"encoding/json"
 	"fmt"
-	"io"
 	"reflect"
 	"strconv"
 	"strings"
-	"time"
 
-	arkapi "github.com/heptio/ark/pkg/apis/ark/v1"
 	"github.com/heptio/ark/pkg/backup"
-	arkclient "github.com/heptio/ark/pkg/client"
 	"github.com/heptio/ark/pkg/discovery"
 	"github.com/heptio/ark/pkg/util/collections"
 	"github.com/libopenstorage/stork/drivers/volume"
@@ -38,7 +30,7 @@ import (
 )
 
 const (
-	resyncPeriod           = int(60 * time.Minute)
+	resyncPeriod           = 30
 	storkMigrationReplicas = "stork.openstorage.org/migrationReplicas"
 )
 
@@ -92,8 +84,10 @@ func (m *MigrationController) Handle(ctx context.Context, event sdk.Event) error
 				Status: stork_crd.MigrationStatusPending,
 			}
 		}
-		if migration.Status.Stage == stork_crd.MigrationStageInitializing ||
-			migration.Status.Stage == stork_crd.MigrationStageVolumes {
+		switch migration.Status.Stage {
+
+		case stork_crd.MigrationStageInitializing,
+			stork_crd.MigrationStageVolumes:
 			migration.Status.Stage = stork_crd.MigrationStageVolumes
 			// Trigger the migration if we don't have any status
 			if migration.Status.Volumes == nil {
@@ -120,27 +114,31 @@ func (m *MigrationController) Handle(ctx context.Context, event sdk.Event) error
 				volumeInfos = make([]*stork_crd.VolumeInfo, 0)
 			}
 			migration.Status.Volumes = volumeInfos
+			// Store the new status
 			err = sdk.Update(migration)
 			if err != nil {
 				return err
 			}
 
 			// Now check if there is any failure or success
-			// TODO: On failure of one volume cancel other migrations
+			// TODO: On failure of one volume cancel other migrations?
 			for _, vInfo := range volumeInfos {
+				// Return if we have any volume migrations still in progress
 				if vInfo.Status == stork_crd.MigrationStatusInProgress {
-					return fmt.Errorf("Migration still in progress")
+					logrus.Infof("Volume Migration still in progress: %v", migration.Name)
+					return nil
 				} else if vInfo.Status == stork_crd.MigrationStatusFailed {
 					migration.Status.Stage = stork_crd.MigrationStageFinal
 					migration.Status.Status = stork_crd.MigrationStatusFailed
 				}
 			}
 
+			// If the migration hasn't failed move on to the next stage.
 			if migration.Status.Status != stork_crd.MigrationStatusFailed {
 				if migration.Spec.IncludeResources {
 					migration.Status.Stage = stork_crd.MigrationStageApplications
 					migration.Status.Status = stork_crd.MigrationStatusInProgress
-					// Update the current state and then move on to the
+					// Update the current state and then move on to migrating
 					// resources
 					err = sdk.Update(migration)
 					if err != nil {
@@ -159,12 +157,28 @@ func (m *MigrationController) Handle(ctx context.Context, event sdk.Event) error
 			if err != nil {
 				return err
 			}
+		case stork_crd.MigrationStageApplications:
+			err := m.migrateResources(migration)
+			if err != nil {
+				logrus.Errorf("Error migrating resources: %v", err)
+				return err
+			}
+
+		case stork_crd.MigrationStageFinal:
+			// Do Nothing
+			return nil
+		default:
+			logrus.Errorf("Invalid stage for migration: %v", migration.Status.Stage)
 		}
 	}
 	return nil
 }
 
 func resourceToBeMigrated(migration *stork_crd.Migration, resource metav1.APIResource) bool {
+	if resource.Group == "extensions" && resource.Kind == "Deployment" {
+		return false
+	}
+
 	switch resource.Kind {
 	case "PersistentVolumeClaim",
 		"PersistentVolume",
@@ -185,6 +199,7 @@ func objectToBeMigrated(object runtime.Unstructured) (bool, error) {
 		return false, err
 	}
 
+	// Don't migrate the kubernetes service
 	if objectType.GetKind() == "Service" {
 
 		metadata, err := meta.Accessor(object)
@@ -206,10 +221,14 @@ func (m *MigrationController) migrateResources(migration *stork_crd.Migration) e
 	}
 	allObjects := make([]runtime.Unstructured, 0)
 	resourceInfos := make([]*stork_crd.ResourceInfo, 0)
+
 	for _, group := range m.discoveryHelper.Resources() {
 		groupVersion, err := schema.ParseGroupVersion(group.GroupVersion)
 		if err != nil {
 			return err
+		}
+		if groupVersion.Group == "extensions" {
+			continue
 		}
 		for _, resource := range group.APIResources {
 			if !resourceToBeMigrated(migration, resource) {
@@ -251,7 +270,7 @@ func (m *MigrationController) migrateResources(migration *stork_crd.Migration) e
 					resourceInfo := &stork_crd.ResourceInfo{
 						Name:      metadata.GetName(),
 						Namespace: metadata.GetNamespace(),
-						Status:    stork_crd.MigrationStatusCaptured,
+						Status:    stork_crd.MigrationStatusInProgress,
 					}
 					resourceInfo.Kind = resource.Kind
 					resourceInfo.Group = groupVersion.Group
@@ -280,6 +299,12 @@ func (m *MigrationController) migrateResources(migration *stork_crd.Migration) e
 		logrus.Errorf("Error applying resources: %v", err)
 		return err
 	}
+	migration.Status.Stage = stork_crd.MigrationStageFinal
+	migration.Status.Status = stork_crd.MigrationStatusSuccessful
+	err = sdk.Update(migration)
+	if err != nil {
+		return err
+	}
 	return nil
 }
 
@@ -294,19 +319,34 @@ func (m *MigrationController) prepareResources(
 		case "PersistentVolume":
 			updatedObject, err := m.preparePVResource(migration, o)
 			if err != nil {
-				return err
+				m.updateResourceStatus(
+					migration,
+					o,
+					stork_crd.MigrationStatusFailed,
+					fmt.Sprintf("Error preparing PV resource: %v", err))
+				continue
 			}
 			o = updatedObject
 		case "Deployment", "StatefulSet":
 			updatedObject, err := m.prepareApplicationResource(migration, o)
 			if err != nil {
-				return err
+				m.updateResourceStatus(
+					migration,
+					o,
+					stork_crd.MigrationStatusFailed,
+					fmt.Sprintf("Error preparing Application resource: %v", err))
+				continue
 			}
 			o = updatedObject
 		}
 		metadata, err := collections.GetMap(content, "metadata")
 		if err != nil {
-			return err
+			m.updateResourceStatus(
+				migration,
+				o,
+				stork_crd.MigrationStatusFailed,
+				fmt.Sprintf("Error getting metadata for resource: %v", err))
+			continue
 		}
 		for key := range metadata {
 			switch key {
@@ -317,6 +357,15 @@ func (m *MigrationController) prepareResources(
 		}
 	}
 	return nil
+}
+
+func (m *MigrationController) updateResourceStatus(
+	migration *stork_crd.Migration,
+	object runtime.Unstructured,
+	status stork_crd.MigrationStatusType,
+	errorMessage string,
+) {
+
 }
 
 func (m *MigrationController) preparePVResource(
@@ -384,9 +433,7 @@ func (m *MigrationController) applyResources(
 	}
 
 	remoteDynamicClientPool := dynamic.NewDynamicClientPool(remoteConfig)
-	logrus.Infof("Applying the following resources: %+v", objects)
 	for _, o := range objects {
-		logrus.Infof("Object: %v", o)
 		dynamicClient, err := remoteDynamicClientPool.ClientForGroupVersionKind(o.GetObjectKind().GroupVersionKind())
 		if err != nil {
 			return err
@@ -399,6 +446,7 @@ func (m *MigrationController) applyResources(
 		if err != nil {
 			return err
 		}
+		logrus.Infof("Applying %v %v", objectType.GetKind(), metadata.GetName())
 		resource := &metav1.APIResource{
 			Name:       strings.ToLower(objectType.GetKind()) + "s",
 			Namespaced: len(metadata.GetNamespace()) > 0,
@@ -406,19 +454,33 @@ func (m *MigrationController) applyResources(
 		client := dynamicClient.Resource(resource, metadata.GetNamespace())
 		unstructured, ok := o.(*unstructured.Unstructured)
 		if !ok {
-			return fmt.Errorf("Unable to case object to unstructured: %v", o)
+			return fmt.Errorf("Unable to cast object to unstructured: %v", o)
 		}
 		_, err = client.Create(unstructured)
 		if err != nil && apierrors.IsAlreadyExists(err) {
 			switch objectType.GetKind() {
 			// Don't want to delete the Volume resources
 			case "PersistentVolumeClaim", "PersistentVolume":
+				break
 			default:
-				_, err = client.Delete(metadata.GetName(), metav1.DeleteOptions{})
+				err = client.Delete(metadata.GetName(), &metav1.DeleteOptions{})
+				_, err = client.Create(unstructured)
+				if err != nil {
+					m.updateResourceStatus(
+						migration,
+						o,
+						stork_crd.MigrationStatusFailed,
+						fmt.Sprintf("Failed to migrate resource: %v", err))
+					continue
+				}
 			}
 
-			return err
 		}
+		m.updateResourceStatus(
+			migration,
+			o,
+			stork_crd.MigrationStatusSuccessful,
+			"Resource migrated successfully")
 	}
 	return nil
 }
