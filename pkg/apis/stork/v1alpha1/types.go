@@ -123,10 +123,11 @@ type ClusterPairList struct {
 
 // MigrationSpec is the spec used to migrate apps between clusterpairs
 type MigrationSpec struct {
-	ClusterPair string            `json:"clusterPair"`
-	Namespaces  []string          `json:"namespaces"`
-	Selectors   map[string]string `json:"selectors"`
-	Options     map[string]string `json:"options"`
+	ClusterPair       string            `json:"clusterPair"`
+	Namespaces        []string          `json:"namespaces"`
+	IncludeResources  bool              `json:"includeResources"`
+	StartApplications bool              `json:"startApplications"`
+	Selectors         map[string]string `json:"selectors"`
 }
 
 // MigrationStatus is the status of a migration operation
@@ -139,16 +140,17 @@ type MigrationStatus struct {
 
 // ResourceInfo is the info for the migration of a resource
 type ResourceInfo struct {
-	meta.TypeMeta   `json:",inline"`
-	meta.ObjectMeta `json:"metadata,omitempty"`
-	Status          MigrationStatusType `json:"status"`
+	Name                  string `json:"name"`
+	Namespace             string `json:"namespace"`
+	meta.GroupVersionKind `json:",inline"`
+	Status                MigrationStatusType `json:"status"`
 }
 
 // VolumeInfo is the info for the migration of a volume
 type VolumeInfo struct {
-	PersistentVolumeClaim string
-	Namespace             string
-	Volume                string
+	PersistentVolumeClaim string              `json:"persistentVolumeClaim"`
+	Namespace             string              `json:"namespace"`
+	Volume                string              `json:"volume"`
 	Status                MigrationStatusType `json:"status"`
 	Reason                string              `json:"reason"`
 }

@@ -8,7 +8,6 @@ import (
 	stork_crd "github.com/libopenstorage/stork/pkg/apis/stork/v1alpha1"
 	"github.com/libopenstorage/stork/pkg/migration/controllers"
 	"github.com/operator-framework/operator-sdk/pkg/sdk"
-	"github.com/sirupsen/logrus"
 	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	"k8s.io/client-go/rest"
 )
@@ -42,12 +41,10 @@ func (m *Migration) Init(config *rest.Config, client apiextensionsclient.Interfa
 
 // Handle handles updated for registered types
 func (m *Migration) Handle(ctx context.Context, event sdk.Event) error {
-	switch o := event.Object.(type) {
+	switch event.Object.(type) {
 	case *stork_crd.ClusterPair:
-		logrus.Infof("Update for clusterpair %v", o)
 		return m.clusterPairController.Handle(ctx, event)
 	case *stork_crd.Migration:
-		logrus.Infof("Update for migration %v", o)
 		return m.migrationController.Handle(ctx, event)
 	}
 	return nil

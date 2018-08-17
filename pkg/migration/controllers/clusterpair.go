@@ -30,27 +30,6 @@ func (c *ClusterPairController) Init(config *rest.Config, client apiextensionscl
 
 	sdk.Watch(stork_crd.SchemeGroupVersion.String(), reflect.TypeOf(stork_crd.ClusterPair{}).Name(), "", resyncPeriod)
 
-	/*
-		storkClient, err := stork_client.NewForConfig(config)
-		remotePair, err := storkClient.StorkV1alpha1().ClusterPairs("default").Get("localcluster", metav1.GetOptions{})
-		if err != nil {
-			logrus.Errorf("Error getting pair: %v", err)
-			return nil
-		}
-			remoteClientConfig := clientcmd.NewNonInteractiveClientConfig(remotePair.Config, remotePair.Config.CurrentContext, &clientcmd.ConfigOverrides{}, nil)
-			remoteConfig, err := remoteClientConfig.ClientConfig()
-			if err != nil {
-				return err
-			}
-
-			remoteK8sClient, err := clientset.NewForConfig(remoteConfig)
-			if err != nil {
-				logrus.Fatalf("Error getting client, %v", err)
-			}
-			podList, err := remoteK8sClient.CoreV1().Pods("").List(metav1.ListOptions{})
-			for _, p := range podList.Items {
-				log.PodLog(&p).Infof("listing pods")
-			}*/
 	return nil
 }
 

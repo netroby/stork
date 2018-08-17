@@ -1,30 +1,53 @@
 package controllers
 
 import (
+	"archive/tar"
+	"bytes"
+	"compress/gzip"
 	"context"
+	"encoding/json"
 	"fmt"
+	"io"
 	"reflect"
+	"strconv"
+	"strings"
 	"time"
 
+	arkapi "github.com/heptio/ark/pkg/apis/ark/v1"
+	"github.com/heptio/ark/pkg/backup"
+	arkclient "github.com/heptio/ark/pkg/client"
+	"github.com/heptio/ark/pkg/discovery"
+	"github.com/heptio/ark/pkg/util/collections"
 	"github.com/libopenstorage/stork/drivers/volume"
 	stork "github.com/libopenstorage/stork/pkg/apis/stork"
 	stork_crd "github.com/libopenstorage/stork/pkg/apis/stork/v1alpha1"
 	"github.com/operator-framework/operator-sdk/pkg/sdk"
+	"github.com/portworx/sched-ops/k8s"
 	"github.com/sirupsen/logrus"
 	apiextensionsv1beta1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1beta1"
 	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
+	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
+	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/apimachinery/pkg/runtime/schema"
+	"k8s.io/client-go/dynamic"
 	"k8s.io/client-go/rest"
+	"k8s.io/client-go/tools/clientcmd"
 )
 
 const (
-	resyncPeriod = int(60 * time.Minute)
+	resyncPeriod           = int(60 * time.Minute)
+	storkMigrationReplicas = "stork.openstorage.org/migrationReplicas"
 )
 
 // MigrationController migrationcontroller
 type MigrationController struct {
-	Driver volume.Driver
+	Driver            volume.Driver
+	backupper         backup.Backupper
+	discoveryHelper   discovery.Helper
+	dynamicClientPool dynamic.ClientPool
 }
 
 // Init init
@@ -34,6 +57,17 @@ func (m *MigrationController) Init(config *rest.Config, client apiextensionsclie
 		return err
 	}
 
+	discoveryClient := client.Discovery()
+	m.discoveryHelper, err = discovery.NewHelper(discoveryClient, logrus.New())
+	if err != nil {
+		return err
+	}
+	err = m.discoveryHelper.Refresh()
+	if err != nil {
+		return err
+	}
+	m.dynamicClientPool = dynamic.NewDynamicClientPool(config)
+
 	sdk.Watch(stork_crd.SchemeGroupVersion.String(), reflect.TypeOf(stork_crd.Migration{}).Name(), "", resyncPeriod)
 	return nil
 }
@@ -42,7 +76,7 @@ func (m *MigrationController) Init(config *rest.Config, client apiextensionsclie
 func (m *MigrationController) Handle(ctx context.Context, event sdk.Event) error {
 	switch o := event.Object.(type) {
 	case *stork_crd.Migration:
-		logrus.Debugf("Update for migration %v Deleted: %v", o, event.Deleted)
+		//logrus.Debugf("Update for migration %v Deleted: %v", o, event.Deleted)
 		migration := o
 		if event.Deleted {
 			return m.Driver.CancelMigration(migration)
@@ -103,6 +137,21 @@ func (m *MigrationController) Handle(ctx context.Context, event sdk.Event) error
 			}
 
 			if migration.Status.Status != stork_crd.MigrationStatusFailed {
+				if migration.Spec.IncludeResources {
+					migration.Status.Stage = stork_crd.MigrationStageApplications
+					migration.Status.Status = stork_crd.MigrationStatusInProgress
+					// Update the current state and then move on to the
+					// resources
+					err = sdk.Update(migration)
+					if err != nil {
+						return err
+					}
+					err = m.migrateResources(migration)
+					if err != nil {
+						logrus.Errorf("Error migrating resources: %v", err)
+						return err
+					}
+				}
 				migration.Status.Stage = stork_crd.MigrationStageFinal
 				migration.Status.Status = stork_crd.MigrationStatusSuccessful
 			}
@@ -110,6 +159,265 @@ func (m *MigrationController) Handle(ctx context.Context, event sdk.Event) error
 			if err != nil {
 				return err
 			}
+		}
+	}
+	return nil
+}
+
+func resourceToBeMigrated(migration *stork_crd.Migration, resource metav1.APIResource) bool {
+	switch resource.Kind {
+	case "PersistentVolumeClaim",
+		"PersistentVolume",
+		"Deployment",
+		"StatefulSet",
+		"ConfigMap",
+		"Service",
+		"Secret":
+		return true
+	default:
+		return false
+	}
+}
+
+func objectToBeMigrated(object runtime.Unstructured) (bool, error) {
+	objectType, err := meta.TypeAccessor(object)
+	if err != nil {
+		return false, err
+	}
+
+	if objectType.GetKind() == "Service" {
+
+		metadata, err := meta.Accessor(object)
+		if err != nil {
+			return false, err
+		}
+		if metadata.GetName() == "kubernetes" {
+			return false, nil
+		}
+	}
+
+	return true, nil
+}
+
+func (m *MigrationController) migrateResources(migration *stork_crd.Migration) error {
+	err := m.discoveryHelper.Refresh()
+	if err != nil {
+		return err
+	}
+	allObjects := make([]runtime.Unstructured, 0)
+	resourceInfos := make([]*stork_crd.ResourceInfo, 0)
+	for _, group := range m.discoveryHelper.Resources() {
+		groupVersion, err := schema.ParseGroupVersion(group.GroupVersion)
+		if err != nil {
+			return err
+		}
+		for _, resource := range group.APIResources {
+			if !resourceToBeMigrated(migration, resource) {
+				continue
+			}
+
+			for _, ns := range migration.Spec.Namespaces {
+				dynamicClient, err := m.dynamicClientPool.ClientForGroupVersionKind(groupVersion.WithKind(""))
+				if err != nil {
+					return err
+				}
+				client := dynamicClient.Resource(&resource, ns)
+
+				objectsList, err := client.List(metav1.ListOptions{})
+				if err != nil {
+					return err
+				}
+				objects, err := meta.ExtractList(objectsList)
+				if err != nil {
+					return err
+				}
+				for _, o := range objects {
+					runtimeObject, ok := o.(runtime.Unstructured)
+					if !ok {
+						return fmt.Errorf("Error casting object: %v", o)
+					}
+
+					migrate, err := objectToBeMigrated(runtimeObject)
+					if err != nil {
+						return fmt.Errorf("Error processing object %v: %v", runtimeObject, err)
+					}
+					if !migrate {
+						continue
+					}
+					metadata, err := meta.Accessor(runtimeObject)
+					if err != nil {
+						return err
+					}
+					resourceInfo := &stork_crd.ResourceInfo{
+						Name:      metadata.GetName(),
+						Namespace: metadata.GetNamespace(),
+						Status:    stork_crd.MigrationStatusCaptured,
+					}
+					resourceInfo.Kind = resource.Kind
+					resourceInfo.Group = groupVersion.Group
+					if resourceInfo.Group == "" {
+						resourceInfo.Group = "core"
+					}
+					resourceInfo.Version = groupVersion.Version
+					resourceInfos = append(resourceInfos, resourceInfo)
+					allObjects = append(allObjects, runtimeObject)
+				}
+			}
+		}
+		migration.Status.Resources = resourceInfos
+		err = sdk.Update(migration)
+		if err != nil {
+			return err
+		}
+	}
+	err = m.prepareResources(migration, allObjects)
+	if err != nil {
+		logrus.Errorf("Error preparing resources: %v", err)
+		return err
+	}
+	err = m.applyResources(migration, allObjects)
+	if err != nil {
+		logrus.Errorf("Error applying resources: %v", err)
+		return err
+	}
+	return nil
+}
+
+func (m *MigrationController) prepareResources(
+	migration *stork_crd.Migration,
+	objects []runtime.Unstructured,
+) error {
+	for _, o := range objects {
+		content := o.UnstructuredContent()
+		delete(content, "status")
+		switch o.GetObjectKind().GroupVersionKind().Kind {
+		case "PersistentVolume":
+			updatedObject, err := m.preparePVResource(migration, o)
+			if err != nil {
+				return err
+			}
+			o = updatedObject
+		case "Deployment", "StatefulSet":
+			updatedObject, err := m.prepareApplicationResource(migration, o)
+			if err != nil {
+				return err
+			}
+			o = updatedObject
+		}
+		metadata, err := collections.GetMap(content, "metadata")
+		if err != nil {
+			return err
+		}
+		for key := range metadata {
+			switch key {
+			case "name", "namespace", "labels", "annotations":
+			default:
+				delete(metadata, key)
+			}
+		}
+	}
+	return nil
+}
+
+func (m *MigrationController) preparePVResource(
+	migration *stork_crd.Migration,
+	object runtime.Unstructured,
+) (runtime.Unstructured, error) {
+	spec, err := collections.GetMap(object.UnstructuredContent(), "spec")
+	if err != nil {
+		return nil, err
+	}
+	delete(spec, "claimRef")
+	delete(spec, "storageClassName")
+
+	portworxSpec, err := collections.GetMap(object.UnstructuredContent(), "spec.portworxVolume")
+	if err != nil {
+		return nil, err
+	}
+
+	metadata, err := meta.Accessor(object)
+	if err != nil {
+		return nil, err
+	}
+
+	portworxSpec["volumeID"] = metadata.GetName()
+	return object, nil
+}
+
+func (m *MigrationController) prepareApplicationResource(
+	migration *stork_crd.Migration,
+	object runtime.Unstructured,
+) (runtime.Unstructured, error) {
+	if migration.Spec.StartApplications {
+		return object, nil
+	}
+
+	// Reset the replicas to 0 and store the current replicas in an annotation
+	content := object.UnstructuredContent()
+	spec, err := collections.GetMap(content, "spec")
+	if err != nil {
+		return nil, err
+	}
+	replicas := spec["replicas"].(int64)
+	annotations, err := collections.GetMap(content, "metadata.annotations")
+	annotations[storkMigrationReplicas] = strconv.FormatInt(replicas, 10)
+	spec["replicas"] = 0
+	return object, nil
+}
+
+func (m *MigrationController) applyResources(
+	migration *stork_crd.Migration,
+	objects []runtime.Unstructured,
+) error {
+	clusterPair, err := k8s.Instance().GetClusterPair(migration.Spec.ClusterPair)
+	if err != nil {
+		return fmt.Errorf("error getting clusterpair: %v", err)
+	}
+	remoteClientConfig := clientcmd.NewNonInteractiveClientConfig(
+		clusterPair.Spec.Config,
+		clusterPair.Spec.Config.CurrentContext,
+		&clientcmd.ConfigOverrides{},
+		nil)
+	remoteConfig, err := remoteClientConfig.ClientConfig()
+	if err != nil {
+		return err
+	}
+
+	remoteDynamicClientPool := dynamic.NewDynamicClientPool(remoteConfig)
+	logrus.Infof("Applying the following resources: %+v", objects)
+	for _, o := range objects {
+		logrus.Infof("Object: %v", o)
+		dynamicClient, err := remoteDynamicClientPool.ClientForGroupVersionKind(o.GetObjectKind().GroupVersionKind())
+		if err != nil {
+			return err
+		}
+		metadata, err := meta.Accessor(o)
+		if err != nil {
+			return err
+		}
+		objectType, err := meta.TypeAccessor(o)
+		if err != nil {
+			return err
+		}
+		resource := &metav1.APIResource{
+			Name:       strings.ToLower(objectType.GetKind()) + "s",
+			Namespaced: len(metadata.GetNamespace()) > 0,
+		}
+		client := dynamicClient.Resource(resource, metadata.GetNamespace())
+		unstructured, ok := o.(*unstructured.Unstructured)
+		if !ok {
+			return fmt.Errorf("Unable to case object to unstructured: %v", o)
+		}
+		_, err = client.Create(unstructured)
+		if err != nil && apierrors.IsAlreadyExists(err) {
+			switch objectType.GetKind() {
+			// Don't want to delete the Volume resources
+			case "PersistentVolumeClaim", "PersistentVolume":
+			default:
+				_, err = client.Delete(metadata.GetName(), metav1.DeleteOptions{})
+			}
+
+			return err
 		}
 	}
 	return nil
