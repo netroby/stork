@@ -14,7 +14,7 @@ const (
 	// StorkClusterPairResourcePlural is plural for "clusterpair" resource
 	StorkClusterPairResourcePlural = "clusterpairs"
 	// StorkMigrationResourcePlural is plural for "migration" resource
-	StorkMigrationResourcePlural = "migration"
+	StorkMigrationResourcePlural = "migrations"
 )
 
 // +genclient
@@ -144,6 +144,7 @@ type ResourceInfo struct {
 	Namespace             string `json:"namespace"`
 	meta.GroupVersionKind `json:",inline"`
 	Status                MigrationStatusType `json:"status"`
+	Reason                string              `json:"reason"`
 }
 
 // VolumeInfo is the info for the migration of a volume
