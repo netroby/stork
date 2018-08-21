@@ -9,6 +9,7 @@ import (
 	"github.com/golang/glog"
 	"github.com/libopenstorage/stork/drivers/volume"
 	_ "github.com/libopenstorage/stork/drivers/volume/portworx"
+	"github.com/libopenstorage/stork/pkg/controller"
 	"github.com/libopenstorage/stork/pkg/extender"
 	"github.com/libopenstorage/stork/pkg/initializer"
 	"github.com/libopenstorage/stork/pkg/migration"
@@ -17,7 +18,6 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
 	api_v1 "k8s.io/api/core/v1"
-	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	clientset "k8s.io/client-go/kubernetes"
 	core_v1 "k8s.io/client-go/kubernetes/typed/core/v1"
 	"k8s.io/client-go/rest"
@@ -87,6 +87,10 @@ func main() {
 			Name:  "health-monitor-interval",
 			Usage: "The interval in seconds to monitor the health of the storage driver (default: 120, min: 30)",
 		},
+		cli.BoolTFlag{
+			Name:  "migration-controller",
+			Usage: "Start the migration controller (default: true)",
+		},
 		cli.BoolFlag{
 			Name:  "app-initializer",
 			Usage: "EXPERIMENTAL: Enable application initializer to update scheduler name automatically (default: false)",
@@ -126,18 +130,6 @@ func run(c *cli.Context) {
 	k8sClient, err := clientset.NewForConfig(config)
 	if err != nil {
 		log.Fatalf("Error getting client, %v", err)
-	}
-
-	aeclientset, err := apiextensionsclient.NewForConfig(config)
-	if err != nil {
-		log.Fatalf("Error getting apiextention client, %v", err)
-	}
-
-	migration := migration.Migration{
-		Driver: d,
-	}
-	if err = migration.Init(config, aeclientset); err != nil {
-		log.Fatalf("Error initializing migration: %v", err)
 	}
 
 	if c.Bool("extender") {
@@ -242,6 +234,23 @@ func runStork(d volume.Driver, c *cli.Context) {
 		}
 	}
 
+	err := controller.Init()
+	if err != nil {
+		log.Fatalf("Error initializing controller: %v", err)
+	}
+
+	migration := migration.Migration{
+		Driver: d,
+	}
+	if err = migration.Init(); err != nil {
+		log.Fatalf("Error initializing migration: %v", err)
+	}
+
+	// The controller should be started at the end
+	err = controller.Run()
+	if err != nil {
+		log.Fatalf("Error starting controller")
+	}
 	signalChan := make(chan os.Signal, 1)
 	signal.Notify(signalChan, syscall.SIGINT, syscall.SIGTERM)
 	for {
