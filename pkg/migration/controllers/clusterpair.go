@@ -14,7 +14,7 @@ import (
 	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/client-go/rest"
+	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
 //ClusterPairController pair
@@ -24,7 +24,6 @@ type ClusterPairController struct {
 
 //Init init
 func (c *ClusterPairController) Init(
-	config *rest.Config,
 	client apiextensionsclient.Interface,
 ) error {
 	err := c.createCRD(client)
@@ -33,7 +32,11 @@ func (c *ClusterPairController) Init(
 	}
 
 	return controller.Register(
-		(&stork_crd.ClusterPair{}).GetObjectKind().GroupVersionKind(),
+		&schema.GroupVersionKind{
+			Group:   stork.GroupName,
+			Version: stork.Version,
+			Kind:    reflect.TypeOf(stork_crd.ClusterPair{}).Name(),
+		},
 		"",
 		resyncPeriod,
 		c)

@@ -62,7 +62,11 @@ func (m *MigrationController) Init(config *rest.Config, client apiextensionsclie
 	m.dynamicClientPool = dynamic.NewDynamicClientPool(config)
 
 	return controller.Register(
-		(&stork_crd.Migration{}).GetObjectKind().GroupVersionKind(),
+		&schema.GroupVersionKind{
+			Group:   stork.GroupName,
+			Version: stork.Version,
+			Kind:    reflect.TypeOf(stork_crd.Migration{}).Name(),
+		},
 		"",
 		resyncPeriod,
 		m)
