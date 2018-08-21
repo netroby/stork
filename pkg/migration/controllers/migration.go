@@ -13,6 +13,7 @@ import (
 	"github.com/libopenstorage/stork/drivers/volume"
 	stork "github.com/libopenstorage/stork/pkg/apis/stork"
 	stork_crd "github.com/libopenstorage/stork/pkg/apis/stork/v1alpha1"
+	"github.com/libopenstorage/stork/pkg/controller"
 	"github.com/operator-framework/operator-sdk/pkg/sdk"
 	"github.com/portworx/sched-ops/k8s"
 	"github.com/sirupsen/logrus"
@@ -60,8 +61,11 @@ func (m *MigrationController) Init(config *rest.Config, client apiextensionsclie
 	}
 	m.dynamicClientPool = dynamic.NewDynamicClientPool(config)
 
-	sdk.Watch(stork_crd.SchemeGroupVersion.String(), reflect.TypeOf(stork_crd.Migration{}).Name(), "", resyncPeriod)
-	return nil
+	return controller.Register(
+		(&stork_crd.Migration{}).GetObjectKind().GroupVersionKind(),
+		"",
+		resyncPeriod,
+		m)
 }
 
 // Handle updates for Migration objects

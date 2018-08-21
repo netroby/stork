@@ -7,6 +7,7 @@ import (
 	"github.com/libopenstorage/stork/drivers/volume"
 	stork "github.com/libopenstorage/stork/pkg/apis/stork"
 	stork_crd "github.com/libopenstorage/stork/pkg/apis/stork/v1alpha1"
+	"github.com/libopenstorage/stork/pkg/controller"
 	"github.com/operator-framework/operator-sdk/pkg/sdk"
 	"github.com/sirupsen/logrus"
 	apiextensionsv1beta1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1beta1"
@@ -22,15 +23,20 @@ type ClusterPairController struct {
 }
 
 //Init init
-func (c *ClusterPairController) Init(config *rest.Config, client apiextensionsclient.Interface) error {
+func (c *ClusterPairController) Init(
+	config *rest.Config,
+	client apiextensionsclient.Interface,
+) error {
 	err := c.createCRD(client)
 	if err != nil {
 		return err
 	}
 
-	sdk.Watch(stork_crd.SchemeGroupVersion.String(), reflect.TypeOf(stork_crd.ClusterPair{}).Name(), "", resyncPeriod)
-
-	return nil
+	return controller.Register(
+		(&stork_crd.ClusterPair{}).GetObjectKind().GroupVersionKind(),
+		"",
+		resyncPeriod,
+		c)
 }
 
 // Handle updates for ClusterPair objects
