@@ -6,6 +6,7 @@ import (
 	"sync"
 
 	"github.com/operator-framework/operator-sdk/pkg/sdk"
+	"github.com/sirupsen/logrus"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
@@ -37,13 +38,13 @@ func Init() error {
 }
 
 // Run the controller
-func Run(ctx context.Context) error {
+func Run() error {
 	if controllerInst == nil {
 		return &controllerNotInitError{}
 	}
 	controllerInst.Lock()
 	defer controllerInst.Unlock()
-	go sdk.Run(ctx)
+	go sdk.Run(context.TODO())
 	controllerInst.started = true
 	return nil
 }
@@ -51,10 +52,11 @@ func Run(ctx context.Context) error {
 // Register to get callbacks for updates to objects
 // All handlers need to be registered before calling Run()
 func Register(
-	gkv schema.GroupVersionKind,
+	gkv *schema.GroupVersionKind,
 	namespace string,
 	resyncPeriod int,
 	handler sdk.Handler) error {
+	logrus.Debugf("Registering controller for %v", gkv)
 	if controllerInst == nil {
 		return &controllerNotInitError{}
 	}
@@ -65,21 +67,22 @@ func Register(
 	}
 
 	objectType := gkv.String()
-	// Only add Watch if we aren't already watching. resyncPeriod will be
-	// ignored for second call if different
+	// Only add Watch if we aren't already watching for the object already.
+	// resyncPeriod will be ignored for second call if different
 	if controllerInst.handlers[objectType] == nil {
 		controllerInst.handlers[objectType] = make([]sdk.Handler, 0)
 		sdk.Watch(gkv.GroupVersion().String(), gkv.Kind, namespace, resyncPeriod)
 	}
+	logrus.Debugf("Registered controller for %v", gkv)
 	controllerInst.handlers[objectType] = append(controllerInst.handlers[objectType], handler)
 	return nil
 }
 
 // Handle handles updates for registered types
 func (c *controller) Handle(ctx context.Context, event sdk.Event) error {
-	kind := event.Object.GetObjectKind().GroupVersionKind().Kind
+	gkv := event.Object.GetObjectKind().GroupVersionKind().String()
 	var firstErr error
-	if handlers, ok := c.handlers[kind]; ok {
+	if handlers, ok := c.handlers[gkv]; ok {
 		for _, handler := range handlers {
 			err := handler.Handle(ctx, event)
 			// Keep track of the first error
