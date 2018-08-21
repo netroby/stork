@@ -842,35 +842,34 @@
 			"revisionTime": "2018-08-13T20:06:59Z"
 		},
 		{
-			"checksumSHA1": "e/K8jT0QqRRgBPqNf01MFPh/vMY=",
+			"checksumSHA1": "RK9DJrPFSAcg8vAKk6s8kV1cpIE=",
 			"path": "github.com/libopenstorage/openstorage/api",
-			"revision": "7cd3e0e3ec9f095e10a444c0f2278a8d8e75410f",
-			"revisionTime": "2018-08-13T20:06:59Z"
+			"revision": "b9d6f9847f80e2cb06af1a5424067a0212a22c83",
+			"revisionTime": "2018-08-20T23:14:11Z"
 		},
 		{
 			"checksumSHA1": "x1rcMJ+CAwulMKZU7wCLUtffXMI=",
 			"path": "github.com/libopenstorage/openstorage/api/client",
-			"revision": "7cd3e0e3ec9f095e10a444c0f2278a8d8e75410f",
-			"revisionTime": "2018-08-13T20:06:59Z"
+			"revision": "b9d6f9847f80e2cb06af1a5424067a0212a22c83",
+			"revisionTime": "2018-08-20T23:14:11Z"
 		},
 		{
 			"checksumSHA1": "bjOLa75D+fgQW1enXK5jnYxs0AQ=",
 			"path": "github.com/libopenstorage/openstorage/api/client/cluster",
-			"revision": "7cd3e0e3ec9f095e10a444c0f2278a8d8e75410f",
-			"revisionTime": "2018-08-13T20:06:59Z"
+			"revision": "b9d6f9847f80e2cb06af1a5424067a0212a22c83",
+			"revisionTime": "2018-08-20T23:14:11Z"
 		},
 		{
-			"checksumSHA1": "MgQRNn17AGwF4PP5jfQ3ZMJEJ2I=",
+			"checksumSHA1": "snoxvIToEAdWGaxZtgH/ZKHVqR4=",
 			"path": "github.com/libopenstorage/openstorage/api/client/volume",
-			"revision": "7cd3e0e3ec9f095e10a444c0f2278a8d8e75410f",
-			"revisionTime": "2018-08-13T20:06:59Z"
+			"revision": "b9d6f9847f80e2cb06af1a5424067a0212a22c83",
+			"revisionTime": "2018-08-20T23:14:11Z"
 		},
 		{
-			"checksumSHA1": "q45c+l269YMDWayTPeWKYRL0Kgo=",
-			"origin": "github.com/portworx/torpedo/vendor/github.com/libopenstorage/openstorage/api/spec",
+			"checksumSHA1": "RwKSgxDaMJuCrcQDst8S47RSilg=",
 			"path": "github.com/libopenstorage/openstorage/api/spec",
-			"revision": "2040aa9f5ee73b32137c70dd010827c0c955ad00",
-			"revisionTime": "2018-07-26T07:06:13Z"
+			"revision": "b9d6f9847f80e2cb06af1a5424067a0212a22c83",
+			"revisionTime": "2018-08-20T23:14:11Z"
 		},
 		{
 			"checksumSHA1": "KuLt7OsNEL8+gy5mLVDsOAW/rNo=",
@@ -880,7 +879,6 @@
 		},
 		{
 			"checksumSHA1": "WpZGDsdBT8ymiho/pvFRomzdf3o=",
-			"origin": "github.com/portworx/torpedo/vendor/github.com/libopenstorage/openstorage/config",
 			"path": "github.com/libopenstorage/openstorage/config",
 			"revision": "2040aa9f5ee73b32137c70dd010827c0c955ad00",
 			"revisionTime": "2018-07-26T07:06:13Z"
@@ -905,14 +903,12 @@
 		},
 		{
 			"checksumSHA1": "/bl8X4ayadp0Bou8MzMkxfXiQ2c=",
-			"origin": "github.com/portworx/torpedo/vendor/github.com/libopenstorage/openstorage/pkg/parser",
 			"path": "github.com/libopenstorage/openstorage/pkg/parser",
 			"revision": "2040aa9f5ee73b32137c70dd010827c0c955ad00",
 			"revisionTime": "2018-07-26T07:06:13Z"
 		},
 		{
 			"checksumSHA1": "FvNAwo77o7tbO7vKT/6D1dyNjDQ=",
-			"origin": "github.com/portworx/torpedo/vendor/github.com/libopenstorage/openstorage/pkg/units",
 			"path": "github.com/libopenstorage/openstorage/pkg/units",
 			"revision": "2040aa9f5ee73b32137c70dd010827c0c955ad00",
 			"revisionTime": "2018-07-26T07:06:13Z"
