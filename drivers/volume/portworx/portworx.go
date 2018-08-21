@@ -9,6 +9,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/heptio/ark/pkg/util/collections"
 	crdv1 "github.com/kubernetes-incubator/external-storage/snapshot/pkg/apis/crd/v1"
 	crdclient "github.com/kubernetes-incubator/external-storage/snapshot/pkg/client"
 	"github.com/kubernetes-incubator/external-storage/snapshot/pkg/controller/snapshotter"
@@ -28,6 +29,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"k8s.io/api/core/v1"
 	k8s_errors "k8s.io/apimachinery/pkg/api/errors"
+	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -1544,6 +1546,24 @@ func (p *portworx) GetMigrationStatus(migration *stork_crd.Migration) ([]*stork_
 
 func (p *portworx) CancelMigration(migration *stork_crd.Migration) error {
 	return nil
+}
+
+func (p *portworx) UpdateMigratedPersistentVolumeSpec(
+	object runtime.Unstructured,
+) (runtime.Unstructured, error) {
+	portworxSpec, err := collections.GetMap(object.UnstructuredContent(), "spec.portworxVolume")
+	if err != nil {
+		return nil, err
+	}
+
+	metadata, err := meta.Accessor(object)
+	if err != nil {
+		return nil, err
+	}
+
+	portworxSpec["volumeID"] = metadata.GetName()
+	return object, nil
+
 }
 
 func init() {

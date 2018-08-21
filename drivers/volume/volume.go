@@ -6,6 +6,7 @@ import (
 	"github.com/libopenstorage/stork/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"k8s.io/api/core/v1"
+	"k8s.io/apimachinery/pkg/runtime"
 )
 
 // Driver defines an external volume driver interface.
@@ -56,6 +57,7 @@ type MigratePluginInterface interface {
 	StartMigration(*stork_crd.Migration) ([]*stork_crd.VolumeInfo, error)
 	GetMigrationStatus(*stork_crd.Migration) ([]*stork_crd.VolumeInfo, error)
 	CancelMigration(*stork_crd.Migration) error
+	UpdateMigratedPersistentVolumeSpec(object runtime.Unstructured) (runtime.Unstructured, error)
 }
 
 // Info Information about a volume
@@ -160,4 +162,11 @@ func (m *MigrationNotSupported) GetMigrationStatus(*stork_crd.Migration) ([]*sto
 // CancelMigration returns ErrNotSupported
 func (m *MigrationNotSupported) CancelMigration(*stork_crd.Migration) error {
 	return &errors.ErrNotSupported{}
+}
+
+// UpdateMigratedPersistentVolumeSpec returns ErrNotSupported
+func (m *MigrationNotSupported) UpdateMigratedPersistentVolumeSpec(
+	runtime.Unstructured,
+) (runtime.Unstructured, error) {
+	return nil, &errors.ErrNotSupported{}
 }
