@@ -205,6 +205,11 @@ func run(c *cli.Context) {
 }
 
 func runStork(d volume.Driver, c *cli.Context) {
+	err := controller.Init()
+	if err != nil {
+		log.Fatalf("Error initializing controller: %v", err)
+	}
+
 	initializer := &initializer.Initializer{
 		Driver: d,
 	}
@@ -234,16 +239,13 @@ func runStork(d volume.Driver, c *cli.Context) {
 		}
 	}
 
-	err := controller.Init()
-	if err != nil {
-		log.Fatalf("Error initializing controller: %v", err)
-	}
-
-	migration := migration.Migration{
-		Driver: d,
-	}
-	if err = migration.Init(); err != nil {
-		log.Fatalf("Error initializing migration: %v", err)
+	if c.Bool("migration-controller") {
+		migration := migration.Migration{
+			Driver: d,
+		}
+		if err = migration.Init(); err != nil {
+			log.Fatalf("Error initializing migration: %v", err)
+		}
 	}
 
 	// The controller should be started at the end
