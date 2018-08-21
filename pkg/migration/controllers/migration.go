@@ -96,72 +96,7 @@ func (m *MigrationController) Handle(ctx context.Context, event sdk.Event) error
 
 		case stork_crd.MigrationStageInitializing,
 			stork_crd.MigrationStageVolumes:
-			migration.Status.Stage = stork_crd.MigrationStageVolumes
-			// Trigger the migration if we don't have any status
-			if migration.Status.Volumes == nil {
-				volumeInfos, err := m.Driver.StartMigration(migration)
-				if err != nil {
-					return err
-				}
-				if volumeInfos == nil {
-					volumeInfos = make([]*stork_crd.VolumeInfo, 0)
-				}
-				migration.Status.Volumes = volumeInfos
-				err = sdk.Update(migration)
-				if err != nil {
-					return err
-				}
-			}
-
-			// Now check the status
-			volumeInfos, err := m.Driver.GetMigrationStatus(migration)
-			if err != nil {
-				return err
-			}
-			if volumeInfos == nil {
-				volumeInfos = make([]*stork_crd.VolumeInfo, 0)
-			}
-			migration.Status.Volumes = volumeInfos
-			// Store the new status
-			err = sdk.Update(migration)
-			if err != nil {
-				return err
-			}
-
-			// Now check if there is any failure or success
-			// TODO: On failure of one volume cancel other migrations?
-			for _, vInfo := range volumeInfos {
-				// Return if we have any volume migrations still in progress
-				if vInfo.Status == stork_crd.MigrationStatusInProgress {
-					logrus.Infof("Volume Migration still in progress: %v", migration.Name)
-					return nil
-				} else if vInfo.Status == stork_crd.MigrationStatusFailed {
-					migration.Status.Stage = stork_crd.MigrationStageFinal
-					migration.Status.Status = stork_crd.MigrationStatusFailed
-				}
-			}
-
-			// If the migration hasn't failed move on to the next stage.
-			if migration.Status.Status != stork_crd.MigrationStatusFailed {
-				if migration.Spec.IncludeResources {
-					migration.Status.Stage = stork_crd.MigrationStageApplications
-					migration.Status.Status = stork_crd.MigrationStatusInProgress
-					// Update the current state and then move on to migrating
-					// resources
-					err = sdk.Update(migration)
-					if err != nil {
-						return err
-					}
-					err = m.migrateResources(migration)
-					if err != nil {
-						logrus.Errorf("Error migrating resources: %v", err)
-						return err
-					}
-				}
-				migration.Status.Stage = stork_crd.MigrationStageFinal
-				migration.Status.Status = stork_crd.MigrationStatusSuccessful
-			}
-			err = sdk.Update(migration)
+			err := m.migrateVolumes(migration)
 			if err != nil {
 				return err
 			}
@@ -182,7 +117,82 @@ func (m *MigrationController) Handle(ctx context.Context, event sdk.Event) error
 	return nil
 }
 
+func (m *MigrationController) migrateVolumes(migration *stork_crd.Migration) error {
+	migration.Status.Stage = stork_crd.MigrationStageVolumes
+	// Trigger the migration if we don't have any status
+	if migration.Status.Volumes == nil {
+		volumeInfos, err := m.Driver.StartMigration(migration)
+		if err != nil {
+			return err
+		}
+		if volumeInfos == nil {
+			volumeInfos = make([]*stork_crd.VolumeInfo, 0)
+		}
+		migration.Status.Volumes = volumeInfos
+		err = sdk.Update(migration)
+		if err != nil {
+			return err
+		}
+	}
+
+	// Now check the status
+	volumeInfos, err := m.Driver.GetMigrationStatus(migration)
+	if err != nil {
+		return err
+	}
+	if volumeInfos == nil {
+		volumeInfos = make([]*stork_crd.VolumeInfo, 0)
+	}
+	migration.Status.Volumes = volumeInfos
+	// Store the new status
+	err = sdk.Update(migration)
+	if err != nil {
+		return err
+	}
+
+	// Now check if there is any failure or success
+	// TODO: On failure of one volume cancel other migrations?
+	for _, vInfo := range volumeInfos {
+		// Return if we have any volume migrations still in progress
+		if vInfo.Status == stork_crd.MigrationStatusInProgress {
+			logrus.Infof("Volume Migration still in progress: %v", migration.Name)
+			return nil
+		} else if vInfo.Status == stork_crd.MigrationStatusFailed {
+			migration.Status.Stage = stork_crd.MigrationStageFinal
+			migration.Status.Status = stork_crd.MigrationStatusFailed
+		}
+	}
+
+	// If the migration hasn't failed move on to the next stage.
+	if migration.Status.Status != stork_crd.MigrationStatusFailed {
+		if migration.Spec.IncludeResources {
+			migration.Status.Stage = stork_crd.MigrationStageApplications
+			migration.Status.Status = stork_crd.MigrationStatusInProgress
+			// Update the current state and then move on to migrating
+			// resources
+			err = sdk.Update(migration)
+			if err != nil {
+				return err
+			}
+			err = m.migrateResources(migration)
+			if err != nil {
+				logrus.Errorf("Error migrating resources: %v", err)
+				return err
+			}
+		}
+		migration.Status.Stage = stork_crd.MigrationStageFinal
+		migration.Status.Status = stork_crd.MigrationStatusSuccessful
+	}
+	err = sdk.Update(migration)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
 func resourceToBeMigrated(migration *stork_crd.Migration, resource metav1.APIResource) bool {
+	// Deployment is present in "apps" and "extensions" group, so ignore
+	// "extensions"
 	if resource.Group == "extensions" && resource.Kind == "Deployment" {
 		return false
 	}
@@ -238,6 +248,7 @@ func (m *MigrationController) migrateResources(migration *stork_crd.Migration) e
 		if groupVersion.Group == "extensions" {
 			continue
 		}
+
 		for _, resource := range group.APIResources {
 			if !resourceToBeMigrated(migration, resource) {
 				continue
@@ -282,6 +293,7 @@ func (m *MigrationController) migrateResources(migration *stork_crd.Migration) e
 					}
 					resourceInfo.Kind = resource.Kind
 					resourceInfo.Group = groupVersion.Group
+					// core Group doesn't have a name, so override it
 					if resourceInfo.Group == "" {
 						resourceInfo.Group = "core"
 					}
@@ -371,9 +383,24 @@ func (m *MigrationController) updateResourceStatus(
 	migration *stork_crd.Migration,
 	object runtime.Unstructured,
 	status stork_crd.MigrationStatusType,
-	errorMessage string,
+	reason string,
 ) {
-
+	for _, resource := range migration.Status.Resources {
+		metadata, err := meta.Accessor(object)
+		if err != nil {
+			continue
+		}
+		gkv := object.GetObjectKind().GroupVersionKind()
+		if resource.Name == metadata.GetName() &&
+			resource.Namespace == metadata.GetNamespace() &&
+			(resource.Group == gkv.Group || (resource.Group == "core" && gkv.Group == "")) &&
+			resource.Version == gkv.Version &&
+			resource.Kind == gkv.Kind {
+			resource.Status = status
+			resource.Reason = reason
+			return
+		}
+	}
 }
 
 func (m *MigrationController) preparePVResource(
@@ -387,18 +414,7 @@ func (m *MigrationController) preparePVResource(
 	delete(spec, "claimRef")
 	delete(spec, "storageClassName")
 
-	portworxSpec, err := collections.GetMap(object.UnstructuredContent(), "spec.portworxVolume")
-	if err != nil {
-		return nil, err
-	}
-
-	metadata, err := meta.Accessor(object)
-	if err != nil {
-		return nil, err
-	}
-
-	portworxSpec["volumeID"] = metadata.GetName()
-	return object, nil
+	return m.Driver.UpdateMigratedPersistentVolumeSpec(object)
 }
 
 func (m *MigrationController) prepareApplicationResource(
