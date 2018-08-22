@@ -19,6 +19,7 @@ import (
 	"github.com/sirupsen/logrus"
 	apiextensionsv1beta1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1beta1"
 	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
+	"k8s.io/apimachinery/pkg/api/errors"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -44,8 +45,18 @@ type MigrationController struct {
 }
 
 // Init init
-func (m *MigrationController) Init(config *rest.Config, client apiextensionsclient.Interface) error {
-	err := m.createCRD(client)
+func (m *MigrationController) Init() error {
+	config, err := rest.InClusterConfig()
+	if err != nil {
+		return fmt.Errorf("Error getting cluster config: %v", err)
+	}
+
+	client, err := apiextensionsclient.NewForConfig(config)
+	if err != nil {
+		return fmt.Errorf("Error getting apiextention client, %v", err)
+	}
+
+	err = m.createCRD()
 	if err != nil {
 		return err
 	}
@@ -86,15 +97,9 @@ func (m *MigrationController) Handle(ctx context.Context, event sdk.Event) error
 			return fmt.Errorf("clusterPair to migrate to cannot be empty")
 		}
 
-		if migration.Status.Stage == "" {
-			migration.Status = stork_crd.MigrationStatus{
-				Stage:  stork_crd.MigrationStageInitializing,
-				Status: stork_crd.MigrationStatusPending,
-			}
-		}
 		switch migration.Status.Stage {
 
-		case stork_crd.MigrationStageInitializing,
+		case stork_crd.MigrationStageInitial,
 			stork_crd.MigrationStageVolumes:
 			err := m.migrateVolumes(migration)
 			if err != nil {
@@ -509,26 +514,19 @@ func (m *MigrationController) applyResources(
 	return nil
 }
 
-func (m *MigrationController) createCRD(client apiextensionsclient.Interface) error {
-	crd := &apiextensionsv1beta1.CustomResourceDefinition{
-		ObjectMeta: metav1.ObjectMeta{
-			Name: stork_crd.StorkMigrationResourcePlural + "." + stork.GroupName,
-		},
-		Spec: apiextensionsv1beta1.CustomResourceDefinitionSpec{
-			Group:   stork.GroupName,
-			Version: stork.Version,
-			Scope:   apiextensionsv1beta1.NamespaceScoped,
-			Names: apiextensionsv1beta1.CustomResourceDefinitionNames{
-				Plural: stork_crd.StorkMigrationResourcePlural,
-				Kind:   reflect.TypeOf(stork_crd.Migration{}).Name(),
-			},
-		},
+func (m *MigrationController) createCRD() error {
+	resource := k8s.CustomResource{
+		Name:    stork_crd.StorkMigrationResourceName,
+		Plural:  stork_crd.StorkMigrationResourcePlural,
+		Group:   stork.GroupName,
+		Version: stork.Version,
+		Scope:   apiextensionsv1beta1.NamespaceScoped,
+		Kind:    reflect.TypeOf(stork_crd.Migration{}).Name(),
 	}
-	_, err := client.ApiextensionsV1beta1().CustomResourceDefinitions().Create(crd)
-
-	if err != nil && !apierrors.IsAlreadyExists(err) {
+	err := k8s.Instance().CreateCRD(resource)
+	if err != nil && !errors.IsAlreadyExists(err) {
 		return err
 	}
 
-	return nil
+	return k8s.Instance().ValidateCRD(resource)
 }

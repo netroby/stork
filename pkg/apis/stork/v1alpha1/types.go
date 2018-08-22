@@ -11,8 +11,12 @@ type StorkRuleActionType string
 const (
 	// StorkRuleActionCommand is a command action
 	StorkRuleActionCommand StorkRuleActionType = "command"
+	// StorkClusterPairResourceName is name for "clusterpair" resource
+	StorkClusterPairResourceName = "clusterpair"
 	// StorkClusterPairResourcePlural is plural for "clusterpair" resource
 	StorkClusterPairResourcePlural = "clusterpairs"
+	// StorkMigrationResourceName is name for "migration" resource
+	StorkMigrationResourceName = "migration"
 	// StorkMigrationResourcePlural is plural for "migration" resource
 	StorkMigrationResourcePlural = "migrations"
 )
@@ -83,6 +87,8 @@ type ClusterPair struct {
 type ClusterPairStatusType string
 
 const (
+	// ClusterPairStatusInitial is the initial state when pairing is created
+	ClusterPairStatusInitial ClusterPairStatusType = ""
 	// ClusterPairStatusPending for when pairing is still pending
 	ClusterPairStatusPending ClusterPairStatusType = "Pending"
 	// ClusterPairStatusReady for when pair is ready
@@ -171,6 +177,8 @@ type Migration struct {
 type MigrationStatusType string
 
 const (
+	// MigrationStatusInitial is the initial state when migration is created
+	MigrationStatusInitial MigrationStatusType = ""
 	// MigrationStatusPending for when migration is still pending
 	MigrationStatusPending MigrationStatusType = "Pending"
 	// MigrationStatusCaptured for when migration specs have been captured
@@ -187,8 +195,8 @@ const (
 type MigrationStageType string
 
 const (
-	// MigrationStageInitializing for when migration is in Initializing stage
-	MigrationStageInitializing MigrationStageType = "Initializing"
+	// MigrationStageInitial for when migration is created
+	MigrationStageInitial MigrationStageType = ""
 	// MigrationStageVolumes for when volumes are being migrated
 	MigrationStageVolumes MigrationStageType = "Volumes"
 	// MigrationStageApplications for when applications are being migrated
