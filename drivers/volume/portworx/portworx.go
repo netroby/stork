@@ -1465,38 +1465,40 @@ func (p *portworx) StartMigration(migration *stork_crd.Migration) ([]*stork_crd.
 	if err != nil {
 		return nil, fmt.Errorf("error getting clusterpair: %v", err)
 	}
-	pvcList, err := k8s.Instance().GetPersistentVolumeClaims(migration.Namespace, migration.Spec.Selectors)
-	if err != nil {
-		return nil, fmt.Errorf("error getting list of volumes to migrate: %v", err)
-	}
 	volumeInfos := make([]*stork_crd.VolumeInfo, 0)
-	for _, pvc := range pvcList.Items {
-		volumeInfo := &stork_crd.VolumeInfo{}
-		volumeInfo.PersistentVolumeClaim = pvc.Name
-		volumeInfo.Namespace = pvc.Namespace
-		volumeInfos = append(volumeInfos, volumeInfo)
+	for _, namespace := range migration.Spec.Namespaces {
+		pvcList, err := k8s.Instance().GetPersistentVolumeClaims(namespace, migration.Spec.Selectors)
+		if err != nil {
+			return nil, fmt.Errorf("error getting list of volumes to migrate: %v", err)
+		}
+		for _, pvc := range pvcList.Items {
+			volumeInfo := &stork_crd.VolumeInfo{}
+			volumeInfo.PersistentVolumeClaim = pvc.Name
+			volumeInfo.Namespace = pvc.Namespace
+			volumeInfos = append(volumeInfos, volumeInfo)
 
-		volume, err := k8s.Instance().GetVolumeForPersistentVolumeClaim(&pvc)
-		if err != nil {
-			volumeInfo.Status = stork_crd.MigrationStatusFailed
-			volumeInfo.Reason = fmt.Sprintf("Error getting volume for PVC: %v", err)
-			logrus.Errorf("%v: %v", pvc.Name, volumeInfo.Reason)
-			continue
+			volume, err := k8s.Instance().GetVolumeForPersistentVolumeClaim(&pvc)
+			if err != nil {
+				volumeInfo.Status = stork_crd.MigrationStatusFailed
+				volumeInfo.Reason = fmt.Sprintf("Error getting volume for PVC: %v", err)
+				logrus.Errorf("%v: %v", pvc.Name, volumeInfo.Reason)
+				continue
+			}
+			volumeInfo.Volume = volume
+			err = p.volDriver.CloudMigrateStart(&api.CloudMigrateStartRequest{
+				Operation: api.CloudMigrate_MigrateVolume,
+				ClusterId: clusterPair.Status.RemoteStorageID,
+				TargetId:  volume,
+			})
+			if err != nil {
+				volumeInfo.Status = stork_crd.MigrationStatusFailed
+				volumeInfo.Reason = fmt.Sprintf("Error starting migration for volume: %v", err)
+				logrus.Errorf("%v: %v", pvc.Name, volumeInfo.Reason)
+				continue
+			}
+			volumeInfo.Status = stork_crd.MigrationStatusInProgress
+			volumeInfo.Reason = fmt.Sprintf("Volume migration has started")
 		}
-		volumeInfo.Volume = volume
-		err = p.volDriver.CloudMigrateStart(&api.CloudMigrateStartRequest{
-			Operation: api.CloudMigrate_MigrateVolume,
-			ClusterId: clusterPair.Status.RemoteStorageID,
-			TargetId:  volume,
-		})
-		if err != nil {
-			volumeInfo.Status = stork_crd.MigrationStatusFailed
-			volumeInfo.Reason = fmt.Sprintf("Error starting migration for volume: %v", err)
-			logrus.Errorf("%v: %v", pvc.Name, volumeInfo.Reason)
-			continue
-		}
-		volumeInfo.Status = stork_crd.MigrationStatusInProgress
-		volumeInfo.Reason = fmt.Sprintf("Volume migration has started")
 	}
 
 	return volumeInfos, nil
