@@ -219,7 +219,11 @@ func resourceToBeMigrated(migration *stork_crd.Migration, resource metav1.APIRes
 	}
 }
 
-func objectToBeMigrated(resourceMap map[types.UID]bool, object runtime.Unstructured) (bool, error) {
+func objectToBeMigrated(
+	resourceMap map[types.UID]bool,
+	object runtime.Unstructured,
+	namespace string,
+) (bool, error) {
 	metadata, err := meta.Accessor(object)
 	if err != nil {
 		return false, err
@@ -232,9 +236,9 @@ func objectToBeMigrated(resourceMap map[types.UID]bool, object runtime.Unstructu
 		return false, err
 	}
 
-	// Don't migrate the kubernetes service
-	if objectType.GetKind() == "Service" {
-
+	switch objectType.GetKind() {
+	case "Service":
+		// Don't migrate the kubernetes service
 		metadata, err := meta.Accessor(object)
 		if err != nil {
 			return false, err
@@ -242,6 +246,15 @@ func objectToBeMigrated(resourceMap map[types.UID]bool, object runtime.Unstructu
 		if metadata.GetName() == "kubernetes" {
 			return false, nil
 		}
+	case "PersistentVolume":
+		spec, err := collections.GetMap(object.UnstructuredContent(), "spec.claimRef")
+		if err != nil {
+			return false, err
+		}
+		if spec["namespace"] == namespace {
+			return true, nil
+		}
+		return false, nil
 	}
 
 	return true, nil
@@ -291,7 +304,7 @@ func (m *MigrationController) migrateResources(migration *stork_crd.Migration) e
 						return fmt.Errorf("Error casting object: %v", o)
 					}
 
-					migrate, err := objectToBeMigrated(resourceMap, runtimeObject)
+					migrate, err := objectToBeMigrated(resourceMap, runtimeObject, ns)
 					if err != nil {
 						return fmt.Errorf("Error processing object %v: %v", runtimeObject, err)
 					}
@@ -492,7 +505,7 @@ func (m *MigrationController) applyResources(
 				Labels: namespace.Labels,
 			},
 		})
-		if err != nil && apierrors.IsAlreadyExists(err) {
+		if err != nil && !apierrors.IsAlreadyExists(err) {
 			return err
 		}
 	}
