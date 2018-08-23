@@ -7,7 +7,6 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/heptio/ark/pkg/backup"
 	"github.com/heptio/ark/pkg/discovery"
 	"github.com/heptio/ark/pkg/util/collections"
 	"github.com/libopenstorage/stork/drivers/volume"
@@ -42,12 +41,11 @@ const (
 // MigrationController migrationcontroller
 type MigrationController struct {
 	Driver            volume.Driver
-	backupper         backup.Backupper
 	discoveryHelper   discovery.Helper
 	dynamicClientPool dynamic.ClientPool
 }
 
-// Init init
+// Init Initialize the migration controller
 func (m *MigrationController) Init() error {
 	config, err := rest.InClusterConfig()
 	if err != nil {
@@ -90,7 +88,6 @@ func (m *MigrationController) Init() error {
 func (m *MigrationController) Handle(ctx context.Context, event sdk.Event) error {
 	switch o := event.Object.(type) {
 	case *stork_crd.Migration:
-		//logrus.Debugf("Update for migration %v Deleted: %v", o, event.Deleted)
 		migration := o
 		if event.Deleted {
 			return m.Driver.CancelMigration(migration)

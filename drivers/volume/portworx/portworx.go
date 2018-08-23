@@ -1565,7 +1565,6 @@ func (p *portworx) UpdateMigratedPersistentVolumeSpec(
 
 	portworxSpec["volumeID"] = metadata.GetName()
 	return object, nil
-
 }
 
 func init() {
