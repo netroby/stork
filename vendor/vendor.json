@@ -614,12 +614,6 @@
 			"revisionTime": "2018-06-29T19:30:45Z"
 		},
 		{
-			"checksumSHA1": "TxUlpW2Cw/9nWdCxlJnhzFMLZ7Q=",
-			"path": "github.com/heptio/ark/pkg/backup",
-			"revision": "c6a8ad2926fa7daa44237b90d8cbdbf0853b3522",
-			"revisionTime": "2018-06-29T19:30:45Z"
-		},
-		{
 			"checksumSHA1": "g63I6da1fVOg4glZqTSS6uvPqPI=",
 			"path": "github.com/heptio/ark/pkg/buildinfo",
 			"revision": "c6a8ad2926fa7daa44237b90d8cbdbf0853b3522",
